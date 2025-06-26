@@ -1,5 +1,168 @@
 // Portfolio Website Main JS
 
+// Performance monitoring
+const startTime = performance.now();
+
+// Intersection Observer for better lazy loading
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        observer.unobserve(img);
+      }
+    }
+  });
+}, {
+  rootMargin: '50px 0px',
+  threshold: 0.1
+});
+
+// Observe all images with data-src attribute
+document.addEventListener('DOMContentLoaded', () => {
+  const lazyImages = document.querySelectorAll('img[data-src]');
+  lazyImages.forEach(img => imageObserver.observe(img));
+  
+  // Log performance
+  const loadTime = performance.now() - startTime;
+  console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+});
+
+// --- Certificate Modal System ---
+const certificateData = {
+  'mahartech-advanced-js': {
+    title: 'Modern JavaScript (ES6 and Beyond)',
+    description: 'This certificate validates my successful completion of the "Modern JavaScript: ES6 and beyond" course offered by ITI Platform (Mahara-Tech). The course, spanning 3 hours and 10 minutes, focused on advanced JavaScript concepts, including features introduced in ECMAScript 6 (ES6) and subsequent versions. This training has enhanced my proficiency in writing modern, efficient, and maintainable JavaScript code, essential for contemporary web development.',
+    image: 'images/mahartech/advanced-js-en.jpg'
+  },
+  'mahartech-html-css': {
+    title: 'Learn HTML & CSS',
+    description: 'This certificate confirms my successful completion of the "Learn HTML & CSS" course provided by ITI Platform (Mahara-Tech). This comprehensive course, totaling 7 hours and 42 minutes, equipped me with fundamental skills in HyperText Markup Language (HTML) for structuring web content and Cascading Style Sheets (CSS) for styling and layout. This training is crucial for building visually appealing and well-structured web pages.',
+    image: 'images/mahartech/html-and-css-en.jpg'
+  },
+  'mahartech-js': {
+    title: 'JavaScript Programming',
+    description: 'This certificate verifies my successful completion of the "JavaScript" course offered by ITI Platform (Mahara-Tech). Over 7 hours of dedicated study, I gained a solid understanding of JavaScript fundamentals, including syntax, data types, control structures, functions, and working with the Document Object Model (DOM). This foundational knowledge is essential for developing interactive and dynamic web applications.',
+    image: 'images/mahartech/js-en.jpg'
+  },
+  'mahartech-typescript': {
+    title: 'TypeScript Fundamentals',
+    description: 'This certificate confirms my successful completion of the "TypeScript Fundamentals" course provided by ITI Platform (Mahara-Tech). Through 2 hours and 8 minutes of focused learning, I acquired a foundational understanding of TypeScript, including its core concepts like static typing, interfaces, classes, and modules. This training is crucial for building more robust, scalable, and maintainable JavaScript applications.',
+    image: 'images/mahartech/typeScript-fundamentals-en.jpg'
+  },
+  'sololearn-coding-data': {
+    title: 'Coding for Data',
+    description: 'This certificate attests to my successful completion of the "Coding for Data" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of coding principles and techniques specifically applied to data-related tasks. It equipped me with essential skills for handling, processing, and analyzing data using programming, which is critical in various data-driven fields.',
+    image: 'images/soloLearn/coding-for-data.jpeg'
+  },
+  'sololearn-frontend': {
+    title: 'Front-end for Beginners (Developed with Angular Team at Google)',
+    description: 'This certificate confirms my successful completion of the "Front-end for Beginners" course from Sololearn, which was developed in collaboration with the Angular Team at Google. This course provided me with a foundational understanding of front-end web development, covering essential concepts and technologies necessary to begin building user interfaces. The curriculum, influenced by Google\'s Angular team, ensures a practical and industry-relevant introduction to the field.',
+    image: 'images/soloLearn/front-end-for-begginers.jpeg'
+  },
+  'sololearn-webdev': {
+    title: 'Web Development',
+    description: 'This certificate verifies my successful completion of the "Web Development" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of core web development principles and technologies. It equipped me with the foundational knowledge and skills necessary to build and maintain websites, covering key aspects of both front-end and potentially back-end development.',
+    image: 'images/soloLearn/web-development.jpeg'
+  },
+  'udemy-html-css-js': {
+    title: 'HTML5, CSS3, and JavaScript The Right Way 2025',
+    description: 'This certificate confirms my successful completion of the "HTML5, CSS3, and JavaScript The Right Way 2025" course on Udemy, instructed by Ali Murtaza. Over 5 total hours, this course provided an in-depth understanding of modern web development fundamentals, focusing on best practices for HTML5, CSS3, and JavaScript. This training has equipped me with the skills to build robust, semantic, and visually appealing web applications according to current industry standards.',
+    image: 'images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg'
+  },
+  'udemy-js-fundamentals': {
+    title: 'JavaScript Fundamentals Course for Beginners',
+    description: 'This certificate confirms my successful completion of the "JavaScript Fundamentals Course for Beginners" on Udemy, instructed by Sara Academy. This 2.5-hour course provided a solid introduction to the core concepts of JavaScript programming. It equipped me with foundational knowledge in JavaScript syntax, variables, data types, operators, control flow, and functions, essential for anyone starting in web development and building interactive web applications.',
+    image: 'images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg'
+  },
+  'udemy-website-template': {
+    title: 'Design a Website Template using HTML5 & CSS3',
+    description: 'This certificate confirms my successful completion of the "Design a Website Template using HTML5 & CSS3" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This extensive 10.5-hour course provided practical skills and techniques for creating professional and responsive website templates using modern HTML5 and CSS3. It enhanced my ability to structure web content semantically and style it effectively, which is fundamental for front-end web design and development.',
+    image: 'images/udemy/design-a-website-template-using-htmlandcss.jpeg'
+  },
+  'udemy-css-grid': {
+    title: 'Introduction to CSS Grid',
+    description: 'This certificate confirms my successful completion of the "Introduction To CSS Grid" course on Udemy, instructed by Joshan Grewal. This 4.5-hour course provided a comprehensive understanding of CSS Grid, a powerful layout system for designing two-dimensional grid-based layouts on the web. It significantly enhanced my skills in creating complex and responsive web designs, a crucial aspect of modern front-end development.',
+    image: 'images/udemy/introduction-to-css-grid.jpg'
+  },
+  'udemy-js-scratch': {
+    title: 'JavaScript From Scratch',
+    description: 'This certificate confirms my successful completion of the "JavaScript From Scratch (Part 1 - Beginner Level)" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This 4.5-hour course served as a foundational introduction to JavaScript programming, covering essential concepts for beginners. It provided me with a strong understanding of core JavaScript syntax, variables, data types, and basic programming constructs, which are critical first steps in becoming proficient in web development.',
+    image: 'images/udemy/introduction-to-programming-using-javaScript.jpeg'
+  },
+  'udemy-js-advanced': {
+    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
+    description: 'This certificate confirms my successful completion of the "JavaScript Fundamentals to Advanced: Full Stack Development" course on Udemy, instructed by Sayman Creative Institute. Completed on June 21, 2025, this comprehensive 5.5-hour course provided an in-depth exploration of JavaScript, progressing from foundational concepts to advanced topics relevant for full-stack development. It significantly enhanced my understanding of JavaScript\'s role in both front-end and back-end environments, equipping me with skills for building complete web applications.',
+    image: 'images/udemy/javaScript-fundamentals-to-advanced.jpg'
+  },
+  'udemy-nextjs-react': {
+    title: 'Practical Next.js & React - Build a real WebApp with Next.js',
+    description: 'This certificate confirms my successful completion of the "Practical Next.js & React - Build a real WebApp with Next.js" course on Udemy, instructed by Nick Ovchinnikov. This extensive 11-hour course provided hands-on experience in building a complete web application using Next.js and React. It significantly enhanced my skills in modern front-end development, specifically in server-side rendering, routing, and state management within the Next.js framework, crucial for developing high-performance and scalable web applications.',
+    image: 'images/udemy/Practical-next.jsandreact.jpeg'
+  },
+  'udemy-web-design': {
+    title: 'Web Design Course For Beginner to Advanced',
+    description: 'This certificate confirms my successful completion of the "Web Design Course For Beginner to Advanced" on Udemy, instructed by Manuel Tudu. This comprehensive 3-hour course provided a thorough understanding of web design principles and practices, progressing from fundamental concepts to more advanced techniques. It equipped me with a holistic view of web design, enabling me to create aesthetically pleasing and functional websites from initial concept to completion.',
+    image: 'images/udemy/web-design.jpeg'
+  },
+  'udemy-html-css-designers': {
+    title: 'HTML and CSS for Web Designers: From Basics to Beautiful',
+    description: 'This certificate confirms my successful completion of the "HTML and CSS for Web Designers: From Basics to Beautiful" course on Udemy, instructed by Mehmood Khalil. Completed on June 21, 2025, this extensive 8-hour course provided a deep dive into HTML and CSS, teaching how to structure and style web content effectively to create visually appealing and responsive designs. It enhanced my ability to translate design concepts into functional and beautiful web pages.',
+    image: 'images/udemy/html-and-css-for-web-designers.jpg'
+  },
+  'chubb-life': {
+    title: 'Chubb Life-Egypt Basic Sales Induction Training',
+    description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
+    image: 'images/certificates/chubb-life.jpeg'
+  },
+  'banque-misr': {
+    title: 'Banque Misr Summer Training Program 2022',
+    description: 'This Certificate of Achievement acknowledges my successful completion of the "Banque Misr Summer Training Program 2022." This program was organized by the Central Administration for Development and Learning within the Human Resources Sector of Banque Misr. It signifies my successful engagement and completion of the designated training track, demonstrating my commitment to continuous learning and professional development within the human resources field.',
+    image: 'images/certificates/banque-misr-certificate .jpg'
+  },
+  'military-accounting': {
+    title: 'Military Service - Procurement Accountant',
+    description: 'This Certificate of Experience, issued by the Command of Brigade 96 Artillery of the Air Defense Forces, verifies my service during the period of January 7, 2023, to March 1, 2024. During my military service, I served as a Procurement Accountant, demonstrating proficiency and excellence in managing procurement-related financial operations. This experience provided me with practical skills in financial record-keeping, expenditure tracking, and inventory management within a structured organizational environment.',
+    image: 'images/certificates/military-accounting.jpg'
+  }
+};
+
+// Open certificate modal
+function openCertificateModal(certificateId) {
+  const certificate = certificateData[certificateId];
+  if (certificate) {
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const certificateModal = document.getElementById('certificateModal');
+    
+    if (modalImage && modalTitle && modalDescription && certificateModal) {
+      modalImage.src = certificate.image;
+      modalImage.alt = certificate.title;
+      modalTitle.textContent = certificate.title;
+      modalDescription.textContent = certificate.description;
+      
+      certificateModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Focus trap for accessibility
+      const modalClose = document.getElementById('modalClose');
+      if (modalClose) modalClose.focus();
+    }
+  }
+}
+
+// Close certificate modal
+function closeCertificateModal() {
+  const certificateModal = document.getElementById('certificateModal');
+  if (certificateModal) {
+    certificateModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
 // --- Multilingual Support ---
 const translations = {
   en: {
@@ -127,40 +290,154 @@ function animateCounters() {
   });
 }
 
-// --- Skills Progress Bars ---
-function animateSkills() {
-  document.querySelectorAll('.progress-bar').forEach(bar => {
-    const percent = bar.getAttribute('data-skill');
-    const progress = bar.querySelector('.progress');
-    setTimeout(() => {
-      progress.style.width = percent + '%';
-    }, 400);
+// --- Skills Animation System ---
+function initSkillsAnimation() {
+  const skillItems = document.querySelectorAll('.skill-item');
+  
+  const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const skillItem = entry.target;
+        const skillProgress = skillItem.querySelector('.skill-progress');
+        const skillLevel = skillProgress.getAttribute('data-level');
+        
+        // Add animation class
+        skillItem.classList.add('fade-in');
+        
+        // Animate skill bar
+        setTimeout(() => {
+          skillProgress.style.width = skillLevel + '%';
+        }, 300);
+        
+        // Unobserve after animation
+        skillsObserver.unobserve(skillItem);
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  skillItems.forEach(item => {
+    skillsObserver.observe(item);
   });
 }
 
-// --- Fade-in/Slide-up Animations on Scroll ---
-function revealOnScroll() {
-  const revealEls = document.querySelectorAll('.about-section, .projects-section, .skills-section, .testimonials-section, .contact-section, .project-card, .counter, .skill, blockquote');
-  const windowHeight = window.innerHeight;
-  revealEls.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < windowHeight - 60) {
-      el.style.opacity = 1;
-      el.style.transform = 'none';
-    } else {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(40px)';
-    }
+// --- Skill Tags Interaction ---
+function initSkillTags() {
+  const skillTags = document.querySelectorAll('.skill-tag');
+  
+  skillTags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      // Add a subtle click effect
+      tag.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        tag.style.transform = '';
+      }, 150);
+    });
+    
+    // Add hover sound effect simulation (visual feedback)
+    tag.addEventListener('mouseenter', () => {
+      tag.style.animation = 'pulse 0.3s ease-in-out';
+    });
+    
+    tag.addEventListener('mouseleave', () => {
+      tag.style.animation = '';
+    });
   });
 }
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('resize', revealOnScroll);
-window.addEventListener('DOMContentLoaded', () => {
+
+// --- Skills Section Enhancement ---
+function enhanceSkillsSection() {
+  const skillItems = document.querySelectorAll('.skill-item');
+  
+  skillItems.forEach(item => {
+    // Add click to show skill details
+    item.addEventListener('click', () => {
+      const skillName = item.getAttribute('data-skill');
+      const skillLevel = item.querySelector('.skill-progress').getAttribute('data-level');
+      
+      // Create a temporary tooltip or notification
+      showSkillNotification(skillName, skillLevel);
+    });
+  });
+}
+
+// Show skill notification
+function showSkillNotification(skillName, level) {
+  // Remove existing notification
+  const existingNotification = document.querySelector('.skill-notification');
+  if (existingNotification) {
+    existingNotification.remove();
+  }
+  
+  // Create notification element
+  const notification = document.createElement('div');
+  notification.className = 'skill-notification';
+  notification.innerHTML = `
+    <div class="notification-content">
+      <h4>${skillName}</h4>
+      <p>Proficiency Level: ${level}%</p>
+    </div>
+  `;
+  
+  // Add styles
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 247, 0.9), rgba(0, 195, 255, 0.9));
+    color: #181f2a;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 255, 247, 0.3);
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 247, 0.3);
+  `;
+  
+  document.body.appendChild(notification);
+  
+  // Animate in
+  setTimeout(() => {
+    notification.style.transform = 'translateX(0)';
+  }, 100);
+  
+  // Remove after 3 seconds
+  setTimeout(() => {
+    notification.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      notification.remove();
+    }, 300);
+  }, 3000);
+}
+
+// Initialize skills animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  initSkillsAnimation();
+  initSkillTags();
+  enhanceSkillsSection();
   setLanguage('en');
   animateCounters();
-  animateSkills();
-  revealOnScroll();
-  animateNavbarRole();
+  
+  // Trigger continuous navbar animation
+  setTimeout(() => {
+    const logoRole = document.querySelector('.logo-role');
+    const logoName = document.querySelector('.logo-name');
+    
+    if (logoRole) {
+      logoRole.style.animation = 'typewriterRole 4s steps(18, end) infinite, blinkCaret 0.7s step-end infinite';
+      logoRole.classList.add('typing');
+    }
+    
+    if (logoName) {
+      logoName.style.animation = 'typewriterName 4s steps(13, end) infinite 2s, blinkCaret 0.7s step-end infinite 2s';
+      logoName.classList.add('typing');
+    }
+  }, 100);
+  
   // Set year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -188,39 +465,190 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     codeBg.innerHTML = layers;
   }
-});
 
-// --- Modal Logic for Projects ---
-const modal = document.getElementById('project-modal');
-const modalContent = modal.querySelector('.modal-body');
-const closeModalBtn = modal.querySelector('.close-modal');
+  // Certificate Modal Event Listeners
+  // Add click listeners to all certificate cards
+  const certificateCards = document.querySelectorAll('.certificate-card');
+  
+  certificateCards.forEach((card, index) => {
+    // Set animation delay for staggered effect
+    const readMoreBtn = card.querySelector('.read-more-btn');
+    if (readMoreBtn) {
+      readMoreBtn.style.setProperty('--animation-order', index);
+    }
+    
+    card.addEventListener('click', (e) => {
+      // Don't trigger if clicking on the read more button (to avoid double triggering)
+      if (e.target.classList.contains('read-more-btn')) {
+        return;
+      }
+      
+      e.preventDefault();
+      const certificateId = card.getAttribute('data-certificate');
+      openCertificateModal(certificateId);
+    });
+  });
 
-document.querySelectorAll('.project-modal-btn').forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    // Example: You can expand this to load different project details
-    modalContent.innerHTML = `
-      <h3>${translations[currentLang]['project1_title']}</h3>
-      <img src="images/design-website-template-using HTML5 -CSS3.jpg" alt="Project 1 screenshot" style="width:100%;border-radius:12px;margin-bottom:1rem;">
-      <p>${translations[currentLang]['project1_desc']}</p>
-      <a href="#" style="color:var(--primary);text-decoration:underline;">${currentLang === 'en' ? 'View on GitHub' : 'شاهد على جيتهاب'}</a>
-    `;
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+  // Also keep the read more button clickable for better UX
+  const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  
+  readMoreButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation(); // Prevent the card click event from also firing
+      const certificateCard = btn.closest('.certificate-card');
+      const certificateId = certificateCard.getAttribute('data-certificate');
+      openCertificateModal(certificateId);
+    });
+  });
+
+  // Close modal events
+  const modalClose = document.getElementById('modalClose');
+  const certificateModal = document.getElementById('certificateModal');
+  
+  if (modalClose) {
+    modalClose.addEventListener('click', closeCertificateModal);
+  }
+  
+  if (certificateModal) {
+    certificateModal.addEventListener('click', (e) => {
+      if (e.target === certificateModal) {
+        closeCertificateModal();
+      }
+    });
+  }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certificateModal && certificateModal.classList.contains('active')) {
+      closeCertificateModal();
+    }
   });
 });
-closeModalBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-function closeModal() {
-  modal.setAttribute('aria-hidden', 'true');
+
+// --- Project Modal System ---
+const projectModal = document.getElementById('projectModal');
+const projectModalClose = document.getElementById('projectModalClose');
+const projectModalTitle = document.getElementById('projectModalTitle');
+const projectModalDescription = document.getElementById('projectModalDescription');
+const projectModalTech = document.getElementById('projectModalTech');
+const projectModalLink = document.getElementById('projectModalLink');
+
+// Project data
+const projectData = {
+  'arcon-corp': {
+    title: '🔹 Arcon Corp Website',
+    description: 'A responsive corporate website for a construction and engineering company. It showcases services, projects, and contact information with a clean and professional UI/UX design.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Design',
+    link: 'https://staging.arconcorp.com'
+  },
+  'egyptian-robotics': {
+    title: '🔹 Egyptian Robotics Union Website',
+    description: 'A bilingual, modern website for the Egyptian Robotics Union, highlighting events, competitions, and educational programs. The site emphasizes clear navigation and responsive design to promote robotics and technology among youth in Egypt.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Bilingual Support',
+    link: 'https://staging.errcsf.org'
+  },
+  'dh-consult': {
+    title: '🔹 DH Consult Company Website',
+    description: 'Corporate website for DH Consult, specializing in advanced education, technical training, engineering, and scientific research. Established in 2001, the site highlights partnerships and tailored solutions with a clean, user-friendly design.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, UI/UX Best Practices',
+    link: 'https://darkgoldenrod-gnu-568360.hostingersite.com'
+  },
+  'ti-educational': {
+    title: '🔹 TI Educational Company Website',
+    description: 'Website for TI Educational, a global leader in virtual reality education, lab simulations, and turnkey training solutions since 1998. The site presents company expertise and regional expansion in the Middle East with a modern, responsive layout.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Web App',
+    link: 'https://forestgreen-koala-992569.hostingersite.com'
+  },
+  'medyour': {
+    title: '🔹 Medyour – Digital Healthcare Platform',
+    description: 'A comprehensive website for Medyour, a pioneering digital healthcare provider in the Middle East. It offers an integrated ecosystem with mobile apps and portals for individuals and organizations, focusing on accessibility, innovation, and seamless healthcare management.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Mobile Integration',
+    link: 'https://medyour.com'
+  },
+  'labsforhome': {
+    title: '🔹 LabsForHome – Virtual Science Lab Platform',
+    description: 'A hybrid learning system combining hardware kits and gaming software to deliver virtual science labs in biology, chemistry, and physics. Enables teachers to guide students through realistic experiment simulations, enhancing learning with repeatable practice. The company\'s website features a clean design and responsive navigation.',
+    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Gamification',
+    link: 'https://lightcyan-salamander-875465.hostingersite.com'
+  },
+  'todo-app': {
+    title: '🔹 Todo List App',
+    description: 'A modern and interactive Todo List web application that helps users manage their tasks efficiently. Features include adding, editing, marking as complete, and removing tasks, with a clean and intuitive UI. Built for productivity and ease of use.',
+    tech: 'HTML5, CSS3, JavaScript, Local Storage',
+    link: 'https://omarelshemy98.github.io/todo-list-app/'
+  }
+};
+
+// Function to open project modal
+function openProjectModal(projectId) {
+  const project = projectData[projectId];
+  if (!project) return;
+
+  projectModalTitle.textContent = project.title;
+  projectModalDescription.textContent = project.description;
+  projectModalTech.innerHTML = `<strong>Tech Stack:</strong> ${project.tech}`;
+  projectModalLink.innerHTML = `<a href="${project.link}" target="_blank" rel="noopener">Visit Project → ${project.link}</a>`;
+
+  projectModal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Focus management
+  projectModalClose.focus();
+}
+
+// Function to close project modal
+function closeProjectModal() {
+  projectModal.classList.remove('active');
   document.body.style.overflow = '';
 }
-// Keyboard accessibility for modal
-closeModalBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') closeModal(); });
 
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      card.querySelector('.project-modal-btn').click();
+// Event listeners for project cards
+document.addEventListener('DOMContentLoaded', () => {
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  projectCards.forEach((card, index) => {
+    const projectId = card.dataset.project;
+    const readMoreBtn = card.querySelector('.read-more-btn');
+    
+    // Add animation delay for wave effect
+    if (readMoreBtn) {
+      readMoreBtn.style.setProperty('--animation-order', index);
+    }
+    
+    // Make entire card clickable
+    card.addEventListener('click', (e) => {
+      // Prevent double trigger if clicking the button
+      if (e.target === readMoreBtn) return;
+      openProjectModal(projectId);
+    });
+    
+    // Button click handler
+    if (readMoreBtn) {
+      readMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent card click
+        openProjectModal(projectId);
+      });
+    }
+  });
+  
+  // Close modal events
+  if (projectModalClose) {
+    projectModalClose.addEventListener('click', closeProjectModal);
+  }
+  
+  if (projectModal) {
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) {
+        closeProjectModal();
+      }
+    });
+  }
+  
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+      closeProjectModal();
     }
   });
 });
