@@ -65,8 +65,13 @@ body {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2.5px solid var(--neon);
-  width: 0;
-  animation: typewriterRole 2.1s steps(24, end) 0.2s forwards, blinkCaret 0.7s step-end infinite;
+  min-width: 0;
+  width: auto;
+  transition: color 0.3s, border-color 0.3s;
+  display: inline-block;
+  vertical-align: bottom;
+  letter-spacing: 0.5px;
+  animation: none;
 }
 .logo-name {
   font-size: 1.25rem;
@@ -560,10 +565,6 @@ body {
 }
 [dir="rtl"] .services-grid {
   flex-direction: row-reverse;
-}
-@keyframes typewriterRole {
-  from { width: 0; }
-  to { width: 19ch; }
 }
 @keyframes typewriterName {
   from { width: 0; }

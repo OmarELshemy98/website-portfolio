@@ -160,6 +160,7 @@ window.addEventListener('DOMContentLoaded', () => {
   animateCounters();
   animateSkills();
   revealOnScroll();
+  animateNavbarRole();
   // Set year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
 });
@@ -301,3 +302,57 @@ if (logoImg) {
 // Add ARIA attributes
 if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 if (closeMenu) closeMenu.setAttribute('aria-label', 'Close menu');
+
+// --- Navbar Role Animation ---
+function animateNavbarRole() {
+  const roleEl = document.querySelector('.logo-role');
+  if (!roleEl) return;
+  const text = 'Front end developer';
+  let i = 0;
+  let isErasing = false;
+  let caretBlinkInterval;
+
+  // Always start with empty text
+  roleEl.textContent = '';
+
+  // Caret blink effect
+  function startCaretBlink() {
+    if (caretBlinkInterval) clearInterval(caretBlinkInterval);
+    caretBlinkInterval = setInterval(() => {
+      if (roleEl) {
+        roleEl.style.borderRightColor = roleEl.style.borderRightColor === 'transparent' ? 'var(--neon)' : 'transparent';
+      }
+    }, 500);
+  }
+  function stopCaretBlink() {
+    if (caretBlinkInterval) clearInterval(caretBlinkInterval);
+    if (roleEl) roleEl.style.borderRightColor = 'var(--neon)';
+  }
+
+  function typeLoop() {
+    if (!isErasing) {
+      roleEl.textContent = text.slice(0, i);
+      i++;
+      if (i > text.length) {
+        isErasing = true;
+        startCaretBlink();
+        setTimeout(typeLoop, 1200); // Pause before erasing
+        return;
+      }
+    } else {
+      roleEl.textContent = text.slice(0, i);
+      i--;
+      if (i < 0) {
+        isErasing = false;
+        // Clear text before starting to type again
+        roleEl.textContent = '';
+        stopCaretBlink();
+        setTimeout(typeLoop, 700); // Pause before typing again
+        return;
+      }
+    }
+    setTimeout(typeLoop, isErasing ? 45 + Math.random()*30 : 70 + Math.random()*40);
+  }
+  stopCaretBlink();
+  typeLoop();
+}
