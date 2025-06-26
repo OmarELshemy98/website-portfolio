@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Your Name</title>
+  <meta name="description" content="Modern portfolio website for a Frontend Developer.">
+  <link rel="icon" href="images/profile-photo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="main-navbar dark-navbar" role="navigation" aria-label="Main Navigation">
+    <div class="navbar-inner">
+      <div class="logo-text">
+        <span class="logo-role">Front end developer</span><br>
+        <span class="logo-name">Omar Elshemy</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" data-i18n="nav_services">Services</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">العربية</button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="animated-bg"></div>
+    <div class="hero-content">
+      <div class="hexagon-img">
+        <img src="images/profile-photo.jpg" alt="Profile photo" class="profile-img">
+      </div>
+      <div class="hero-text">
+        <h1><span data-i18n="hero_hi">Hello, It's Me</span><br>
+          <span class="hero-name">John Kendric</span><br>
+          <span data-i18n="hero_role">And I'm a <span class='highlight'>Frontend Developer</span></span>
+        </h1>
+        <p data-i18n="hero_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ab, autem repellat incidunt ipsam perspiciatis.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn neon-btn" data-i18n="hero_cv">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-inner">
+      <div class="about-img">
+        <div class="hexagon-img small">
+          <img src="images/profile-photo.jpg" alt="Profile photo" class="profile-img">
+        </div>
+      </div>
+      <div class="about-text">
+        <h2><span data-i18n="about_title">About <span class="highlight">Me</span></span></h2>
+        <h3 data-i18n="about_role">Frontend Developer!</h3>
+        <p data-i18n="about_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nisi, deserunt explicabo deleniti consequatur perspiciatis quibusdam, voluptates maxime! Nesciunt possimus distinctio fugiat molestias excepturi explicabo commodi accusamus vero recusandae, molestiae excepturi cupiditate voluptatibus.</p>
+        <a href="#" class="btn neon-btn" data-i18n="about_more">Read More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <h2 class="section-title"><span data-i18n="services_title">Our <span class="highlight">Services</span></span></h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">💻</div>
+        <h3 data-i18n="service_web">Web Development</h3>
+        <p data-i18n="service_web_desc">Modern and responsive websites using the latest technologies.</p>
+        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3 data-i18n="service_design">Graphic Design</h3>
+        <p data-i18n="service_design_desc">Creative and unique designs for your brand and business.</p>
+        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3 data-i18n="service_marketing">Digital Marketing</h3>
+        <p data-i18n="service_marketing_desc">Grow your business with smart digital marketing solutions.</p>
+        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <h2 class="section-title"><span data-i18n="portfolio_title">Latest <span class="highlight">Project</span></span></h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="images/web-development.jpg" alt="Project 1"></div>
+      <div class="portfolio-item"><img src="images/introduction-to-css-grid.jpg" alt="Project 2"></div>
+      <div class="portfolio-item"><img src="images/Introduction-to-Programming-Using-JavaScript.jpg" alt="Project 3"></div>
+      <div class="portfolio-item"><img src="images/design-website-template-using HTML5 -CSS3.jpg" alt="Project 4"></div>
+      <div class="portfolio-item"><img src="images/front-end-beginners.jpg" alt="Project 5"></div>
+      <div class="portfolio-item"><img src="images/coding-for-data.jpg" alt="Project 6"></div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2 class="section-title"><span data-i18n="contact_title">Contact <span class="highlight">Me!</span></span></h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required data-i18n-placeholder="contact_name">
+      <input type="email" name="email" placeholder="Your Email" required data-i18n-placeholder="contact_email">
+      <textarea name="message" placeholder="Your Message" required data-i18n-placeholder="contact_message"></textarea>
+      <button type="submit" class="btn neon-btn" data-i18n="contact_send">Send</button>
+    </form>
+  </section>
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> <span class="footer-name">Your Name</span>. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
