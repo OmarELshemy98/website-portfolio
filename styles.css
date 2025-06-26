@@ -577,3 +577,31 @@ body {
 @keyframes hideCaret {
   to { border-right-color: transparent; }
 }
+.code-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.22;
+  filter: blur(1.5px) brightness(1.1);
+  background: none;
+}
+.code-bg .code-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #00fff7cc;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  white-space: pre;
+  user-select: none;
+  animation: codeMove 12s linear infinite;
+}
+@keyframes codeMove {
+  0% { transform: translateY(40%); }
+  100% { transform: translateY(-60%); }
+}

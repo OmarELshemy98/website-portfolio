@@ -163,6 +163,31 @@ window.addEventListener('DOMContentLoaded', () => {
   animateNavbarRole();
   // Set year in footer
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Inject enhanced animated code background in hero
+  const codeBg = document.querySelector('.code-bg');
+  if (codeBg) {
+    const codeSnippets = [
+      `// Portfolio.js\nfunction Developer() {\n  const skills = ['HTML', 'CSS', 'JavaScript', 'React'];\n  for (let skill of skills) {\n    console.log(skill);\n  }\n  return <Portfolio />;\n}`,
+      `// Responsive Design\n@media (max-width: 900px) {\n  .container { flex-direction: column; }\n}`,
+      `// Creativity\nconst design = () => 'Modern & Clean';` ,
+      `// Animation\nrequestAnimationFrame(() => render());` ,
+      `// Contact\nconst email = 'me@portfolio.com';` ,
+      `// Experience\nlet years = 5;\nconsole.log('Years:', years);` ,
+      `// UI/UX\nfunction createButton(text) {\n  return '<button>' + text + '</button>';\n}` ,
+      `// Frameworks\nimport React from 'react';\nimport NextJS from 'next';` ,
+      `// CSS Variables\n:root {\n  --primary: #00fff7;\n  --bg: #181f2a;\n}`
+    ];
+    let layers = '';
+    for (let i = 0; i < 3; i++) {
+      const snippet = codeSnippets.slice(i * 3, (i + 1) * 3).join('\n\n');
+      const speed = 10 + i * 4;
+      const opacity = 0.18 + i * 0.08;
+      const top = Math.random() * 40;
+      layers += `<div class=\"code-lines\" style=\"animation-duration:${speed}s;opacity:${opacity};top:${top}%;\">${snippet}</div>`;
+    }
+    codeBg.innerHTML = layers;
+  }
 });
 
 // --- Modal Logic for Projects ---
