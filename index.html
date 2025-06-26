@@ -49,59 +49,78 @@
   </section>
   <!-- About Section -->
   <section id="about" class="about-section">
-    <div class="about-inner">
-      <div class="about-img">
-        <div class="hexagon-img small">
-          <img src="images/profile-photo.jpg" alt="Profile photo" class="profile-img">
-        </div>
+    <div class="about-inner" style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: flex-start;">
+      <div class="about-text" style="flex: 2 1 340px; min-width: 260px;">
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <p>Hi, I'm <b>Omar Ibrahim Hamdy Elshemy</b> — a digital craftsman who transforms ideas into interactive realities. My journey in front-end development is fueled by curiosity, creativity, and a relentless pursuit of pixel-perfect design. I don't just build websites; I create digital experiences that connect, inspire, and delight users across every device.</p>
+        <p>With a toolkit packed with HTML5, CSS3, JavaScript, React, and Vue.js, I blend code and creativity to deliver solutions that are as beautiful as they are functional. Whether it's a sleek landing page, a dynamic web app, or a seamless user interface, I believe every detail matters. My approach is rooted in UI/UX best practices, ensuring every project is not just well-coded, but truly user-centered.</p>
+        <p>Collaboration is my superpower — I thrive on turning complex challenges into elegant, maintainable solutions, working hand-in-hand with designers and back-end teams. From startups to established brands, I've helped clients stand out in the digital world with innovative, high-performance web experiences. Let's build something extraordinary together!</p>
       </div>
-      <div class="about-text">
-        <h2><span data-i18n="about_title">About <span class="highlight">Me</span></span></h2>
-        <h3 data-i18n="about_role">Frontend Developer!</h3>
-        <p data-i18n="about_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, nisi, deserunt explicabo deleniti consequatur perspiciatis quibusdam, voluptates maxime! Nesciunt possimus distinctio fugiat molestias excepturi explicabo commodi accusamus vero recusandae, molestiae excepturi cupiditate voluptatibus.</p>
-        <a href="#" class="btn neon-btn" data-i18n="about_more">Read More</a>
-      </div>
-    </div>
-  </section>
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <h2 class="section-title"><span data-i18n="services_title">Our <span class="highlight">Services</span></span></h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">💻</div>
-        <h3 data-i18n="service_web">Web Development</h3>
-        <p data-i18n="service_web_desc">Modern and responsive websites using the latest technologies.</p>
-        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <h3 data-i18n="service_design">Graphic Design</h3>
-        <p data-i18n="service_design_desc">Creative and unique designs for your brand and business.</p>
-        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3 data-i18n="service_marketing">Digital Marketing</h3>
-        <p data-i18n="service_marketing_desc">Grow your business with smart digital marketing solutions.</p>
-        <a href="#" class="btn service-btn" data-i18n="service_more">Read More</a>
+      <div class="about-info" style="flex: 1 1 220px; min-width: 200px;">
+        <h2 style="margin-bottom: 1.2rem;">Basic Information</h2>
+        <table style="width: 100%; font-size: 1.08rem;">
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">AGE:</td><td>26</td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">EMAIL:</td><td class="email-cell"><a href="mailto:omarelshemy010@gmail.com" style="color: #27ae60; text-decoration: none;">omarelshemy010@gmail.com</a></td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">LinkedIn:</td><td><a href="https://www.linkedin.com/in/omar-elshemy1081998" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none;">linkedin.com/in/omar-elshemy1081998</a></td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">Whatapp:</td><td style="color: #27ae60;"><a href="https://wa.me/201026238072" target="_blank" rel="noopener" style="color: #27ae60; text-decoration: none;">01026238072</a></td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">PHONE:</td><td>01204777405</td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">ADDRESS:</td><td>"Fifth Settlement", New cairo</td></tr>
+          <tr><td style="font-weight: bold; padding-right: 0.5em;">ADDRESS:</td><td>"Mohrm bk", Alexandria</td></tr>
+        </table>
       </div>
     </div>
   </section>
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio-section">
-    <h2 class="section-title"><span data-i18n="portfolio_title">Latest <span class="highlight">Project</span></span></h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="images/web-development.jpg" alt="Project 1"></div>
-      <div class="portfolio-item"><img src="images/introduction-to-css-grid.jpg" alt="Project 2"></div>
-      <div class="portfolio-item"><img src="images/Introduction-to-Programming-Using-JavaScript.jpg" alt="Project 3"></div>
-      <div class="portfolio-item"><img src="images/design-website-template-using HTML5 -CSS3.jpg" alt="Project 4"></div>
-      <div class="portfolio-item"><img src="images/front-end-beginners.jpg" alt="Project 5"></div>
-      <div class="portfolio-item"><img src="images/coding-for-data.jpg" alt="Project 6"></div>
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <div class="project-title">🔹 Arcon Corp Website</div>
+        <div class="project-desc">A responsive corporate website for a construction and engineering company. It showcases services, projects, and contact information with a clean and professional UI/UX design.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Design</div>
+        <div class="project-link"><a href="https://staging.arconcorp.com" target="_blank" rel="noopener">Live Link: staging.arconcorp.com</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 Egyptian Robotics Union Website</div>
+        <div class="project-desc">A bilingual, modern website for the Egyptian Robotics Union, highlighting events, competitions, and educational programs. The site emphasizes clear navigation and responsive design to promote robotics and technology among youth in Egypt.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, Bilingual Support</div>
+        <div class="project-link"><a href="https://staging.errcsf.org" target="_blank" rel="noopener">Live Link: staging.errcsf.org</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 DH Consult Company Website</div>
+        <div class="project-desc">Corporate website for DH Consult, specializing in advanced education, technical training, engineering, and scientific research. Established in 2001, the site highlights partnerships and tailored solutions with a clean, user-friendly design.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, UI/UX Best Practices</div>
+        <div class="project-link"><a href="https://darkgoldenrod-gnu-568360.hostingersite.com" target="_blank" rel="noopener">Live Link: darkgoldenrod-gnu-568360.hostingersite.com</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 TI Educational Company Website</div>
+        <div class="project-desc">Website for TI Educational, a global leader in virtual reality education, lab simulations, and turnkey training solutions since 1998. The site presents company expertise and regional expansion in the Middle East with a modern, responsive layout.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Web App</div>
+        <div class="project-link"><a href="https://forestgreen-koala-992569.hostingersite.com" target="_blank" rel="noopener">Live Link: forestgreen-koala-992569.hostingersite.com</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 Medyour – Digital Healthcare Platform</div>
+        <div class="project-desc">A comprehensive website for Medyour, a pioneering digital healthcare provider in the Middle East. It offers an integrated ecosystem with mobile apps and portals for individuals and organizations, focusing on accessibility, innovation, and seamless healthcare management.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, Mobile Integration</div>
+        <div class="project-link"><a href="https://medyour.com" target="_blank" rel="noopener">Live Link: medyour.com</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 LabsForHome – Virtual Science Lab Platform</div>
+        <div class="project-desc">A hybrid learning system combining hardware kits and gaming software to deliver virtual science labs in biology, chemistry, and physics. Enables teachers to guide students through realistic experiment simulations, enhancing learning with repeatable practice. The company's website features a clean design and responsive navigation.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Tailwind CSS, Gamification</div>
+        <div class="project-link"><a href="https://lightcyan-salamander-875465.hostingersite.com" target="_blank" rel="noopener">Live Link: lightcyan-salamander-875465.hostingersite.com</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">🔹 Todo List App</div>
+        <div class="project-desc">A modern and interactive Todo List web application that helps users manage their tasks efficiently. Features include adding, editing, marking as complete, and removing tasks, with a clean and intuitive UI. Built for productivity and ease of use.</div>
+        <div class="project-tech">Tech Stack: HTML5, CSS3, JavaScript, Local Storage</div>
+        <div class="project-link"><a href="https://omarelshemy98.github.io/todo-list-app/" target="_blank" rel="noopener">Live Link: omarelshemy98.github.io/todo-list-app/</a></div>
+      </div>
     </div>
   </section>
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
-    <h2 class="section-title"><span data-i18n="contact_title">Contact <span class="highlight">Me!</span></span></h2>
+    <h2 class="section-title">Contact <span class="highlight">Me!</span></h2>
     <form class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required data-i18n-placeholder="contact_name">
       <input type="email" name="email" placeholder="Your Email" required data-i18n-placeholder="contact_email">
