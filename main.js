@@ -163,117 +163,6 @@ function closeCertificateModal() {
   }
 }
 
-// --- Multilingual Support ---
-const translations = {
-  en: {
-    nav_home: "Home",
-    nav_aboutus: "About us",
-    nav_activities: "Activities",
-    nav_competitions: "Competitions",
-    nav_subscription: "Subscription",
-    nav_news: "News",
-    nav_login: "Login",
-    nav_register: "Register",
-    nav_logout: "Logout",
-    nav_about: "About",
-    nav_projects: "Projects",
-    nav_skills: "Skills",
-    nav_contact: "Contact",
-    hero_title: "Hi, I'm Your Name",
-    hero_job: "Frontend Developer",
-    hero_intro: "I build creative, modern, and performant web experiences.",
-    hero_cta: "Contact Me",
-    about_title: "About Me",
-    about_bio: "Short bio goes here. Passionate about web development and UI/UX design.",
-    about_years: "Years Experience",
-    about_projects: "Projects",
-    projects_title: "Projects",
-    project1_title: "Project One",
-    project1_desc: "Short description of the project.",
-    project1_more: "More",
-    skills_title: "Skills",
-    skill_html: "HTML5",
-    skill_css: "CSS3",
-    skill_js: "JavaScript",
-    testimonials_title: "Testimonials",
-    testimonial1: '"A fantastic developer! Highly recommended."',
-    contact_title: "Contact Me",
-    contact_send: "Send",
-    footer_rights: "All rights reserved.",
-    contact_name: "Your Name",
-    contact_email: "Your Email",
-    contact_message: "Your Message"
-  },
-  ar: {
-    nav_home: "الرئيسية",
-    nav_aboutus: "من نحن",
-    nav_activities: "الأنشطة",
-    nav_competitions: "المسابقات",
-    nav_subscription: "الاشتراك",
-    nav_news: "الأخبار",
-    nav_login: "تسجيل الدخول",
-    nav_register: "تسجيل جديد",
-    nav_logout: "تسجيل الخروج",
-    nav_about: "عنّي",
-    nav_projects: "المشاريع",
-    nav_skills: "المهارات",
-    nav_contact: "تواصل",
-    hero_title: "مرحباً، أنا اسمك",
-    hero_job: "مطور واجهات أمامية",
-    hero_intro: "أبني تجارب ويب إبداعية وحديثة وعالية الأداء.",
-    hero_cta: "تواصل معي",
-    about_title: "عنّي",
-    about_bio: "نبذة قصيرة هنا. شغوف بتطوير الويب وتصميم تجربة المستخدم.",
-    about_years: "سنوات الخبرة",
-    about_projects: "مشاريع",
-    projects_title: "المشاريع",
-    project1_title: "المشروع الأول",
-    project1_desc: "وصف مختصر للمشروع.",
-    project1_more: "المزيد",
-    skills_title: "المهارات",
-    skill_html: "HTML5",
-    skill_css: "CSS3",
-    skill_js: "جافاسكريبت",
-    testimonials_title: "آراء العملاء",
-    testimonial1: '"مطور رائع! أنصح بالتعامل معه."',
-    contact_title: "تواصل معي",
-    contact_send: "إرسال",
-    footer_rights: "جميع الحقوق محفوظة.",
-    contact_name: "اسمك",
-    contact_email: "بريدك الإلكتروني",
-    contact_message: "رسالتك"
-  }
-};
-
-let currentLang = 'en';
-
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  // Update all data-i18n text
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-  // Update placeholders
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang][key]) {
-      el.placeholder = translations[lang][key];
-    }
-  });
-  // Update lang toggle button
-  const langBtn = document.getElementById('lang-toggle');
-  langBtn.textContent = lang === 'en' ? 'AR' : 'EN';
-}
-
-document.getElementById('lang-toggle').addEventListener('click', () => {
-  setLanguage(currentLang === 'en' ? 'ar' : 'en');
-});
-
 // --- Animated Counters ---
 function animateCounters() {
   document.querySelectorAll('.count').forEach(counter => {
@@ -419,7 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsAnimation();
   initSkillTags();
   enhanceSkillsSection();
-  setLanguage('en');
   animateCounters();
   
   // Trigger continuous navbar animation
