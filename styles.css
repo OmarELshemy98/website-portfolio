@@ -2161,6 +2161,26 @@ body {
   .mobile-nav {
     display: flex;
   }
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.2rem;
+  }
+  .hexagon-img {
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-btns {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
 }
 @media (min-width: 701px) {
   .mobile-nav, .burger-menu {
