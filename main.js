@@ -663,98 +663,35 @@ document.body.addEventListener('mousedown', function() {
   document.body.classList.remove('user-is-tabbing');
 });
 
-// --- Navbar Hamburger and Overlay ---
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeMenu = document.getElementById('close-menu');
-
-if (menuToggle && mobileMenu && closeMenu) {
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-    menuToggle.classList.add('open');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeMenu.focus();
-    trapFocus(mobileMenu);
-  });
-  closeMenu.addEventListener('click', closeMobileMenu);
-  // Close on overlay link click
-  mobileMenu.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('click', closeMobileMenu);
-  });
-  // Esc to close
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-      closeMobileMenu();
-    }
-  });
-  // Click on backdrop closes menu
-  mobileMenu.addEventListener('mousedown', e => {
-    if (e.target === mobileMenu) closeMobileMenu();
-  });
-}
-function closeMobileMenu() {
-  mobileMenu.classList.remove('open');
-  menuToggle.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-  mobileMenu.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  menuToggle.focus();
-}
-// Hamburger icon animation
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('open');
-  });
-}
-// Trap focus inside mobile menu
-function trapFocus(container) {
-  const focusable = container.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
-  if (!focusable.length) return;
-  let first = focusable[0];
-  let last = focusable[focusable.length - 1];
-  function handleTab(e) {
-    if (!container.classList.contains('open')) return;
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else {
-        if (document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
+// --- Burger Menu Functionality ---
+document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.getElementById('burgerMenu');
+  const mobileNav = document.getElementById('mobileNav');
+  if (burger && mobileNav) {
+    burger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = burger.classList.toggle('open');
+      mobileNav.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+    // Close menu on nav link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Close menu when clicking outside
+    document.addEventListener('click', function (e) {
+      if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !burger.contains(e.target)) {
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
       }
-    }
+    });
   }
-  container.addEventListener('keydown', handleTab);
-}
-// Sync language toggle in mobile menu
-const langToggle = document.getElementById('lang-toggle');
-const mobileLangToggle = document.getElementById('mobile-lang-toggle');
-if (langToggle && mobileLangToggle) {
-  mobileLangToggle.addEventListener('click', () => {
-    langToggle.click();
-  });
-}
-// Logo fallback for missing image
-const logoImg = document.querySelector('.logo-img');
-if (logoImg) {
-  logoImg.onerror = function() {
-    this.style.display = 'none';
-    const fallback = document.createElement('div');
-    fallback.className = 'logo-img-fallback';
-    fallback.textContent = 'FD'; // Initials fallback
-    fallback.style = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;color:#194378;background:#e0e7ef;border-radius:50%';
-    this.parentNode.appendChild(fallback);
-  };
-}
-// Add ARIA attributes
-if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
-if (closeMenu) closeMenu.setAttribute('aria-label', 'Close menu');
+});
 
 // --- Navbar Role Animation ---
 function animateNavbarRole() {
