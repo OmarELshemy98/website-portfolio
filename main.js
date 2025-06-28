@@ -465,6 +465,12 @@ const projectData = {
     description: 'A modern and interactive Todo List web application that helps users manage their tasks efficiently. Features include adding, editing, marking as complete, and removing tasks, with a clean and intuitive UI. Built for productivity and ease of use.',
     tech: 'HTML5, CSS3, JavaScript, Local Storage',
     link: 'https://omarelshemy98.github.io/todo-list-app/'
+  },
+  'student-dashboard': {
+    title: '🔹 Student Dashboard - Math Learning Platform',
+    description: 'A comprehensive student dashboard for a math learning platform featuring attendance tracking, course management, and student profile settings. The dashboard provides an intuitive interface for students to monitor their academic progress, view enrolled courses, and manage their learning experience with modern UI/UX design.',
+    tech: 'HTML5, CSS3, JavaScript, Responsive Design, Dashboard UI',
+    link: 'https://omarelshemy98.github.io/student-dashboard-/'
   }
 };
 
