@@ -126,6 +126,12 @@ const certificateData = {
     title: 'Military Service - Procurement Accountant',
     description: 'This Certificate of Experience, issued by the Command of Brigade 96 Artillery of the Air Defense Forces, verifies my service during the period of January 7, 2023, to March 1, 2024. During my military service, I served as a Procurement Accountant, demonstrating proficiency and excellence in managing procurement-related financial operations. This experience provided me with practical skills in financial record-keeping, expenditure tracking, and inventory management within a structured organizational environment.',
     image: 'images/certificates/military-accounting.jpg'
+  },
+  'medyour': {
+    title: 'Medyour Website – Bilingual Healthcare Services Platform',
+    description: 'Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)',
+    link: 'https://medyour.com'
   }
 };
 
@@ -426,51 +432,51 @@ const projectModalLink = document.getElementById('projectModalLink');
 const projectData = {
   'arcon-corp': {
     title: '🔹 Arcon Corp Website',
-    description: 'A responsive corporate website for a construction and engineering company. It showcases services, projects, and contact information with a clean and professional UI/UX design.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Design',
+    description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
+    tech: 'Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards',
     link: 'https://staging.arconcorp.com'
   },
   'egyptian-robotics': {
-    title: '🔹 Egyptian Robotics Union Website',
-    description: 'A bilingual, modern website for the Egyptian Robotics Union, highlighting events, competitions, and educational programs. The site emphasizes clear navigation and responsive design to promote robotics and technology among youth in Egypt.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Bilingual Support',
+    title: 'ERRCSF Website (Egyptian Robotics & RC Sports Federation)',
+    description: 'A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.',
+    tech: 'HTML5 (Semantic & Accessible Markup), CSS3 (Custom styles + Tailwind CSS utility framework), JavaScript (Vanilla JS for interactivity), Font Awesome (Icons), Google Fonts (Roboto), Responsive Design (Mobile-first approach)',
     link: 'https://staging.errcsf.org'
   },
   'dh-consult': {
-    title: '🔹 DH Consult Company Website',
-    description: 'Corporate website for DH Consult, specializing in advanced education, technical training, engineering, and scientific research. Established in 2001, the site highlights partnerships and tailored solutions with a clean, user-friendly design.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, UI/UX Best Practices',
+    title: 'ConsultCo – Professional Consulting Services Website',
+    description: 'Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company\'s online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.',
+    tech: 'HTML5 for semantic and accessible markup, Tailwind CSS for rapid, utility-first styling and responsive design, Vanilla JavaScript for interactive features and smooth navigation, Image optimization for fast loading times',
     link: 'https://darkgoldenrod-gnu-568360.hostingersite.com'
   },
   'ti-educational': {
-    title: '🔹 TI Educational Company Website',
-    description: 'Website for TI Educational, a global leader in virtual reality education, lab simulations, and turnkey training solutions since 1998. The site presents company expertise and regional expansion in the Middle East with a modern, responsive layout.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Responsive Web App',
+    title: 'Educational Website for Kitmeer',
+    description: 'A responsive and user-friendly educational website designed to showcase Kitmeer\'s products and solutions for schools, universities, vocational, and industrial sectors. The website features detailed product pages, category-based navigation, and a modern visual design to enhance user engagement and accessibility.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization',
     link: 'https://forestgreen-koala-992569.hostingersite.com'
   },
-  'medyour': {
-    title: '🔹 Medyour – Digital Healthcare Platform',
-    description: 'A comprehensive website for Medyour, a pioneering digital healthcare provider in the Middle East. It offers an integrated ecosystem with mobile apps and portals for individuals and organizations, focusing on accessibility, innovation, and seamless healthcare management.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Mobile Integration',
-    link: 'https://medyour.com'
-  },
   'labsforhome': {
-    title: '🔹 LabsForHome – Virtual Science Lab Platform',
-    description: 'A hybrid learning system combining hardware kits and gaming software to deliver virtual science labs in biology, chemistry, and physics. Enables teachers to guide students through realistic experiment simulations, enhancing learning with repeatable practice. The company\'s website features a clean design and responsive navigation.',
-    tech: 'HTML5, CSS3, JavaScript, Tailwind CSS, Gamification',
+    title: 'Labs For Home Website – Interactive Science Learning Platform',
+    description: 'A modern, responsive web application designed to enhance science education through interactive simulations, gamified learning modules, and comprehensive resource management. The platform provides tailored experiences for students, teachers, and schools, featuring video demonstrations, testimonials, and a robust content management system. The website aims to make science learning engaging, accessible, and effective for various academic levels.',
+    tech: 'Next.js (React Framework), TypeScript, CSS Modules & PostCSS, Responsive Web Design, Modular Component Architecture, Media Asset Management (Images, Videos), Node.js (for build and tooling)',
     link: 'https://lightcyan-salamander-875465.hostingersite.com'
   },
   'todo-app': {
-    title: '🔹 Todo List App',
-    description: 'A modern and interactive Todo List web application that helps users manage their tasks efficiently. Features include adding, editing, marking as complete, and removing tasks, with a clean and intuitive UI. Built for productivity and ease of use.',
-    tech: 'HTML5, CSS3, JavaScript, Local Storage',
+    title: 'To-Do List Web Application',
+    description: 'A simple and intuitive web application that allows users to create, manage, and organize their daily tasks efficiently. The app features task addition, deletion, and completion tracking, providing a seamless user experience for productivity management.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS)',
     link: 'https://omarelshemy98.github.io/todo-list-app/'
   },
   'student-dashboard': {
-    title: '🔹 Student Dashboard - Math Learning Platform',
-    description: 'A comprehensive student dashboard for a math learning platform featuring attendance tracking, course management, and student profile settings. The dashboard provides an intuitive interface for students to monitor their academic progress, view enrolled courses, and manage their learning experience with modern UI/UX design.',
-    tech: 'HTML5, CSS3, JavaScript, Responsive Design, Dashboard UI',
+    title: 'Mathmatic Dashboard Courses',
+    description: 'A web-based dashboard designed to manage and display mathematics courses. The platform provides an intuitive interface for users to log in, view available courses, and interact with course content efficiently. The project emphasizes user experience, accessibility, and responsive design.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS)',
     link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
+  },
+  'medyour': {
+    title: 'Medyour Website – Healthcare Services Platform',
+    description: 'A responsive, bilingual (Arabic & English) website for Medyour, designed to showcase healthcare services, address industry challenges, and provide information to users in both languages. The website features dedicated pages for services, FAQs, contact, and more, with a focus on accessibility and user experience.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Support (Arabic & English)',
+    link: 'https://medyour.com'
   }
 };
 
