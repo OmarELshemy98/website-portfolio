@@ -470,7 +470,7 @@ const projectData = {
     title: '🔹 Student Dashboard - Math Learning Platform',
     description: 'A comprehensive student dashboard for a math learning platform featuring attendance tracking, course management, and student profile settings. The dashboard provides an intuitive interface for students to monitor their academic progress, view enrolled courses, and manage their learning experience with modern UI/UX design.',
     tech: 'HTML5, CSS3, JavaScript, Responsive Design, Dashboard UI',
-    link: 'https://omarelshemy98.github.io/student-dashboard-/'
+    link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
   }
 };
 
