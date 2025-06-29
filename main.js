@@ -646,3 +646,76 @@ function animateNavbarRole() {
   stopCaretBlink();
   typeLoop();
 }
+
+// CV Modal logic
+const viewCvBtn = document.getElementById('viewCvBtn');
+const cvModal = document.getElementById('cvModal');
+const cvModalClose = document.getElementById('cvModalClose');
+
+// Carousel elements
+const cvImages = cvModal ? cvModal.querySelectorAll('.cv-image') : [];
+const cvPrev = document.getElementById('cvPrev');
+const cvNext = document.getElementById('cvNext');
+const cvIndicators = document.getElementById('cvIndicators');
+let cvCurrent = 0;
+
+function showCvSlide(idx) {
+  if (!cvImages.length) return;
+  cvImages.forEach((img, i) => {
+    img.style.display = i === idx ? 'block' : 'none';
+  });
+  if (cvIndicators) {
+    const dots = cvIndicators.querySelectorAll('.indicator');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === idx);
+    });
+  }
+  cvCurrent = idx;
+}
+
+if (viewCvBtn && cvModal && cvModalClose) {
+  viewCvBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    cvModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    showCvSlide(0);
+  });
+  cvModalClose.addEventListener('click', function() {
+    cvModal.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+  cvModal.addEventListener('click', function(e) {
+    if (e.target === cvModal) {
+      cvModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+  if (cvPrev && cvNext) {
+    cvPrev.addEventListener('click', function() {
+      showCvSlide((cvCurrent - 1 + cvImages.length) % cvImages.length);
+    });
+    cvNext.addEventListener('click', function() {
+      showCvSlide((cvCurrent + 1) % cvImages.length);
+    });
+  }
+  if (cvIndicators) {
+    cvIndicators.addEventListener('click', function(e) {
+      if (e.target.classList.contains('indicator')) {
+        const idx = parseInt(e.target.getAttribute('data-index'));
+        showCvSlide(idx);
+      }
+    });
+  }
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!cvModal.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') {
+      showCvSlide((cvCurrent - 1 + cvImages.length) % cvImages.length);
+    } else if (e.key === 'ArrowRight') {
+      showCvSlide((cvCurrent + 1) % cvImages.length);
+    } else if (e.key === 'Escape') {
+      cvModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+}

@@ -84,7 +84,7 @@
         </h1>
         <p data-i18n="hero_desc">Passionate Front End Developer crafting modern, responsive, and user-friendly web experiences. I turn ideas into interactive digital products with clean code and creative design.</p>
         <div class="hero-btns">
-          <a href="#" class="btn neon-btn" data-i18n="hero_cv">Download CV</a>
+          <a href="#" class="btn neon-btn" id="viewCvBtn" data-i18n="hero_cv">View CV</a>
         </div>
       </div>
     </div>
@@ -780,6 +780,33 @@
         <p class="modal-description" id="projectModalDescription"></p>
         <div class="modal-tech" id="projectModalTech"></div>
         <div class="modal-link" id="projectModalLink"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CV Modal -->
+  <div class="modal-overlay" id="cvModal">
+    <div class="modal-content cv-modal-content">
+      <button class="modal-close" id="cvModalClose">&times;</button>
+      <div class="modal-body cv-modal-body">
+        <div class="cv-carousel" id="cvCarousel">
+          <button class="carousel-arrow left" id="cvPrev" aria-label="Previous CV page">&#8592;</button>
+          <div class="carousel-images">
+            <img class="cv-image" src="images/my-cv/my-cv_page-0001.jpg" alt="CV Page 1" loading="lazy" style="max-width:100%; display: block;" />
+            <img class="cv-image" src="images/my-cv/my-cv_page-0002.jpg" alt="CV Page 2" loading="lazy" style="max-width:100%; display: none;" />
+          </div>
+          <button class="carousel-arrow right" id="cvNext" aria-label="Next CV page">&#8594;</button>
+        </div>
+        <div class="carousel-indicators" id="cvIndicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+        </div>
+        <!-- Download PDF Button -->
+        <div class="cv-download-btn-wrapper" style="text-align:center; margin-top:1.5rem;">
+          <a href="images/my-cv/my-cv.pdf" download class="btn neon-btn cv-download-btn" id="cvDownloadBtn" style="display:inline-block; min-width:160px; font-size:1.1rem;">
+            <span style="vertical-align:middle;">&#128190;</span> Download PDF
+          </a>
+        </div>
       </div>
     </div>
   </div>
