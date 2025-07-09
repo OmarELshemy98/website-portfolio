@@ -30,6 +30,81 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
 });
 
+// Landing Overlay Hide/Show Animation
+window.addEventListener('DOMContentLoaded', function() {
+  var overlay = document.getElementById('landing-overlay');
+  if (overlay) {
+    // Start with show animation
+    overlay.classList.add('landing-show');
+    overlay.classList.remove('landing-hide');
+    // Hide after 5 seconds with animation
+    setTimeout(function() {
+      overlay.classList.remove('landing-show');
+      overlay.classList.add('landing-hide');
+      setTimeout(function() { overlay.style.display = 'none'; }, 700);
+    }, 5000);
+  }
+});
+
+// Code Rain Animation for Landing Overlay
+(function() {
+  var canvas = document.getElementById('code-rain-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  canvas.width = w;
+  canvas.height = h;
+
+  var letters = '01<>[]{};=+-*/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  var fontSize = 22;
+  var columns = Math.floor(w / fontSize);
+  var drops = [];
+  for (var i = 0; i < columns; i++) drops[i] = Math.random() * -h;
+
+  function draw() {
+    ctx.fillStyle = 'rgba(26, 55, 77, 0.18)'; // خلفية شفافة قليلاً
+    ctx.fillRect(0, 0, w, h);
+    ctx.font = fontSize + 'px monospace';
+    ctx.fillStyle = '#00ffb3';
+    for (var i = 0; i < drops.length; i++) {
+      var text = letters[Math.floor(Math.random() * letters.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > h && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i] += 1 + Math.random() * 0.5;
+    }
+  }
+
+  var animationId;
+  function animate() {
+    draw();
+    animationId = requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Resize canvas on window resize
+  window.addEventListener('resize', function() {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+    columns = Math.floor(w / fontSize);
+    drops = [];
+    for (var i = 0; i < columns; i++) drops[i] = Math.random() * -h;
+  });
+
+  // Stop animation when overlay is hidden
+  var observer = new MutationObserver(function() {
+    var overlay = document.getElementById('landing-overlay');
+    if (overlay && overlay.style.display === 'none') {
+      cancelAnimationFrame(animationId);
+    }
+  });
+  observer.observe(document.getElementById('landing-overlay'), { attributes: true, attributeFilter: ['style'] });
+})();
+
 // --- Certificate Modal System ---
 const certificateData = {
   'mahartech-advanced-js': {
