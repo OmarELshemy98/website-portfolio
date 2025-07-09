@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Code Rain Animation for Landing Overlay
+// Code Rain Animation for Landing Overlay (Realistic code snippets)
 (function() {
   var canvas = document.getElementById('code-rain-canvas');
   if (!canvas) return;
@@ -56,24 +56,117 @@ window.addEventListener('DOMContentLoaded', function() {
   canvas.width = w;
   canvas.height = h;
 
-  var letters = '01<>[]{};=+-*/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  // Realistic code snippets (HTML, JS, CSS)
+  var codeSnippets = [
+    '<div class="box">',
+    '<button onclick="go()">',
+    '<input type="text" />',
+    '<img src="logo.png" alt="logo">',
+    '<ul class="nav">',
+    '<li class="item">',
+    '<a href="#">Home</a>',
+    '<h1>Welcome!</h1>',
+    '<meta charset="UTF-8">',
+    '<link rel="stylesheet" href="main.css">',
+    'function handleClick() {',
+    'let result = sum(5, 7);',
+    'const skills = ["HTML", "CSS"]',
+    'console.log("Hi!");',
+    'if (x > 10) { ... }',
+    'for (let i = 0; i < 5; i++)',
+    'setTimeout(() => {...}, 1000);',
+    'document.getElementById("main")',
+    'window.addEventListener("load", ...)',
+    'return a + b;',
+    'background: #1a374d;',
+    'color: #fff;',
+    'padding: 16px 24px;',
+    'margin: 0 auto;',
+    'display: flex;',
+    'align-items: center;',
+    'justify-content: space-between;',
+    'border-radius: 8px;',
+    'font-size: 1.2rem;',
+    'box-shadow: 0 2px 8px #0003;',
+    'transition: all 0.3s;',
+    'export default App;',
+    'import React from "react";',
+    'map(item => <li>{item}</li>)',
+    'filter(Boolean)',
+    'reduce((a, b) => a + b, 0)',
+    'const [state, setState] = useState()',
+    'useEffect(() => {...}, [])',
+    'props.children',
+    'className="container"',
+    'href="/about"',
+    'src="/img/bg.jpg"',
+    'type="button"',
+    'value="Submit"',
+    'id="main-section"',
+    'onClick={handleClick}',
+    'aria-label="Close"',
+    'justify-content: center;',
+    'gap: 12px;',
+    'min-width: 320px;',
+    'max-width: 1200px;',
+    'overflow: hidden;',
+    'position: absolute;',
+    'top: 0;',
+    'left: 0;',
+    'right: 0;',
+    'bottom: 0;',
+    'z-index: 10;',
+    'opacity: 0.8;',
+    'pointer-events: none;',
+    'font-family: Montserrat, sans-serif;',
+    'border: none;',
+    'outline: none;',
+    'cursor: pointer;',
+    'transition: background 0.2s;',
+    'background-color: #222;',
+    'color: #00ffb3;',
+    'height: 100vh;',
+    'width: 100vw;',
+    'margin-bottom: 2rem;',
+    'padding-top: 2rem;',
+    'text-align: center;',
+    'font-weight: bold;',
+    'letter-spacing: 1px;',
+    'line-height: 1.5;',
+    'box-sizing: border-box;',
+    'overflow-x: hidden;',
+    'overflow-y: auto;',
+    'background-image: url("bg.svg");',
+    'background-repeat: no-repeat;',
+    'background-size: cover;',
+    'background-position: center;',
+    'filter: blur(2px);',
+    'transform: scale(1.05);',
+    'animation: fadeIn 1s;',
+    'keyframes fadeIn { ... }',
+    '::-webkit-scrollbar { ... }',
+    '::selection { background: #00ffb3; }',
+    '/* Responsive Design */',
+    '@media (max-width: 600px) { ... }',
+    '/* End of CSS */',
+  ];
   var fontSize = 22;
   var columns = Math.floor(w / fontSize);
   var drops = [];
   for (var i = 0; i < columns; i++) drops[i] = Math.random() * -h;
 
   function draw() {
-    ctx.fillStyle = 'rgba(26, 55, 77, 0.18)'; // خلفية شفافة قليلاً
+    ctx.fillStyle = 'rgba(26, 55, 77, 0.18)';
     ctx.fillRect(0, 0, w, h);
     ctx.font = fontSize + 'px monospace';
     ctx.fillStyle = '#00ffb3';
     for (var i = 0; i < drops.length; i++) {
-      var text = letters[Math.floor(Math.random() * letters.length)];
+      var text = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
       if (drops[i] * fontSize > h && Math.random() > 0.975) {
         drops[i] = 0;
       }
-      drops[i] += 1 + Math.random() * 0.5;
+      drops[i] += 0.4 + Math.random() * 0.1;
     }
   }
 
