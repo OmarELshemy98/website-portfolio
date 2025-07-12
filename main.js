@@ -641,9 +641,9 @@ const projectData = {
     link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
   },
   'medyour': {
-    title: 'Medyour Website – Healthcare Services Platform',
-    description: 'A responsive, bilingual (Arabic & English) website for Medyour, designed to showcase healthcare services, address industry challenges, and provide information to users in both languages. The website features dedicated pages for services, FAQs, contact, and more, with a focus on accessibility and user experience.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Support (Arabic & English)',
+    title: 'Medyour Digital Business Card Platform',
+    description: 'A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology',
     link: 'https://medyour.com'
   }
 };
