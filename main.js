@@ -295,12 +295,7 @@ const certificateData = {
     description: 'This Certificate of Experience, issued by the Command of Brigade 96 Artillery of the Air Defense Forces, verifies my service during the period of January 7, 2023, to March 1, 2024. During my military service, I served as a Procurement Accountant, demonstrating proficiency and excellence in managing procurement-related financial operations. This experience provided me with practical skills in financial record-keeping, expenditure tracking, and inventory management within a structured organizational environment.',
     image: 'images/certificates/military-accounting.jpg'
   },
-  'medyour': {
-    title: 'Medyour Website – Bilingual Healthcare Services Platform',
-    description: 'Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)',
-    link: 'https://medyour.com'
-  }
+
 };
 
 // Open certificate modal
@@ -641,6 +636,12 @@ const projectData = {
     link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
   },
   'medyour': {
+    title: 'Medyour – Digital Healthcare Platform',
+    description: 'Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)',
+    link: 'https://medyour.com'
+  },
+  'medyour-card': {
     title: 'Medyour Digital Business Card Platform',
     description: 'A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4',
     tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology',
