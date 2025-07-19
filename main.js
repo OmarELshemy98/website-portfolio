@@ -645,6 +645,18 @@ const projectData = {
     description: 'A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4',
     tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology',
     link: 'https://medyour.com'
+  },
+  'modern-trade-corporate': {
+    title: '🔹 Modern Trade for Engineering (MTE)',
+    description: 'Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design',
+    link: 'https://moderntrade.netlify.app/'
+  },
+  'modern-trade-mte': {
+    title: '🔹 Modern Trade (MTE) Digital Business Card & Company Profile',
+    description: 'A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE’s commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Responsive Web Design, Digital Business Card, Social Media Integration',
+    link: 'https://moderntrade.netlify.app/cards/index.html?id=19634771'
   }
 };
 
