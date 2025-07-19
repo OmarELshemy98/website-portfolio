@@ -655,9 +655,15 @@ const projectData = {
   },
   'modern-trade-mte': {
     title: '🔹 Modern Trade (MTE) Digital Business Card & Company Profile',
-    description: 'A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE’s commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.',
+    description: 'A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE\'s commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.',
     tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Responsive Web Design, Digital Business Card, Social Media Integration',
     link: 'https://moderntrade.netlify.app/cards/index.html?id=19634771'
+  },
+  'luxury-apartment': {
+    title: '🔹 Luxury Apartment Showcase – Modern Real Estate Experience',
+    description: 'A sophisticated and modern real estate showcase website designed to present luxury apartments with an elegant, user-friendly interface. The platform features high-quality property images, detailed descriptions, interactive galleries, and seamless navigation to provide potential buyers and renters with an immersive viewing experience. Built with responsive design principles, the website ensures optimal viewing across all devices while maintaining the premium aesthetic expected in luxury real estate.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization, Modern UI/UX Design',
+    link: 'https://alexluxuryapt.netlify.app/'
   }
 };
 
