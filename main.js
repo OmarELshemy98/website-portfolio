@@ -695,6 +695,26 @@ const projectData = {
     tech: 'Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards',
     link: 'https://staging.arconcorp.com'
   },
+  'axiom-website': {
+    title: '🔹 Axiom AI Solutions Website',
+    description: "The Axiom AI Solutions Website is a comprehensive front-end development project for a leading engineering and technology firm. I crafted a responsive and visually compelling website that reflects the company's commitment to innovation and excellence.\n\nDeveloped entirely using Next.js, the site offers high performance and a seamless user experience. It effectively showcases Axiom's advanced solutions across critical sectors like engineering, manufacturing, cybersecurity, and IT. The front-end was meticulously designed to be intuitive and engaging, professionally presenting products and services to potential business clients.",
+    tech: `Static Site Generation (SSG): Demonstrates expertise in building high-performance, secure, and scalable websites that are pre-rendered for speed and efficiency.
+
+Next.js (React Framework): Utilized for building the highly efficient and performant front-end, leveraging its static generation capabilities.
+
+React.js: The core library used for developing reusable UI components and managing the site's dynamic content.
+
+JavaScript (ES6+): Applied modern JavaScript standards to implement interactive functionalities and a smooth user experience.
+
+HTML5 & CSS3: Fundamental skills used for structuring and styling the website, adhering to modern web standards.
+
+Responsive Design: Ensured the website displays flawlessly and functions perfectly on all devices, from desktops to mobile phones.
+
+UI/UX Implementation: Translated a professional design into a functional, user-centric interface that simplifies navigation and enhances engagement.
+
+Deployment & Performance Optimization: Demonstrated expertise in deploying a static site and optimizing it for real-world performance.`,
+    link: 'https://staging.axiomais.com/'
+  },
   'egyptian-robotics': {
     title: 'ERRCSF Website (Egyptian Robotics & RC Sports Federation)',
     description: 'A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.',
