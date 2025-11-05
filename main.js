@@ -692,51 +692,70 @@ const projectData = {
   'arcon-corp': {
     title: '🔹 Arcon Corp Website',
     description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
-    tech: 'Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards',
+    tech: `&bull; Next.js (React Framework)<br>
+    &bull; React.js<br>
+    &bull; Bootstrap 5 (for responsive design and components)<br>
+    &bull; CSS Modules & Custom CSS<br>
+    &bull; JavaScript (ES6+)<br>
+    &bull; Image Optimization (Next.js Image component)<br>
+    &bull; Font Awesome (for icons)<br>
+    &bull; HTML5 & Modern Web Standards<br>`,
     link: 'https://staging.arconcorp.com'
   },
   'axiom-website': {
     title: '🔹 Axiom AI Solutions Website',
-    description: "The Axiom AI Solutions Website is a comprehensive front-end development project for a leading engineering and technology firm. I crafted a responsive and visually compelling website that reflects the company's commitment to innovation and excellence.\n\nDeveloped entirely using Next.js, the site offers high performance and a seamless user experience. It effectively showcases Axiom's advanced solutions across critical sectors like engineering, manufacturing, cybersecurity, and IT. The front-end was meticulously designed to be intuitive and engaging, professionally presenting products and services to potential business clients.",
-    tech: `Static Site Generation (SSG): Demonstrates expertise in building high-performance, secure, and scalable websites that are pre-rendered for speed and efficiency.
+    description: "Developed a high-performance, responsive front-end platform for a leading engineering and technology firm, utilizing Next.js for optimal speed and scalability. Engineered the site using Static Site Generation (SSG) to ensure secure, highly efficient rendering. Meticulously implemented the UI/UX design to create a visually compelling and intuitive interface, effectively showcasing advanced solutions across critical sectors (e.g., cybersecurity, manufacturing) to potential business clients. Demonstrated expertise in full project deployment and front-end performance optimization for real-world scenarios",
+    tech: `&bull; Performance-Driven Development <br>
 
-Next.js (React Framework): Utilized for building the highly efficient and performant front-end, leveraging its static generation capabilities.
+&bull; Strategic Architecture <br>
 
-React.js: The core library used for developing reusable UI components and managing the site's dynamic content.
+&bull; Meticulous Design Translation <br>
 
-JavaScript (ES6+): Applied modern JavaScript standards to implement interactive functionalities and a smooth user experience.
+&bull; Client-Facing Communication <br>
 
-HTML5 & CSS3: Fundamental skills used for structuring and styling the website, adhering to modern web standards.
-
-Responsive Design: Ensured the website displays flawlessly and functions perfectly on all devices, from desktops to mobile phones.
-
-UI/UX Implementation: Translated a professional design into a functional, user-centric interface that simplifies navigation and enhances engagement.
-
-Deployment & Performance Optimization: Demonstrated expertise in deploying a static site and optimizing it for real-world performance.`,
-    link: 'https://staging.axiomais.com/'
+&bull; Production Readiness`,
+    link: 'https://axiomais.com'
   },
   'egyptian-robotics': {
     title: 'ERRCSF Website (Egyptian Robotics & RC Sports Federation)',
     description: 'A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.',
-    tech: 'HTML5 (Semantic & Accessible Markup), CSS3 (Custom styles + Tailwind CSS utility framework), JavaScript (Vanilla JS for interactivity), Font Awesome (Icons), Google Fonts (Roboto), Responsive Design (Mobile-first approach)',
+    tech: `&bull; HTML5 (Semantic & Accessible Markup)<br>
+    &bull; CSS3 (Custom styles + Tailwind CSS utility framework)<br>
+    &bull; JavaScript (Vanilla JS for interactivity)<br>
+    &bull; Font Awesome (Icons)<br>
+    &bull; Google Fonts (Roboto)<br>
+    &bull; Responsive Design (Mobile-first approach)<br>`,
     link: 'https://staging.errcsf.org'
   },
   'dh-consult': {
     title: 'ConsultCo – Professional Consulting Services Website',
     description: 'Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company\'s online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.',
-    tech: 'HTML5 for semantic and accessible markup, Tailwind CSS for rapid, utility-first styling and responsive design, Vanilla JavaScript for interactive features and smooth navigation, Image optimization for fast loading times',
+    tech: `&bull; HTML5 for semantic and accessible markup<br>
+    &bull; Tailwind CSS for rapid, utility-first styling and responsive design<br>
+    &bull; Vanilla JavaScript for interactive features and smooth navigation<br>
+    &bull; Image optimization for fast loading times`,
     link: 'https://darkgoldenrod-gnu-568360.hostingersite.com'
   },
   'ti-educational': {
     title: 'Educational Website for Kitmeer',
     description: 'A responsive and user-friendly educational website designed to showcase Kitmeer\'s products and solutions for schools, universities, vocational, and industrial sectors. The website features detailed product pages, category-based navigation, and a modern visual design to enhance user engagement and accessibility.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization',
+    tech: `&bull; HTML5<br>
+    &bull; CSS3<br>
+    &bull; JavaScript (Vanilla JS)<br>
+    &bull; Responsive Web Design<br>
+    &bull; Image Optimization`,
     link: 'https://forestgreen-koala-992569.hostingersite.com'
   },
   'labsforhome': {
     title: 'Labs For Home Website – Interactive Science Learning Platform',
-    description: 'A modern, responsive web application designed to enhance science education through interactive simulations, gamified learning modules, and comprehensive resource management. The platform provides tailored experiences for students, teachers, and schools, featuring video demonstrations, testimonials, and a robust content management system. The website aims to make science learning engaging, accessible, and effective for various academic levels.',
-    tech: 'Next.js (React Framework), TypeScript, CSS Modules & PostCSS, Responsive Web Design, Modular Component Architecture, Media Asset Management (Images, Videos), Node.js (for build and tooling)',
+    description: 'Developed a high-performance, feature-rich educational platform designed to revolutionize science learning. The site was built using Next.js and TypeScript to ensure code stability, scalability, and enhanced performance. Implemented complex features including interactive simulations and a robust content management system to deliver tailored experiences for students and teachers. Focused on creating an engaging, accessible UI/UX, showcasing video demonstrations and comprehensive resources, driving effective digital education.',
+    tech: `&bull; Next.js (React Framework)<br>
+    &bull; TypeScript<br>
+    &bull; CSS Modules &amp; PostCSS<br>
+    &bull; Responsive Web Design<br>
+    &bull; Modular Component Architecture<br>
+    &bull; Media Asset Management (Images, Videos)<br>
+    &bull; Node.js (for build and tooling)`,
     link: 'https://lightcyan-salamander-875465.hostingersite.com'
   },
   'todo-app': {
@@ -753,8 +772,18 @@ Deployment & Performance Optimization: Demonstrated expertise in deploying a sta
   },
   'medyour': {
     title: 'Medyour – Digital Healthcare Platform',
-    description: 'Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)',
+    description: 'Developed a full-featured, responsive corporate website for a healthcare service provider, focusing on clear service presentation and user engagement. Engineered robust multilingual support (Arabic/English) to ensure broad reach across the MENA region. Implemented modern CSS techniques and semantic HTML to optimize accessibility (A11y) and SEO. Ensured pixel-perfect translation of designs and seamless, performant navigation across all devices.',
+    tech: `Tech Stack:<br>
+    &bull; Meticulous Execution &amp; Quality Focus<br>
+    &bull; User-Centric Problem Solving<br>
+    &bull; Multilingual Adaptability (RTL/LTR Proficiency)<br>
+    &bull; Independent Ownership &amp; Delivery<br>
+    &bull; HTML <br>
+    &bull; CSS3 <br>
+    &bull; CSS3 <br>
+    &bull; JavaScript (Vanilla JS) <br>
+    &bull;  Responsive Web Design <br>
+    &bull; Accessibility &amp; Standards Compliance (A11y)`,
     link: 'https://medyour.com'
   },
   'medyour-card': {
