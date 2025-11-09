@@ -11,11 +11,13 @@
   --neon-glow: 0 0 24px #00fff7, 0 0 48px #00fff744;
   --text-main: #fff;
   --text-muted: #b0b8c9;
-  --accent: #00c3ff;
+  --accent: #06b6d4;       /* cyan */
+  --accent-2: #0ea5b7;     /* darker cyan */
+  --border-200: rgba(0,0,0,.12);
   --shadow: 0 4px 32px 0 #000a;
   --radius: 18px;
   --transition: 0.4s cubic-bezier(.4,0,.2,1);
-  /* NEW: unified container sizing */
+  /* unified container sizing */
   --maxw: 1200px;
   --pad: clamp(12px, 2vw, 24px);
 }
@@ -176,7 +178,7 @@ body {
 .hexagon-img { width: 220px; height: 240px; display: flex; align-items: center; justify-content: center; background: none; position: relative; }
 .hexagon-img::before {
   content: ''; position: absolute; inset: 0; margin: auto; width: 100%; height: 100%;
-  background: linear-gradient(135deg, var(--neon) 60%, #00c3ff 100%);
+  background: linear-gradient(135deg, var(--neon) 60%, var(--accent) 100%);
   clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
   filter: blur(8px) brightness(1.2); z-index: 1; opacity: .85;
 }
@@ -201,6 +203,37 @@ body {
   transition: background .2s, color .2s, box-shadow .3s; text-decoration:none; display:inline-block;
 }
 .btn.neon-btn:hover, .btn.neon-btn:focus { background:#00c3ff; color:#fff; box-shadow:0 0 32px #00fff7cc; }
+
+/* أزرار واضحة */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid var(--border-200);
+}
+
+.btn-primary{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.btn-primary:hover{ background: var(--accent-2); }
+
+.btn-secondary{
+  background: #fff;
+  color: #0f172a;
+  border-color: var(--border-200);
+}
+.btn-secondary:hover{ background: rgba(0,0,0,.04); }
+
+.hero-btns .btn:not(:last-child) {
+  margin-right: 0.5rem;
+}
 
 /* =======================
    About
@@ -253,7 +286,7 @@ body {
   background-color: var(--neon); color:#1a202c; padding:.75rem 2rem; border-radius:.5rem; font-weight:600;
   transition: background-color .3s ease, transform .2s ease;
 }
-.request-button:hover { background-color:#00e0d8; transform: translateY(-2px); }
+.request-button:hover { background-color:#00e0e0; transform: translateY(-2px); }
 
 /* =======================
    Portfolio
@@ -316,6 +349,29 @@ body {
 .modal-link { margin-top: 1rem; }
 .modal-link a { color: var(--accent); text-decoration:none; font-weight:600; transition: color .3s; }
 .modal-link a:hover, .modal-link a:focus { color: var(--neon); }
+
+/* لون مميز للـ bold داخل المودال */
+.modal .modal-body strong{
+  color: var(--accent-2);
+  font-weight: 800;
+}
+
+/* ترتيب الروابط جوة البوب أب تحت بعض */
+.modal-links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* تحسين عرض تفاصيل التقنية داخل المودال */
+.modal-body .tech{
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.modal-body .tech b,
+.modal-body .tech strong{ color: var(--accent-2); }
 
 /* =======================
    Certificates (Grid aligned + equal height)

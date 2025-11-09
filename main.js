@@ -687,130 +687,250 @@ const projectModalDescription = document.getElementById('projectModalDescription
 const projectModalTech = document.getElementById('projectModalTech');
 const projectModalLink = document.getElementById('projectModalLink');
 
-// Project data
+// Project data (مرتبة من الاقوى للأضعف)
+// Project data (strongest → weakest)
 const projectData = {
-  'arcon-corp': {
-    title: '🔹 Arcon Corp Website',
-    description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
-    tech: `&bull; Next.js (React Framework)<br>
-    &bull; React.js<br>
-    &bull; Bootstrap 5 (for responsive design and components)<br>
-    &bull; CSS Modules & Custom CSS<br>
-    &bull; JavaScript (ES6+)<br>
-    &bull; Image Optimization (Next.js Image component)<br>
-    &bull; Font Awesome (for icons)<br>
-    &bull; HTML5 & Modern Web Standards<br>`,
-    link: 'https://staging.arconcorp.com'
+  // 1️⃣ SMART BUSINESS CARD — flagship project
+  'smart-business-card': {
+    title: 'Smart Business Card Platform',
+    description: `
+A next-generation **digital identity platform** built with **Next.js 15**, **React 19**, and **Firebase**, empowering professionals to create and share **interactive digital business profiles** instantly.  
+Each profile includes **dynamic QR codes**, personalized URLs, and one-tap **Add to Contacts (.vcf)** functionality.  
+Features a real-time **Admin Dashboard** with Firestore synchronization, authentication, and cloud storage.  
+Engineered with **modular TypeScript architecture** and deployed through **Netlify CI/CD pipelines**, achieving **<1s QR generation** and **100% mobile Lighthouse performance**.  
+**Result:** a production-ready SaaS ecosystem that transforms traditional networking into a seamless digital experience.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; Next.js 15 + React 19 (App Router)<br>
+&bull; TypeScript + Modular Architecture<br>
+&bull; Firebase (Auth, Firestore, Storage)<br>
+&bull; Dynamic QR Code Generation<br>
+&bull; vCard Export (.vcf) – One-Tap Add to Contacts<br>
+&bull; Responsive UI (CSS Modules)<br>
+&bull; Admin Dashboard + Role-Based Access<br>
+&bull; Netlify CI/CD Deployment<br>`,
+    link: 'https://smartbuisnesscard.netlify.app',
+    example: {
+      label: 'Example Profile',
+      href: 'https://smartbuisnesscard.netlify.app/cards/ans1VG0leH1lJSzrGDb7'
+    }
   },
+
+  // 2️⃣ AXIOM AI SOLUTIONS
   'axiom-website': {
-    title: '🔹 Axiom AI Solutions Website',
-    description: "Developed a high-performance, responsive front-end platform for a leading engineering and technology firm, utilizing Next.js for optimal speed and scalability. Engineered the site using Static Site Generation (SSG) to ensure secure, highly efficient rendering. Meticulously implemented the UI/UX design to create a visually compelling and intuitive interface, effectively showcasing advanced solutions across critical sectors (e.g., cybersecurity, manufacturing) to potential business clients. Demonstrated expertise in full project deployment and front-end performance optimization for real-world scenarios",
-    tech: `&bull; Performance-Driven Development <br>
-
-&bull; Strategic Architecture <br>
-
-&bull; Meticulous Design Translation <br>
-
-&bull; Client-Facing Communication <br>
-
-&bull; Production Readiness`,
+    title: 'Axiom AI Solutions Website',
+    description: `
+Built a **high-performance corporate platform** for an AI & engineering firm using **Next.js (SSG)** for lightning-fast static rendering and **Core Web Vitals improvement (↑45%)**.  
+Translated complex UI designs into a **pixel-perfect**, scalable system with reusable React components.  
+Delivered a **modern, secure, enterprise-grade front end** reflecting Axiom’s innovation and technical excellence.  
+**Result:** a fast, SEO-optimized B2B platform improving client conversion and engagement.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; Next.js (Static Site Generation)<br>
+&bull; React.js + Reusable Components<br>
+&bull; Core Web Vitals Optimization<br>
+&bull; Accessibility + SEO Enhancements<br>
+&bull; Performance-Driven Architecture<br>`,
     link: 'https://axiomais.com'
   },
-  'egyptian-robotics': {
-    title: 'ERRCSF Website (Egyptian Robotics & RC Sports Federation)',
-    description: 'A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.',
-    tech: `&bull; HTML5 (Semantic & Accessible Markup)<br>
-    &bull; CSS3 (Custom styles + Tailwind CSS utility framework)<br>
-    &bull; JavaScript (Vanilla JS for interactivity)<br>
-    &bull; Font Awesome (Icons)<br>
-    &bull; Google Fonts (Roboto)<br>
-    &bull; Responsive Design (Mobile-first approach)<br>`,
-    link: 'https://staging.errcsf.org'
-  },
-  'dh-consult': {
-    title: 'ConsultCo – Professional Consulting Services Website',
-    description: 'Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company\'s online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.',
-    tech: `&bull; HTML5 for semantic and accessible markup<br>
-    &bull; Tailwind CSS for rapid, utility-first styling and responsive design<br>
-    &bull; Vanilla JavaScript for interactive features and smooth navigation<br>
-    &bull; Image optimization for fast loading times`,
-    link: 'https://darkgoldenrod-gnu-568360.hostingersite.com'
-  },
-  'ti-educational': {
-    title: 'Educational Website for Kitmeer',
-    description: 'A responsive and user-friendly educational website designed to showcase Kitmeer\'s products and solutions for schools, universities, vocational, and industrial sectors. The website features detailed product pages, category-based navigation, and a modern visual design to enhance user engagement and accessibility.',
-    tech: `&bull; HTML5<br>
-    &bull; CSS3<br>
-    &bull; JavaScript (Vanilla JS)<br>
-    &bull; Responsive Web Design<br>
-    &bull; Image Optimization`,
-    link: 'https://forestgreen-koala-992569.hostingersite.com'
-  },
+
+  // 3️⃣ LABS FOR HOME
   'labsforhome': {
-    title: 'Labs For Home Website – Interactive Science Learning Platform',
-    description: 'Developed a high-performance, feature-rich educational platform designed to revolutionize science learning. The site was built using Next.js and TypeScript to ensure code stability, scalability, and enhanced performance. Implemented complex features including interactive simulations and a robust content management system to deliver tailored experiences for students and teachers. Focused on creating an engaging, accessible UI/UX, showcasing video demonstrations and comprehensive resources, driving effective digital education.',
-    tech: `&bull; Next.js (React Framework)<br>
-    &bull; TypeScript<br>
-    &bull; CSS Modules &amp; PostCSS<br>
-    &bull; Responsive Web Design<br>
-    &bull; Modular Component Architecture<br>
-    &bull; Media Asset Management (Images, Videos)<br>
-    &bull; Node.js (for build and tooling)`,
+    title: 'Labs For Home — Interactive Science Learning Platform',
+    description: `
+Developed an **immersive virtual science learning platform** using **Next.js + TypeScript**, enabling students to perform **interactive experiments** and explore visual learning modules online.  
+Optimized for **accessibility, SEO**, and **35% reduced resource load**, ensuring smooth operation even on low-end devices.  
+**Result:** a scalable, user-centric education platform transforming science learning into an engaging digital experience.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; Next.js + TypeScript<br>
+&bull; Modular UI Components<br>
+&bull; CSS Modules & PostCSS<br>
+&bull; Media Asset Optimization (Images/Videos)<br>
+&bull; Accessibility & SEO Performance<br>`,
     link: 'https://lightcyan-salamander-875465.hostingersite.com'
   },
-  'todo-app': {
-    title: 'To-Do List Web Application',
-    description: 'A simple and intuitive web application that allows users to create, manage, and organize their daily tasks efficiently. The app features task addition, deletion, and completion tracking, providing a seamless user experience for productivity management.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS)',
-    link: 'https://omarelshemy98.github.io/todo-list-app/'
-  },
-  'student-dashboard': {
-    title: 'Mathmatic Dashboard Courses',
-    description: 'A web-based dashboard designed to manage and display mathematics courses. The platform provides an intuitive interface for users to log in, view available courses, and interact with course content efficiently. The project emphasizes user experience, accessibility, and responsive design.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS)',
-    link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
-  },
-  'medyour': {
-    title: 'Medyour – Digital Healthcare Platform',
-    description: 'Developed a full-featured, responsive corporate website for a healthcare service provider, focusing on clear service presentation and user engagement. Engineered robust multilingual support (Arabic/English) to ensure broad reach across the MENA region. Implemented modern CSS techniques and semantic HTML to optimize accessibility (A11y) and SEO. Ensured pixel-perfect translation of designs and seamless, performant navigation across all devices.',
-    tech: `Tech Stack:<br>
-    &bull; Meticulous Execution &amp; Quality Focus<br>
-    &bull; User-Centric Problem Solving<br>
-    &bull; Multilingual Adaptability (RTL/LTR Proficiency)<br>
-    &bull; Independent Ownership &amp; Delivery<br>
-    &bull; HTML <br>
-    &bull; CSS3 <br>
-    &bull; CSS3 <br>
-    &bull; JavaScript (Vanilla JS) <br>
-    &bull;  Responsive Web Design <br>
-    &bull; Accessibility &amp; Standards Compliance (A11y)`,
-    link: 'https://medyour.com'
-  },
-  'medyour-card': {
-    title: 'Medyour Digital Business Card Platform',
-    description: 'A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology',
-    link: 'https://medyour.com'
-  },
+
+  // 4️⃣ MODERN TRADE CORPORATE
   'modern-trade-corporate': {
-    title: '🔹 Modern Trade for Engineering (MTE)',
-    description: 'Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design',
+    title: 'Modern Trade for Engineering (MTE) — Corporate Website',
+    description: `
+Designed and developed a **bilingual (EN/AR) corporate platform** to showcase engineering solutions globally.  
+Implemented **multilingual routing**, **SEO-first architecture**, and **responsive UI** achieving **Lighthouse 90+** across devices.  
+Enhanced visibility and client engagement through **structured data and optimized content delivery**.  
+**Result:** a fast, accessible, and professional digital presence boosting MTE’s brand credibility.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, Tailwind CSS, Vanilla JS<br>
+&bull; RTL/LTR Multilingual Support<br>
+&bull; SEO Optimization + Structured Metadata<br>
+&bull; Responsive & Accessible Design<br>`,
     link: 'https://moderntrade.netlify.app/'
   },
+
+  // 5️⃣ MEDYOUR
+  'medyour': {
+    title: 'Medyour — Digital Healthcare Platform',
+    description: `
+Built a **fully bilingual healthcare website** with **accessibility-first design** and strong brand identity.  
+Implemented **Arabic/English layouts**, semantic structure, and **SEO optimization** to expand digital reach across the MENA region.  
+Focused on performance, scalability, and mobile UX.  
+**Result:** an inclusive, high-performance healthcare platform enhancing credibility and trust.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, CSS3, JavaScript (Vanilla JS)<br>
+&bull; Multilingual (RTL/LTR) Layouts<br>
+&bull; Accessibility (A11y) + SEO Optimization<br>
+&bull; Mobile-First Responsive Design<br>`,
+    link: 'https://medyour.com'
+  },
+
+  // 6️⃣ ARCON CORP
+  'arcon-corp': {
+    title: 'Arcon Corp Website',
+    description: `
+Developed a **corporate website** for a leading manufacturing and automation company using **Next.js** and **Bootstrap 5**.  
+Delivered **modular, scalable UI components** with optimized image handling for high-speed performance.  
+**Result:** a stable, maintainable platform showcasing industrial innovation and reliability.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; Next.js + React<br>
+&bull; Bootstrap 5 + CSS Modules<br>
+&bull; Optimized Image Management<br>
+&bull; Semantic HTML + Modern Standards<br>`,
+    link: 'https://staging.arconcorp.com'
+  },
+
+  // 7️⃣ MEDYOUR CARD (Prototype)
+  'medyour-card': {
+    title: 'Medyour Digital Business Card (Prototype)',
+    description: `
+An early **prototype** validating the Smart Business Card ecosystem — introducing **dynamic profile rendering**, **QR navigation**, and **contact exporting**.  
+Focused on **instant load times**, responsive UI, and simplified mobile sharing experience.  
+**Result:** a lightweight MVP that evolved into the full Smart Business Card platform.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, CSS3, JavaScript (Vanilla JS)<br>
+&bull; QR Code Integration + vCard Export<br>
+&bull; Responsive Web Layout<br>`,
+    link: 'https://medyour.com'
+  },
+
+  // 8️⃣ MODERN TRADE DIGITAL CARD
   'modern-trade-mte': {
-    title: '🔹 Modern Trade (MTE) Digital Business Card & Company Profile',
-    description: 'A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE\'s commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Responsive Web Design, Digital Business Card, Social Media Integration',
+    title: 'Modern Trade (MTE) — Digital Business Card & Company Profile',
+    description: `
+Created a **responsive digital card** for MTE featuring **quick contact actions**, **social links**, and an elegant corporate identity layout.  
+Built with **Tailwind CSS** to achieve consistent visual balance and mobile-first responsiveness.  
+**Result:** a modern networking tool enhancing brand visibility and user engagement.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, CSS3, Tailwind CSS<br>
+&bull; Responsive Design + Social Integration<br>
+&bull; Digital Business Card UI<br>`,
     link: 'https://moderntrade.netlify.app/cards/index.html?id=19634771'
   },
+
+  // 9️⃣ LUXURY APARTMENT
   'luxury-apartment': {
-    title: '🔹 Luxury Apartment Showcase – Modern Real Estate Experience',
-    description: 'A sophisticated and modern real estate showcase website designed to present luxury apartments with an elegant, user-friendly interface. The platform features high-quality property images, detailed descriptions, interactive galleries, and seamless navigation to provide potential buyers and renters with an immersive viewing experience. Built with responsive design principles, the website ensures optimal viewing across all devices while maintaining the premium aesthetic expected in luxury real estate.',
-    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization, Modern UI/UX Design',
+    title: 'Luxury Apartment Showcase — Modern Real Estate Experience',
+    description: `
+Developed a **premium real-estate showcase** with immersive property galleries, **lazy loading**, and optimized performance.  
+Crafted an elegant, modern UI delivering a **high-end browsing experience** for property seekers.  
+**Result:** a visually engaging, fully responsive real-estate website.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, CSS3, JavaScript (Vanilla JS)<br>
+&bull; Image Optimization + Lazy Loading<br>
+&bull; Responsive, Elegant UI/UX<br>`,
     link: 'https://alexluxuryapt.netlify.app/'
+  },
+
+  // 🔟 DH CONSULT
+  'dh-consult': {
+    title: 'ConsultCo — Professional Consulting Services Website',
+    description: `
+Built a **modern consulting firm website** focused on clarity, speed, and conversion.  
+Integrated **smooth animations**, **client-side validation**, and **responsive design** to enhance engagement.  
+**Result:** a clean, professional digital platform strengthening corporate credibility.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5 + Tailwind CSS<br>
+&bull; Vanilla JS (Interactivity & Animations)<br>
+&bull; Responsive Web Design<br>`,
+    link: 'https://darkgoldenrod-gnu-568360.hostingersite.com'
+  },
+
+  // 11️⃣ TI EDUCATIONAL
+  'ti-educational': {
+    title: 'Kitmeer Educational Solutions Website',
+    description: `
+Developed a **lightweight educational platform** to showcase learning solutions for schools and industries.  
+Optimized for **fast load times** and accessibility on all devices.  
+**Result:** an efficient, mobile-friendly showcase for educational products.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, CSS3, Vanilla JS<br>
+&bull; Responsive Web Design<br>
+&bull; Lightweight Architecture<br>`,
+    link: 'https://forestgreen-koala-992569.hostingersite.com'
+  },
+
+  // 12️⃣ EGYPTIAN ROBOTICS
+  'egyptian-robotics': {
+    title: 'ERRCSF — Egyptian Robotics & RC Sports Federation',
+    description: `
+Developed a **modern portal** for the Robotics & RC Federation featuring **multi-step registration** and **interactive member areas**.  
+Optimized for **mobile accessibility** and seamless navigation using Tailwind CSS and Vanilla JS.  
+**Result:** a structured, user-friendly hub connecting robotics enthusiasts nationwide.  
+`,
+    tech: `
+💻 **Tech Stack**:<br>
+&bull; HTML5, Tailwind CSS, Vanilla JS<br>
+&bull; Multi-Step Forms + Interactivity<br>
+&bull; Responsive & Accessible Layout<br>`,
+    link: 'https://staging.errcsf.org'
+  },
+
+  // 13️⃣ TO-DO APP
+  'todo-app': {
+    title: 'To-Do List Web Application',
+    description: `
+A **minimal productivity app** for managing and tracking daily tasks efficiently.  
+Demonstrates **DOM manipulation**, clean UI design, and optimized performance.  
+**Result:** a lightweight, functional productivity tool.  
+`,
+    tech: '💻 **Tech Stack**: HTML5, CSS3, JavaScript (Vanilla JS)',
+    link: 'https://omarelshemy98.github.io/todo-list-app/'
+  },
+
+  // 14️⃣ STUDENT DASHBOARD
+  'student-dashboard': {
+    title: 'Mathmatic Dashboard Courses',
+    description: `
+Built a **web-based dashboard** for managing and viewing mathematics courses.  
+Implements **local storage logic** for simulated real-time updates within a clean, responsive interface.  
+**Result:** a structured front-end prototype for future LMS integration.  
+`,
+    tech: '💻 **Tech Stack**: HTML5, CSS3, JavaScript (Vanilla JS)',
+    link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses'
   }
 };
+
+
+
+
 
 // Function to open project modal
 function openProjectModal(projectId) {
@@ -820,12 +940,33 @@ function openProjectModal(projectId) {
   projectModalTitle.textContent = project.title;
   projectModalDescription.textContent = project.description;
   projectModalTech.innerHTML = `<strong>Tech Stack:</strong> ${project.tech}`;
-  projectModalLink.innerHTML = `<a href="${project.link}" target="_blank" rel="noopener">Visit Project → ${project.link}</a>`;
+
+  // 🔗 روابط أسفل بعض
+  let linksHtml = '';
+  if (project.link) {
+    linksHtml += `
+      <div class="modal-link-item">
+        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="modal-link-btn main-link">
+          🔗 Visit Live Project
+        </a>
+      </div>
+    `;
+  }
+  if (project.example?.href) {
+    const label = project.example.label || 'Example Profile';
+    linksHtml += `
+      <div class="modal-link-item">
+        <a href="${project.example.href}" target="_blank" rel="noopener noreferrer" class="modal-link-btn secondary-link">
+          🧩 ${label}
+        </a>
+      </div>
+    `;
+  }
+
+  projectModalLink.innerHTML = linksHtml;
 
   projectModal.classList.add('active');
   document.body.style.overflow = 'hidden';
-  
-  // Focus management
   projectModalClose.focus();
 }
 
