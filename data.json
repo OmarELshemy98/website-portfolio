@@ -1,338 +1,844 @@
 {
-    "en": {
-      "meta": {
-        "title": "Omar Elshemy - Frontend Developer Portfolio | Modern Web Development",
-        "description": "Omar Elshemy - Passionate Frontend Developer crafting modern, responsive, and user-friendly web experiences. Specialized in HTML5, CSS3, JavaScript, React, and Vue.js.",
-        "keywords": "Frontend Developer, Web Developer, HTML5, CSS3, JavaScript, React, Vue.js, Portfolio, Omar Elshemy",
-        "author": "Omar Elshemy"
-      },
-      "contact": {
-        "email": "omarelshemy010@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/omar-elshemy",
-        "whatsapp": "https://wa.me/201026238072",
-        "whatsapp_number": "201026238072",
-        "phone": "01204777405",
-        "address1": "New cairo",
-        "address2": "Alexandria",
-        "github": "https://github.com/omarelshemy98"
-      },
-      "nav": {
-        "home": "Home",
-        "about": "About",
-        "skills": "Skills",
-        "experience": "Experience",
-        "projects": "Projects",
-        "certificates": "Certificates",
-        "contact": "Contact"
-      },
-      "landingOverlay": {
-        "title": "Omar Elshemy",
-        "subtitle": "Frontend Developer",
-        "welcome": "Welcome to my portfolio"
-      },
-      "hero": {
-        "greeting": "Hello, It's Me",
-        "name": "Omar Elshemy",
-        "role": "And I'm a <span class='highlight'>Frontend Developer</span>",
-        "description": "Passionate Front End Developer crafting modern, responsive, and user-friendly web experiences. I turn ideas into interactive digital products with clean code and creative design.",
-        "cvButton": "View CV"
-      },
-      "about": {
-        "title": "About <span class=\"highlight\">Me</span>",
-        "p1": "I'm a digital craftsman who transforms ideas into interactive realities. My journey in front-end development is fueled by curiosity, creativity, and a relentless pursuit of pixel-perfect design. I don't just build websites; I create digital experiences that connect, inspire, and delight users across every device.",
-        "p2": "With a toolkit packed with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>React</b>, and <b>Vue.js</b>, I blend code and creativity to deliver solutions that are as beautiful as they are functional. Whether it's a sleek landing page, a <b>dynamic web app</b>, or a seamless user interface, I believe every detail matters. My approach is rooted in <b>UI/UX best practices</b>, ensuring every project is not just well-coded, but truly user-centered.",
-        "p3": "Collaboration is my superpower — I thrive on turning complex challenges into elegant, maintainable solutions, working hand-in-hand with designers and back-end teams. From startups to established brands, I've helped clients stand out in the digital world with innovative, high-performance web experiences. Let's build something extraordinary together!",
-        "infoCard": {
-          "title": "Basic Information",
-          "email": "EMAIL:",
-          "linkedin": "LinkedIn:",
-          "whatsapp": "Whatapp:",
-          "phone": "PHONE:",
-          "address1": "ADDRESS:",
-          "address2": "Secondary ADDRESS:"
-        }
-      },
-      "skills": {
-        "title": "My <span class=\"highlight\">Skills</span>",
-        "categories": [
-          {
-            "title": "🛠️ Core Technologies",
-            "items": [
-              {"name": "HTML5", "level": 95, "icon": "images/logo/html.png"},
-              {"name": "CSS3", "level": 90, "icon": "images/logo/css.png"},
-              {"name": "JavaScript", "level": 85, "icon": "images/logo/js.png"},
-              {"name": "TypeScript", "level": 80, "icon": "images/logo/ts.png"}
-            ]
-          },
-          {
-            "title": "⚛️ Frameworks & Libraries",
-            "items": [
-              {"name": "React", "level": 88, "icon": "images/logo/react.png"},
-              {"name": "Next.js", "level": 82, "icon": "images/logo/next-js.png"},
-              {"name": "Redux", "level": 80, "icon": "images/logo/redux.png"},
-              {"name": "React Query", "level": 75, "icon": "images/logo/react-query.png"},
-              {"name": "Context API", "level": 85, "icon": "images/logo/react.png"}
-            ]
-          },
-          {
-            "title": "🎨 UI Frameworks & Styling",
-            "items": [
-              {"name": "Bootstrap", "level": 90, "icon": "images/logo/bootstrap.png"},
-              {"name": "Tailwind CSS", "level": 85, "icon": "images/logo/tailwind.png"},
-              {"name": "Material UI", "level": 80, "icon": "images/logo/mui.png"},
-              {"name": "Styled Components", "level": 80, "icon": "images/logo/styled-components.png"},
-              {"name": "Framer Motion", "level": 75, "icon": "images/logo/framer-motion.png"}
-            ]
-          },
-          {
-            "title": "🔧 Tools & Technologies",
-            "items": [
-              {"name": "Git", "level": 95, "icon": "images/logo/git.png"},
-              {"name": "GitHub", "level": 92, "icon": "images/logo/github.png"},
-              {"name": "Responsive Design", "level": 95, "icon": "images/logo/responsive.png"},
-              {"name": "UI/UX Design", "level": 85, "icon": "images/logo/ui-ux.png"},
-              {"name": "Performance Optimization", "level": 80, "icon": "images/logo/performance-optimization.png"},
-              {"name": "SEO Optimization", "level": 85, "icon": "images/logo/seo.png"},
-              {"name": "Web Accessibility", "level": 82, "icon": "images/logo/web-accessibility.png"},
-              {"name": "Testing & QA", "level": 78, "icon": "images/logo/testing-qa.png"},
-              {"name": "Figma", "level": 85, "icon": "images/logo/figma.png"},
-              {"name": "Npm", "level": 90, "icon": "images/logo/npm.png"},
-              {"name": "Yarn", "level": 90, "icon": "images/logo/yarn.png"},
-              {"name": "Vite", "level": 82, "icon": "images/logo/vite.png"}
-            ]
-          },
-          {
-            "title": "⚡ Modern JavaScript & APIs",
-            "items": [
-              {"name": "ES6+ Features", "level": 90, "icon": "images/logo/es6.png"},
-              {"name": "ES6 Modules", "level": 85, "icon": "images/logo/es6.png"},
-              {"name": "Async/Await", "level": 88, "icon": "images/logo/async-await.png"},
-              {"name": "Web APIs", "level": 82, "icon": "images/logo/web-api.png"}
-            ]
-          },
-          {
-            "title": "️ Development Tools",
-            "items": [
-              {"name": "ESLint", "level": 85, "icon": "images/logo/eslint.png"},
-              {"name": "Prettier", "level": 88, "icon": "images/logo/prettier.png"}
-            ]
-          },
-          {
-            "title": "🔗 Backend Integration",
-            "items": [
-              {"name": "Server-Side Rendering", "level": 80, "icon": "images/logo/ssr.png"},
-              {"name": "Static Site Generation", "level": 85, "icon": "images/logo/ssg.png"}
-            ]
-          }
-        ]
-      },
-      "services": {
-        "title": "Services<span class=\"highlight\"> </span>",
-        "items": [
-          {"id": "custom-dev", "title": "Custom Website Development", "description": "Bring your unique vision to life with a bespoke, high-performance website tailored to your needs. From concept to launch, I build responsive and scalable web solutions."},
-          {"id": "ui-ux-conversion", "title": "UI/UX to Code Conversion", "description": "Transform your design mockups (Figma, Adobe XD, Sketch) into pixel-perfect, interactive web experiences with clean, semantic HTML, CSS, and JavaScript."},
-          {"id": "performance-opt", "title": "Website Performance Optimization", "description": "Boost your site's speed, improve loading times, and enhance user engagement with expert performance tuning, code splitting, and asset optimization."},
-          {"id": "responsive-design", "title": "Responsive Web Design", "description": "Ensure your website looks stunning and functions flawlessly on every device, from mobile phones and tablets to desktops, providing a seamless user experience."},
-          {"id": "maintenance-support", "title": "Front-End Maintenance & Support", "description": "Keep your website up-to-date, secure, and bug-free with ongoing maintenance, feature updates, and technical support for your front-end applications."},
-          {"id": "interactive-ui", "title": "Interactive UI Components", "description": "Develop custom, reusable, and highly interactive UI components using React or Vue.js to enhance your web application's user interface and functionality."},
-          {"id": "api-integration", "title": "API Integration (Frontend)", "description": "Connect your web application to external services and databases by expertly integrating RESTful APIs, third-party libraries, and payment gateways."},
-          {"id": "redesign-modernization", "title": "Website Redesign & Modernization", "description": "Revitalize your outdated website with a modern, engaging design and updated technology stack to improve aesthetics, functionality, and user retention."},
-          {"id": "accessibility-consulting", "title": "Web Accessibility (A11y) Consulting", "description": "Ensure your website is usable by everyone, including individuals with disabilities, by implementing WCAG guidelines and best practices for accessibility."},
-          {"id": "cms-frontend", "title": "CMS Frontend Development", "description": "Build dynamic and customizable frontends for popular Content Management Systems like WordPress (headless), Strapi, or Contentful, ensuring seamless content delivery."},
-          {"id": "web-animation", "title": "Web Animation & Interactivity", "description": "Enhance user engagement and visual appeal with custom web animations, interactive elements, and captivating transitions using CSS, SVG, and JavaScript libraries."},
-          {"id": "frontend-consulting", "title": "Frontend Consulting & Strategy", "description": "Receive expert guidance on frontend architecture, technology stack selection, code best practices, and performance strategies to optimize your web development process."}
-        ]
-      },
-      "experience": {
-        "title": "Work <span class=\"highlight\">Experience</span>",
-        "items": [
-          {
-            "role": "Front End Developer",
-            "company": "Arcon Corporation",
-            "period": "SEPTEMBER 2024 - PRESENT",
-            "duties": [
-              "Built responsive websites using HTML, CSS, and JavaScript to improve user experience.",
-              "Collaborated with team members to implement new features, boosting site performance.",
-              "Assisted in bug fixes and site updates to ensure optimal functionality."
-            ]
-          },
-          {
-            "role": "Sales Executive",
-            "company": "CHUBB LIFE INSURANCE",
-            "period": "MAY 2024 - SEPTEMBER 2024",
-            "duties": [
-              "Assist clients with selecting life insurance policies tailored to their needs.",
-              "Provide expert advice on loan products, guiding clients through the application process.",
-              "Conduct financial assessments and recommend suitable financial products.",
-              "Collaborate with bank staff to ensure smooth operations and excellent customer service.",
-              "Maintain detailed records of client interactions and financial transactions."
-            ]
-          },
-          {
-            "role": "Corporate Accountant",
-            "company": "MABARET AL ASAFRA HOSPITAL",
-            "period": "APRIL 2020 - FEBRUARY 2021",
-            "duties": [
-              "Prepared monthly financial reports, highlighting key metrics and trends for management review.",
-              "Supported accounts payable and receivable functions, including invoice processing and payment collections.",
-              "Maintained accurate records of financial transactions, ensuring data integrity and compliance with accounting standards.",
-              "Reconciled bank statements and general ledger accounts, resolving discrepancies promptly.",
-              "Assisted in preparing tax returns and regulatory filings, ensuring compliance with local and federal regulations."
-            ]
-          }
-        ]
-      },
-      "certificates": {
-        "title": "My <span class=\"highlight\">Certificates</span>",
-        "categories": [
-          {
-            "title": "Mahara-Tech (ITI Platform)",
-            "items": [
-              {"id": "mahartech-advanced-js", "image": "images/mahartech/advanced-js-en.jpg", "title": "Modern JavaScript (ES6 and Beyond)"},
-              {"id": "mahartech-html-css", "image": "images/mahartech/html-and-css-en.jpg", "title": "Learn HTML & CSS"},
-              {"id": "mahartech-js", "image": "images/mahartech/js-en.jpg", "title": "JavaScript Programming"},
-              {"id": "mahartech-typescript", "image": "images/mahartech/typeScript-fundamentals-en.jpg", "title": "TypeScript Fundamentals"}
-            ]
-          },
-          {
-            "title": "SoloLearn",
-            "items": [
-              {"id": "sololearn-coding-data", "image": "images/soloLearn/coding-for-data.jpeg", "title": "Coding for Data"},
-              {"id": "sololearn-frontend", "image": "images/soloLearn/front-end-for-begginers.jpeg", "title": "Front-end for Beginners (Developed with Angular Team at Google)"},
-              {"id": "sololearn-webdev", "image": "images/soloLearn/web-development.jpeg", "title": "Web Development"}
-            ]
-          },
-          {
-            "title": "Udemy",
-            "items": [
-              {"id": "udemy-html-css-js", "image": "images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg", "title": "HTML5, CSS3, and JavaScript The Right Way 2025"},
-              {"id": "udemy-js-fundamentals", "image": "images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg", "title": "JavaScript Fundamentals Course for Beginners"},
-              {"id": "udemy-website-template", "image": "images/udemy/design-a-website-template-using-htmlandcss.jpeg", "title": "Design a Website Template using HTML5 & CSS3"},
-              {"id": "udemy-css-grid", "image": "images/udemy/introduction-to-css-grid.jpg", "title": "Introduction to CSS Grid"},
-              {"id": "udemy-js-scratch", "image": "images/udemy/introduction-to-programming-using-javaScript.jpeg", "title": "JavaScript From Scratch"},
-              {"id": "udemy-js-advanced", "image": "images/udemy/javaScript-fundamentals-to-advanced.jpg", "title": "JavaScript Fundamentals to Advanced: Full Stack Development"},
-              {"id": "udemy-nextjs-react", "image": "images/udemy/Practical-next.jsandreact.jpeg", "title": "Practical Next.js & React - Build a real WebApp with Next.js"},
-              {"id": "udemy-web-design", "image": "images/udemy/web-design.jpeg", "title": "Web Design Course For Beginner to Advanced"},
-              {"id": "udemy-html-css-designers", "image": "images/udemy/html-and-css-for-web-designers.jpg", "title": "HTML and CSS for Web Designers: From Basics to Beautiful"}
-            ]
-          },
-          {
-            "title": "Professional & Other Certificates",
-            "items": [
-              {"id": "chubb-life", "image": "images/certificates/chubb-life.jpeg", "title": "Chubb Life-Egypt Basic Sales Induction Training"},
-              {"id": "banque-misr", "image": "images/certificates/banque-misr-certificate .jpg", "title": "Banque Misr Summer Training Program 2022"}
-            ]
-          }
-        ],
-        "details": {
-          "mahartech-advanced-js": {"title": "Modern JavaScript (ES6 and Beyond)", "description": "This certificate validates my successful completion of the \"Modern JavaScript: ES6 and beyond\" course offered by ITI Platform (Mahara-Tech). The course, spanning 3 hours and 10 minutes, focused on advanced JavaScript concepts, including features introduced in ECMAScript 6 (ES6) and subsequent versions. This training has enhanced my proficiency in writing modern, efficient, and maintainable JavaScript code, essential for contemporary web development.", "image": "images/mahartech/advanced-js-en.jpg"},
-          "mahartech-html-css": {"title": "Learn HTML & CSS", "description": "This certificate confirms my successful completion of the \"Learn HTML & CSS\" course provided by ITI Platform (Mahara-Tech). This comprehensive course, totaling 7 hours and 42 minutes, equipped me with fundamental skills in HyperText Markup Language (HTML) for structuring web content and Cascading Style Sheets (CSS) for styling and layout. This training is crucial for building visually appealing and well-structured web pages.", "image": "images/mahartech/html-and-css-en.jpg"},
-          "mahartech-js": {"title": "JavaScript Programming", "description": "This certificate verifies my successful completion of the \"JavaScript\" course offered by ITI Platform (Mahara-Tech). Over 7 hours of dedicated study, I gained a solid understanding of JavaScript fundamentals, including syntax, data types, control structures, functions, and working with the Document Object Model (DOM). This foundational knowledge is essential for developing interactive and dynamic web applications.", "image": "images/mahartech/js-en.jpg"},
-          "mahartech-typescript": {"title": "TypeScript Fundamentals", "description": "This certificate confirms my successful completion of the \"TypeScript Fundamentals\" course provided by ITI Platform (Mahara-Tech). Through 2 hours and 8 minutes of focused learning, I acquired a foundational understanding of TypeScript, including its core concepts like static typing, interfaces, classes, and modules. This training is crucial for building more robust, scalable, and maintainable JavaScript applications.", "image": "images/mahartech/typeScript-fundamentals-en.jpg"},
-          "sololearn-coding-data": {"title": "Coding for Data", "description": "This certificate attests to my successful completion of the \"Coding for Data\" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of coding principles and techniques specifically applied to data-related tasks. It equipped me with essential skills for handling, processing, and analyzing data using programming, which is critical in various data-driven fields.", "image": "images/soloLearn/coding-for-data.jpeg"},
-          "sololearn-frontend": {"title": "Front-end for Beginners (Developed with Angular Team at Google)", "description": "This certificate confirms my successful completion of the \"Front-end for Beginners\" course from Sololearn, which was developed in collaboration with the Angular Team at Google. This course provided me with a foundational understanding of front-end web development, covering essential concepts and technologies necessary to begin building user interfaces. The curriculum, influenced by Google's Angular team, ensures a practical and industry-relevant introduction to the field.", "image": "images/soloLearn/front-end-for-begginers.jpeg"},
-          "sololearn-webdev": {"title": "Web Development", "description": "This certificate verifies my successful completion of the \"Web Development\" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of core web development principles and technologies. It equipped me with the foundational knowledge and skills necessary to build and maintain websites, covering key aspects of both front-end and potentially back-end development.", "image": "images/soloLearn/web-development.jpeg"},
-          "udemy-html-css-js": {"title": "HTML5, CSS3, and JavaScript The Right Way 2025", "description": "This certificate confirms my successful completion of the \"HTML5, CSS3, and JavaScript The Right Way 2025\" course on Udemy, instructed by Ali Murtaza. Over 5 total hours, this course provided an in-depth understanding of modern web development fundamentals, focusing on best practices for HTML5, CSS3, and JavaScript. This training has equipped me with the skills to build robust, semantic, and visually appealing web applications according to current industry standards.", "image": "images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg"},
-          "udemy-js-fundamentals": {"title": "JavaScript Fundamentals Course for Beginners", "description": "This certificate confirms my successful completion of the \"JavaScript Fundamentals Course for Beginners\" on Udemy, instructed by Sara Academy. This 2.5-hour course provided a solid introduction to the core concepts of JavaScript programming. It equipped me with foundational knowledge in JavaScript syntax, variables, data types, operators, control flow, and functions, essential for anyone starting in web development and building interactive web applications.", "image": "images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg"},
-          "udemy-website-template": {"title": "Design a Website Template using HTML5 & CSS3", "description": "This certificate confirms my successful completion of the \"Design a Website Template using HTML5 & CSS3\" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This extensive 10.5-hour course provided practical skills and techniques for creating professional and responsive website templates using modern HTML5 and CSS3. It enhanced my ability to structure web content semantically and style it effectively, which is fundamental for front-end web design and development.", "image": "images/udemy/design-a-website-template-using-htmlandcss.jpeg"},
-          "udemy-css-grid": {"title": "Introduction to CSS Grid", "description": "This certificate confirms my successful completion of the \"Introduction To CSS Grid\" course on Udemy, instructed by Joshan Grewal. This 4.5-hour course provided a comprehensive understanding of CSS Grid, a powerful layout system for designing two-dimensional grid-based layouts on the web. It significantly enhanced my skills in creating complex and responsive web designs, a crucial aspect of modern front-end development.", "image": "images/udemy/introduction-to-css-grid.jpg"},
-          "udemy-js-scratch": {"title": "JavaScript From Scratch", "description": "This certificate confirms my successful completion of the \"JavaScript From Scratch (Part 1 - Beginner Level)\" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This 4.5-hour course served as a foundational introduction to JavaScript programming, covering essential concepts for beginners. It provided me with a strong understanding of core JavaScript syntax, variables, data types, and basic programming constructs, which are critical first steps in becoming proficient in web development.", "image": "images/udemy/introduction-to-programming-using-javaScript.jpeg"},
-          "udemy-js-advanced": {"title": "JavaScript Fundamentals to Advanced: Full Stack Development", "description": "This certificate confirms my successful completion of the \"JavaScript Fundamentals to Advanced: Full Stack Development\" course on Udemy, instructed by Sayman Creative Institute. Completed on June 21, 2025, this comprehensive 5.5-hour course provided an in-depth exploration of JavaScript, progressing from foundational concepts to advanced topics relevant for full-stack development. It significantly enhanced my understanding of JavaScript's role in both front-end and back-end environments, equipping me with skills for building complete web applications.", "image": "images/udemy/javaScript-fundamentals-to-advanced.jpg"},
-          "udemy-nextjs-react": {"title": "Practical Next.js & React - Build a real WebApp with Next.js", "description": "This certificate confirms my successful completion of the \"Practical Next.js & React - Build a real WebApp with Next.js\" course on Udemy, instructed by Nick Ovchinnikov. This extensive 11-hour course provided hands-on experience in building a complete web application using Next.js and React. It significantly enhanced my skills in modern front-end development, specifically in server-side rendering, routing, and state management within the Next.js framework, crucial for developing high-performance and scalable web applications.", "image": "images/udemy/Practical-next.jsandreact.jpeg"},
-          "udemy-web-design": {"title": "Web Design Course For Beginner to Advanced", "description": "This certificate confirms my successful completion of the \"Web Design Course For Beginner to Advanced\" on Udemy, instructed by Manuel Tudu. This comprehensive 3-hour course provided a thorough understanding of web design principles and practices, progressing from fundamental concepts to more advanced techniques. It equipped me with a holistic view of web design, enabling me to create aesthetically pleasing and functional websites from initial concept to completion.", "image": "images/udemy/web-design.jpeg"},
-          "udemy-html-css-designers": {"title": "HTML and CSS for Web Designers: From Basics to Beautiful", "description": "This certificate confirms my successful completion of the \"HTML and CSS for Web Designers: From Basics to Beautiful\" course on Udemy, instructed by Mehmood Khalil. Completed on June 21, 2025, this extensive 8-hour course provided a deep dive into HTML and CSS, teaching how to structure and style web content effectively to create visually appealing and responsive designs. It enhanced my ability to translate design concepts into functional and beautiful web pages.", "image": "images/udemy/html-and-css-for-web-designers.jpg"},
-          "chubb-life": {"title": "Chubb Life-Egypt Basic Sales Induction Training", "description": "This certificate recognizes my successful completion of the \"Chubb Life-Egypt Basic Sales Induction Training.\" This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product's Knowledge test demonstrates my comprehensive grasp of Chubb Life's offerings and commitment to professional development in sales.", "image": "images/certificates/chubb-life.jpeg"},
-          "banque-misr": {"title": "Banque Misr Summer Training Program 2022", "description": "This Certificate of Achievement acknowledges my successful completion of the \"Banque Misr Summer Training Program 2022.\" This program was organized by the Central Administration for Development and Learning within the Human Resources Sector of Banque Misr. It signifies my successful engagement and completion of the designated training track, demonstrating my commitment to continuous learning and professional development within the human resources field.", "image": "images/certificates/banque-misr-certificate .jpg"},
-          "military-accounting": {"title": "Military Service - Procurement Accountant", "description": "This Certificate of Experience, issued by the Command of Brigade 96 Artillery of the Air Defense Forces, verifies my service during the period of January 7, 2023, to March 1, 2024. During my military service, I served as a Procurement Accountant, demonstrating proficiency and excellence in managing procurement-related financial operations. This experience provided me with practical skills in financial record-keeping, expenditure tracking, and inventory management within a structured organizational environment.", "image": "images/certificates/military-accounting.jpg"}
-        }
-      },
-      "projects": {
-        "title": "My <span class=\"highlight\">Projects</span>",
-        "items": [
-          {"id": "smart-business-card", "title": "🔹 Smart Business Card Platform", "link": "https://smartbuisnesscard.netlify.app"},
-          {"id": "arcon-corp", "title": "🔹 Arcon Corp Website", "link": "https://staging.arconcorp.com"},
-          {"id": "egyptian-robotics", "title": "🔹 Egyptian Robotics Union Website", "link": "https://staging.errcsf.org"},
-          {"id": "labsforhome", "title": "🔹 LabsForHome – Virtual Science Lab Platform", "link": "https://lightcyan-salamander-875465.hostingersite.com"},
-          {"id": "modern-trade-corporate", "title": "🔹 Modern Trade for Engineering (MTE)", "link": "https://moderntrade.netlify.app/"},
-          {"id": "medyour", "title": "🔹 Medyour – Digital Healthcare Platform", "link": "https://medyour.com"},
-          {"id": "modern-trade-mte", "title": "🔹 Modern Trade (MTE) Digital Business Card & Company Profile", "link": "https://moderntrade.netlify.app/cards/index.html?id=19634771"},
-          {"id": "medyour-card", "title": "🔹 Medyour Digital Business Card Platform", "link": "https://medyour.com"},
-          {"id": "dh-consult", "title": "🔹 DH Consult Company Website", "link": "https://darkgoldenrod-gnu-568360.hostingersite.com"},
-          {"id": "ti-educational", "title": "🔹 TI Educational Company Website", "link": "https://forestgreen-koala-992569.hostingersite.com"},
-          {"id": "luxury-apartment", "title": "🔹 Luxury Apartment Showcase – Modern Real Estate Experience", "link": "https://alexluxuryapt.netlify.app/"},
-          {"id": "student-dashboard", "title": "🔹 Student Dashboard - Math Learning Platform", "link": "https://omarelshemy98.github.io/mathmatic-dashboard-courses"},
-          {"id": "todo-app", "title": "🔹 Todo List App", "link": "https://omarelshemy98.github.io/todo-list-app"}
-        ],
-        "details": {
-          "arcon-corp": {"title": "🔹 Arcon Corp Website", "description": "ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company's innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON's commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.", "tech": "Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards", "link": "https://staging.arconcorp.com"},
-          "egyptian-robotics": {"title": "ERRCSF Website (Egyptian Robotics & RC Sports Federation)", "description": "A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.", "tech": "HTML5 (Semantic & Accessible Markup), CSS3 (Custom styles + Tailwind CSS utility framework), JavaScript (Vanilla JS for interactivity), Font Awesome (Icons), Google Fonts (Roboto), Responsive Design (Mobile-first approach)", "link": "https://staging.errcsf.org"},
-          "dh-consult": {"title": "ConsultCo – Professional Consulting Services Website", "description": "Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company's online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.", "tech": "HTML5 for semantic and accessible markup, Tailwind CSS for rapid, utility-first styling and responsive design, Vanilla JavaScript for interactive features and smooth navigation, Image optimization for fast loading times", "link": "https://darkgoldenrod-gnu-568360.hostingersite.com"},
-          "ti-educational": {"title": "Educational Website for Kitmeer", "description": "A responsive and user-friendly educational website designed to showcase Kitmeer's products and solutions for schools, universities, vocational, and industrial sectors. The website features detailed product pages, category-based navigation, and a modern visual design to enhance user engagement and accessibility.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization", "link": "https://forestgreen-koala-992569.hostingersite.com"},
-          "labsforhome": {"title": "Labs For Home Website – Interactive Science Learning Platform", "description": "A modern, responsive web application designed to enhance science education through interactive simulations, gamified learning modules, and comprehensive resource management. The platform provides tailored experiences for students, teachers, and schools, featuring video demonstrations, testimonials, and a robust content management system. The website aims to make science learning engaging, accessible, and effective for various academic levels.", "tech": "Next.js (React Framework), TypeScript, CSS Modules & PostCSS, Responsive Web Design, Modular Component Architecture, Media Asset Management (Images, Videos), Node.js (for build and tooling)", "link": "https://lightcyan-salamander-875465.hostingersite.com"},
-          "todo-app": {"title": "To-Do List Web Application", "description": "A simple and intuitive web application that allows users to create, manage, and organize their daily tasks efficiently. The app features task addition, deletion, and completion tracking, providing a seamless user experience for productivity management.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS)", "link": "https://omarelshemy98.github.io/todo-list-app/"},
-          "student-dashboard": {"title": "Mathmatic Dashboard Courses", "description": "A web-based dashboard designed to manage and display mathematics courses. The platform provides an intuitive interface for users to log in, view available courses, and interact with course content efficiently. The project emphasizes user experience, accessibility, and responsive design.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS)", "link": "https://omarelshemy98.github.io/mathmatic-dashboard-courses"},
-          "medyour": {"title": "Medyour – Digital Healthcare Platform", "description": "Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)", "link": "https://medyour.com"},
-          "medyour-card": {"title": "Medyour Digital Business Card Platform", "description": "A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology", "link": "https://medyour.com"},
-          "smart-business-card": {
-            "title": "Smart Business Card Platform",
-            "description": "\nA next-generation *digital identity platform* built with *Next.js 15, **React 19, and **Firebase, empowering professionals to create and share **interactive digital business profiles* instantly.  \n\nEach profile includes *dynamic QR codes, personalized URLs, and one-tap **Add to Contacts (.vcf)* functionality.  \n\nFeatures a real-time *Admin Dashboard* with Firestore synchronization, authentication, and cloud storage.  \n\nEngineered with *modular TypeScript architecture* and deployed through *Netlify CI/CD pipelines, achieving **<1s QR generation* and *100% mobile Lighthouse performance*.  \n\n*Result:* a production-ready SaaS ecosystem that transforms traditional networking into a seamless digital experience.  \n",
-            "tech": "\n💻 *Tech Stack*:<br>\n&bull; Next.js 15 + React 19 (App Router)<br>\n&bull; TypeScript + Modular Architecture<br>\n&bull; Firebase (Auth, Firestore, Storage)<br>\n&bull; Dynamic QR Code Generation<br>\n&bull; vCard Export (.vcf) – One-Tap Add to Contacts<br>\n&bull; Responsive UI (CSS Modules)<br>\n&bull; Admin Dashboard + Role-Based Access<br>\n&bull; Netlify CI/CD Deployment<br>",
-            "link": "https://smartbuisnesscard.netlify.app",
-            "example": {
-              "label": "Example Profile",
-              "href": "https://smartbuisnesscard.netlify.app/cards/ans1VG0leH1lJSzrGDb7"
+  "en": {
+    "meta": {
+      "title": "Omar Elshemy - Frontend Developer Portfolio | Modern Web Development",
+      "description": "Omar Elshemy - Passionate Frontend Developer crafting modern, responsive, and user-friendly web experiences. Specialized in HTML5, CSS3, JavaScript, React, and Vue.js.",
+      "keywords": "Frontend Developer, Web Developer, HTML5, CSS3, JavaScript, React, Vue.js, Portfolio, Omar Elshemy",
+      "author": "Omar Elshemy"
+    },
+    "contact": {
+      "email": "omarelshemy010@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/omar-elshemy",
+      "whatsapp": "https://wa.me/201026238072",
+      "whatsapp_number": "201026238072",
+      "phone": "01204777405",
+      "address1": "New cairo",
+      "address2": "Alexandria",
+      "github": "https://github.com/omarelshemy98"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "certificates": "Certificates",
+      "contact": "Contact"
+    },
+    "landingOverlay": {
+      "title": "Omar Elshemy",
+      "subtitle": "Frontend Developer",
+      "welcome": "Welcome to my portfolio"
+    },
+    "hero": {
+      "greeting": "Hello, It's Me",
+      "name": "Omar Elshemy",
+      "role": "And I'm a <span class='highlight'>Frontend Developer</span>",
+      "description": "Passionate Front End Developer crafting modern, responsive, and user-friendly web experiences. I turn ideas into interactive digital products with clean code and creative design.",
+      "cvButton": "View CV"
+    },
+    "about": {
+      "title": "About <span class=\"highlight\">Me</span>",
+      "p1": "I'm a digital craftsman who transforms ideas into interactive realities. My journey in front-end development is fueled by curiosity, creativity, and a relentless pursuit of pixel-perfect design. I don't just build websites; I create digital experiences that connect, inspire, and delight users across every device.",
+      "p2": "With a toolkit packed with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>React</b>, and <b>Vue.js</b>, I blend code and creativity to deliver solutions that are as beautiful as they are functional. Whether it's a sleek landing page, a <b>dynamic web app</b>, or a seamless user interface, I believe every detail matters. My approach is rooted in <b>UI/UX best practices</b>, ensuring every project is not just well-coded, but truly user-centered.",
+      "p3": "Collaboration is my superpower — I thrive on turning complex challenges into elegant, maintainable solutions, working hand-in-hand with designers and back-end teams. From startups to established brands, I've helped clients stand out in the digital world with innovative, high-performance web experiences. Let's build something extraordinary together!",
+      "infoCard": {
+        "title": "Basic Information",
+        "email": "EMAIL:",
+        "linkedin": "LinkedIn:",
+        "whatsapp": "Whatapp:",
+        "phone": "PHONE:",
+        "address1": "ADDRESS:",
+        "address2": "Secondary ADDRESS:"
+      }
+    },
+    "skills": {
+      "title": "My <span class=\"highlight\">Skills</span>",
+      "categories": [
+        {
+          "title": "🛠️ Core Technologies",
+          "items": [
+            { "name": "HTML5", "level": 95, "icon": "images/logo/html.png" },
+            { "name": "CSS3", "level": 90, "icon": "images/logo/css.png" },
+            { "name": "JavaScript", "level": 85, "icon": "images/logo/js.png" },
+            { "name": "TypeScript", "level": 80, "icon": "images/logo/ts.png" }
+          ]
+        },
+        {
+          "title": "⚛️ Frameworks & Libraries",
+          "items": [
+            { "name": "React", "level": 88, "icon": "images/logo/react.png" },
+            {
+              "name": "Next.js",
+              "level": 82,
+              "icon": "images/logo/next-js.png"
+            },
+            { "name": "Redux", "level": 80, "icon": "images/logo/redux.png" },
+            {
+              "name": "React Query",
+              "level": 75,
+              "icon": "images/logo/react-query.png"
+            },
+            {
+              "name": "Context API",
+              "level": 85,
+              "icon": "images/logo/react.png"
             }
-          },
-          "modern-trade-corporate": {"title": "🔹 Modern Trade for Engineering (MTE)", "description": "Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design", "link": "https://moderntrade.netlify.app/"},
-          "modern-trade-mte": {"title": "🔹 Modern Trade (MTE) Digital Business Card & Company Profile", "description": "A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE's commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Responsive Web Design, Digital Business Card, Social Media Integration", "link": "https://moderntrade.netlify.app/cards/index.html?id=19634771"},
-          "luxury-apartment": {"title": "🔹 Luxury Apartment Showcase – Modern Real Estate Experience", "description": "A sophisticated and modern real estate showcase website designed to present luxury apartments with an elegant, user-friendly interface. The platform features high-quality property images, detailed descriptions, interactive galleries, and seamless navigation to provide potential buyers and renters with an immersive viewing experience. Built with responsive design principles, the website ensures optimal viewing across all devices while maintaining the premium aesthetic expected in luxury real estate.", "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization, Modern UI/UX Design", "link": "https://alexluxuryapt.netlify.app/"}
+          ]
+        },
+        {
+          "title": "🎨 UI Frameworks & Styling",
+          "items": [
+            {
+              "name": "Bootstrap",
+              "level": 90,
+              "icon": "images/logo/bootstrap.png"
+            },
+            {
+              "name": "Tailwind CSS",
+              "level": 85,
+              "icon": "images/logo/tailwind.png"
+            },
+            {
+              "name": "Material UI",
+              "level": 80,
+              "icon": "images/logo/mui.png"
+            },
+            {
+              "name": "Styled Components",
+              "level": 80,
+              "icon": "images/logo/styled-components.png"
+            },
+            {
+              "name": "Framer Motion",
+              "level": 75,
+              "icon": "images/logo/framer-motion.png"
+            }
+          ]
+        },
+        {
+          "title": "🔧 Tools & Technologies",
+          "items": [
+            { "name": "Git", "level": 95, "icon": "images/logo/git.png" },
+            { "name": "GitHub", "level": 92, "icon": "images/logo/github.png" },
+            {
+              "name": "Responsive Design",
+              "level": 95,
+              "icon": "images/logo/responsive.png"
+            },
+            {
+              "name": "UI/UX Design",
+              "level": 85,
+              "icon": "images/logo/ui-ux.png"
+            },
+            {
+              "name": "Performance Optimization",
+              "level": 80,
+              "icon": "images/logo/performance-optimization.png"
+            },
+            {
+              "name": "SEO Optimization",
+              "level": 85,
+              "icon": "images/logo/seo.png"
+            },
+            {
+              "name": "Web Accessibility",
+              "level": 82,
+              "icon": "images/logo/web-accessibility.png"
+            },
+            {
+              "name": "Testing & QA",
+              "level": 78,
+              "icon": "images/logo/testing-qa.png"
+            },
+            { "name": "Figma", "level": 85, "icon": "images/logo/figma.png" },
+            { "name": "Npm", "level": 90, "icon": "images/logo/npm.png" },
+            { "name": "Yarn", "level": 90, "icon": "images/logo/yarn.png" },
+            { "name": "Vite", "level": 82, "icon": "images/logo/vite.png" }
+          ]
+        },
+        {
+          "title": "⚡ Modern JavaScript & APIs",
+          "items": [
+            {
+              "name": "ES6+ Features",
+              "level": 90,
+              "icon": "images/logo/es6.png"
+            },
+            {
+              "name": "ES6 Modules",
+              "level": 85,
+              "icon": "images/logo/es6.png"
+            },
+            {
+              "name": "Async/Await",
+              "level": 88,
+              "icon": "images/logo/async-await.png"
+            },
+            {
+              "name": "Web APIs",
+              "level": 82,
+              "icon": "images/logo/web-api.png"
+            }
+          ]
+        },
+        {
+          "title": "️ Development Tools",
+          "items": [
+            { "name": "ESLint", "level": 85, "icon": "images/logo/eslint.png" },
+            {
+              "name": "Prettier",
+              "level": 88,
+              "icon": "images/logo/prettier.png"
+            }
+          ]
+        },
+        {
+          "title": "🔗 Backend Integration",
+          "items": [
+            {
+              "name": "Server-Side Rendering",
+              "level": 80,
+              "icon": "images/logo/ssr.png"
+            },
+            {
+              "name": "Static Site Generation",
+              "level": 85,
+              "icon": "images/logo/ssg.png"
+            }
+          ]
         }
-      },
-      "social": {
-        "title": "Connect <span class=\"highlight\">With Me!</span>"
-      },
-      "footer": {
-        "copyright": "Omar Elshemy",
-        "rights": "All rights reserved."
-      },
-      "serviceModal": {
-        "title": "Request <span id=\"modalServiceTitle\" class=\"text-[#00fff7]\">Service</span>",
-        "nameLabel": "Your Name:",
-        "namePlaceholder": "Enter your full name",
-        "emailLabel": "Your Email:",
-        "emailPlaceholder": "name@example.com",
-        "descLabel": "Tell me about your project & requirements:",
-        "descPlaceholder": "Describe what you need, your goals, and any specific features.",
-        "fileLabel": "Upload relevant files (e.g., design mockups, examples):",
-        "mobileLabel": "Your Mobile Number (for WhatsApp/call):",
-        "mobilePlaceholder": "e.g., 01012345678",
-        "paymentLabel": "Preferred Payment Method:",
-        "paymentOptions": [
-          "Select an option", "Vodafone Cash", "Bank Transfer"
-        ],
-        "timeframeLabel": "Desired Delivery Timeframe:",
-        "timeframeOptions": [
-          "Select timeframe (Optional)", "1-3 days", "3-7 days", "1-2 weeks", "2-4 weeks", "1 month+", "Custom (please specify in description)"
-        ],
-        "submitButton": "Submit Request",
-        "fileInfo": "File upload attempted: {fileName} ({fileSize} KB). Please send it separately via WhatsApp.",
-        "noFile": "No file attached.",
-        "validationError": "Please fill in all required fields (Name, Email, Description, Mobile Number, Payment Method).",
-        "successMessage": "WhatsApp will open with your message ready. Please press the send button within WhatsApp."
-      },
-      "codeRainSnippets": [
-        "<div class=\"box\">", "<button onclick=\"go()\">", "<input type=\"text\" />", "<img src=\"logo.png\" alt=\"logo\">", "<ul class=\"nav\">", "<li class=\"item\">", "<a href=\"#\">Home</a>", "<h1>Welcome!</h1>", "<meta charset=\"UTF-8\">", "<link rel=\"stylesheet\" href=\"main.css\">", "function handleClick() {", "let result = sum(5, 7);", "const skills = [\"HTML\", \"CSS\"]", "console.log(\"Hi!\");", "if (x > 10) { ... }", "for (let i = 0; i < 5; i++)", "setTimeout(() => {...}, 1000);", "document.getElementById(\"main\")", "window.addEventListener(\"load\", ...)", "return a + b;", "background: #1a374d;", "color: #fff;", "padding: 16px 24px;", "margin: 0 auto;", "display: flex;", "align-items: center;", "justify-content: space-between;", "border-radius: 8px;", "font-size: 1.2rem;", "box-shadow: 0 2px 8px #0003;", "transition: all 0.3s;", "export default App;", "import React from \"react\";", "map(item => <li>{item}</li>)", "filter(Boolean)", "reduce((a, b) => a + b, 0)", "const [state, setState] = useState()", "useEffect(() => {...}, [])", "props.children", "className=\"container\"", "href=\"/about\"", "src=\"/img/bg.jpg\"", "type=\"button\"", "value=\"Submit\"", "id=\"main-section\"", "onClick={handleClick}", "aria-label=\"Close\"", "justify-content: center;", "gap: 12px;", "min-width: 320px;", "max-width: 1200px;", "overflow: hidden;", "position: absolute;", "top: 0;", "left: 0;", "right: 0;", "bottom: 0;", "z-index: 10;", "opacity: 0.8;", "pointer-events: none;", "font-family: Montserrat, sans-serif;", "border: none;", "outline: none;", "cursor: pointer;", "transition: background 0.2s;", "background-color: #222;", "color: #00ffb3;", "height: 100vh;", "width: 100vw;", "margin-bottom: 2rem;", "padding-top: 2rem;", "text-align: center;", "font-weight: bold;", "letter-spacing: 1px;", "line-height: 1.5;", "box-sizing: border-box;", "overflow-x: hidden;", "overflow-y: auto;", "background-image: url(\"bg.svg\");", "background-repeat: no-repeat;", "background-size: cover;", "background-position: center;", "filter: blur(2px);", "transform: scale(1.05);", "animation: fadeIn 1s;", "keyframes fadeIn { ... }", "::-webkit-scrollbar { ... }", "::selection { background: #00ffb3; }", "/* Responsive Design */", "@media (max-width: 600px) { ... }", "/* End of CSS */"
-      ],
-      "heroCodeSnippets": [
-        "// Portfolio.js\nfunction Developer() {\n  const skills = ['HTML', 'CSS', 'JavaScript', 'React'];\n  for (let skill of skills) {\n    console.log(skill);\n  }\n  return <Portfolio />;\n}",
-        "// Responsive Design\n@media (max-width: 900px) {\n  .container { flex-direction: column; }\n}",
-        "// Creativity\nconst design = () => 'Modern & Clean';",
-        "// Animation\nrequestAnimationFrame(() => render());",
-        "// Contact\nconst email = 'me@portfolio.com';",
-        "// Experience\nlet years = 5;\nconsole.log('Years:', years);",
-        "// UI/UX\nfunction createButton(text) {\n  return '<button>' + text + '</button>';\n}",
-        "// Frameworks\nimport React from 'react';\nimport NextJS from 'next';",
-        "// CSS Variables\n:root {\n  --primary: #00fff7;\n  --bg: #181f2a;\n}"
       ]
-    }
+    },
+    "services": {
+      "title": "Services<span class=\"highlight\"> </span>",
+      "items": [
+        {
+          "id": "custom-dev",
+          "title": "Custom Website Development",
+          "description": "Bring your unique vision to life with a bespoke, high-performance website tailored to your needs. From concept to launch, I build responsive and scalable web solutions."
+        },
+        {
+          "id": "ui-ux-conversion",
+          "title": "UI/UX to Code Conversion",
+          "description": "Transform your design mockups (Figma, Adobe XD, Sketch) into pixel-perfect, interactive web experiences with clean, semantic HTML, CSS, and JavaScript."
+        },
+        {
+          "id": "performance-opt",
+          "title": "Website Performance Optimization",
+          "description": "Boost your site's speed, improve loading times, and enhance user engagement with expert performance tuning, code splitting, and asset optimization."
+        },
+        {
+          "id": "responsive-design",
+          "title": "Responsive Web Design",
+          "description": "Ensure your website looks stunning and functions flawlessly on every device, from mobile phones and tablets to desktops, providing a seamless user experience."
+        },
+        {
+          "id": "maintenance-support",
+          "title": "Front-End Maintenance & Support",
+          "description": "Keep your website up-to-date, secure, and bug-free with ongoing maintenance, feature updates, and technical support for your front-end applications."
+        },
+        {
+          "id": "interactive-ui",
+          "title": "Interactive UI Components",
+          "description": "Develop custom, reusable, and highly interactive UI components using React or Vue.js to enhance your web application's user interface and functionality."
+        },
+        {
+          "id": "api-integration",
+          "title": "API Integration (Frontend)",
+          "description": "Connect your web application to external services and databases by expertly integrating RESTful APIs, third-party libraries, and payment gateways."
+        },
+        {
+          "id": "redesign-modernization",
+          "title": "Website Redesign & Modernization",
+          "description": "Revitalize your outdated website with a modern, engaging design and updated technology stack to improve aesthetics, functionality, and user retention."
+        },
+        {
+          "id": "accessibility-consulting",
+          "title": "Web Accessibility (A11y) Consulting",
+          "description": "Ensure your website is usable by everyone, including individuals with disabilities, by implementing WCAG guidelines and best practices for accessibility."
+        },
+        {
+          "id": "cms-frontend",
+          "title": "CMS Frontend Development",
+          "description": "Build dynamic and customizable frontends for popular Content Management Systems like WordPress (headless), Strapi, or Contentful, ensuring seamless content delivery."
+        },
+        {
+          "id": "web-animation",
+          "title": "Web Animation & Interactivity",
+          "description": "Enhance user engagement and visual appeal with custom web animations, interactive elements, and captivating transitions using CSS, SVG, and JavaScript libraries."
+        },
+        {
+          "id": "frontend-consulting",
+          "title": "Frontend Consulting & Strategy",
+          "description": "Receive expert guidance on frontend architecture, technology stack selection, code best practices, and performance strategies to optimize your web development process."
+        }
+      ]
+    },
+    "experience": {
+      "title": "Work <span class=\"highlight\">Experience</span>",
+      "items": [
+        {
+          "role": "Front End Developer",
+          "company": "Arcon Corporation",
+          "period": "SEPTEMBER 2024 - PRESENT",
+          "duties": [
+            "Developed and maintained responsive, scalable, and high-performance web interfaces using React.js, Next.js, and TypeScript.",
+            "Built reusable UI component systems, reducing development time by 25% across multiple projects.",
+            "Integrated RESTful APIs and implemented robust state management using custom hooks and React Query.",
+            "Improved Core Web Vitals and SEO performance through code splitting, image optimization, and lazy loading.",
+            "Collaborated with design and backend teams in Agile sprints to ensure timely delivery of features and enhancements.",
+            "Participated in code reviews, linting automation, and version control to maintain clean, maintainable architecture."
+          ]
+        },
+        {
+          "role": "Junior Front-End Developer",
+          "company": "Modern Trade for Engineering Supplies",
+          "period": "MAY 2022 – DEC 2023",
+          "duties": [
+            "Designed and implemented responsive landing pages, dashboards, and admin panels using React.js, HTML5, and Tailwind CSS.",
+            "Enhanced website load speed by 35% through performance tuning and component optimization.",
+            "Collaborated closely with backend engineers to integrate RESTful APIs and improve UI responsiveness.",
+            "Maintained high standards for accessibility (A11y) and browser compatibility across all devices."
+          ]
+        },
+        {
+          "role": "Sales Executive",
+          "company": "CHUBB LIFE INSURANCE",
+          "period": "MAY 2024 - SEPTEMBER 2024",
+          "duties": [
+            "Assist clients with selecting life insurance policies tailored to their needs.",
+            "Provide expert advice on loan products, guiding clients through the application process.",
+            "Conduct financial assessments and recommend suitable financial products.",
+            "Collaborate with bank staff to ensure smooth operations and excellent customer service.",
+            "Maintain detailed records of client interactions and financial transactions."
+          ]
+        },
+        {
+          "role": "Corporate Accountant",
+          "company": "MABARET AL ASAFRA HOSPITAL",
+          "period": "APRIL 2020 - FEBRUARY 2021",
+          "duties": [
+            "Prepared monthly financial reports, highlighting key metrics and trends for management review.",
+            "Supported accounts payable and receivable functions, including invoice processing and payment collections.",
+            "Maintained accurate records of financial transactions, ensuring data integrity and compliance with accounting standards.",
+            "Reconciled bank statements and general ledger accounts, resolving discrepancies promptly.",
+            "Assisted in preparing tax returns and regulatory filings, ensuring compliance with local and federal regulations."
+          ]
+        }
+      ]
+    },
+    "certificates": {
+      "title": "My <span class=\"highlight\">Certificates</span>",
+      "categories": [
+        {
+          "title": "Mahara-Tech (ITI Platform)",
+          "items": [
+            {
+              "id": "mahartech-advanced-js",
+              "image": "images/mahartech/advanced-js-en.jpg",
+              "title": "Modern JavaScript (ES6 and Beyond)"
+            },
+            {
+              "id": "mahartech-html-css",
+              "image": "images/mahartech/html-and-css-en.jpg",
+              "title": "Learn HTML & CSS"
+            },
+            {
+              "id": "mahartech-js",
+              "image": "images/mahartech/js-en.jpg",
+              "title": "JavaScript Programming"
+            },
+            {
+              "id": "mahartech-typescript",
+              "image": "images/mahartech/typeScript-fundamentals-en.jpg",
+              "title": "TypeScript Fundamentals"
+            }
+          ]
+        },
+        {
+          "title": "SoloLearn",
+          "items": [
+            {
+              "id": "sololearn-coding-data",
+              "image": "images/soloLearn/coding-for-data.jpeg",
+              "title": "Coding for Data"
+            },
+            {
+              "id": "sololearn-frontend",
+              "image": "images/soloLearn/front-end-for-begginers.jpeg",
+              "title": "Front-end for Beginners (Developed with Angular Team at Google)"
+            },
+            {
+              "id": "sololearn-webdev",
+              "image": "images/soloLearn/web-development.jpeg",
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Udemy",
+          "items": [
+            {
+              "id": "udemy-html-css-js",
+              "image": "images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg",
+              "title": "HTML5, CSS3, and JavaScript The Right Way 2025"
+            },
+            {
+              "id": "udemy-js-fundamentals",
+              "image": "images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg",
+              "title": "JavaScript Fundamentals Course for Beginners"
+            },
+            {
+              "id": "udemy-website-template",
+              "image": "images/udemy/design-a-website-template-using-htmlandcss.jpeg",
+              "title": "Design a Website Template using HTML5 & CSS3"
+            },
+            {
+              "id": "udemy-css-grid",
+              "image": "images/udemy/introduction-to-css-grid.jpg",
+              "title": "Introduction to CSS Grid"
+            },
+            {
+              "id": "udemy-js-scratch",
+              "image": "images/udemy/introduction-to-programming-using-javaScript.jpeg",
+              "title": "JavaScript From Scratch"
+            },
+            {
+              "id": "udemy-js-advanced",
+              "image": "images/udemy/javaScript-fundamentals-to-advanced.jpg",
+              "title": "JavaScript Fundamentals to Advanced: Full Stack Development"
+            },
+            {
+              "id": "udemy-nextjs-react",
+              "image": "images/udemy/Practical-next.jsandreact.jpeg",
+              "title": "Practical Next.js & React - Build a real WebApp with Next.js"
+            },
+            {
+              "id": "udemy-web-design",
+              "image": "images/udemy/web-design.jpeg",
+              "title": "Web Design Course For Beginner to Advanced"
+            },
+            {
+              "id": "udemy-html-css-designers",
+              "image": "images/udemy/html-and-css-for-web-designers.jpg",
+              "title": "HTML and CSS for Web Designers: From Basics to Beautiful"
+            }
+          ]
+        },
+        {
+          "title": "Professional & Other Certificates",
+          "items": [
+            {
+              "id": "chubb-life",
+              "image": "images/certificates/chubb-life.jpeg",
+              "title": "Chubb Life-Egypt Basic Sales Induction Training"
+            },
+            {
+              "id": "banque-misr",
+              "image": "images/certificates/banque-misr-certificate .jpg",
+              "title": "Banque Misr Summer Training Program 2022"
+            }
+          ]
+        }
+      ],
+      "details": {
+        "mahartech-advanced-js": {
+          "title": "Modern JavaScript (ES6 and Beyond)",
+          "description": "This certificate validates my successful completion of the \"Modern JavaScript: ES6 and beyond\" course offered by ITI Platform (Mahara-Tech). The course, spanning 3 hours and 10 minutes, focused on advanced JavaScript concepts, including features introduced in ECMAScript 6 (ES6) and subsequent versions. This training has enhanced my proficiency in writing modern, efficient, and maintainable JavaScript code, essential for contemporary web development.",
+          "image": "images/mahartech/advanced-js-en.jpg"
+        },
+        "mahartech-html-css": {
+          "title": "Learn HTML & CSS",
+          "description": "This certificate confirms my successful completion of the \"Learn HTML & CSS\" course provided by ITI Platform (Mahara-Tech). This comprehensive course, totaling 7 hours and 42 minutes, equipped me with fundamental skills in HyperText Markup Language (HTML) for structuring web content and Cascading Style Sheets (CSS) for styling and layout. This training is crucial for building visually appealing and well-structured web pages.",
+          "image": "images/mahartech/html-and-css-en.jpg"
+        },
+        "mahartech-js": {
+          "title": "JavaScript Programming",
+          "description": "This certificate verifies my successful completion of the \"JavaScript\" course offered by ITI Platform (Mahara-Tech). Over 7 hours of dedicated study, I gained a solid understanding of JavaScript fundamentals, including syntax, data types, control structures, functions, and working with the Document Object Model (DOM). This foundational knowledge is essential for developing interactive and dynamic web applications.",
+          "image": "images/mahartech/js-en.jpg"
+        },
+        "mahartech-typescript": {
+          "title": "TypeScript Fundamentals",
+          "description": "This certificate confirms my successful completion of the \"TypeScript Fundamentals\" course provided by ITI Platform (Mahara-Tech). Through 2 hours and 8 minutes of focused learning, I acquired a foundational understanding of TypeScript, including its core concepts like static typing, interfaces, classes, and modules. This training is crucial for building more robust, scalable, and maintainable JavaScript applications.",
+          "image": "images/mahartech/typeScript-fundamentals-en.jpg"
+        },
+        "sololearn-coding-data": {
+          "title": "Coding for Data",
+          "description": "This certificate attests to my successful completion of the \"Coding for Data\" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of coding principles and techniques specifically applied to data-related tasks. It equipped me with essential skills for handling, processing, and analyzing data using programming, which is critical in various data-driven fields.",
+          "image": "images/soloLearn/coding-for-data.jpeg"
+        },
+        "sololearn-frontend": {
+          "title": "Front-end for Beginners (Developed with Angular Team at Google)",
+          "description": "This certificate confirms my successful completion of the \"Front-end for Beginners\" course from Sololearn, which was developed in collaboration with the Angular Team at Google. This course provided me with a foundational understanding of front-end web development, covering essential concepts and technologies necessary to begin building user interfaces. The curriculum, influenced by Google's Angular team, ensures a practical and industry-relevant introduction to the field.",
+          "image": "images/soloLearn/front-end-for-begginers.jpeg"
+        },
+        "sololearn-webdev": {
+          "title": "Web Development",
+          "description": "This certificate verifies my successful completion of the \"Web Development\" course from Sololearn. This course provided me with a comprehensive theoretical and practical understanding of core web development principles and technologies. It equipped me with the foundational knowledge and skills necessary to build and maintain websites, covering key aspects of both front-end and potentially back-end development.",
+          "image": "images/soloLearn/web-development.jpeg"
+        },
+        "udemy-html-css-js": {
+          "title": "HTML5, CSS3, and JavaScript The Right Way 2025",
+          "description": "This certificate confirms my successful completion of the \"HTML5, CSS3, and JavaScript The Right Way 2025\" course on Udemy, instructed by Ali Murtaza. Over 5 total hours, this course provided an in-depth understanding of modern web development fundamentals, focusing on best practices for HTML5, CSS3, and JavaScript. This training has equipped me with the skills to build robust, semantic, and visually appealing web applications according to current industry standards.",
+          "image": "images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg"
+        },
+        "udemy-js-fundamentals": {
+          "title": "JavaScript Fundamentals Course for Beginners",
+          "description": "This certificate confirms my successful completion of the \"JavaScript Fundamentals Course for Beginners\" on Udemy, instructed by Sara Academy. This 2.5-hour course provided a solid introduction to the core concepts of JavaScript programming. It equipped me with foundational knowledge in JavaScript syntax, variables, data types, operators, control flow, and functions, essential for anyone starting in web development and building interactive web applications.",
+          "image": "images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg"
+        },
+        "udemy-website-template": {
+          "title": "Design a Website Template using HTML5 & CSS3",
+          "description": "This certificate confirms my successful completion of the \"Design a Website Template using HTML5 & CSS3\" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This extensive 10.5-hour course provided practical skills and techniques for creating professional and responsive website templates using modern HTML5 and CSS3. It enhanced my ability to structure web content semantically and style it effectively, which is fundamental for front-end web design and development.",
+          "image": "images/udemy/design-a-website-template-using-htmlandcss.jpeg"
+        },
+        "udemy-css-grid": {
+          "title": "Introduction to CSS Grid",
+          "description": "This certificate confirms my successful completion of the \"Introduction To CSS Grid\" course on Udemy, instructed by Joshan Grewal. This 4.5-hour course provided a comprehensive understanding of CSS Grid, a powerful layout system for designing two-dimensional grid-based layouts on the web. It significantly enhanced my skills in creating complex and responsive web designs, a crucial aspect of modern front-end development.",
+          "image": "images/udemy/introduction-to-css-grid.jpg"
+        },
+        "udemy-js-scratch": {
+          "title": "JavaScript From Scratch",
+          "description": "This certificate confirms my successful completion of the \"JavaScript From Scratch (Part 1 - Beginner Level)\" course on Udemy, instructed by Kioomars Jonood and Samaneh Mazidi Sharaf Abadi. This 4.5-hour course served as a foundational introduction to JavaScript programming, covering essential concepts for beginners. It provided me with a strong understanding of core JavaScript syntax, variables, data types, and basic programming constructs, which are critical first steps in becoming proficient in web development.",
+          "image": "images/udemy/introduction-to-programming-using-javaScript.jpeg"
+        },
+        "udemy-js-advanced": {
+          "title": "JavaScript Fundamentals to Advanced: Full Stack Development",
+          "description": "This certificate confirms my successful completion of the \"JavaScript Fundamentals to Advanced: Full Stack Development\" course on Udemy, instructed by Sayman Creative Institute. Completed on June 21, 2025, this comprehensive 5.5-hour course provided an in-depth exploration of JavaScript, progressing from foundational concepts to advanced topics relevant for full-stack development. It significantly enhanced my understanding of JavaScript's role in both front-end and back-end environments, equipping me with skills for building complete web applications.",
+          "image": "images/udemy/javaScript-fundamentals-to-advanced.jpg"
+        },
+        "udemy-nextjs-react": {
+          "title": "Practical Next.js & React - Build a real WebApp with Next.js",
+          "description": "This certificate confirms my successful completion of the \"Practical Next.js & React - Build a real WebApp with Next.js\" course on Udemy, instructed by Nick Ovchinnikov. This extensive 11-hour course provided hands-on experience in building a complete web application using Next.js and React. It significantly enhanced my skills in modern front-end development, specifically in server-side rendering, routing, and state management within the Next.js framework, crucial for developing high-performance and scalable web applications.",
+          "image": "images/udemy/Practical-next.jsandreact.jpeg"
+        },
+        "udemy-web-design": {
+          "title": "Web Design Course For Beginner to Advanced",
+          "description": "This certificate confirms my successful completion of the \"Web Design Course For Beginner to Advanced\" on Udemy, instructed by Manuel Tudu. This comprehensive 3-hour course provided a thorough understanding of web design principles and practices, progressing from fundamental concepts to more advanced techniques. It equipped me with a holistic view of web design, enabling me to create aesthetically pleasing and functional websites from initial concept to completion.",
+          "image": "images/udemy/web-design.jpeg"
+        },
+        "udemy-html-css-designers": {
+          "title": "HTML and CSS for Web Designers: From Basics to Beautiful",
+          "description": "This certificate confirms my successful completion of the \"HTML and CSS for Web Designers: From Basics to Beautiful\" course on Udemy, instructed by Mehmood Khalil. Completed on June 21, 2025, this extensive 8-hour course provided a deep dive into HTML and CSS, teaching how to structure and style web content effectively to create visually appealing and responsive designs. It enhanced my ability to translate design concepts into functional and beautiful web pages.",
+          "image": "images/udemy/html-and-css-for-web-designers.jpg"
+        },
+        "chubb-life": {
+          "title": "Chubb Life-Egypt Basic Sales Induction Training",
+          "description": "This certificate recognizes my successful completion of the \"Chubb Life-Egypt Basic Sales Induction Training.\" This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product's Knowledge test demonstrates my comprehensive grasp of Chubb Life's offerings and commitment to professional development in sales.",
+          "image": "images/certificates/chubb-life.jpeg"
+        },
+        "banque-misr": {
+          "title": "Banque Misr Summer Training Program 2022",
+          "description": "This Certificate of Achievement acknowledges my successful completion of the \"Banque Misr Summer Training Program 2022.\" This program was organized by the Central Administration for Development and Learning within the Human Resources Sector of Banque Misr. It signifies my successful engagement and completion of the designated training track, demonstrating my commitment to continuous learning and professional development within the human resources field.",
+          "image": "images/certificates/banque-misr-certificate .jpg"
+        },
+        "military-accounting": {
+          "title": "Military Service - Procurement Accountant",
+          "description": "This Certificate of Experience, issued by the Command of Brigade 96 Artillery of the Air Defense Forces, verifies my service during the period of January 7, 2023, to March 1, 2024. During my military service, I served as a Procurement Accountant, demonstrating proficiency and excellence in managing procurement-related financial operations. This experience provided me with practical skills in financial record-keeping, expenditure tracking, and inventory management within a structured organizational environment.",
+          "image": "images/certificates/military-accounting.jpg"
+        }
+      }
+    },
+    "projects": {
+      "title": "My <span class=\"highlight\">Projects</span>",
+      "items": [
+        {
+          "id": "smart-business-card",
+          "title": "🔹 Smart Business Card Platform",
+          "link": "https://smartbuisnesscard.netlify.app"
+        },
+        {
+          "id": "arcon-corp",
+          "title": "🔹 Arcon Corp Website",
+          "link": "https://www.arconcorp.com"
+        },
+        {
+          "id": "axiom-ai",
+          "title": "🔹 Axiom AI Solutions ",
+          "link": "https://www.axiomais.com/"
+        },
+        {
+          "id": "egyptian-robotics",
+          "title": "🔹 Egyptian Robotics Union Website",
+          "link": "https://staging.errcsf.org"
+        },
+        {
+          "id": "labsforhome",
+          "title": "🔹 LabsForHome – Virtual Science Lab Platform",
+          "link": "https://lightcyan-salamander-875465.hostingersite.com"
+        },
+        {
+          "id": "modern-trade-corporate",
+          "title": "🔹 Modern Trade for Engineering (MTE)",
+          "link": "https://moderntrade.netlify.app/"
+        },
+        {
+          "id": "medyour",
+          "title": "🔹 Medyour – Digital Healthcare Platform",
+          "link": "https://www.medyour.com"
+        },
+        {
+          "id": "modern-trade-mte",
+          "title": "🔹 Modern Trade (MTE) Digital Business Card & Company Profile",
+          "link": "https://moderntrade.netlify.app/cards/index.html?id=19634771"
+        },
+        {
+          "id": "dh-consult",
+          "title": "🔹 DH Consult Company Website",
+          "link": "https://darkgoldenrod-gnu-568360.hostingersite.com"
+        },
+        {
+          "id": "ti-educational",
+          "title": "🔹 TI Educational Company Website",
+          "link": "https://forestgreen-koala-992569.hostingersite.com"
+        },
+        {
+          "id": "luxury-apartment",
+          "title": "🔹 Luxury Apartment Showcase – Modern Real Estate Experience",
+          "link": "https://alexluxuryapt.netlify.app/"
+        },
+        {
+          "id": "student-dashboard",
+          "title": "🔹 Student Dashboard - Math Learning Platform",
+          "link": "https://omarelshemy98.github.io/mathmatic-dashboard-courses"
+        },
+        {
+          "id": "todo-app",
+          "title": "🔹 Todo List App",
+          "link": "https://omarelshemy98.github.io/todo-list-app"
+        }
+      ],
+      "details": {
+        "arcon-corp": {
+          "title": "🔹 Arcon Corp Website",
+          "description": "ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company's innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON's commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.",
+          "tech": "Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards",
+          "link": "https://staging.arconcorp.com"
+        },
+        "axiom-ai": {
+          "title": "Axiom AI Solutions Website",
+          "description": "A corporate website for a tech and engineering company, built with modern, scalable technologies. Developed using Next.js 15 (React 19) and TypeScript with a responsive layout and custom SCSS. The site highlights the company’s services in technology and engineering, with focus on performance, security, and optimized images.",
+          "tech": "Next.js 15 (React 19), TypeScript, CSS Modules, SCSS, Bootstrap 5, JavaScript (ES6+), Image Optimization (Next.js), Font Awesome, HTML5",
+          "link": "https://axiomais.com"
+        },
+        "egyptian-robotics": {
+          "title": "ERRCSF Website (Egyptian Robotics & RC Sports Federation)",
+          "description": "A modern, responsive website for the Egyptian Robotics & RC Sports Federation. The site provides information about the federation, its activities, membership, media, and news. It features a multi-step registration form, interactive popups, and a visually engaging design tailored for both desktop and mobile users.",
+          "tech": "HTML5 (Semantic & Accessible Markup), CSS3 (Custom styles + Tailwind CSS utility framework), JavaScript (Vanilla JS for interactivity), Font Awesome (Icons), Google Fonts (Roboto), Responsive Design (Mobile-first approach)",
+          "link": "https://staging.errcsf.org"
+        },
+        "dh-consult": {
+          "title": "ConsultCo – Professional Consulting Services Website",
+          "description": "Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company's online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.",
+          "tech": "HTML5 for semantic and accessible markup, Tailwind CSS for rapid, utility-first styling and responsive design, Vanilla JavaScript for interactive features and smooth navigation, Image optimization for fast loading times",
+          "link": "https://darkgoldenrod-gnu-568360.hostingersite.com"
+        },
+        "ti-educational": {
+          "title": "Educational Website for Kitmeer",
+          "description": "A responsive and user-friendly educational website designed to showcase Kitmeer's products and solutions for schools, universities, vocational, and industrial sectors. The website features detailed product pages, category-based navigation, and a modern visual design to enhance user engagement and accessibility.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization",
+          "link": "https://forestgreen-koala-992569.hostingersite.com"
+        },
+        "labsforhome": {
+          "title": "Labs For Home Website – Interactive Science Learning Platform",
+          "description": "A modern, responsive web application designed to enhance science education through interactive simulations, gamified learning modules, and comprehensive resource management. The platform provides tailored experiences for students, teachers, and schools, featuring video demonstrations, testimonials, and a robust content management system. The website aims to make science learning engaging, accessible, and effective for various academic levels.",
+          "tech": "Next.js (React Framework), TypeScript, CSS Modules & PostCSS, Responsive Web Design, Modular Component Architecture, Media Asset Management (Images, Videos), Node.js (for build and tooling)",
+          "link": "https://lightcyan-salamander-875465.hostingersite.com"
+        },
+        "todo-app": {
+          "title": "To-Do List Web Application",
+          "description": "A simple and intuitive web application that allows users to create, manage, and organize their daily tasks efficiently. The app features task addition, deletion, and completion tracking, providing a seamless user experience for productivity management.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS)",
+          "link": "https://omarelshemy98.github.io/todo-list-app/"
+        },
+        "student-dashboard": {
+          "title": "Mathmatic Dashboard Courses",
+          "description": "A web-based dashboard designed to manage and display mathematics courses. The platform provides an intuitive interface for users to log in, view available courses, and interact with course content efficiently. The project emphasizes user experience, accessibility, and responsive design.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS)",
+          "link": "https://omarelshemy98.github.io/mathmatic-dashboard-courses"
+        },
+        "medyour": {
+          "title": "Medyour – Digital Healthcare Platform",
+          "description": "Developed a modern, responsive website for Medyour, a healthcare services provider. The platform delivers comprehensive information about services, challenges, and FAQs, supporting both Arabic and English languages. Emphasized user experience, accessibility, and seamless navigation across devices to ensure broad reach and engagement.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Multilingual Implementation (Arabic & English)",
+          "link": "https://medyour.com"
+        },
+        "medyour-card": {
+          "title": "Medyour Digital Business Card Platform",
+          "description": "A dynamic digital business card platform that transforms traditional contact sharing into an interactive experience. Built with modern web technologies, this responsive application allows users to instantly access team member information, contact details, and social media profiles through personalized URLs. Features include one-click contact saving, mobile-optimized design, and seamless integration with various communication channels. Each profile has a unique QR code that, when scanned, directly switches to the profile website. Example profile: https://medyourcard.netlify.app/?id=4",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, QR Code Integration, Digital Business Card Technology",
+          "link": "https://medyour.com"
+        },
+        "smart-business-card": {
+          "title": "Smart Business Card Platform",
+          "description": "\nA next-generation *digital identity platform* built with *Next.js 15, **React 19, and **Firebase, empowering professionals to create and share **interactive digital business profiles* instantly.  \n\nEach profile includes *dynamic QR codes, personalized URLs, and one-tap **Add to Contacts (.vcf)* functionality.  \n\nFeatures a real-time *Admin Dashboard* with Firestore synchronization, authentication, and cloud storage.  \n\nEngineered with *modular TypeScript architecture* and deployed through *Netlify CI/CD pipelines, achieving **<1s QR generation* and *100% mobile Lighthouse performance*.  \n\n*Result:* a production-ready SaaS ecosystem that transforms traditional networking into a seamless digital experience.  \n",
+          "tech": "\n💻 *Tech Stack*:<br>\n&bull; Next.js 15 + React 19 (App Router)<br>\n&bull; TypeScript + Modular Architecture<br>\n&bull; Firebase (Auth, Firestore, Storage)<br>\n&bull; Dynamic QR Code Generation<br>\n&bull; vCard Export (.vcf) – One-Tap Add to Contacts<br>\n&bull; Responsive UI (CSS Modules)<br>\n&bull; Admin Dashboard + Role-Based Access<br>\n&bull; Netlify CI/CD Deployment<br>",
+          "link": "https://smartbuisnesscard.netlify.app",
+          "example": {
+            "label": "Example Profile",
+            "href": "https://smartbuisnesscard.netlify.app/cards/ans1VG0leH1lJSzrGDb7"
+          }
+        },
+        "modern-trade-corporate": {
+          "title": "🔹 Modern Trade for Engineering (MTE)",
+          "description": "Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design",
+          "link": "https://moderntrade.netlify.app/"
+        },
+        "modern-trade-mte": {
+          "title": "🔹 Modern Trade (MTE) Digital Business Card & Company Profile",
+          "description": "A visually striking, responsive digital business card and company profile for Modern Trade for Engineering (MTE), a leading provider of engineering and industrial solutions in Egypt and the Middle East. This project combines elegant design with seamless user experience, featuring quick contact options, social media integration, and a concise company overview. Built with modern web technologies and Tailwind CSS, the site delivers a professional, mobile-friendly interface that highlights MTE's commitment to innovation, quality, and client satisfaction. The digital card serves as both a personal contact hub and a corporate introduction, making it ideal for networking and business development.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Responsive Web Design, Digital Business Card, Social Media Integration",
+          "link": "https://moderntrade.netlify.app/cards/index.html?id=19634771"
+        },
+        "luxury-apartment": {
+          "title": "🔹 Luxury Apartment Showcase – Modern Real Estate Experience",
+          "description": "A sophisticated and modern real estate showcase website designed to present luxury apartments with an elegant, user-friendly interface. The platform features high-quality property images, detailed descriptions, interactive galleries, and seamless navigation to provide potential buyers and renters with an immersive viewing experience. Built with responsive design principles, the website ensures optimal viewing across all devices while maintaining the premium aesthetic expected in luxury real estate.",
+          "tech": "HTML5, CSS3, JavaScript (Vanilla JS), Responsive Web Design, Image Optimization, Modern UI/UX Design",
+          "link": "https://alexluxuryapt.netlify.app/"
+        }
+      }
+    },
+    "social": {
+      "title": "Connect <span class=\"highlight\">With Me!</span>"
+    },
+    "footer": {
+      "copyright": "Omar Elshemy",
+      "rights": "All rights reserved."
+    },
+    "serviceModal": {
+      "title": "Request <span id=\"modalServiceTitle\" class=\"text-[#00fff7]\">Service</span>",
+      "nameLabel": "Your Name:",
+      "namePlaceholder": "Enter your full name",
+      "emailLabel": "Your Email:",
+      "emailPlaceholder": "name@example.com",
+      "descLabel": "Tell me about your project & requirements:",
+      "descPlaceholder": "Describe what you need, your goals, and any specific features.",
+      "fileLabel": "Upload relevant files (e.g., design mockups, examples):",
+      "mobileLabel": "Your Mobile Number (for WhatsApp/call):",
+      "mobilePlaceholder": "e.g., 01012345678",
+      "paymentLabel": "Preferred Payment Method:",
+      "paymentOptions": ["Select an option", "Vodafone Cash", "Bank Transfer"],
+      "timeframeLabel": "Desired Delivery Timeframe:",
+      "timeframeOptions": [
+        "Select timeframe (Optional)",
+        "1-3 days",
+        "3-7 days",
+        "1-2 weeks",
+        "2-4 weeks",
+        "1 month+",
+        "Custom (please specify in description)"
+      ],
+      "submitButton": "Submit Request",
+      "fileInfo": "File upload attempted: {fileName} ({fileSize} KB). Please send it separately via WhatsApp.",
+      "noFile": "No file attached.",
+      "validationError": "Please fill in all required fields (Name, Email, Description, Mobile Number, Payment Method).",
+      "successMessage": "WhatsApp will open with your message ready. Please press the send button within WhatsApp."
+    },
+    "codeRainSnippets": [
+      "<div class=\"box\">",
+      "<button onclick=\"go()\">",
+      "<input type=\"text\" />",
+      "<img src=\"logo.png\" alt=\"logo\">",
+      "<ul class=\"nav\">",
+      "<li class=\"item\">",
+      "<a href=\"#\">Home</a>",
+      "<h1>Welcome!</h1>",
+      "<meta charset=\"UTF-8\">",
+      "<link rel=\"stylesheet\" href=\"main.css\">",
+      "function handleClick() {",
+      "let result = sum(5, 7);",
+      "const skills = [\"HTML\", \"CSS\"]",
+      "console.log(\"Hi!\");",
+      "if (x > 10) { ... }",
+      "for (let i = 0; i < 5; i++)",
+      "setTimeout(() => {...}, 1000);",
+      "document.getElementById(\"main\")",
+      "window.addEventListener(\"load\", ...)",
+      "return a + b;",
+      "background: #1a374d;",
+      "color: #fff;",
+      "padding: 16px 24px;",
+      "margin: 0 auto;",
+      "display: flex;",
+      "align-items: center;",
+      "justify-content: space-between;",
+      "border-radius: 8px;",
+      "font-size: 1.2rem;",
+      "box-shadow: 0 2px 8px #0003;",
+      "transition: all 0.3s;",
+      "export default App;",
+      "import React from \"react\";",
+      "map(item => <li>{item}</li>)",
+      "filter(Boolean)",
+      "reduce((a, b) => a + b, 0)",
+      "const [state, setState] = useState()",
+      "useEffect(() => {...}, [])",
+      "props.children",
+      "className=\"container\"",
+      "href=\"/about\"",
+      "src=\"/img/bg.jpg\"",
+      "type=\"button\"",
+      "value=\"Submit\"",
+      "id=\"main-section\"",
+      "onClick={handleClick}",
+      "aria-label=\"Close\"",
+      "justify-content: center;",
+      "gap: 12px;",
+      "min-width: 320px;",
+      "max-width: 1200px;",
+      "overflow: hidden;",
+      "position: absolute;",
+      "top: 0;",
+      "left: 0;",
+      "right: 0;",
+      "bottom: 0;",
+      "z-index: 10;",
+      "opacity: 0.8;",
+      "pointer-events: none;",
+      "font-family: Montserrat, sans-serif;",
+      "border: none;",
+      "outline: none;",
+      "cursor: pointer;",
+      "transition: background 0.2s;",
+      "background-color: #222;",
+      "color: #00ffb3;",
+      "height: 100vh;",
+      "width: 100vw;",
+      "margin-bottom: 2rem;",
+      "padding-top: 2rem;",
+      "text-align: center;",
+      "font-weight: bold;",
+      "letter-spacing: 1px;",
+      "line-height: 1.5;",
+      "box-sizing: border-box;",
+      "overflow-x: hidden;",
+      "overflow-y: auto;",
+      "background-image: url(\"bg.svg\");",
+      "background-repeat: no-repeat;",
+      "background-size: cover;",
+      "background-position: center;",
+      "filter: blur(2px);",
+      "transform: scale(1.05);",
+      "animation: fadeIn 1s;",
+      "keyframes fadeIn { ... }",
+      "::-webkit-scrollbar { ... }",
+      "::selection { background: #00ffb3; }",
+      "/* Responsive Design */",
+      "@media (max-width: 600px) { ... }",
+      "/* End of CSS */"
+    ],
+    "heroCodeSnippets": [
+      "// Portfolio.js\nfunction Developer() {\n  const skills = ['HTML', 'CSS', 'JavaScript', 'React'];\n  for (let skill of skills) {\n    console.log(skill);\n  }\n  return <Portfolio />;\n}",
+      "// Responsive Design\n@media (max-width: 900px) {\n  .container { flex-direction: column; }\n}",
+      "// Creativity\nconst design = () => 'Modern & Clean';",
+      "// Animation\nrequestAnimationFrame(() => render());",
+      "// Contact\nconst email = 'me@portfolio.com';",
+      "// Experience\nlet years = 5;\nconsole.log('Years:', years);",
+      "// UI/UX\nfunction createButton(text) {\n  return '<button>' + text + '</button>';\n}",
+      "// Frameworks\nimport React from 'react';\nimport NextJS from 'next';",
+      "// CSS Variables\n:root {\n  --primary: #00fff7;\n  --bg: #181f2a;\n}"
+    ]
   }
+}
