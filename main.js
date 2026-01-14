@@ -376,6 +376,21 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "HTML and CSS for Web Designers: From Basics to Beautiful" course on Udemy, instructed by Mehmood Khalil. Completed on June 21, 2025, this extensive 8-hour course provided a deep dive into HTML and CSS, teaching how to structure and style web content effectively to create visually appealing and responsive designs. It enhanced my ability to translate design concepts into functional and beautiful web pages.',
     image: 'images/udemy/html-and-css-for-web-designers.jpg'
   },
+  'udemy-30-html-css': {
+    title: '30 HTML & CSS Projects Workshop',
+    description: 'This certificate confirms my successful completion of the "30 HTML & CSS Projects Workshop" course on Udemy. The course focused on building practical, real-world projects using modern HTML5 and CSS3, strengthening my skills in layout, responsive design, and component-driven structuring. It enhanced my ability to translate design ideas into clean, maintainable, and performant web pages.',
+    image: 'images/udemy/30-html-css.jpg'
+  },
+  'udemy-css-and-js': {
+    title: 'CSS and JavaScript Essentials',
+    description: 'This certificate confirms my successful completion of the "CSS and JavaScript Essentials" course on Udemy. The training covered core styling techniques with CSS and interactivity with JavaScript, including DOM manipulation, events, and modern best practices. It improved my capability to craft dynamic, responsive interfaces with clean and accessible code.',
+    image: 'images/udemy/css-and-js.jpg'
+  },
+  'udemy-web-project-workshop': {
+    title: 'Web Project Workshop',
+    description: 'This certificate confirms my successful completion of the "Web Project Workshop" course on Udemy. The course focused on building end-to-end web projects, from planning and structuring to styling and interaction. It strengthened my practical experience in assembling complete, production-ready web pages and components.',
+    image: 'images/udemy/web-project-workshop.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
