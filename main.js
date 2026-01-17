@@ -391,6 +391,16 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "Web Project Workshop" course on Udemy. The course focused on building end-to-end web projects, from planning and structuring to styling and interaction. It strengthened my practical experience in assembling complete, production-ready web pages and components.',
     image: 'images/udemy/web-project-workshop.jpg'
   },
+  'udemy-js-fast-entry': {
+    title: 'JavaScript Fast Entry: Programming for Everyone',
+    description: 'This certificate confirms my successful completion of the "JavaScript Fast Entry: Programming for Everyone" course on Udemy. The program introduced core JavaScript concepts including variables, data types, control flow, functions, and basic DOM operations. It provided a practical, beginner-friendly pathway into programming, enabling me to write clear, functional scripts and understand essential web interactivity.',
+    image: 'images/udemy/javaScript-fast-entry-programming-for-everyone.jpg'
+  },
+  'udemy-master-js-html-css': {
+    title: 'Master JavaScript, HTML, and CSS',
+    description: 'This certificate confirms my successful completion of the "Master JavaScript, HTML, and CSS" course on Udemy. The training covered modern HTML5 semantics, CSS3 layout and responsive design (including Flexbox and Grid), and JavaScript for interactivity, events, and DOM manipulation. It strengthened my ability to build accessible, responsive, and interactive web interfaces following contemporary best practices.',
+    image: 'images/udemy/master-javaScript-html-and-css.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
