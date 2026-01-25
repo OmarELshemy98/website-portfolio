@@ -401,6 +401,11 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "Master JavaScript, HTML, and CSS" course on Udemy. The training covered modern HTML5 semantics, CSS3 layout and responsive design (including Flexbox and Grid), and JavaScript for interactivity, events, and DOM manipulation. It strengthened my ability to build accessible, responsive, and interactive web interfaces following contemporary best practices.',
     image: 'images/udemy/master-javaScript-html-and-css.jpg'
   },
+  'udemy-html-css-java-js-fullstack': {
+    title: 'HTML, CSS, Java & JavaScript Full-Stack Development',
+    description: 'This certificate confirms my successful completion of the "HTML, CSS, Java & JavaScript Full-Stack Development" course on Udemy. The curriculum covered front-end fundamentals (HTML5 semantics, CSS3 layout and responsive design, and core JavaScript), together with back-end concepts using Java, including basic server-side logic and application structure. It strengthened my ability to assemble end-to-end web solutions across the stack.',
+    image: 'images/udemy/html-css-java-javaScript-full-stack.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
