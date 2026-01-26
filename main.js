@@ -406,6 +406,31 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "HTML, CSS, Java & JavaScript Full-Stack Development" course on Udemy. The curriculum covered front-end fundamentals (HTML5 semantics, CSS3 layout and responsive design, and core JavaScript), together with back-end concepts using Java, including basic server-side logic and application structure. It strengthened my ability to assemble end-to-end web solutions across the stack.',
     image: 'images/udemy/html-css-java-javaScript-full-stack.jpg'
   },
+  'udemy-mastering-html5-css3-advanced': {
+    title: 'Mastering HTML5 & CSS3: Advanced',
+    description: 'This certificate confirms my successful completion of the "Mastering HTML5 & CSS3: Advanced" course on Udemy. The training focused on advanced HTML5 semantics, accessibility best practices, CSS3 layout systems (Flexbox, Grid), responsive patterns, transitions and animations, and performance-conscious styling. It strengthened my ability to craft modern, scalable, and accessible interfaces with clean, maintainable code.',
+    image: 'images/udemy/mastering-html5-and-css3-advanced.jpg'
+  },
+  'udemy-mastering-html5-css3-intermediate': {
+    title: 'Mastering HTML5 & CSS3: Intermediate',
+    description: 'This certificate confirms my successful completion of the "Mastering HTML5 & CSS3: Intermediate" course on Udemy. The training covered intermediate-level HTML5 structure, semantic elements, CSS3 styling, responsive layout techniques with Flexbox and media queries, and foundational transitions/animations. It strengthened my ability to build well-structured, responsive interfaces with clean, accessible styling.',
+    image: 'images/udemy/mastering-html5-and-css3-intermediate.jpg'
+  },
+  'udemy-mastering-html5-css3-beginner': {
+    title: 'Mastering HTML5 & CSS3: Beginner',
+    description: 'This certificate confirms my successful completion of the "Mastering HTML5 & CSS3: Beginner" course on Udemy. The training introduced HTML5 semantic structure, CSS3 basics, responsive foundations, and essential styling techniques. It helped establish a solid base for building clean, accessible, and responsive web pages.',
+    image: 'images/udemy/mastering-html5-and-css3-beginner.jpg'
+  },
+  'udemy-js-10-projects-10-days': {
+    title: 'JavaScript: 10 Projects in 10 Days (Beginners)',
+    description: 'This certificate confirms my successful completion of the "JavaScript: 10 Projects in 10 Days" course on Udemy. Through hands-on mini projects, I practiced DOM manipulation, events, form handling, local storage, and basic animations, strengthening practical problem-solving and front-end JavaScript skills for real-world interfaces.',
+    image: 'images/udemy/js-ten-Projects-in-ten-days-course-for-beginners.jpg'
+  },
+  'udemy-js-from-scratch-part1-beginner': {
+    title: 'JavaScript From Scratch (Part 1 - Beginner Level)',
+    description: 'This certificate confirms my successful completion of the "JavaScript From Scratch (Part 1 - Beginner Level)" course on Udemy. The program covered fundamental JavaScript concepts including variables, data types, control structures, functions, and basic DOM operations, providing a strong foundation for building interactive web experiences.',
+    image: 'images/udemy/javaScript-from-scratch-part1-beginner-level).jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
