@@ -431,6 +431,11 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "JavaScript From Scratch (Part 1 - Beginner Level)" course on Udemy. The program covered fundamental JavaScript concepts including variables, data types, control structures, functions, and basic DOM operations, providing a strong foundation for building interactive web experiences.',
     image: 'images/udemy/javaScript-from-scratch-part1-beginner-level).jpg'
   },
+  'udemy-react-practical': {
+    title: 'React: All You Need to Know with Practical Project',
+    description: 'This certificate confirms my successful completion of the "React: All You Need to Know with Practical Project" course on Udemy. The training covered core React concepts such as components, props, state, hooks, and basic routing, reinforced by building a practical project. It strengthened my ability to structure React applications and implement interactive, maintainable UI components.',
+    image: 'images/udemy/react-all-you-need-to-know-with-practical-project.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
