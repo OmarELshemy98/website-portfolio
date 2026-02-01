@@ -436,6 +436,31 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "React: All You Need to Know with Practical Project" course on Udemy. The training covered core React concepts such as components, props, state, hooks, and basic routing, reinforced by building a practical project. It strengthened my ability to structure React applications and implement interactive, maintainable UI components.',
     image: 'images/udemy/react-all-you-need-to-know-with-practical-project.jpg'
   },
+  'udemy-ui-ux-canva': {
+    title: 'Complete UI/UX Design with Canva',
+    description: 'This certificate confirms my successful completion of the "Complete UI/UX Design with Canva" course on Udemy. The course covered design theory, color psychology, typography, and wireframing, using Canva to create professional user interfaces and user experiences. It enhanced my ability to design visually appealing and user-friendly layouts.',
+    image: 'images/udemy/complete-ui-ux-design-with-canva-design-smart.jpg'
+  },
+  'udemy-git-gitlab-github': {
+    title: 'Git, GitLab, & GitHub Fundamentals',
+    description: 'This certificate confirms my successful completion of the "Git, GitLab, & GitHub Fundamentals for Software Developers" course on Udemy. The training provided a solid foundation in version control, covering Git commands, branching, merging, and collaboration workflows using GitLab and GitHub. It strengthened my ability to manage codebases effectively in team environments.',
+    image: 'images/udemy/git-gitLab-github-fundamentals-for-software-developers.jpg'
+  },
+  'udemy-nextjs-scalable': {
+    title: 'Next.js: Build Scalable React Apps',
+    description: 'This certificate confirms my successful completion of the "Next.js: Build Scalable React Apps with Page and App Router" course on Udemy. The course explored advanced React patterns, server-side rendering, static site generation, and the modern App Router architecture in Next.js. It equipped me with the skills to build high-performance, SEO-friendly, and scalable web applications.',
+    image: 'images/udemy/next-js-build-scalable-react-apps-with-page-and-app-router.jpg'
+  },
+  'udemy-nodejs-practical': {
+    title: 'Node.js: All You Need to Know',
+    description: 'This certificate confirms my successful completion of the "Node.js: All You Need to Know with Practical Project" course on Udemy. The program covered Node.js runtime fundamentals, modules, file system operations, and building a backend server. It provided hands-on experience in server-side JavaScript development.',
+    image: 'images/udemy/nodejs-all-you-need-to-know-with-practical-project.jpg'
+  },
+  'udemy-responsive-css': {
+    title: 'Responsive Web Design with CSS',
+    description: 'This certificate confirms my successful completion of the "Responsive Web Design with CSS: A Complete CSS Guide" course on Udemy. The training focused on modern CSS techniques, including Flexbox, Grid, media queries, and mobile-first design strategies. It enhanced my ability to create websites that look and function perfectly across all device sizes.',
+    image: 'images/udemy/responsiv-web-design-with-css-a-complete-css-guide.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
