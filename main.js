@@ -461,6 +461,16 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "Responsive Web Design with CSS: A Complete CSS Guide" course on Udemy. The training focused on modern CSS techniques, including Flexbox, Grid, media queries, and mobile-first design strategies. It enhanced my ability to create websites that look and function perfectly across all device sizes.',
     image: 'images/udemy/responsiv-web-design-with-css-a-complete-css-guide.jpg'
   },
+  'udemy-node-bootcamp': {
+    title: 'Complete Node.js Bootcamp: From Basics to Advanced',
+    description: 'This certificate confirms my successful completion of the "Complete Node.js Bootcamp: From Basics to Advanced" course on Udemy. The course provided a deep dive into Node.js, covering asynchronous programming, RESTful APIs, Express.js, and database integration. It enhanced my backend development skills and ability to build scalable applications.',
+    image: 'images/udemy/complete-node-js-bootcamp-from-basics-to-advanced.jpg'
+  },
+  'udemy-master-node-fullstack': {
+    title: 'Master Node.js: From Beginner to Full Stack Developer',
+    description: 'This certificate confirms my successful completion of the "Master Node.js: From Beginner to Full Stack Developer" course on Udemy. The training covered the full stack development process using Node.js, including server-side logic, database management with MongoDB, and frontend integration. It equipped me with the skills to build end-to-end web solutions.',
+    image: 'images/udemy/master-node.js--from-beginner-to-full-stack-developer.jpg'
+  },
   'chubb-life': {
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
     description: 'This certificate recognizes my successful completion of the "Chubb Life-Egypt Basic Sales Induction Training." This training program equipped me with foundational knowledge in product understanding and sales principles within the life insurance sector. My achievement of a 98% score in the Product\'s Knowledge test demonstrates my comprehensive grasp of Chubb Life\'s offerings and commitment to professional development in sales.',
