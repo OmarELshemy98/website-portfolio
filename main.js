@@ -461,6 +461,11 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "Node.js: All You Need to Know with Practical Project" course on Udemy. The program covered Node.js runtime fundamentals, modules, file system operations, and building a backend server. It provided hands-on experience in server-side JavaScript development.',
     image: 'images/udemy/nodejs-all-you-need-to-know-with-practical-project.jpg'
   },
+  'udemy-mongodb-master': {
+    title: 'Master MongoDB: Cloud-Based NoSQL Database Management',
+    description: 'This certificate confirms my successful completion of the "Master MongoDB: Cloud-Based NoSQL Database Management" course on Udemy. This comprehensive course covers everything from MongoDB basics to advanced cloud-based database management. I learned how to design, implement, and manage scalable NoSQL databases, work with MongoDB Atlas, and integrate MongoDB with modern web applications for efficient data handling.',
+    image: 'images/udemy/master-mongodb-cloud-based-nosql-database-management.jpg'
+  },
   'udemy-responsive-css': {
     title: 'Responsive Web Design with CSS',
     description: 'This certificate confirms my successful completion of the "Responsive Web Design with CSS: A Complete CSS Guide" course on Udemy. The training focused on modern CSS techniques, including Flexbox, Grid, media queries, and mobile-first design strategies. It enhanced my ability to create websites that look and function perfectly across all device sizes.',
