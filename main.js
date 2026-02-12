@@ -361,6 +361,11 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "JavaScript Fundamentals to Advanced: Full Stack Development" course on Udemy, instructed by Sayman Creative Institute. Completed on June 21, 2025, this comprehensive 5.5-hour course provided an in-depth exploration of JavaScript, progressing from foundational concepts to advanced topics relevant for full-stack development. It significantly enhanced my understanding of JavaScript\'s role in both front-end and back-end environments, equipping me with skills for building complete web applications.',
     image: 'images/udemy/javaScript-fundamentals-to-advanced.jpg'
   },
+  'udemy-js-fundamentals-advanced-fullstack': {
+    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
+    description: 'This certificate confirms my successful completion of the "JavaScript Fundamentals to Advanced: Full Stack Development" course on Udemy. This comprehensive course covers JavaScript from the basics to advanced full-stack concepts, including DOM manipulation, asynchronous programming, and backend integration. It validates my ability to build complex, data-driven web applications using modern JavaScript techniques.',
+    image: 'images/udemy/javaScript-fundamentals-to-advanced-full-stack-development.jpg'
+  },
   'udemy-nextjs-react': {
     title: 'Practical Next.js & React - Build a real WebApp with Next.js',
     description: 'This certificate confirms my successful completion of the "Practical Next.js & React - Build a real WebApp with Next.js" course on Udemy, instructed by Nick Ovchinnikov. This extensive 11-hour course provided hands-on experience in building a complete web application using Next.js and React. It significantly enhanced my skills in modern front-end development, specifically in server-side rendering, routing, and state management within the Next.js framework, crucial for developing high-performance and scalable web applications.',
