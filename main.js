@@ -386,6 +386,11 @@ const certificateData = {
     description: 'This certificate confirms my successful completion of the "30 HTML & CSS Projects Workshop" course on Udemy. The course focused on building practical, real-world projects using modern HTML5 and CSS3, strengthening my skills in layout, responsive design, and component-driven structuring. It enhanced my ability to translate design ideas into clean, maintainable, and performant web pages.',
     image: 'images/udemy/30-html-css.jpg'
   },
+  'udemy-master-html-modern-web-design': {
+    title: 'Master HTML for Modern Web Design',
+    description: 'This certificate confirms my successful completion of the "Master HTML for Modern Web Design" course on Udemy. The course focused on modern HTML5 semantics, clean structure, accessibility, and best practices for building professional, standards-compliant web pages. It strengthened my ability to create solid HTML foundations that work seamlessly with CSS, JavaScript, and modern design systems.',
+    image: 'images/udemy/master-html-for-modern-web-design.jpg'
+  },
   'udemy-css-and-js': {
     title: 'CSS and JavaScript Essentials',
     description: 'This certificate confirms my successful completion of the "CSS and JavaScript Essentials" course on Udemy. The training covered core styling techniques with CSS and interactivity with JavaScript, including DOM manipulation, events, and modern best practices. It improved my capability to craft dynamic, responsive interfaces with clean and accessible code.',
@@ -450,6 +455,11 @@ const certificateData = {
     title: 'Git, GitLab, & GitHub Fundamentals',
     description: 'This certificate confirms my successful completion of the "Git, GitLab, & GitHub Fundamentals for Software Developers" course on Udemy. The training provided a solid foundation in version control, covering Git commands, branching, merging, and collaboration workflows using GitLab and GitHub. It strengthened my ability to manage codebases effectively in team environments.',
     image: 'images/udemy/git-gitLab-github-fundamentals-for-software-developers.jpg'
+  },
+  'udemy-git-github-3hours-2026': {
+    title: 'Learn Git and GitHub in Less Than 3 Hours (2026)',
+    description: 'This certificate confirms my successful completion of the "Learn Git and GitHub in Less Than 3 Hours (2026)" course on Udemy. The course focused on practical, fast-paced learning of Git commands, branching, merging, and basic GitHub workflows, enabling me to use version control confidently in real projects and collaborate effectively using remote repositories.',
+    image: 'images/udemy/learn-git-and-github-in-less-than-3-hours(2026).jpg'
   },
   'udemy-nextjs-scalable': {
     title: 'Next.js: Build Scalable React Apps',
