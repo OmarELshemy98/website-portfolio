@@ -1,32 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
     const serviceModal = document.getElementById('serviceModal');
-    const closeButton = serviceModal.querySelector('.close-button');
+    const closeButton = serviceModal ? serviceModal.querySelector('.close-button') : null;
     const serviceRequestForm = document.getElementById('serviceRequestForm');
     const modalServiceTitle = document.getElementById('modalServiceTitle');
     const formMessage = document.getElementById('formMessage');
 
-    let currentService = ''; // To store the title of the service being requested
+    if (!serviceCards.length || !serviceModal || !closeButton || !serviceRequestForm || !modalServiceTitle || !formMessage) {
+        return;
+    }
 
-    // Open modal when "Request Service" button is clicked
+    let currentService = '';
+
     serviceCards.forEach(card => {
-        card.querySelector('.request-button').addEventListener('click', () => {
+        const requestButton = card.querySelector('.request-button');
+        if (!requestButton) return;
+        requestButton.addEventListener('click', () => {
             currentService = card.dataset.serviceTitle;
-            modalServiceTitle.textContent = currentService; // Set dynamic service title
+            modalServiceTitle.textContent = currentService;
             serviceModal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling background
-            formMessage.classList.add('hidden'); // Hide previous messages
-            serviceRequestForm.reset(); // Clear form fields
+            document.body.style.overflow = 'hidden';
+            formMessage.classList.add('hidden');
+            serviceRequestForm.reset();
         });
     });
 
-    // Close modal functionality
     closeButton.addEventListener('click', () => {
         serviceModal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.overflow = '';
     });
 
-    // Close modal if clicked outside content
     serviceModal.addEventListener('click', (e) => {
         if (e.target === serviceModal) {
             serviceModal.classList.remove('active');
@@ -34,32 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form Submission Handler
     serviceRequestForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault();
 
-        // Basic Client-Side Validation
         const clientName = document.getElementById('clientName').value.trim();
         const clientEmail = document.getElementById('clientEmail').value.trim();
         const serviceDescription = document.getElementById('serviceDescription').value.trim();
         const mobileNumber = document.getElementById('mobileNumber').value.trim();
         const paymentMethod = document.getElementById('paymentMethod').value;
-        const deliveryTimeframe = document.getElementById('deliveryTimeframe').value || 'Not specified'; // Default if not selected
+        const deliveryTimeframe = document.getElementById('deliveryTimeframe').value || 'Not specified';
         
-        // File upload cannot be sent directly via WhatsApp URL
         const fileInput = document.getElementById('fileUpload');
-        const file = fileInput.files[0];
-        // Changed message to English
+        const file = fileInput ? fileInput.files[0] : null;
         let fileInfo = file ? `File upload attempted: ${file.name} (${(file.size / 1024).toFixed(2)} KB). Please send it separately via WhatsApp.` : 'No file attached.';
 
-
         if (!clientName || !clientEmail || !serviceDescription || !mobileNumber || !paymentMethod) {
-            // Changed message to English
             displayMessage('Please fill in all required fields (Name, Email, Description, Mobile Number, Payment Method).', 'error');
             return;
         }
 
-        // Prepare the WhatsApp message text in English
         const whatsappMessage = `
 New Service Request:
 Service Requested: ${currentService}
@@ -70,22 +66,18 @@ Mobile Number (WhatsApp): ${mobileNumber}
 Preferred Payment Method: ${paymentMethod}
 Desired Delivery Timeframe: ${deliveryTimeframe}
 File Information: ${fileInfo}
-        `.trim(); // .trim() removes leading/trailing whitespace
+        `.trim();
 
-        // WhatsApp number including country code for Egypt (+20)
-        const whatsappNumber = '201026238072'; // 01026238072
+        const whatsappNumber = '201026238072';
 
-        // Construct the WhatsApp URL
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-        // Open WhatsApp link in a new tab
         window.open(whatsappUrl, '_blank');
 
-        // Show success message in English and reset form
         displayMessage('WhatsApp will open with your message ready. Please press the send button within WhatsApp.', 'success');
-        serviceRequestForm.reset(); // Clear form fields
-        setTimeout(() => serviceModal.classList.remove('active'), 5000); // Auto close after 5 seconds
-        document.body.style.overflow = ''; // Restore scrolling
+        serviceRequestForm.reset();
+        setTimeout(() => serviceModal.classList.remove('active'), 5000);
+        document.body.style.overflow = '';
     });
 
     function displayMessage(message, type) {
@@ -880,6 +872,7 @@ const projectData = {
 
 // Function to open project modal
 function openProjectModal(projectId) {
+  if (!projectModal || !projectModalTitle || !projectModalDescription || !projectModalTech || !projectModalLink) return;
   const project = projectData[projectId];
   if (!project) return;
 
@@ -892,11 +885,14 @@ function openProjectModal(projectId) {
   document.body.style.overflow = 'hidden';
   
   // Focus management
-  projectModalClose.focus();
+  if (projectModalClose) {
+    projectModalClose.focus();
+  }
 }
 
 // Function to close project modal
 function closeProjectModal() {
+  if (!projectModal) return;
   projectModal.classList.remove('active');
   document.body.style.overflow = '';
 }
@@ -945,7 +941,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Keyboard support
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
+    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
       closeProjectModal();
     }
   });
