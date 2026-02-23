@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import type { GetStaticProps } from 'next'
 import { projects as allProjects, type Project } from '@/data/projects'
 
@@ -21,19 +22,7 @@ export default function Projects({ projects }: Props) {
       <Head>
         <title>Projects</title>
       </Head>
-      <nav className="main-navbar dark-navbar" role="navigation" aria-label="Main Navigation">
-        <div className="navbar-inner">
-          <div className="logo-text">
-            <span className="logo-role">Front end developer</span><br />
-            <span className="logo-name">Omar Elshemy</span>
-          </div>
-          <ul className="nav-links">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/certifications">Certificates</Link></li>
-            <li><Link href="/projects" className="active">Projects</Link></li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar />
       <section className="projects-section">
         <div className="projects-list">
           {projects.map(p => (
@@ -59,6 +48,7 @@ export default function Projects({ projects }: Props) {
         </div>
       </section>
       <script src="/scripts/projects.js" defer></script>
+      <Footer />
     </>
   )
 }

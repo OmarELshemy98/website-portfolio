@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import type { GetStaticProps } from 'next'
 import { certifications as allCerts, type Certification } from '@/data/certifications'
 
@@ -22,19 +23,7 @@ export default function Certifications({ certs }: Props) {
       <Head>
         <title>Certificates</title>
       </Head>
-      <nav className="main-navbar dark-navbar" role="navigation" aria-label="Main Navigation">
-        <div className="navbar-inner">
-          <div className="logo-text">
-            <span className="logo-role">Front end developer</span><br />
-            <span className="logo-name">Omar Elshemy</span>
-          </div>
-          <ul className="nav-links">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/certifications" className="active">Certificates</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar />
       <section className="certifications-section">
         {categories.map(cat => {
           const items = certs.filter(c => c.category === cat)
@@ -66,6 +55,7 @@ export default function Certifications({ certs }: Props) {
         </div>
       </div>
       <script src="/scripts/certifications.js" defer></script>
+      <Footer />
     </>
   )
 }
