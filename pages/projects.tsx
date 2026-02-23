@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import type { GetStaticProps } from 'next'
 import { projects as allProjects, type Project } from '@/data/projects'
 
@@ -27,9 +28,9 @@ export default function Projects({ projects }: Props) {
             <span className="logo-name">Omar Elshemy</span>
           </div>
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/certifications">Certificates</a></li>
-            <li><a href="/projects" className="active">Projects</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/certifications">Certificates</Link></li>
+            <li><Link href="/projects" className="active">Projects</Link></li>
           </ul>
         </div>
       </nav>

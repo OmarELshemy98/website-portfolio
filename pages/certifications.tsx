@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import type { GetStaticProps } from 'next'
 import { certifications as allCerts, type Certification } from '@/data/certifications'
 
@@ -28,9 +29,9 @@ export default function Certifications({ certs }: Props) {
             <span className="logo-name">Omar Elshemy</span>
           </div>
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/certifications" className="active">Certificates</a></li>
-            <li><a href="/projects">Projects</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/certifications" className="active">Certificates</Link></li>
+            <li><Link href="/projects">Projects</Link></li>
           </ul>
         </div>
       </nav>

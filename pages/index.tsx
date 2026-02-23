@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
             <span className="logo-name">Omar Elshemy</span>
           </div>
           <ul className="nav-links">
-            <li><a href="/" className="active">Home</a></li>
-            <li><a href="/certifications">Certificates</a></li>
-            <li><a href="/projects">Projects</a></li>
+            <li><Link href="/" className="active">Home</Link></li>
+            <li><Link href="/certifications">Certificates</Link></li>
+            <li><Link href="/projects">Projects</Link></li>
           </ul>
         </div>
       </nav>
@@ -25,9 +26,9 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              <span>Hello, It's Me</span><br />
+              <span>Hello, It&apos;s Me</span><br />
               <span className="hero-name">Omar Elshemy</span><br />
-              <span>And I'm a <span className="highlight">Frontend Developer</span></span>
+              <span>And I&apos;m a <span className="highlight">Frontend Developer</span></span>
             </h1>
             <p>Passionate Front End Developer crafting modern, responsive, and user-friendly web experiences.</p>
           </div>
