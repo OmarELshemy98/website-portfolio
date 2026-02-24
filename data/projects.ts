@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 'arcon-corp',
     title: 'ARCON - Pioneering Solutions for a Dynamic Future',
     description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
-    tech: 'Next.js, React, Bootstrap 5, CSS Modules, JavaScript , responsive design , seo optimization',
+    tech: 'Next.js (React Framework), React.js, Bootstrap 5 (for responsive design and components), CSS Modules & Custom CSS, JavaScript (ES6+), Image Optimization (Next.js Image component), Font Awesome (for icons), HTML5 & Modern Web Standards',
     link: 'www.arconcorp.com',
     images: [
       '/images/mockup/arcon-mockup/arcon-home.png',
@@ -40,24 +40,70 @@ export const projects: Project[] = [
     tech: 'Next.js, React, TypeScript , bootstrap 5 , responsive design , seo optimization',
     link: 'www.axiomais.com',
     images: [
-            '/images/mockup/axiom-mockup/axiom-home.png',
-            '/images/mockup/axiom-mockup/axiom-aboutus.png',
-            '/images/mockup/axiom-mockup/axiom-contact.png',
-            '/images/mockup/axiom-mockup/axiom-products-engineeringLearningSystems.png',
-            '/images/mockup/axiom-mockup/axiom-products-informationTechnology.png',
-            '/images/mockup/axiom-mockup/axiom-products-manufacturing.png',
-            '/images/mockup/axiom-mockup/axiom-products-robotics.png',
-            '/images/mockup/axiom-mockup/axiom-products-scienceLabEquipment.png',
-            '/images/mockup/axiom-mockup/axiom-products-simulation.png',
-            '/images/mockup/axiom-mockup/axiom-products-vocationalTrainingSolutions.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-education.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-engineering.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
-            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+      '/images/mockup/axiom-mockup/axiom-home.png',
+      '/images/mockup/axiom-mockup/axiom-aboutus.png',
+      '/images/mockup/axiom-mockup/axiom-whyaxiom.png',
+      '/images/mockup/axiom-mockup/axiom-contact.png',
+      '/images/mockup/axiom-mockup/axiom-products-engineeringLearningSystems.png',
+      '/images/mockup/axiom-mockup/axiom-products-informationTechnology.png',
+      '/images/mockup/axiom-mockup/axiom-products-manufacturing.png',
+      '/images/mockup/axiom-mockup/axiom-products-robotics.png',
+      '/images/mockup/axiom-mockup/axiom-products-scienceLabEquipment.png',
+      '/images/mockup/axiom-mockup/axiom-products-simulation.png',
+      '/images/mockup/axiom-mockup/axiom-products-vocationalTrainingSolutions.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-education.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-engineering.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-logistics.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-manufacturing.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-oilGas.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-transportation.png',
+      '/images/mockup/axiom-mockup/axiom-sectors-WaterandElectricityPlants.png',
+      '/images/mockup/axiom-mockup/axiom-services-cybersecurity.png',
+      '/images/mockup/axiom-mockup/axiom-services-EngineeringandSystemsIntegration.png',
+      '/images/mockup/axiom-mockup/axiom-services-informationTechnology.png',
+      '/images/mockup/axiom-mockup/axiom-services-Logistics.png',
+      '/images/mockup/axiom-mockup/axiom-services-SmartManufacturing.png',
+      '/images/mockup/axiom-mockup/axiom-services-Training.png',
+      '/images/mockup/axiom-mockup/axiom-services-TransportationandMobility.png',
 
     ]
+  },
+    {
+    id: 'modern-trade-corporate',
+    title: 'Modern Trade for Engineering (MTE)',
+    description: 'Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.',
+    tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design',
+    link: 'www.moderntrade.netlify.app',
+    images: [
+      '/images/mockup/modernTrade-mockup/mte-home-en.png',
+      '/images/mockup/modernTrade-mockup/mte-home-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-about-en.png',
+      '/images/mockup/modernTrade-mockup/mte-about-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-careers-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-contact-en.png',
+      '/images/mockup/modernTrade-mockup/mte-contact-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-faqs-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-faqs-en.png',
+      '/images/mockup/modernTrade-mockup/mte-news-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-news-en.png',
+      '/images/mockup/modernTrade-mockup/mte-privacy-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-privacy-en.png',
+      '/images/mockup/modernTrade-mockup/mte-projects-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-services-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-services-en.png',
+      '/images/mockup/modernTrade-mockup/mte-services-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-services-en.png',
+
+    ]
+  },
+    {
+    id: 'medyour',
+    title: 'Medyour – Digital Healthcare Platform',
+    description: 'Modern responsive website with bilingual support and seamless navigation.',
+    tech: 'HTML5, CSS3, Vanilla JS',
+    link: 'https://medyour.com',
+    images: []
   },
   {
     id: 'egyptian-robotics',
@@ -107,14 +153,7 @@ export const projects: Project[] = [
     link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses',
     images: []
   },
-  {
-    id: 'medyour',
-    title: 'Medyour – Digital Healthcare Platform',
-    description: 'Modern responsive website with bilingual support and seamless navigation.',
-    tech: 'HTML5, CSS3, Vanilla JS',
-    link: 'https://medyour.com',
-    images: []
-  },
+
   {
     id: 'medyour-card',
     title: 'Medyour Digital Business Card',
@@ -123,14 +162,7 @@ export const projects: Project[] = [
     link: 'https://medyour.com',
     images: []
   },
-  {
-    id: 'modern-trade-corporate',
-    title: 'Modern Trade for Engineering (MTE)',
-    description: 'Multilingual corporate website with mobile-first design and SEO optimization.',
-    tech: 'HTML5, CSS3, Vanilla JS, Tailwind CSS',
-    link: 'https://moderntrade.netlify.app/',
-    images: []
-  },
+
   {
     id: 'modern-trade-mte',
     title: 'Modern Trade Digital Business Card',
