@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: 'Arcon Corp Website',
     description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems.',
     tech: 'Next.js, React, Bootstrap 5, CSS Modules, JavaScript',
-    link: 'https://staging.arconcorp.com',
+    link: 'www.arconcorp.com',
     images: []
   },
   {
