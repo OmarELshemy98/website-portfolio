@@ -10,9 +10,9 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 'arcon-corp',
-    title: 'Arcon Corp Website',
-    description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems.',
-    tech: 'Next.js, React, Bootstrap 5, CSS Modules, JavaScript',
+    title: 'ARCON - Pioneering Solutions for a Dynamic Future',
+    description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
+    tech: 'Next.js, React, Bootstrap 5, CSS Modules, JavaScript , responsive design , seo optimization',
     link: 'www.arconcorp.com',
     images: [
       '/images/mockup/arcon-mockup/arcon-home.png',
@@ -31,6 +31,32 @@ export const projects: Project[] = [
       '/images/mockup/arcon-mockup/arcon-sectors-logistics.png',
       '/images/mockup/arcon-mockup/arcon-sectors-manufacturing.png',
       '/images/mockup/arcon-mockup/arcon-sectors-transportation.png'
+    ]
+  },
+  {
+    id: 'axiom',
+    title: 'Axiom AI Solutions Website',
+    description: 'The Axiom AI Solutions Website is a comprehensive front-end development project for a leading engineering and technology firm. I crafted a responsive and visually compelling website that reflects the company\'s commitment to innovation and excellence. Developed entirely using Next.js, the site offers high performance and a seamless user experience. It effectively showcases Axiom\'s advanced solutions across critical sectors like engineering, manufacturing, cybersecurity, and IT. The front-end was meticulously designed to be intuitive and engaging, professionally presenting products and services to potential business clients.',
+    tech: 'Next.js, React, TypeScript , bootstrap 5 , responsive design , seo optimization',
+    link: 'www.axiomais.com',
+    images: [
+            '/images/mockup/axiom-mockup/axiom-home.png',
+            '/images/mockup/axiom-mockup/axiom-aboutus.png',
+            '/images/mockup/axiom-mockup/axiom-contact.png',
+            '/images/mockup/axiom-mockup/axiom-products-engineeringLearningSystems.png',
+            '/images/mockup/axiom-mockup/axiom-products-informationTechnology.png',
+            '/images/mockup/axiom-mockup/axiom-products-manufacturing.png',
+            '/images/mockup/axiom-mockup/axiom-products-robotics.png',
+            '/images/mockup/axiom-mockup/axiom-products-scienceLabEquipment.png',
+            '/images/mockup/axiom-mockup/axiom-products-simulation.png',
+            '/images/mockup/axiom-mockup/axiom-products-vocationalTrainingSolutions.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-education.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-engineering.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+            '/images/mockup/axiom-mockup/axiom-sectors-defenseSolutions.png',
+
     ]
   },
   {
