@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initCertificatesModal() {
   var cards = document.querySelectorAll('.certificate-card')
   var modal = document.getElementById('certificateModal')
   var modalImg = document.getElementById('certificateModalImage')
@@ -27,4 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     })
   }
-})
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCertificatesModal)
+} else {
+  initCertificatesModal()
+}

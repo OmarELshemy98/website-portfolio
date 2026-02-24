@@ -14,7 +14,24 @@ export const projects: Project[] = [
     description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems.',
     tech: 'Next.js, React, Bootstrap 5, CSS Modules, JavaScript',
     link: 'www.arconcorp.com',
-    images: []
+    images: [
+      '/images/mockup/arcon-mockup/arcon-home.png',
+      '/images/mockup/arcon-mockup/arcon-aboutus.png',
+      '/images/mockup/arcon-mockup/arcon-contact.png',
+      '/images/mockup/arcon-mockup/arcon-products-manufacturing.png',
+      '/images/mockup/arcon-mockup/arcon-products-engineeringLearningSystems.png',
+      '/images/mockup/arcon-mockup/arcon-products-informationTechnology.png',
+      '/images/mockup/arcon-mockup/arcon-products-robotics.png',
+      '/images/mockup/arcon-mockup/arcon-products-simulation.png',
+      '/images/mockup/arcon-mockup/arcon-products-vocationalTrainingSolutions.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-cyberSecurity.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-education.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-engineering.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-informationTechnology.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-logistics.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-manufacturing.png',
+      '/images/mockup/arcon-mockup/arcon-sectors-transportation.png'
+    ]
   },
   {
     id: 'egyptian-robotics',

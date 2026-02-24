@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initProjectCarousels() {
   var carousels = document.querySelectorAll('.project-carousel')
   carousels.forEach(function (carousel) {
     var track = carousel.querySelector('.carousel-track')
@@ -47,4 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     update()
   })
-})
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProjectCarousels)
+} else {
+  initProjectCarousels()
+}

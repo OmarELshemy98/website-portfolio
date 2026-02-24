@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import type { GetStaticProps } from 'next'
@@ -47,7 +48,7 @@ export default function Projects({ projects }: Props) {
           ))}
         </div>
       </section>
-      <script src="/scripts/projects.js" defer></script>
+      <Script src="/scripts/projects.js" strategy="afterInteractive" />
       <Footer />
     </>
   )

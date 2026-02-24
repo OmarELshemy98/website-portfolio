@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import type { GetStaticProps } from 'next'
@@ -54,7 +55,7 @@ export default function Certifications({ certs }: Props) {
           <img id="certificateModalImage" alt="" />
         </div>
       </div>
-      <script src="/scripts/certifications.js" defer></script>
+      <Script src="/scripts/certifications.js" strategy="afterInteractive" />
       <Footer />
     </>
   )
