@@ -4,9 +4,5 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/about": "pages/about.js",
-  "/certifications": "pages/certifications.js",
-  "/skills": "pages/skills.js",
-  "/experience": "pages/experience.js",
-  "/projects": "pages/projects.js",
-  "/services": "pages/services.js"
+  "/skills": "pages/skills.js"
 }
