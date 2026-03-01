@@ -103,7 +103,26 @@ export const projects: Project[] = [
     description: 'Modern responsive website with bilingual support and seamless navigation.',
     tech: 'HTML5, CSS3, Vanilla JS',
     link: 'https://medyour.com',
-    images: []
+    images: [
+      '/images/mockup/medyour-mockup/medyour-home-en-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-home-ar-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-aboutUs-en-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-aboutUs-ar-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-healthcare-en-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-healthcare-ar.png',
+      '/images/mockup/medyour-mockup/medyour-services-en-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-services-ar-mockup.png',
+      '/images/mockup/medyour-mockup/medyour-whymedyour-en.png',
+      '/images/mockup/medyour-mockup/medyour-whymedyour-ar.png',
+      '/images/mockup/medyour-mockup/medyour-contact-en.png',
+      '/images/mockup/medyour-mockup/medyour-contact-ar.png',
+      '/images/mockup/medyour-mockup/medyour-faqs-en.png',
+      '/images/mockup/medyour-mockup/medyour-faqs-ar.png',
+      '/images/mockup/medyour-mockup/medyour-privacy-en.png',
+      '/images/mockup/medyour-mockup/medyour-privacy-ar.png',
+      '/images/mockup/medyour-mockup/medyour-terms-en.png',
+      '/images/mockup/medyour-mockup/medyour-terms-ar.png'
+    ]
   },
   {
     id: 'egyptian-robotics',
@@ -111,7 +130,12 @@ export const projects: Project[] = [
     description: 'Responsive website for the Egyptian Robotics & RC Sports Federation with multi-step registration and interactive popups.',
     tech: 'HTML5, CSS3, Tailwind CSS, Vanilla JS',
     link: 'https://staging.errcsf.org',
-    images: []
+    images: [
+      '/images/mockup/errcsf-mockup/errcsf.png',
+      '/images/mockup/errcsf-mockup/about-us.png',
+      '/images/mockup/errcsf-mockup/part2.png',
+      '/images/mockup/errcsf-mockup/screencapture-staging-errcsf-org-2026-02-16-12_54_00.png'
+    ]
   },
   {
     id: 'dh-consult',
@@ -119,7 +143,12 @@ export const projects: Project[] = [
     description: 'Dynamic and visually appealing website for a consulting firm with sections for company info, services, projects, and contact.',
     tech: 'HTML5, Tailwind CSS, Vanilla JS',
     link: 'https://darkgoldenrod-gnu-568360.hostingersite.com',
-    images: []
+    images: [
+      '/images/mockup/DhConsult-mockup/home.png',
+      '/images/mockup/DhConsult-mockup/about-us.png',
+      '/images/mockup/DhConsult-mockup/projects.png',
+      '/images/mockup/DhConsult-mockup/screencapture-darkgoldenrod-gnu-568360-hostingersite-2026-02-16-13_21_12.png'
+    ]
   },
   {
     id: 'ti-educational',
@@ -135,7 +164,20 @@ export const projects: Project[] = [
     description: 'Responsive web app with interactive simulations, gamified modules, and resource management, tailored for students and schools.',
     tech: 'Next.js, TypeScript, CSS Modules, PostCSS',
     link: 'https://lightcyan-salamander-875465.hostingersite.com',
-    images: []
+    images: [
+      '/images/mockup/l4h-mockup/l4h-home.png',
+      '/images/mockup/l4h-mockup/l4h-aboutus.png',
+      '/images/mockup/l4h-mockup/l4h-academicLevel.png',
+      '/images/mockup/l4h-mockup/l4h-technologyFeatures.png',
+      '/images/mockup/l4h-mockup/l4h-solForSchools.png',
+      '/images/mockup/l4h-mockup/l4h-solForStudents.png',
+      '/images/mockup/l4h-mockup/l4h-solForTeachers.png',
+      '/images/mockup/l4h-mockup/l4h-experments.png',
+      '/images/mockup/l4h-mockup/l4h-physicalKits.png',
+      '/images/mockup/l4h-mockup/l4h-lms.png',
+      '/images/mockup/l4h-mockup/l4h-requestQuote.png',
+      '/images/mockup/l4h-mockup/l4h-contact.png'
+    ]
   },
   {
     id: 'todo-app',
@@ -169,7 +211,26 @@ export const projects: Project[] = [
     description: 'Responsive digital business card and company profile for MTE.',
     tech: 'HTML5, CSS3, Vanilla JS, Tailwind CSS',
     link: 'https://moderntrade.netlify.app/cards/index.html?id=19634771',
-    images: []
+    images: [
+      '/images/mockup/modernTrade-mockup/mte-home-en.png',
+      '/images/mockup/modernTrade-mockup/mte-home-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-about-en.png',
+      '/images/mockup/modernTrade-mockup/mte-about-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-services-en.png',
+      '/images/mockup/modernTrade-mockup/mte-services-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-projects-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-contact-en.png',
+      '/images/mockup/modernTrade-mockup/mte-contact-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-careers-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-news-en.png',
+      '/images/mockup/modernTrade-mockup/mte-news-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-faqs-en.png',
+      '/images/mockup/modernTrade-mockup/mte-faqs-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-privacy-en.png',
+      '/images/mockup/modernTrade-mockup/mte-privacy-ar.png',
+      '/images/mockup/modernTrade-mockup/mte-terms-en.png',
+      '/images/mockup/modernTrade-mockup/mte-terms-ar.png'
+    ]
   },
   {
     id: 'luxury-apartment',
