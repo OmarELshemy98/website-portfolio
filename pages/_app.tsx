@@ -4,7 +4,7 @@ import '../styles.css'
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <link rel="icon" href="/images/circle-logo.png" type="image/png" />
+      <link rel="icon" href="/favicon.png" type="image/png" />
       <Component {...pageProps} />
     </>
   )

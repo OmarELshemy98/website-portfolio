@@ -125,6 +125,27 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'labsforhome',
+    title: 'Labs For Home – Interactive Science Learning',
+    description: 'Responsive web app with interactive simulations, gamified modules, and resource management, tailored for students and schools.',
+    tech: 'Next.js, TypeScript, CSS Modules, PostCSS',
+    link: 'https://lightcyan-salamander-875465.hostingersite.com',
+    images: [
+      '/images/mockup/l4h-mockup/l4h-home.png',
+      '/images/mockup/l4h-mockup/l4h-aboutus.png',
+      '/images/mockup/l4h-mockup/l4h-academicLevel.png',
+      '/images/mockup/l4h-mockup/l4h-technologyFeatures.png',
+      '/images/mockup/l4h-mockup/l4h-solForSchools.png',
+      '/images/mockup/l4h-mockup/l4h-solForStudents.png',
+      '/images/mockup/l4h-mockup/l4h-solForTeachers.png',
+      '/images/mockup/l4h-mockup/l4h-experments.png',
+      '/images/mockup/l4h-mockup/l4h-physicalKits.png',
+      '/images/mockup/l4h-mockup/l4h-lms.png',
+      '/images/mockup/l4h-mockup/l4h-requestQuote.png',
+      '/images/mockup/l4h-mockup/l4h-contact.png'
+    ]
+  },
+  {
     id: 'egyptian-robotics',
     title: 'ERRCSF Website',
     description: 'Responsive website for the Egyptian Robotics & RC Sports Federation with multi-step registration and interactive popups.',
@@ -135,6 +156,19 @@ export const projects: Project[] = [
       '/images/mockup/errcsf-mockup/about-us.png',
       '/images/mockup/errcsf-mockup/part2.png',
       '/images/mockup/errcsf-mockup/screencapture-staging-errcsf-org-2026-02-16-12_54_00.png'
+    ]
+  },
+  {
+    id: 'front-end-portfolio',
+    title: 'Professional Front-End Portfolio Showcase',
+    description: 'This portfolio website serves as the live demonstration and definitive proof of my full Front-End expertise. Developed using cutting-edge technologies, it is not merely a resume but a high-performance web application built to the highest industry standards. The project showcases my commitment to clean architecture and superior user experience, making it the perfect benchmark for the quality clients can expect. Key Technical Features & Value Delivered: Next.js & React Core: Built on the Next.js framework utilizing React.js for developing a robust, highly modular, and scalable Single-Page Application (SPA). Superior Performance: Strategic implementation of performance optimization techniques, ensuring blazing-fast loading times and an excellent Lighthouse score. Clean Code Architecture: Delivered with clean, semantic, and easily maintainable code, adhering strictly to modern JavaScript (ES6+) best practices. Full Responsiveness: Meticulously crafted to ensure flawless responsiveness and perfect functionality across all devices and screen sizes. Professional UI/UX: A sleek, intuitive interface that successfully presents complex professional information in an engaging and user-friendly manner.',
+    tech: 'Next.js, React.js, TypeScript, Tailwind CSS, ES6+, Performance Optimization, Responsive Design, SEO',
+    link: 'https://omarelshemy.netlify.app/',
+    images: [
+      '/images/mockup/myWebsite-mockup/home.png',
+      '/images/mockup/myWebsite-mockup/about-us.png',
+      '/images/mockup/myWebsite-mockup/projects.png',
+      '/images/mockup/myWebsite-mockup/screencapture-omarelshemy-netlify-app-2026-02-16-13_21_12.png'
     ]
   },
   {
@@ -158,27 +192,7 @@ export const projects: Project[] = [
     link: 'https://forestgreen-koala-992569.hostingersite.com',
     images: []
   },
-  {
-    id: 'labsforhome',
-    title: 'Labs For Home – Interactive Science Learning',
-    description: 'Responsive web app with interactive simulations, gamified modules, and resource management, tailored for students and schools.',
-    tech: 'Next.js, TypeScript, CSS Modules, PostCSS',
-    link: 'https://lightcyan-salamander-875465.hostingersite.com',
-    images: [
-      '/images/mockup/l4h-mockup/l4h-home.png',
-      '/images/mockup/l4h-mockup/l4h-aboutus.png',
-      '/images/mockup/l4h-mockup/l4h-academicLevel.png',
-      '/images/mockup/l4h-mockup/l4h-technologyFeatures.png',
-      '/images/mockup/l4h-mockup/l4h-solForSchools.png',
-      '/images/mockup/l4h-mockup/l4h-solForStudents.png',
-      '/images/mockup/l4h-mockup/l4h-solForTeachers.png',
-      '/images/mockup/l4h-mockup/l4h-experments.png',
-      '/images/mockup/l4h-mockup/l4h-physicalKits.png',
-      '/images/mockup/l4h-mockup/l4h-lms.png',
-      '/images/mockup/l4h-mockup/l4h-requestQuote.png',
-      '/images/mockup/l4h-mockup/l4h-contact.png'
-    ]
-  },
+  
   {
     id: 'todo-app',
     title: 'To-Do List Web Application',
