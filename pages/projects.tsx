@@ -25,25 +25,39 @@ export default function Projects({ projects }: Props) {
       </Head>
       <Navbar />
       <section className="projects-section">
-        <div className="projects-list">
+        <div className="projects-container">
           {projects.map(p => (
-            <div key={p.id} className="project-card" data-project-id={p.id}>
-              <h3 className="project-title">{p.title}</h3>
-              <div className="project-carousel" data-project-id={p.id}>
-                <button className="carousel-prev" aria-label="Previous">‹</button>
-                <div className="carousel-track">
-                  {p.images.length > 0 ? p.images.map((src, idx) => (
-                    <img key={idx} src={src} alt={`${p.title} ${idx + 1}`} className="carousel-image" loading="lazy" />
-                  )) : (
-                    <div className="carousel-empty">No images available</div>
-                  )}
+            <div key={p.id} className="project-item" data-project-id={p.id}>
+              <div className="project-info">
+                <h2 className="project-title">{p.title}</h2>
+                <div className="project-details">
+                  <p className="project-description">{p.description}</p>
+                  <p className="project-tech"><strong>Skills:</strong> {p.tech}</p>
+                  <div className="project-link-container">
+                    <a href={p.link.startsWith('http') ? p.link : `https://${p.link}`} 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       className="project-external-link">
+                      Visit Project <i className="fas fa-external-link-alt"></i>
+                    </a>
+                  </div>
                 </div>
-                <button className="carousel-next" aria-label="Next">›</button>
-                <div className="carousel-indicators"></div>
               </div>
-              <p className="project-description">{p.description}</p>
-              <p className="project-tech"><strong>Skills:</strong> {p.tech}</p>
-              <p className="project-link"><a href={p.link} target="_blank" rel="noopener noreferrer">{p.link}</a></p>
+              
+              {p.images && p.images.length > 0 && (
+                <div className="project-visuals">
+                  <div className="project-carousel" data-project-id={p.id}>
+                    <button className="carousel-prev" aria-label="Previous">‹</button>
+                    <div className="carousel-track">
+                      {p.images.map((src, idx) => (
+                        <img key={idx} src={src} alt={`${p.title} ${idx + 1}`} className="carousel-image" loading="lazy" />
+                      ))}
+                    </div>
+                    <button className="carousel-next" aria-label="Next">›</button>
+                    <div className="carousel-indicators"></div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
