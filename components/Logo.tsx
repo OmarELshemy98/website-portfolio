@@ -11,14 +11,7 @@ export default function Logo() {
         />
       </div>
       
-      <div className="flex flex-col ml-1 leading-tight">
-        <span className="text-sm md:text-base font-bold text-white tracking-tight group-hover:text-neon transition-colors duration-300">
-          Omar <span className="text-neon">Elshemy</span>
-        </span>
-        <span className="text-[7px] md:text-[8px] text-text-muted font-bold uppercase tracking-[0.2em] opacity-70">
-          Front-End Developer
-        </span>
-      </div>
+   
     </Link>
   )
 }

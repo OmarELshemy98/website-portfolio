@@ -9,7 +9,7 @@ export default function Navbar() {
           <Logo />
         </div>
         
-        <ul className="nav-links hidden lg:flex gap-8 absolute left-1/2 -translate-x-1/2">
+        <ul className="nav-links hidden lg:flex gap-8 ">
           <li><Link href="/" className="hover:text-neon transition-colors">Home</Link></li>
           <li><Link href="/about" className="hover:text-neon transition-colors">About</Link></li>
           <li><Link href="/skills" className="hover:text-neon transition-colors">Skills</Link></li>
