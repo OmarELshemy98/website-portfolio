@@ -7,6 +7,7 @@ export type Certification = {
   credentialId: string
   credentialUrl: string
   category: 'Udemy' | 'SoloLearn' | 'MaharaTech' | 'Other'
+  subcategory?: string
 }
 
 export const certifications: Certification[] = [
@@ -88,7 +89,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-css-grid',
@@ -98,7 +100,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-js-scratch',
@@ -108,7 +111,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'JavaScript'
   },
   {
     id: 'udemy-js-advanced',
@@ -118,7 +122,8 @@ export const certifications: Certification[] = [
     issueDate: '2025-06-21',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'JavaScript'
   },
   {
     id: 'udemy-react-practical',
@@ -128,7 +133,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'React & Next.js'
   },
   {
     id: 'udemy-nextjs-react',
@@ -138,7 +144,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'React & Next.js'
   },
   {
     id: 'udemy-nextjs-scalable',
@@ -148,7 +155,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'React & Next.js'
   },
   {
     id: 'udemy-css-and-js',
@@ -158,7 +166,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Frontend Basics'
   },
   {
     id: 'udemy-web-design',
@@ -168,7 +177,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Web Design'
   },
   {
     id: 'udemy-web-project-workshop',
@@ -178,7 +188,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Web Design'
   },
   {
     id: 'udemy-js-fast-entry',
@@ -188,7 +199,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'JavaScript'
   },
   {
     id: 'udemy-git-gitlab-github',
@@ -198,7 +210,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Tools & Version Control'
   },
   {
     id: 'udemy-git-github-3hours-2026',
@@ -208,7 +221,8 @@ export const certifications: Certification[] = [
     issueDate: '2026-01-01',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Tools & Version Control'
   },
   {
     id: 'udemy-master-node-fullstack',
@@ -218,7 +232,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Node.js'
   },
   {
     id: 'udemy-nodejs-practical',
@@ -228,7 +243,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Node.js'
   },
   {
     id: 'udemy-30-html-css',
@@ -238,7 +254,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-master-html-modern-web-design',
@@ -248,7 +265,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-html-css-designers',
@@ -258,7 +276,8 @@ export const certifications: Certification[] = [
     issueDate: '2025-06-21',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-html-css-java-js-fullstack',
@@ -268,7 +287,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'JavaScript'
   },
   {
     id: 'udemy-mastering-html5-css3-advanced',
@@ -278,7 +298,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-mastering-html5-css3-intermediate',
@@ -288,7 +309,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-mastering-html5-css3-beginner',
@@ -298,7 +320,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-responsive-css',
