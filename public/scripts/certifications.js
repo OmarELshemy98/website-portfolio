@@ -37,10 +37,12 @@
     const modalImg = document.getElementById('certificateModalImage');
     const modalTitle = document.getElementById('certificateModalTitle');
     const modalDesc = document.getElementById('certificateModalDescription');
+    const modalOrg = document.getElementById('certificateModalOrg');
     const modalDate = document.getElementById('certificateModalDate');
     const modalId = document.getElementById('certificateModalId');
     const modalUrl = document.getElementById('certificateModalUrl');
     
+    const orgCont = document.getElementById('certificateModalOrgContainer');
     const dateCont = document.getElementById('certificateModalDateContainer');
     const idCont = document.getElementById('certificateModalIdContainer');
     const urlCont = document.getElementById('certificateModalUrlContainer');
@@ -49,6 +51,7 @@
     const title = btn.getAttribute('data-cert-title') || '';
     const image = btn.getAttribute('data-cert-image') || '';
     const desc = btn.getAttribute('data-cert-desc') || '';
+    const org = btn.getAttribute('data-cert-org') || '';
     const date = btn.getAttribute('data-cert-date') || '';
     const idVal = btn.getAttribute('data-cert-id-val') || '';
     const url = btn.getAttribute('data-cert-url') || '';
@@ -58,6 +61,11 @@
     if (modalTitle) modalTitle.textContent = title;
     if (modalDesc) modalDesc.textContent = desc;
     
+    if (modalOrg) {
+      modalOrg.textContent = org;
+      if (orgCont) orgCont.style.display = org ? 'block' : 'none';
+    }
+
     if (modalDate) {
       modalDate.textContent = date;
       if (dateCont) dateCont.style.display = date ? 'block' : 'none';
@@ -70,7 +78,6 @@
     
     if (modalUrl) {
       modalUrl.href = url;
-      modalUrl.textContent = 'View Credential';
       if (urlCont) urlCont.style.display = url ? 'block' : 'none';
     }
 

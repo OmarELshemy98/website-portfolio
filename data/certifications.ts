@@ -8,6 +8,7 @@ export type Certification = {
   credentialUrl: string
   category: 'Udemy' | 'SoloLearn' | 'MaharaTech' | 'Other'
   subcategory?: string
+  issuingOrg?: string
 }
 
 export const certifications: Certification[] = [
