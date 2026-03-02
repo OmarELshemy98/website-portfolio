@@ -19,7 +19,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'MaharaTech'
+    category: 'MaharaTech',
+    subcategory: 'JavaScript'
   },
   {
     id: 'mahartech-html-css',
@@ -29,7 +30,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'MaharaTech'
+    category: 'MaharaTech',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'mahartech-js',
@@ -39,7 +41,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'MaharaTech'
+    category: 'MaharaTech',
+    subcategory: 'JavaScript'
   },
   {
     id: 'mahartech-typescript',
@@ -49,7 +52,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'MaharaTech'
+    category: 'MaharaTech',
+    subcategory: 'JavaScript'
   },
   {
     id: 'sololearn-coding-data',
@@ -59,7 +63,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'SoloLearn'
+    category: 'SoloLearn',
+    subcategory: 'Tools & Version Control'
   },
   {
     id: 'sololearn-frontend',
@@ -69,7 +74,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'SoloLearn'
+    category: 'SoloLearn',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'sololearn-webdev',
@@ -79,7 +85,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'SoloLearn'
+    category: 'SoloLearn',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-website-template',
@@ -331,7 +338,8 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-node-bootcamp',
@@ -341,7 +349,85 @@ export const certifications: Certification[] = [
     issueDate: '',
     credentialId: '',
     credentialUrl: '',
-    category: 'Udemy'
+    category: 'Udemy',
+    subcategory: 'Node.js'
+  },
+  {
+    id: 'udemy-ui-ux-canva',
+    title: 'Complete UI/UX Design with Canva',
+    description: 'This certificate confirms completion of the "Complete UI/UX Design with Canva: Design Smart" course on Udemy.',
+    image: '/images/udemy/complete-ui-ux-design-with-canva-design-smart.jpg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'Web Design'
+  },
+  {
+    id: 'udemy-js-ten-projects',
+    title: 'JavaScript: 10 Projects in 10 Days',
+    description: 'This certificate confirms completion of the "JS: Ten Projects in Ten Days course for beginners" on Udemy.',
+    image: '/images/udemy/js-ten-Projects-in-ten-days-course-for-beginners.jpg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  {
+    id: 'udemy-master-js-html-css',
+    title: 'Master JavaScript, HTML, and CSS',
+    description: 'This certificate confirms completion of the "Master JavaScript, HTML, and CSS" course on Udemy.',
+    image: '/images/udemy/master-javaScript-html-and-css.jpg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  {
+    id: 'udemy-mongodb-nosql',
+    title: 'Master MongoDB: Cloud-Based NoSQL Database',
+    description: 'This certificate confirms completion of the "Master MongoDB: Cloud-Based NoSQL Database Management" course on Udemy.',
+    image: '/images/udemy/master-mongodb-cloud-based-nosql-database-management.jpg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'Node.js'
+  },
+  {
+    id: 'udemy-advanced-win-store-js',
+    title: 'Advanced Windows Store App Development using HTML & JS',
+    description: 'This certificate confirms completion of the "Advanced Windows Store App Development using HTML and JavaScript" course on Udemy.',
+    image: '/images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  {
+    id: 'udemy-ciw-js-specialist',
+    title: 'CIW JavaScript Specialist',
+    description: 'This certificate confirms completion of the "Certified Internet Webmaster JavaScript Specialist" course on Udemy.',
+    image: '/images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  {
+    id: 'udemy-js-scratch-part1',
+    title: 'JavaScript From Scratch (Part 1 - Beginner Level)',
+    description: 'This certificate confirms completion of the "JavaScript From Scratch Part 1 - Beginner Level" course on Udemy.',
+    image: '/images/udemy/javaScript-from-scratch-part1-beginner-level).jpg',
+    issueDate: '',
+    credentialId: '',
+    credentialUrl: '',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
   },
   {
     id: 'chubb-life',
