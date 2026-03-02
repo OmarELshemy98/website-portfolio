@@ -51,7 +51,7 @@ export default function Certifications({ certs }: Props) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {items.map(c => (
                   <div key={c.id} className="certificate-card group bg-[#1a2332] rounded-2xl overflow-hidden border border-white/5 hover:border-neon/30 transition-all duration-500 shadow-xl flex flex-col h-full" data-certificate={c.id}>
-                    <div className="relative aspect-[16/10] overflow-hidden bg-black/20">
+                    <div className="relative aspect-[4/3] ">
                       <img 
                         src={c.image} 
                         alt={c.title} 
