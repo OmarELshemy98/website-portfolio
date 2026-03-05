@@ -282,25 +282,27 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'Next.js'
   },
+  // sixteenth
   {
-    id: 'udemy-30-html-css',
-    title: '30 HTML & CSS Projects Workshop',
-    description: 'This certificate confirms completion of the "30 HTML & CSS Projects Workshop" course on Udemy.',
-    image: '/images/udemy/30-html-css.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-nodejs-practical-project',
+    title: 'Nodejs: All You Need to Know with Practical Project',
+    description: 'Mastered back-end development fundamentals using Node.js. Built a practical project covering server-side logic, environment configuration, and integration of core Node.js modules to create scalable web applications.',
+    image: '/images/certificates/udemy/nodejs-all-you-need-to-know-with-practical-project.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-fca4d233-3a2b-4ced-a20f-a040ed466a43',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-fca4d233-3a2b-4ced-a20f-a040ed466a43',
     category: 'Udemy',
-    subcategory: 'HTML & CSS'
+    subcategory: 'Node.js'
   },
+  // seventeenth
   {
     id: 'udemy-master-html-modern-web-design',
-    title: 'Master HTML for Modern Web Design',
-    description: 'This certificate confirms completion of the "Master HTML for Modern Web Design" course on Udemy.',
-    image: '/images/udemy/master-html-for-modern-web-design.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'Responsive Web Design with CSS: A Complete CSS Guide',
+    description: 'Mastered the art of creating responsive web layouts that work seamlessly across all devices. This comprehensive guide covered advanced CSS techniques, media queries, and modern layout systems like Flexbox and Grid to ensure optimal user experience on mobile, tablet, and desktop.',
+    image: '/images/certificates/udemy/responsiv-web-design-with-css-a-complete-css-guide.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-3314bb1e-b328-4b4e-95b0-20dd41dfe45c',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-3314bb1e-b328-4b4e-95b0-20dd41dfe45c',
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
