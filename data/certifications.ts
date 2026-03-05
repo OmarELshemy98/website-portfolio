@@ -522,6 +522,54 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'Next.js'
   },
+  // thirtysix
+  {
+    id: 'udemy-js-fundamentals-beginners',
+    title: 'JavaScript Fundamentals Course for Beginners',
+    description: 'Successfully completed a comprehensive guide to JavaScript basics. Mastered core syntax, variables, and foundational programming logic, establishing a solid starting point for advanced web development and dynamic application building.',
+    image: '/images/certificates/udemy/javascript-fundamental.jpg',
+    issueDate: 'january 2025',
+    credentialId: 'UC-0db5f3a2-f0b5-489a-9405-a7a7d344114c',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-0db5f3a2-f0b5-489a-9405-a7a7d344114c',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  // thirtyseven
+  {
+    id: 'udemy-js-from-scratch-2025',
+    title: 'JavaScript From Scratch',
+    description: 'Completed "JavaScript From Scratch (Part 1 - Beginner Level)" on Udemy. Acquired foundational skills in JavaScript, including syntax, basic programming concepts, and fundamental operations. This course laid a strong groundwork for building interactive and dynamic web applications. It has empowered me with the essential knowledge to start leveraging JavaScript in web development projects.',
+    image: '/images/certificates/udemy/javascript-from-scratch.jpg',
+    issueDate: 'january 2025',
+    credentialId: 'UC-1977bbf0-5eaf-47b4-b2e3-0c3514be9eee',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-1977bbf0-5eaf-47b4-b2e3-0c3514be9eee',
+    category: 'Udemy',
+    subcategory: 'Frontend Basics'
+  },
+  // thirtyeight
+  {
+    id: 'udemy-html-css-intermediate-2025',
+    title: 'Mastering HTML5 and CSS3 (Part 2 - Intermediate Level)',
+    description: 'Enhanced my web development skills with advanced techniques in HTML5 and CSS3. This course focused on building responsive, modern websites with intermediate-level features, ensuring strong coding standards and best practices. It further strengthened my ability to create interactive and visually appealing web pages efficiently.',
+    image: '/images/certificates/udemy/mastering-html-and-css.jpg',
+    issueDate: 'january 2025',
+    credentialId: 'UC-86568e27-6bbb-4cd5-ac7b-75f8dccedba9',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-86568e27-6bbb-4cd5-ac7b-75f8dccedba9',
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
+  },
+  // thirtynine
+  {
+    id: 'udemy-html-css-intermediate-2025',
+    title: 'Web Design Course For Beginner to Advanced',
+    description: 'Completed "Web Design Course: Beginner to Advanced" on Udemy. Gained comprehensive knowledge in web design principles, including responsive design, HTML, CSS, and advanced design techniques. Learned to create user-friendly and visually appealing websites. This course solidified my expertise in delivering professional web interfaces and design projects.',
+    image: '/images/certificates/udemy/web-design-course.jpg',
+    issueDate: 'january 2025',
+    credentialId: 'UC-af5176f6-8812-4895-bcd5-8b6a37ced659',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-af5176f6-8812-4895-bcd5-8b6a37ced659',
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
+  },
   // thirtytwo
   {
     id: 'chubb-life',
