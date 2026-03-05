@@ -224,34 +224,36 @@ export const certifications: Certification[] = [
   },
   // eleventh
   {
-    id: 'udemy-js-fast-entry',
+    id: 'udemy-mongodb-cloud-nosql',
     title: 'Master MongoDB: Cloud Based NoSQL Database Management',
     description: 'Mastered NoSQL database management using MongoDB Atlas. Covered document-based data modeling, CRUD operations, and cloud deployment strategies essential for building modern, scalable applications.',
     image: '/images/certificates/udemy/master-mongodb-cloud-based-nosql-database-management.jpg',
-    issueDate: '',
+    issueDate: 'february 2026',
     credentialId: 'UC-95bda844-7b31-4aa7-a816-20b8dd787138',
     credentialUrl: 'https://www.udemy.com/certificate/UC-95bda844-7b31-4aa7-a816-20b8dd787138',
     category: 'Udemy',
+    subcategory: 'MongoDB'
+  },
+  // twelfth
+  {
+    id: 'udemy-js-fullstack',
+    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
+    description: 'Comprehensive certification covering the full spectrum of JavaScript development. Mastered everything from core fundamental syntax to advanced programming concepts essential for Full Stack Development, providing a deep understanding of how to build dynamic and scalable web applications.',
+    image: '/images/certificates/udemy/javaScript-fundamentals-to-advanced-full-stack-development.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-4efac4b8-d30f-4648-8178-dfa41070160f',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-4efac4b8-d30f-4648-8178-dfa41070160f',
+    category: 'Udemy',
     subcategory: 'JavaScript'
   },
-  {
-    id: 'udemy-git-gitlab-github',
-    title: 'Git, GitLab, & GitHub Fundamentals',
-    description: 'This certificate confirms completion of the "Git, GitLab, & GitHub Fundamentals for Software Developers" course on Udemy.',
-    image: '/images/udemy/git-gitLab-github-fundamentals-for-software-developers.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
-    category: 'Udemy',
-    subcategory: 'Tools & Version Control'
-  },
+  // thirteenth
   {
     id: 'udemy-git-github-3hours-2026',
-    title: 'Learn Git and GitHub in Less Than 3 Hours (2026)',
-    description: 'This certificate confirms completion of the "Learn Git and GitHub in Less Than 3 Hours (2026)" course on Udemy.',
-    image: '/images/udemy/learn-git-and-github-in-less-than-3-hours(2026).jpg',
-    issueDate: '2026-01-01',
-    credentialId: '',
+    title: 'Master Node.js: From Beginner to Full-Stack Developer',
+    description: 'Comprehensive certification in Node.js development, bridging the gap between basic server-side scripting and full-stack integration. Mastered advanced backend workflows, database connectivity, and environment management to build robust, scalable applications.',
+    image: '/images/certificates/udemy/master-node.js--from-beginner-to-full-stack-developer.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-431f7e3c-20f7-4fcd-af57-a478b391e442',
     credentialUrl: '',
     category: 'Udemy',
     subcategory: 'Tools & Version Control'
