@@ -440,7 +440,7 @@ export const certifications: Certification[] = [
   },
   // twentynine
   {
-    id: 'udemy-advanced-win-store-js',
+    id: 'udemy-js-html-css-30-projects',
     title: 'Master JavaScript, HTML, and CSS with 30 Projects in 30 Days',
     description: 'This certificate confirms my successful completion of the "Master JavaScript, HTML, and CSS" course on Udemy. The training covered modern HTML5 semantics, CSS3 layout and responsive design (including Flexbox and Grid), and JavaScript for interactivity, events, and DOM manipulation. It strengthened my ability to build accessible, responsive, and interactive web interfaces following contemporary best practices.',
     image: '/images/certificates/udemy/master-javaScript-html-and-css.jpg',
@@ -448,27 +448,29 @@ export const certifications: Certification[] = [
     credentialId: 'UC-ffbe5ace-1e4e-4382-89d8-dad19dc507a0',
     credentialUrl: 'https://www.udemy.com/certificate/UC-ffbe5ace-1e4e-4382-89d8-dad19dc507a0',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'HTML & CSS'
   },
+  // thirty
   {
-    id: 'udemy-ciw-js-specialist',
-    title: 'CIW JavaScript Specialist',
-    description: 'This certificate confirms completion of the "Certified Internet Webmaster JavaScript Specialist" course on Udemy.',
-    image: '/images/udemy/certified-internet-webmaster-javaScript-specialist.jpeg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-js-fast-entry',
+    title: 'JavaScript Fast Entry: Programming for Everyone',
+    description: 'This certificate confirms my successful completion of the "JavaScript Fast Entry: Programming for Everyone" course on Udemy. The program introduced core JavaScript concepts including variables, data types, control flow, functions, and basic DOM operations. It provided a practical, beginner-friendly pathway into programming, enabling me to write clear, functional scripts and understand essential web interactivity',
+    image: '/images/certificates/udemy/javaScript-fast-entry-programming-for-everyone.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-a368f3c5-e1e5-4ec6-af53-663320b441c0',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-a368f3c5-e1e5-4ec6-af53-663320b441c0',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'Frontend Basics'
   },
+  // thirtyone
   {
     id: 'udemy-js-scratch-part1',
-    title: 'JavaScript From Scratch (Part 1 - Beginner Level)',
-    description: 'This certificate confirms completion of the "JavaScript From Scratch Part 1 - Beginner Level" course on Udemy.',
-    image: '/images/udemy/javaScript-from-scratch-part1-beginner-level).jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
+    description: 'Successfully completed "JavaScript Fundamentals to Advanced: Full Stack Development" (5.5 hrs) via Udemy (Sayman Creative Institute, 06/21/2025). Gained comprehensive skills, progressing from foundational to advanced JavaScript, for building complete front-end and back-end web applications',
+    image: '/images/certificates/udemy/javascript-fundamentals-to-advanced.jpg',
+    issueDate: 'june 2025',
+    credentialId: 'UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
     category: 'Udemy',
     subcategory: 'JavaScript'
   },
