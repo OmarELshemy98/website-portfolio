@@ -158,7 +158,7 @@ export const certifications: Certification[] = [
     subcategory: 'Next.js'
   },
   {
-    id: 'udemy-nextjs-react',
+    id: 'udemy-webdev-html-css-js',
     title: 'Web Development for Beginners: HTML, CSS & JavaScript',
     description: 'Mastered the core pillars of web development through a comprehensive hands-on program. Gained proficiency in structuring content with HTML, designing responsive layouts with CSS, and implementing dynamic client-side logic with JavaScript to build fully functional web applications.',
     image: '/images/certificates/udemy/web-development-for-beginners-html-css-javaScript.jpg',
@@ -166,16 +166,16 @@ export const certifications: Certification[] = [
     credentialId: 'UC-4bbdd991-afb6-4920-83e8-2d01fce2690e',
     credentialUrl: 'https://www.udemy.com/certificate/UC-4bbdd991-afb6-4920-83e8-2d01fce2690e',
     category: 'Udemy',
-    subcategory: 'React & Next.js'
+    subcategory: 'HTML & CSS'
   },
   {
     id: 'udemy-nextjs-scalable',
-    title: 'Next.js: Build Scalable React Apps',
-    description: 'This certificate confirms completion of the "Next.js: Build Scalable React Apps with Page and App Router" course on Udemy.',
-    image: '/images/udemy/next-js-build-scalable-react-apps-with-page-and-app-router.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'Node.js Crash Course: Build a REST API',
+    description: 'Successfully completed an intensive crash course on building robust RESTful APIs using Node.js. Developed a deep understanding of server-side architecture, routing, and backend logic by building a production-ready API in a highly condensed timeframe.',
+    image: '/images/certificates/udemy/next-js-build-scalable-react-apps-with-page-and-app-router.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-50162445-48b2-40a4-90b3-4deabbe6cc69',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-50162445-48b2-40a4-90b3-4deabbe6cc69',
     category: 'Udemy',
     subcategory: 'React & Next.js'
   },
