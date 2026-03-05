@@ -212,24 +212,25 @@ export const certifications: Certification[] = [
   },
   // tenth
   {
-    id: 'udemy-web-project-workshop',
-    title: 'Web Project Workshop',
+    id: 'udemy-git-github-2026',
+    title: 'Learn Git and GitHub in Less Than 3 Hours (2026)',
     description: 'Mastered the essential workflows of Git and GitHub for 2026. Learned how to manage code versions, collaborate with other developers, and use the most up-to-date industry standards for repository management and software development lifecycles.',
     image: '/images/certificates/udemy/learn-git-and-github-in-less-than-3-hours(2026).jpg',
     issueDate: 'february 2026',
     credentialId: 'UC-2bbeeb83-ecbe-4cd5-9093-618553c7aa83',
     credentialUrl: 'https://www.udemy.com/certificate/UC-2bbeeb83-ecbe-4cd5-9093-618553c7aa83',
     category: 'Udemy',
-    subcategory: 'Web Design'
+    subcategory: 'Tools & Version Control'
   },
+  // eleventh
   {
     id: 'udemy-js-fast-entry',
-    title: 'JavaScript Fast Entry: Programming for Everyone',
-    description: 'This certificate confirms completion of the "JavaScript Fast Entry: Programming for Everyone" course on Udemy.',
-    image: '/images/udemy/javaScript-fast-entry-programming-for-everyone.jpg',
+    title: 'Master MongoDB: Cloud Based NoSQL Database Management',
+    description: 'Mastered NoSQL database management using MongoDB Atlas. Covered document-based data modeling, CRUD operations, and cloud deployment strategies essential for building modern, scalable applications.',
+    image: '/images/certificates/udemy/master-mongodb-cloud-based-nosql-database-management.jpg',
     issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    credentialId: 'UC-95bda844-7b31-4aa7-a816-20b8dd787138',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-95bda844-7b31-4aa7-a816-20b8dd787138',
     category: 'Udemy',
     subcategory: 'JavaScript'
   },
