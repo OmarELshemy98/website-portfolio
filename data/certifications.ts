@@ -344,7 +344,7 @@ export const certifications: Certification[] = [
   },
   // twentyone
   {
-    id: 'udemy-mastering-html5-css3-intermediate',
+    id: 'udemy-js-scratch-part1-beginner',
     title: 'JavaScript From Scratch (Part 1 - Beginner Level)',
     description: 'Started the journey into programming by mastering JavaScript fundamentals from scratch. Covered essential concepts including variables, data types, control flow, and basic functions to build a solid logical foundation for web development.',
     image: '/images/certificates/udemy/javaScript-from-scratch-part1-beginner-level.jpg',
@@ -352,60 +352,65 @@ export const certifications: Certification[] = [
     credentialId: 'UC-bc7216a9-8573-4101-8e3c-af05c6e965da',
     credentialUrl: 'https://www.udemy.com/certificate/UC-bc7216a9-8573-4101-8e3c-af05c6e965da',
     category: 'Udemy',
-    subcategory: 'HTML & CSS'
+    subcategory: 'JavaScript'
   },
+  // twentytwo
   {
-    id: 'udemy-mastering-html5-css3-beginner',
-    title: 'Mastering HTML5 & CSS3: Beginner',
-    description: 'This certificate confirms completion of the "Mastering HTML5 & CSS3: Beginner" course on Udemy.',
-    image: '/images/udemy/mastering-html5-and-css3-beginner.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-js-10-projects-10-days',
+    title: 'javaScript 10 Projects in 10 Days Course for Beginners',
+    description: 'Completed a project-based course focused on practical JavaScript application. Developed 10 distinct web projects in 10 days, enhancing skills in DOM manipulation, event handling, and functional programming logic.',
+    image: '/images/certificates/udemy/javaScript 10 Projects in 10 Days Course for Beginners.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-d34f00c3-9d75-4b41-b84d-2dc1f374b055',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-d34f00c3-9d75-4b41-b84d-2dc1f374b055',
+    category: 'Udemy',
+    subcategory: 'JavaScript'
+  },
+  // twentythree
+  {
+    id: 'udemy-html5-css3-beginner',
+    title: 'Mastering HTML5 and CSS3 (Part 1 - Beginner Level)',
+    description: 'Foundational course covering the essentials of web development. Learned the core structure of web pages using HTML5 and the basics of styling with CSS3 to create clean and functional user interfaces',
+    image: '/images/certificates/udemy/mastering-html5-and-css3-beginner.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-6fa5689b-db95-48ef-aea8-a66b57a922b1',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-6fa5689b-db95-48ef-aea8-a66b57a922b1',
+    category: 'Udemy',
+    subcategory: 'Frontend Basics'
+  },
+  // twentyfour
+  {
+    id: 'udemy-html-css-intermediate',
+    title: 'Mastering HTML5 and CSS3 (Part 2 - Intermediate Level)',
+    description: 'Advanced deep-dive into HTML5 and CSS3, covering complex responsive design, advanced animations, and modern web optimization techniques to create professional-grade user interfaces.',
+    image: '/images/certificates/udemy/mastering-html5-and-css3-intermediate.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-65f60783-fdc7-4da3-a30a-c5e05b5a4f0b',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-65f60783-fdc7-4da3-a30a-c5e05b5a4f0b',
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
+  // twentyfive
   {
-    id: 'udemy-responsive-css',
-    title: 'Responsive Web Design with CSS',
-    description: 'This certificate confirms completion of the "Responsive Web Design with CSS: A Complete CSS Guide" course on Udemy.',
-    image: '/images/udemy/responsiv-web-design-with-css-a-complete-css-guide.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-html-css-advanced',
+    title: 'Mastering HTML5 and CSS3 (Part 3 - Advanced Level)',
+    description: 'Specialized in advanced HTML5 and CSS3 architecture. Focused on building complex user interfaces, implementing advanced animations, and utilizing modern layout techniques to ensure high-performance web experiences.',
+    image: '/images/certificates/udemy/mastering-html5-and-css3-advanced.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-2a832d34-284d-4997-87be-e3f64f5c446b',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-2a832d34-284d-4997-87be-e3f64f5c446b',
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
-  {
-    id: 'udemy-node-bootcamp',
-    title: 'Complete Node.js Bootcamp',
-    description: 'This certificate confirms completion of the "Complete Node.js Bootcamp: From Basics to Advanced" course on Udemy.',
-    image: '/images/udemy/complete-node-js-bootcamp-from-basics-to-advanced.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
-    category: 'Udemy',
-    subcategory: 'Node.js'
-  },
-  {
-    id: 'udemy-ui-ux-canva',
-    title: 'Complete UI/UX Design with Canva',
-    description: 'This certificate confirms completion of the "Complete UI/UX Design with Canva: Design Smart" course on Udemy.',
-    image: '/images/udemy/complete-ui-ux-design-with-canva-design-smart.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
-    category: 'Udemy',
-    subcategory: 'Web Design'
-  },
+  // twentysix
   {
     id: 'udemy-js-ten-projects',
-    title: 'JavaScript: 10 Projects in 10 Days',
-    description: 'This certificate confirms completion of the "JS: Ten Projects in Ten Days course for beginners" on Udemy.',
+    title: 'HTML, CSS, Java, & JavaScript​: Full Stack Programming Course',
+    description: 'Earned a certification in Full Stack Programming through an intensive course focused on:\n\nFront-End: Designing modern, responsive layouts using HTML5 and CSS3.\n\nScripting: Enhancing user experience and interactivity with JavaScript.\n\nBack-End Foundation: Mastering object-oriented programming (OOP) principles and logic using Java.\n\nThis course provided the foundational tools necessary to develop and deploy complete web applications',
     image: '/images/udemy/js-ten-Projects-in-ten-days-course-for-beginners.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    issueDate: 'january 2026',
+    credentialId: 'UC-fbaf0675-c156-42ff-aa0a-af446f6b734c',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-fbaf0675-c156-42ff-aa0a-af446f6b734c',
     category: 'Udemy',
     subcategory: 'JavaScript'
   },
