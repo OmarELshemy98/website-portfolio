@@ -500,15 +500,27 @@ export const certifications: Certification[] = [
   },
   // thirtyfour
   {
-    id: 'udemy-js-fundamentals-to-advanced',
+    id: 'udemy-practical-nextjs-react',
     title: 'Practical Next.js & React - Build a real WebApp with Next.js',
     description: 'Completed "Practical Next.js & React - Build a Real WebApp with Next.js" on Udemy (Instructor: Nick Ovchinnikov). Gained hands-on experience in Next.js, React, SSR, SSG, API routes, and performance optimization. Excited to apply these skills to build modern, scalable web apps!',
     image: '/images/certificates/udemy/javascript-fundamentals-to-advanced.jpg',
     issueDate: 'february 2025',
     credentialId: 'UC-ad14e6fc-afa3-4679-98af-6a82083eac1f',
-    credentialUrl: 'https://www.udemy.com/certificate/UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-ad14e6fc-afa3-4679-98af-6a82083eac1f',
     category: 'Udemy',
-    subcategory: 'Full Stack'
+    subcategory: 'Next.js'
+  },
+  // thirtyfive
+  {
+    id: 'udemy-practical-nextjs-react',
+    title: 'HTML5, CSS3, and JavaScript The Right Way 2025',
+    description: 'Excited to share that I’ve completed the "HTML5, CSS3, and JavaScript The Right Way 2025" course on Udemy by Ali Murtaza. This course provided hands-on experience in building modern, responsive websites using HTML5, styling with CSS3, and adding interactivity with JavaScript. It’s a great step forward in my journey as a web developer, and I’m eager to apply these skills in real-world projects!',
+    image: '/images/certificates/udemy/html-css-js-the-right-way.jpg',
+    issueDate: 'february 2025',
+    credentialId: 'UC-a06d33cc-c037-4a62-82dc-a0755e1e049e',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-a06d33cc-c037-4a62-82dc-a0755e1e049e',
+    category: 'Udemy',
+    subcategory: 'Next.js'
   },
   // thirtytwo
   {
