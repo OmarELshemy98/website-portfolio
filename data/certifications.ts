@@ -464,7 +464,7 @@ export const certifications: Certification[] = [
   },
   // thirtyone
   {
-    id: 'udemy-js-scratch-part1',
+    id: 'udemy-js-fundamentals-to-advanced',
     title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
     description: 'Successfully completed "JavaScript Fundamentals to Advanced: Full Stack Development" (5.5 hrs) via Udemy (Sayman Creative Institute, 06/21/2025). Gained comprehensive skills, progressing from foundational to advanced JavaScript, for building complete front-end and back-end web applications',
     image: '/images/certificates/udemy/javascript-fundamentals-to-advanced.jpg',
@@ -472,8 +472,44 @@ export const certifications: Certification[] = [
     credentialId: 'UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
     credentialUrl: 'https://www.udemy.com/certificate/UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'Full Stack'
   },
+  // thirtytwo
+  {
+    id: 'udemy-html-css-web-designers',
+    title: 'HTML and CSS for Web Designers: From Basics to Beautiful',
+    description: 'This certificate confirms my successful completion of the "HTML and CSS for Web Designers: From Basics to Beautiful" course on Udemy, instructed by Mehmood Khalil. Completed on June 21, 2025, this extensive 8-hour course provided a deep dive into HTML and CSS, teaching how to structure and style web content effectively to create visually appealing and responsive designs. It enhanced my ability to translate design concepts into functional and beautiful web pages.',
+    image: '/images/certificates/udemy/html-and-css-for-web-designers-from-basics-to-beautiful.jpg',
+    issueDate: 'june 2025',
+    credentialId: 'UC-744c1c52-468e-4e07-a8fb-f5e79c0d6917',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-744c1c52-468e-4e07-a8fb-f5e79c0d6917/',
+    category: 'Udemy',
+    subcategory: 'HTML & CSS'
+  },
+  // thirtythree
+  {
+    id: 'udemy-js-fundamentals-to-advanced',
+    title: 'Introduction To CSS Grid',
+    description: 'I have successfully completed the Introduction to CSS Grid course on Udemy, instructed by Joshan Grewal. This course enhanced my skills in creating responsive web layouts using CSS Grid, including working with fractional units, percentages, and auto values. I’m excited to apply these skills in building flexible, scalable, and user-friendly web designs.',
+    image: '/images/certificates/udemy/introduction-to-css-grid.jpg',
+    issueDate: 'march 2025',
+    credentialId: 'UC-993b1597-f3a4-4dd6-be6b-e71f30bbaa30',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-993b1597-f3a4-4dd6-be6b-e71f30bbaa30',
+    category: 'Udemy',
+    subcategory: 'Full Stack'
+  },
+  {
+    id: 'udemy-js-fundamentals-to-advanced',
+    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
+    description: 'Successfully completed "JavaScript Fundamentals to Advanced: Full Stack Development" (5.5 hrs) via Udemy (Sayman Creative Institute, 06/21/2025). Gained comprehensive skills, progressing from foundational to advanced JavaScript, for building complete front-end and back-end web applications',
+    image: '/images/certificates/udemy/javascript-fundamentals-to-advanced.jpg',
+    issueDate: 'june 2025',
+    credentialId: 'UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
+    category: 'Udemy',
+    subcategory: 'Full Stack'
+  },
+  // thirtytwo
   {
     id: 'chubb-life',
     title: 'Chubb Life-Egypt Basic Sales Induction Training',
