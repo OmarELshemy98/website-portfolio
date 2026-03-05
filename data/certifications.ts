@@ -102,6 +102,7 @@ export const certifications: Certification[] = [
     category: 'SoloLearn',
     subcategory: 'HTML & CSS'
   },
+  // first
   {
     id: 'udemy-nodejs-scalable-backend',
     title: 'Node.js - Build Fast and Scalable Backend Applications',
@@ -113,6 +114,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'Node.js'
   },
+  // second
   {
     id: 'udemy-html-css-complete-guide',
     title: 'HTML & CSS: The Complete Web Development Guide',
@@ -124,6 +126,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'Frontend Basics'
   },
+  // third 
   {
     id: 'udemy-responsive-css3',
     title: 'JavaScript From Scratch',
@@ -135,6 +138,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
+  // fourth
   {
     id: 'udemy-js-advanced',
     title: 'The Complete Front-End Web Development Bootcamp',
@@ -146,6 +150,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'JavaScript'
   },
+  // fifth
   {
     id: 'udemy-nextjs-practical',
     title: 'React: All You Need to Know with Practical Project',
@@ -157,6 +162,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'Next.js'
   },
+  // sixth
   {
     id: 'udemy-webdev-html-css-js',
     title: 'Web Development for Beginners: HTML, CSS & JavaScript',
@@ -168,6 +174,7 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
+  // seventh
   {
     id: 'udemy-nodejs-restapi',
     title: 'Node.js Crash Course: Build a REST API',
@@ -179,8 +186,9 @@ export const certifications: Certification[] = [
     category: 'Udemy',
     subcategory: 'REST API'
   },
+  // eigth
   {
-    id: 'udemy-css-and-js',
+    id: 'udemy-react-complete-guide',
     title: 'React.js Complete Guide: Build Interactive Web Applications',
     description: 'In-depth mastery of React.js for building modern, high-performance interactive web applications. Gained practical experience in component-based architecture, state management, and creating seamless user interfaces with the latest industry standards.',
     image: '/images/certificates/udemy/react-js-complete-guide-build-interactive-web-applications.jpg',
@@ -188,27 +196,29 @@ export const certifications: Certification[] = [
     credentialId: 'UC-f8138af0-5312-4f84-a255-7deca285c561',
     credentialUrl: 'https://www.udemy.com/certificate/UC-f8138af0-5312-4f84-a255-7deca285c561',
     category: 'Udemy',
-    subcategory: 'Frontend Basics'
+    subcategory: 'React.js'
   },
+  // ninth
   {
-    id: 'udemy-web-design',
-    title: 'Web Design Course For Beginner to Advanced',
-    description: 'This certificate confirms completion of the "Web Design Course For Beginner to Advanced" on Udemy.',
-    image: '/images/udemy/web-design.jpeg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-master-html-modern-web-design',
+    title: 'Master HTML for Modern Web Design',
+    description: 'Advanced mastery of HTML specifically tailored for modern web design. Focused on creating semantic, accessible, and high-performance front-end structures that align with contemporary design trends and user experience standards.',
+    image: '/images/certificates/udemy/master-html-for-modern-web-design.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-13ce519d-7f9e-43b4-aafb-f76d6e4c7d08',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-13ce519d-7f9e-43b4-aafb-f76d6e4c7d08',
     category: 'Udemy',
-    subcategory: 'Web Design'
+    subcategory: 'HTML & CSS'
   },
+  // tenth
   {
     id: 'udemy-web-project-workshop',
     title: 'Web Project Workshop',
-    description: 'This certificate confirms completion of the "Web Project Workshop" course on Udemy.',
-    image: '/images/udemy/web-project-workshop.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    description: 'Mastered the essential workflows of Git and GitHub for 2026. Learned how to manage code versions, collaborate with other developers, and use the most up-to-date industry standards for repository management and software development lifecycles.',
+    image: '/images/certificates/udemy/learn-git-and-github-in-less-than-3-hours(2026).jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-2bbeeb83-ecbe-4cd5-9093-618553c7aa83',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-2bbeeb83-ecbe-4cd5-9093-618553c7aa83',
     category: 'Udemy',
     subcategory: 'Web Design'
   },
