@@ -296,7 +296,7 @@ export const certifications: Certification[] = [
   },
   // seventeenth
   {
-    id: 'udemy-master-html-modern-web-design',
+    id: 'udemy-responsive-css-complete-guide',
     title: 'Responsive Web Design with CSS: A Complete CSS Guide',
     description: 'Mastered the art of creating responsive web layouts that work seamlessly across all devices. This comprehensive guide covered advanced CSS techniques, media queries, and modern layout systems like Flexbox and Grid to ensure optimal user experience on mobile, tablet, and desktop.',
     image: '/images/certificates/udemy/responsiv-web-design-with-css-a-complete-css-guide.jpg',
@@ -304,49 +304,53 @@ export const certifications: Certification[] = [
     credentialId: 'UC-3314bb1e-b328-4b4e-95b0-20dd41dfe45c',
     credentialUrl: 'https://www.udemy.com/certificate/UC-3314bb1e-b328-4b4e-95b0-20dd41dfe45c',
     category: 'Udemy',
-    subcategory: 'HTML & CSS'
+    subcategory: 'CSS'
   },
+  // eighteenth
   {
-    id: 'udemy-html-css-designers',
-    title: 'HTML and CSS for Web Designers',
-    description: 'This certificate confirms completion of the "HTML and CSS for Web Designers: From Basics to Beautiful" course on Udemy.',
-    image: '/images/udemy/html-and-css-for-web-designers.jpg',
-    issueDate: '2025-06-21',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-git-gitlab-github-fundamentals',
+    title: 'GIT, GitLab, GitHub Fundamentals for Software Developers',
+    description: 'Mastered the essentials of version control systems. Learned how to manage source code effectively using Git, and collaborated on projects via GitHub and GitLab, covering branching, merging, and repository management.',
+    image: '/images/certificates/udemy/git-gitLab-github-fundamentals-for-software-developers.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-134446a5-9074-4ca5-834f-328211249fbc',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-134446a5-9074-4ca5-834f-328211249fbc',
     category: 'Udemy',
-    subcategory: 'HTML & CSS'
+    subcategory: 'Tools & Version Control'
   },
+  // nintheen
   {
-    id: 'udemy-html-css-java-js-fullstack',
-    title: 'HTML, CSS, Java & JavaScript Full-Stack Development',
-    description: 'This certificate confirms completion of the "HTML, CSS, Java & JavaScript Full-Stack Development" course on Udemy.',
-    image: '/images/udemy/html-css-java-javaScript-full-stack.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-ui-ux-canva-smart',
+    title: 'Complete UI/UX Design with Canva - Design Smart Interface',
+    description: 'Gained practical skills in user interface (UI) and user experience (UX) design. Learned to create smart, user-centric interfaces and professional web layouts using Canva, focusing on design principles that enhance digital product usability.',
+    image: '/images/certificates/udemy/complete-ui-ux-design-with-canva-design-smart.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-0e283d9e-9523-4d8b-8a13-61f4cac5c8aa',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-0e283d9e-9523-4d8b-8a13-61f4cac5c8aa',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'Web Design'
   },
+  // twentieth
   {
-    id: 'udemy-mastering-html5-css3-advanced',
-    title: 'Mastering HTML5 & CSS3: Advanced',
-    description: 'This certificate confirms completion of the "Mastering HTML5 & CSS3: Advanced" course on Udemy.',
-    image: '/images/udemy/mastering-html5-and-css3-advanced.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-react-practical-project',
+    title: 'React: All You Need to Know with Practical Project',
+    description: 'Mastered React.js fundamentals by building a practical project. Covered component-based architecture, state management, and modern React hooks to develop dynamic and scalable user interfaces.',
+    image: '/images/certificates/udemy/react-all-you-need-to-know-with-practical-project.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-687bc164-d993-4745-9d3c-13f10d2d9f4e',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-687bc164-d993-4745-9d3c-13f10d2d9f4e',
     category: 'Udemy',
-    subcategory: 'HTML & CSS'
+    subcategory: 'React.js'
   },
+  // twentyone
   {
     id: 'udemy-mastering-html5-css3-intermediate',
-    title: 'Mastering HTML5 & CSS3: Intermediate',
-    description: 'This certificate confirms completion of the "Mastering HTML5 & CSS3: Intermediate" course on Udemy.',
-    image: '/images/udemy/mastering-html5-and-css3-intermediate.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'JavaScript From Scratch (Part 1 - Beginner Level)',
+    description: 'Started the journey into programming by mastering JavaScript fundamentals from scratch. Covered essential concepts including variables, data types, control flow, and basic functions to build a solid logical foundation for web development.',
+    image: '/images/certificates/udemy/javaScript-from-scratch-part1-beginner-level.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-bc7216a9-8573-4101-8e3c-af05c6e965da',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-bc7216a9-8573-4101-8e3c-af05c6e965da',
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
