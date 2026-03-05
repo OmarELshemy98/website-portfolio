@@ -488,7 +488,7 @@ export const certifications: Certification[] = [
   },
   // thirtythree
   {
-    id: 'udemy-js-fundamentals-to-advanced',
+    id: 'udemy-intro-css-grid',
     title: 'Introduction To CSS Grid',
     description: 'I have successfully completed the Introduction to CSS Grid course on Udemy, instructed by Joshan Grewal. This course enhanced my skills in creating responsive web layouts using CSS Grid, including working with fractional units, percentages, and auto values. I’m excited to apply these skills in building flexible, scalable, and user-friendly web designs.',
     image: '/images/certificates/udemy/introduction-to-css-grid.jpg',
@@ -496,15 +496,16 @@ export const certifications: Certification[] = [
     credentialId: 'UC-993b1597-f3a4-4dd6-be6b-e71f30bbaa30',
     credentialUrl: 'https://www.udemy.com/certificate/UC-993b1597-f3a4-4dd6-be6b-e71f30bbaa30',
     category: 'Udemy',
-    subcategory: 'Full Stack'
+    subcategory: 'CSS'
   },
+  // thirtyfour
   {
     id: 'udemy-js-fundamentals-to-advanced',
-    title: 'JavaScript Fundamentals to Advanced: Full Stack Development',
-    description: 'Successfully completed "JavaScript Fundamentals to Advanced: Full Stack Development" (5.5 hrs) via Udemy (Sayman Creative Institute, 06/21/2025). Gained comprehensive skills, progressing from foundational to advanced JavaScript, for building complete front-end and back-end web applications',
+    title: 'Practical Next.js & React - Build a real WebApp with Next.js',
+    description: 'Completed "Practical Next.js & React - Build a Real WebApp with Next.js" on Udemy (Instructor: Nick Ovchinnikov). Gained hands-on experience in Next.js, React, SSR, SSG, API routes, and performance optimization. Excited to apply these skills to build modern, scalable web apps!',
     image: '/images/certificates/udemy/javascript-fundamentals-to-advanced.jpg',
-    issueDate: 'june 2025',
-    credentialId: 'UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
+    issueDate: 'february 2025',
+    credentialId: 'UC-ad14e6fc-afa3-4679-98af-6a82083eac1f',
     credentialUrl: 'https://www.udemy.com/certificate/UC-85f76409-88fb-4d82-8a56-36daf1575ffe',
     category: 'Udemy',
     subcategory: 'Full Stack'
