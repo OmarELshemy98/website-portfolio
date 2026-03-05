@@ -169,7 +169,7 @@ export const certifications: Certification[] = [
     subcategory: 'HTML & CSS'
   },
   {
-    id: 'udemy-nextjs-scalable',
+    id: 'udemy-nodejs-restapi',
     title: 'Node.js Crash Course: Build a REST API',
     description: 'Successfully completed an intensive crash course on building robust RESTful APIs using Node.js. Developed a deep understanding of server-side architecture, routing, and backend logic by building a production-ready API in a highly condensed timeframe.',
     image: '/images/certificates/udemy/next-js-build-scalable-react-apps-with-page-and-app-router.jpg',
@@ -177,16 +177,16 @@ export const certifications: Certification[] = [
     credentialId: 'UC-50162445-48b2-40a4-90b3-4deabbe6cc69',
     credentialUrl: 'https://www.udemy.com/certificate/UC-50162445-48b2-40a4-90b3-4deabbe6cc69',
     category: 'Udemy',
-    subcategory: 'React & Next.js'
+    subcategory: 'REST API'
   },
   {
     id: 'udemy-css-and-js',
-    title: 'CSS and JavaScript Essentials',
-    description: 'This certificate confirms completion of the "CSS and JavaScript Essentials" course on Udemy.',
-    image: '/images/udemy/css-and-js.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'React.js Complete Guide: Build Interactive Web Applications',
+    description: 'In-depth mastery of React.js for building modern, high-performance interactive web applications. Gained practical experience in component-based architecture, state management, and creating seamless user interfaces with the latest industry standards.',
+    image: '/images/certificates/udemy/react-js-complete-guide-build-interactive-web-applications.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-f8138af0-5312-4f84-a255-7deca285c561',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-f8138af0-5312-4f84-a255-7deca285c561',
     category: 'Udemy',
     subcategory: 'Frontend Basics'
   },
