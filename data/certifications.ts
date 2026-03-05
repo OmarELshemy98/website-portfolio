@@ -248,37 +248,39 @@ export const certifications: Certification[] = [
   },
   // thirteenth
   {
-    id: 'udemy-git-github-3hours-2026',
+    id: 'udemy-nodejs-fullstack-2026',
     title: 'Master Node.js: From Beginner to Full-Stack Developer',
     description: 'Comprehensive certification in Node.js development, bridging the gap between basic server-side scripting and full-stack integration. Mastered advanced backend workflows, database connectivity, and environment management to build robust, scalable applications.',
     image: '/images/certificates/udemy/master-node.js--from-beginner-to-full-stack-developer.jpg',
     issueDate: 'february 2026',
     credentialId: 'UC-431f7e3c-20f7-4fcd-af57-a478b391e442',
-    credentialUrl: '',
+    credentialUrl: 'http://udemy.com/certificate/UC-431f7e3c-20f7-4fcd-af57-a478b391e442',
     category: 'Udemy',
-    subcategory: 'Tools & Version Control'
+    subcategory: 'Node.js'
   },
+  // fourteenth
   {
     id: 'udemy-master-node-fullstack',
-    title: 'Master Node.js: From Beginner to Full Stack Developer',
-    description: 'This certificate confirms completion of the "Master Node.js: From Beginner to Full Stack Developer" course on Udemy.',
-    image: '/images/udemy/master-node.js--from-beginner-to-full-stack-developer.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'Complete Node.js Bootcamp: From Basics to Advanced',
+    description: 'Completed an intensive bootcamp covering Node.js from foundational concepts to advanced architectural patterns. Developed deep expertise in building robust server-side applications, managing APIs, and implementing scalable backend solutions using modern JavaScript environments.',
+    image: '/images/certificates/udemy/complete-node-js-bootcamp-from-basics-to-advanced.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-222854e2-218b-4063-b187-b5f3997c0b0a',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-222854e2-218b-4063-b187-b5f3997c0b0a',
     category: 'Udemy',
     subcategory: 'Node.js'
   },
+  // fifteenth
   {
-    id: 'udemy-nodejs-practical',
-    title: 'Node.js: All You Need to Know',
-    description: 'This certificate confirms completion of the "Node.js: All You Need to Know with Practical Project" course on Udemy.',
-    image: '/images/udemy/nodejs-all-you-need-to-know-with-practical-project.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-nextjs-scalable-react',
+    title: 'Next.js: Build Scalable React Apps with Page & App Routers',
+    description: 'Mastered Next.js to build high-performance, scalable React applications. Gained expertise in both Page and App Router architectures, server-side rendering (SSR), static site generation (SSG), and modern web optimization techniques for professional-grade development.',
+    image: '/images/certificates/udemy/next-js-build-scalable-react-apps-with-page-and-app-router.jpg',
+    issueDate: 'february 2026',
+    credentialId: 'UC-281609b3-82b2-4efb-a573-816ddbb18988',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-281609b3-82b2-4efb-a573-816ddbb18988',
     category: 'Udemy',
-    subcategory: 'Node.js'
+    subcategory: 'Next.js'
   },
   {
     id: 'udemy-30-html-css',
