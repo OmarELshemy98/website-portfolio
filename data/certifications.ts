@@ -585,10 +585,10 @@ export const certifications: Certification[] = [
   // thirtytwo
   {
     id: 'chubb-life',
-    title: 'Chubb Life-Egypt Basic Sales Induction Training',
-    description: 'This certificate recognizes successful completion of the "Chubb Life-Egypt Basic Sales Induction Training".',
+    title: 'certificate of completion CHUBB Life Egypt',
+    description: 'Completed "Chubb Life-Egypt Basic Sales Induction Training" Successfully completed the Basic Sales Induction training program at Chubb Life-Egypt, achieving a high score of 98% on the Product Knowledge test. Gained in-depth knowledge of life insurance products and sales techniques, with a focus on customer needs and delivering exceptional value. This certification reflects my commitment to professional growth and excellence in the insurance industry.',
     image: '/images/certificates/chubb-life.jpeg',
-    issueDate: '',
+    issueDate: 'june 2024',
     credentialId: '',
     credentialUrl: '',
     category: 'Other'
@@ -598,7 +598,7 @@ export const certifications: Certification[] = [
     title: 'Banque Misr Summer Training Program 2022',
     description: 'This Certificate of Achievement acknowledges successful completion of the "Banque Misr Summer Training Program 2022".',
     image: '/images/certificates/banque-misr-certificate .jpg',
-    issueDate: '',
+    issueDate: 'august 2020',
     credentialId: '',
     credentialUrl: '',
     category: 'Other'
