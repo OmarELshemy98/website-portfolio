@@ -404,7 +404,7 @@ export const certifications: Certification[] = [
   },
   // twentysix
   {
-    id: 'udemy-js-ten-projects',
+    id: 'udemy-fullstack-html-css-java-js',
     title: 'HTML, CSS, Java, & JavaScript​: Full Stack Programming Course',
     description: 'Earned a certification in Full Stack Programming through an intensive course focused on:\n\nFront-End: Designing modern, responsive layouts using HTML5 and CSS3.\n\nScripting: Enhancing user experience and interactivity with JavaScript.\n\nBack-End Foundation: Mastering object-oriented programming (OOP) principles and logic using Java.\n\nThis course provided the foundational tools necessary to develop and deploy complete web applications',
     image: '/images/udemy/js-ten-Projects-in-ten-days-course-for-beginners.jpg',
@@ -412,38 +412,41 @@ export const certifications: Certification[] = [
     credentialId: 'UC-fbaf0675-c156-42ff-aa0a-af446f6b734c',
     credentialUrl: 'https://www.udemy.com/certificate/UC-fbaf0675-c156-42ff-aa0a-af446f6b734c',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'Full Stack'
   },
+  // twentyseven
   {
-    id: 'udemy-master-js-html-css',
-    title: 'Master JavaScript, HTML, and CSS',
-    description: 'This certificate confirms completion of the "Master JavaScript, HTML, and CSS" course on Udemy.',
-    image: '/images/udemy/master-javaScript-html-and-css.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-css-js-beginners',
+    title: 'CSS And JavaScript Complete Course For Beginners',
+    description: 'This certificate confirms my successful completion of the "CSS and JavaScript Essentials" course on Udemy. The training covered core styling techniques with CSS and interactivity with JavaScript, including DOM manipulation, events, and modern best practices. It improved my capability to craft dynamic, responsive interfaces with clean and accessible code.',
+    image: '/images/certificates/udemy/css-and-javaScript-essentials.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-ef9a899c-abda-43d7-a863-8a71b493d2ce',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-ef9a899c-abda-43d7-a863-8a71b493d2ce',
     category: 'Udemy',
-    subcategory: 'JavaScript'
+    subcategory: 'HTML & CSS'
   },
+  // twentyeight
   {
-    id: 'udemy-mongodb-nosql',
-    title: 'Master MongoDB: Cloud-Based NoSQL Database',
-    description: 'This certificate confirms completion of the "Master MongoDB: Cloud-Based NoSQL Database Management" course on Udemy.',
-    image: '/images/udemy/master-mongodb-cloud-based-nosql-database-management.jpg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    id: 'udemy-web-project-workshop',
+    title: 'Web Project Workshop: 20+ HTML & CSS Websites in Action',
+    description: 'This certificate confirms my successful completion of the "Web Project Workshop" course on Udemy. The course focused on building end-to-end web projects, from planning and structuring to styling and interaction. It strengthened my practical experience in assembling complete, production-ready web pages and components.',
+    image: '/images/certificates/udemy/web-project-workshop.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-6505d7be-5433-451d-be2b-5366df28deaf',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-6505d7be-5433-451d-be2b-5366df28deaf/',
     category: 'Udemy',
-    subcategory: 'Node.js'
+    subcategory: 'HTML & CSS'
   },
+  // twentynine
   {
     id: 'udemy-advanced-win-store-js',
-    title: 'Advanced Windows Store App Development using HTML & JS',
-    description: 'This certificate confirms completion of the "Advanced Windows Store App Development using HTML and JavaScript" course on Udemy.',
-    image: '/images/udemy/advanced-windows-store-app-development-usinghtml-and-javaScript.jpeg',
-    issueDate: '',
-    credentialId: '',
-    credentialUrl: '',
+    title: 'Master JavaScript, HTML, and CSS with 30 Projects in 30 Days',
+    description: 'This certificate confirms my successful completion of the "Master JavaScript, HTML, and CSS" course on Udemy. The training covered modern HTML5 semantics, CSS3 layout and responsive design (including Flexbox and Grid), and JavaScript for interactivity, events, and DOM manipulation. It strengthened my ability to build accessible, responsive, and interactive web interfaces following contemporary best practices.',
+    image: '/images/certificates/udemy/master-javaScript-html-and-css.jpg',
+    issueDate: 'january 2026',
+    credentialId: 'UC-ffbe5ace-1e4e-4382-89d8-dad19dc507a0',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-ffbe5ace-1e4e-4382-89d8-dad19dc507a0',
     category: 'Udemy',
     subcategory: 'JavaScript'
   },
