@@ -560,13 +560,25 @@ export const certifications: Certification[] = [
   },
   // thirtynine
   {
-    id: 'udemy-html-css-intermediate-2025',
+    id: 'udemy-web-design-beginner-to-advanced',
     title: 'Web Design Course For Beginner to Advanced',
     description: 'Completed "Web Design Course: Beginner to Advanced" on Udemy. Gained comprehensive knowledge in web design principles, including responsive design, HTML, CSS, and advanced design techniques. Learned to create user-friendly and visually appealing websites. This course solidified my expertise in delivering professional web interfaces and design projects.',
     image: '/images/certificates/udemy/web-design-course.jpg',
     issueDate: 'january 2025',
     credentialId: 'UC-af5176f6-8812-4895-bcd5-8b6a37ced659',
     credentialUrl: 'https://www.udemy.com/certificate/UC-af5176f6-8812-4895-bcd5-8b6a37ced659',
+    category: 'Udemy',
+    subcategory: 'Web Design'
+  },
+  // forty
+  {
+    id: 'udemy-html-css-template',
+    title: 'design a website template using HTML5 & CSS3',
+    description: 'Successfully completed a comprehensive course on modern web design principles, focusing on creating responsive and visually appealing website templates using HTML5 and CSS3. Gained hands-on experience with semantic HTML elements, advanced CSS techniques, and responsive design practices. This certification reflects proficiency in designing functional and user-friendly web interfaces.',
+    image: '/images/certificates/udemy/html-elements-advanced-css-techniques-and-responsive-design-practices.jpg',
+    issueDate: 'january 2025',
+    credentialId: 'UC-e20191f0-21ae-444e-9c52-1bf622f1539a',
+    credentialUrl: 'https://www.udemy.com/certificate/UC-e20191f0-21ae-444e-9c52-1bf622f1539a',
     category: 'Udemy',
     subcategory: 'HTML & CSS'
   },
