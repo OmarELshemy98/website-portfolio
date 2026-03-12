@@ -1,7 +1,21 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Logo from './Logo'
 
 export default function Navbar() {
+  const router = useRouter()
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/skills', label: 'Skills' },
+    { href: '/services', label: 'Services' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/certifications', label: 'Certificates' },
+    { href: '/contact', label: 'Contact' },
+  ]
+
   return (
     <nav className="main-navbar dark-navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-inner flex items-center justify-between px-4 md:px-8 relative">
@@ -9,15 +23,24 @@ export default function Navbar() {
           <Logo />
         </div>
         
-        <ul className="nav-links hidden lg:flex gap-8 ">
-          <li><Link href="/" className="hover:text-neon transition-colors">Home</Link></li>
-          <li><Link href="/about" className="hover:text-neon transition-colors">About</Link></li>
-          <li><Link href="/skills" className="hover:text-neon transition-colors">Skills</Link></li>
-          <li><Link href="/services" className="hover:text-neon transition-colors">Services</Link></li>
-          <li><Link href="/experience" className="hover:text-neon transition-colors">Experience</Link></li>
-          <li><Link href="/projects" className="hover:text-neon transition-colors">Projects</Link></li>
-          <li><Link href="/certifications" className="hover:text-neon transition-colors">Certificates</Link></li>
-          <li><Link href="/contact" className="hover:text-neon transition-colors">Contact</Link></li>
+        <ul className="nav-links hidden lg:flex gap-8">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link 
+                href={link.href} 
+                className={`relative hover:text-neon transition-colors duration-300 ${
+                  router.pathname === link.href 
+                    ? 'text-neon font-bold' 
+                    : ''
+                }`}
+              >
+                {link.label}
+                {router.pathname === link.href && (
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4/5 h-0.5 bg-neon rounded-full"></span>
+                )}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Placeholder to keep layout balanced if needed, or for future right-side elements */}

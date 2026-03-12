@@ -1,9 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon: #00fff7;
+  --color-neon-cyan: #00fff7;
+  --color-accent: #00c3ff;
+  --color-dark: #181f2a;
+  --color-card: #232b3a;
+}
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --bg-dark: #181f2a;
@@ -411,51 +417,11 @@ body {
 }
 /* Services Section */
 .services-section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 2.5rem auto;
   padding: 2rem 0 0 0;
 }
-.services-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.service-card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  flex: 1 1 260px;
-  min-width: 240px;
-  max-width: 340px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  position: relative;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.service-card:hover, .service-card:focus-within {
-  box-shadow: 0 0 32px #00fff799, 0 4px 32px #000a;
-  transform: translateY(-6px) scale(1.03);
-}
-.service-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: var(--neon);
-  text-shadow: var(--neon-glow);
-}
-.service-card h3 {
-  margin: 0 0 0.5rem 0;
-  color: #fff;
-  font-size: 1.2rem;
-}
-.service-card p {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  margin-bottom: 0.5rem;
-}
+
 /* Portfolio Section */
 .portfolio-section {
   max-width: 1100px;
@@ -488,39 +454,11 @@ body {
 }
 /* Contact Section */
 .contact-section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 2.5rem auto;
   padding: 2rem 0 0 0;
 }
-.contact-form {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  max-width: 420px;
-  margin: 0 auto;
-}
-.contact-form input, .contact-form textarea {
-  background: #181f2a;
-  color: #fff;
-  border: 1.5px solid #232b3a;
-  border-radius: 8px;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  font-family: inherit;
-  resize: none;
-  transition: border var(--transition);
-}
-.contact-form input:focus, .contact-form textarea:focus {
-  border: 1.5px solid var(--neon);
-  outline: none;
-}
-.contact-form button {
-  margin-top: 0.5rem;
-}
+
 /* Footer */
 .footer-section {
   position: relative;

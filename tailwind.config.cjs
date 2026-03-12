@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         neon: "#00fff7",
+        'neon-cyan': "#00fff7",
         accent: "#00c3ff",
         dark: "#181f2a",
         card: "#232b3a",
