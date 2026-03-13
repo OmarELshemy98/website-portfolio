@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className="main-navbar dark-navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-inner flex items-center justify-between px-4 md:px-8 relative">
-        <div className="flex items-center gap-4 ">
+        <div className="flex items-center gap-4">
           <Logo />
         </div>
         
