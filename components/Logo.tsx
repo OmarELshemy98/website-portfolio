@@ -7,7 +7,7 @@ export default function Logo() {
         <img 
           src="/images/logo.png" 
           alt="Logo" 
-          className="w-7 h-7 md:w-9 md:h-9 object-contain transition-transform duration-700 group-hover:rotate-[360deg]"
+          className="   transition-transform duration-700 group-hover:rotate-[360deg]"
         />
       </div>
       
