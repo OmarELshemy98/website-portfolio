@@ -127,53 +127,20 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
 }
 .logo-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
   line-height: 1.1;
   min-width: 120px;
   user-select: none;
 }
-.logo-role {
-  font-size: 1.05rem;
-  color: #b0b8c9;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2.5px solid var(--neon);
-  min-width: 0;
-  width: 0;
-  transition: color 0.3s, border-color 0.3s;
-  display: inline-block;
-  vertical-align: bottom;
-  letter-spacing: 0.5px;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
-}
-.logo-name {
-  font-size: 1.25rem;
-  color: var(--neon);
-  text-shadow: var(--neon-glow);
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2.5px solid var(--neon);
-  width: 0;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
-}
-.logo-text .dot {
-  color: var(--neon);
-  text-shadow: var(--neon-glow);
-}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
