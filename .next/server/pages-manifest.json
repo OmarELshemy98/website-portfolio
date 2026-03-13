@@ -2,9 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.js",
-  "/skills": "pages/skills.js",
-  "/services": "pages/services.js",
   "/experience": "pages/experience.js",
   "/certifications": "pages/certifications.js",
   "/projects": "pages/projects.js"
