@@ -2,11 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/experience": "pages/experience.js",
+  "/about": "pages/about.js",
+  "/skills": "pages/skills.js",
   "/services": "pages/services.js",
-  "/": "pages/index.js",
-  "/projects": "pages/projects.js",
+  "/experience": "pages/experience.js",
   "/certifications": "pages/certifications.js",
-  "/contact": "pages/contact.js",
-  "/skills": "pages/skills.js"
+  "/projects": "pages/projects.js"
 }

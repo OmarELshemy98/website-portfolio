@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -12,9 +11,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <section id="hero" className="hero-section">
-        {/* Code Rain Background */}
-        <canvas id="code-rain-canvas" className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
-        
         <div className="animated-bg"></div>
         <div className="hero-content">
           <div className="hero-text">
@@ -30,7 +26,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Script src="/scripts/code-rain.js" strategy="afterInteractive" />
       <Footer />
     </>
   )

@@ -1,28 +1,8 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../styles.css'
-import { useEffect } from 'react'
 
 export default function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const handleSkillsAnimation = () => {
-      const skillProgressElements = document.querySelectorAll('.skill-progress') as NodeListOf<HTMLElement>;
-      skillProgressElements.forEach(skill => {
-        const level = skill.dataset.level;
-        if (level) {
-          skill.style.width = `${level}%`;
-        }
-      });
-    };
-
-    // Run on initial load
-    setTimeout(handleSkillsAnimation, 100);
-
-    // Rerun on component mount if needed (e.g., for client-side navigation)
-    handleSkillsAnimation();
-
-  }, [pageProps]);
-
   return (
     <>
       <Head>

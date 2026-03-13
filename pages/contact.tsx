@@ -1,21 +1,8 @@
 import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { useState } from 'react'
 
 export default function Contact() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const whatsappNumber = '201026238072'
-    const whatsappMessage = `Hello, my name is ${name}. My email is ${email}.\n\nMy message is:\n${message}`
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-    window.open(whatsappUrl, '_blank')
-  }
-
   return (
     <>
       <Head>
@@ -29,8 +16,7 @@ export default function Contact() {
             I&apos;m currently available for freelance work and open to new opportunities. If you have a project in mind or just want to say hi, feel free to reach out!
           </p>
 
-          <form onSubmit={handleSubmit} className="relative group bg-gray-900/40 p-10 rounded-3xl shadow-2xl border border-white/5 backdrop-blur-xl overflow-hidden">
-            {/* Decorative background glow */}
+          <form id="contactForm" className="relative group bg-gray-900/40 p-10 rounded-3xl shadow-2xl border border-white/5 backdrop-blur-xl overflow-hidden">
             <div className="absolute -top-32 -left-32 w-64 h-64 bg-neon-cyan/5 rounded-full blur-3xl group-hover:bg-neon-cyan/10 transition-all duration-700"></div>
             
             <div className="relative z-10">
@@ -41,8 +27,6 @@ export default function Contact() {
                     type="text" 
                     id="name" 
                     name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
                     required 
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-cyan/50 focus:border-neon-cyan transition-all duration-300"
                     placeholder="Omar Elshemy"
@@ -54,8 +38,6 @@ export default function Contact() {
                     type="email" 
                     id="email" 
                     name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     required 
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-cyan/50 focus:border-neon-cyan transition-all duration-300"
                     placeholder="example@email.com"
@@ -69,8 +51,6 @@ export default function Contact() {
                   id="message" 
                   name="message"
                   rows={6}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
                   required
                   className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-cyan/50 focus:border-neon-cyan transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
