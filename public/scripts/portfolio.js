@@ -54,7 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const showOverlay = (pageName) => {
     if (overlay && pageNameEl) {
-      pageNameEl.textContent = pageName.replace(/\//g, '') || 'Home';
+      // Clean up page name for display (remove slashes)
+      let displayName = pageName.replace(/\//g, '').trim();
+      pageNameEl.textContent = displayName || 'Home';
       overlay.classList.add('show');
       startCodeRain();
     }
