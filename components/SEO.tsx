@@ -10,13 +10,13 @@ interface SEOProps {
 
 export default function SEO({ 
   title, 
-  description = "Omar Elshemy is a professional Front End Developer specializing in building modern, responsive, and high-performance web applications using React, Next.js, and TypeScript. Explore my portfolio for freelance services and web development projects.",
-  keywords = "Omar Elshemy, Front End Developer, Web Developer, React Developer, Next.js Expert, TypeScript Developer, UI/UX Designer, Freelance Web Developer, Portfolio, JavaScript Developer, Egypt Web Developer, Alexandria, New Cairo",
+  description = "Omar Elshemy is a Front End Developer specializing in React and Next.js. I build modern, responsive web applications with a focus on performance and UI/UX design.",
+  keywords = "Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer",
   ogImage = "/images/profile-photo.jpg",
-  ogUrl = "https://omarelshemy.com" 
+  ogUrl = "https://omarelshemy.netlify.app" 
 }: SEOProps) {
-  const baseTitle = "Omar Elshemy | Professional Front End Developer Portfolio"
-  const fullTitle = title ? `${title} | Omar Elshemy - Front End Developer` : baseTitle
+  const baseTitle = "Omar Elshemy | Front End Developer"
+  const fullTitle = title ? `${title} | Omar Elshemy` : baseTitle
 
   return (
     <Head>
