@@ -37,6 +37,22 @@ body {
   overflow-x: hidden;
 }
 
+/* Global Content Wrapper to prevent Navbar overlap */
+main, section:not(.hero-section), .contact-page, .projects-section, .certificates-section, .skills-section, .about-section, .experience-section {
+  padding-top: 120px !important;
+}
+
+@media (max-width: 1024px) {
+  main, section:not(.hero-section), .contact-page, .projects-section, .certificates-section, .skills-section, .about-section, .experience-section {
+    padding-top: 100px !important;
+  }
+}
+
+/* Hero section special case */
+.hero-section {
+  padding-top: 90px;
+}
+
 /* Page Transition Overlay */
 #page-transition-overlay {
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
@@ -195,6 +211,99 @@ body {
 }
 .mobile-menu-btn.active .line:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Mobile Menu Overlay */
+#mobileMenuOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1117 !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000 !important; /* Above everything including main navbar */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#mobileMenuOverlay.show-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobileMenuOverlay ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  margin: 0;
+}
+
+#mobileMenuOverlay .mobile-link {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#mobileMenuOverlay .mobile-link:hover {
+  color: var(--neon);
+  transform: scale(1.1);
+  text-shadow: 0 0 20px var(--neon);
+}
+
+/* Close button for mobile menu */
+.mobile-menu-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* Project Carousel Controls */
+.carousel-prev, .carousel-next {
+  display: flex !important;
+  opacity: 1 !important;
+  background: rgba(0, 255, 247, 0.3) !important;
+  color: white !important;
+  border: 2px solid var(--neon) !important;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.4);
+}
+
+.carousel-prev { left: 15px; }
+.carousel-next { right: 15px; }
+
+@media (max-width: 768px) {
+  .carousel-prev, .carousel-next {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 }
 
 /* Hero Section */

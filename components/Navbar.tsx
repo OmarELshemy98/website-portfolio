@@ -78,8 +78,9 @@ export default function Navbar() {
         {/* Mobile Menu Overlay */}
         <div 
           id="mobileMenuOverlay"
-          className="fixed inset-0 bg-[#0d1117] lg:hidden transition-all duration-500 flex flex-col items-center justify-center z-40 opacity-0 pointer-events-none translate-y-full"
+          className="fixed inset-0 bg-[#0d1117] lg:hidden transition-all duration-500 flex flex-col items-center justify-center z-[2000] opacity-0 pointer-events-none"
         >
+          <div id="mobileMenuClose" className="mobile-menu-close">&times;</div>
           <ul className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>

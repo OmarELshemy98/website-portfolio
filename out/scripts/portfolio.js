@@ -86,30 +86,40 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Mobile Menu Logic ---
   const menuBtn = document.getElementById('mobileMenuBtn');
   const menuOverlay = document.getElementById('mobileMenuOverlay');
+  const menuClose = document.getElementById('mobileMenuClose');
   const mobileLinks = document.querySelectorAll('.mobile-link');
 
   if (menuBtn && menuOverlay) {
     const toggleMenu = () => {
-      const isOpen = menuOverlay.classList.contains('opacity-100');
-      if (isOpen) {
-        menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
-        menuOverlay.classList.add('opacity-0', 'pointer-events-none', 'translate-y-full');
-        menuBtn.classList.remove('active');
+      menuOverlay.classList.toggle('show-menu');
+      menuBtn.classList.toggle('active');
+      
+      // Toggle body scroll
+      if (menuOverlay.classList.contains('show-menu')) {
+        document.body.style.overflow = 'hidden';
       } else {
-        menuOverlay.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-full');
-        menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
-        menuBtn.classList.add('active');
+        document.body.style.overflow = '';
       }
     };
 
+    const closeMenu = () => {
+      menuOverlay.classList.remove('show-menu');
+      menuBtn.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
     menuBtn.addEventListener('click', toggleMenu);
+    if (menuClose) menuClose.addEventListener('click', closeMenu);
 
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
-        menuOverlay.classList.add('opacity-0', 'pointer-events-none', 'translate-y-full');
-        menuBtn.classList.remove('active');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on outside click
+    menuOverlay.addEventListener('click', (e) => {
+      if (e.target === menuOverlay) {
+        closeMenu();
+      }
     });
   }
 

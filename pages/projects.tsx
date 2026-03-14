@@ -48,13 +48,17 @@ export default function Projects({ projects }: Props) {
               {p.images && p.images.length > 0 && (
                 <div className="project-visuals">
                   <div className="project-carousel" data-project-id={p.id}>
-                    <button className="carousel-prev" aria-label="Previous">‹</button>
+                    <button className="carousel-prev" aria-label="Previous">
+                      <i className="fas fa-chevron-left"></i>
+                    </button>
                     <div className="carousel-track">
                       {p.images.map((src, idx) => (
                         <img key={idx} src={src} alt={`${p.title} ${idx + 1}`} className="carousel-image" loading="lazy" />
                       ))}
                     </div>
-                    <button className="carousel-next" aria-label="Next">›</button>
+                    <button className="carousel-next" aria-label="Next">
+                      <i className="fas fa-chevron-right"></i>
+                    </button>
                     <div className="carousel-indicators"></div>
                   </div>
                 </div>
