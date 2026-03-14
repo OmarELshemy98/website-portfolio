@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 
 export default function Services() {
   const services = [
@@ -38,9 +38,10 @@ export default function Services() {
 
   return (
     <>
-      <Head>
-        <title>Services | Front-End Freelancer</title>
-      </Head>
+      <SEO 
+        title="Services | Freelance Frontend Developer" 
+        description="I provide professional front-end development services, including custom web development, design conversion, and performance optimization."
+      />
       <Navbar />
       <main className="bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

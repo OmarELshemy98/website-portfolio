@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Script from 'next/script'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 import type { GetStaticProps } from 'next'
 import { projects as allProjects, type Project } from '@/data/projects'
 
@@ -20,9 +20,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Projects({ projects }: Props) {
   return (
     <>
-      <Head>
-        <title>Projects</title>
-      </Head>
+      <SEO 
+        title="Portfolio Projects" 
+        description="A showcase of web development projects by Omar Elshemy, featuring responsive designs, interactive web apps, and modern front-end solutions."
+      />
       <Navbar />
       <section className="projects-section">
         <div className="projects-container">

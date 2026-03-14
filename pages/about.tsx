@@ -1,13 +1,14 @@
-import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About</title>
-      </Head>
+      <SEO 
+        title="About Me" 
+        description="Learn more about Omar Elshemy, a digital craftsman and front-end developer passionate about creating beautiful and functional web experiences."
+      />
       <Navbar />
       <section id="about" className="about-section">
         <div className="about-inner">

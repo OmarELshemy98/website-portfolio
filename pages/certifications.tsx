@@ -1,7 +1,7 @@
-import Head from 'next/head'
 import Script from 'next/script'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 import type { GetStaticProps } from 'next'
 import { certifications as allCerts, type Certification } from '../data/certifications'
 
@@ -27,9 +27,10 @@ export default function Certifications({ certs }: Props) {
   
   return (
     <>
-      <Head>
-        <title>Certificates - Omar Elshemy | Frontend Developer</title>
-      </Head>
+      <SEO 
+        title="Certifications" 
+        description="View the professional certifications and achievements of Omar Elshemy, including certificates from MaharaTech, SoloLearn, and Udemy."
+      />
       <Navbar />
       
       <section id="certificates" className="certificates-section pt-32 pb-20 px-4 max-w-[1200px] mx-auto min-h-screen">

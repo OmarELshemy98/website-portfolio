@@ -1,13 +1,14 @@
-import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 
 export default function Experience() {
   return (
     <>
-      <Head>
-        <title>Experience</title>
-      </Head>
+      <SEO 
+        title="Experience" 
+        description="Professional work experience of Omar Elshemy as a Front End Developer and in other previous roles."
+      />
       <Navbar />
       <section id="experience" className="experience-section">
         <h2 className="section-title">Work <span className="highlight">Experience</span></h2>

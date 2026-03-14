@@ -1,13 +1,14 @@
-import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 
 export default function Contact() {
   return (
     <>
-      <Head>
-        <title>Contact Me</title>
-      </Head>
+      <SEO 
+        title="Contact Me" 
+        description="Get in touch with Omar Elshemy for freelance opportunities or professional collaborations in front-end development."
+      />
       <Navbar />
       <main className="contact-page bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
