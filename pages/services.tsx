@@ -6,49 +6,79 @@ export default function Services() {
   const services = [
     {
       title: "Custom Web Development",
-      description: "Building high-performance, scalable websites using modern technologies like React, Next.js, and TypeScript. Tailored to your business needs.",
+      description: "Building high-performance, scalable websites using React, Next.js (SSR/SSG), and TypeScript. I focus on clean code and robust architecture tailored to your needs.",
       icon: "🚀"
     },
     {
-      title: "UI/UX to React Conversion",
-      description: "Transforming your Figma, Adobe XD, or Sketch designs into pixel-perfect, responsive React/Next.js applications with clean, maintainable code.",
+      title: "Figma to React Conversion",
+      description: "Transforming your Figma or Adobe XD designs into pixel-perfect, responsive React/Next.js components with Tailwind CSS for rapid and consistent styling.",
       icon: "🎨"
     },
     {
-      title: "Performance Optimization",
-      description: "Improving your website's speed, SEO rankings, and Core Web Vitals to ensure the best possible user experience and conversion rates.",
+      title: "Performance & SEO Optimization",
+      description: "Optimizing Core Web Vitals, implementing SEO best practices, and ensuring lightning-fast load times to boost your search engine rankings and user retention.",
       icon: "⚡"
     },
     {
-      title: "Responsive Web Design",
-      description: "Creating mobile-first, fluid layouts that work flawlessly across all devices, from smartphones to large desktop monitors.",
+      title: "Responsive & Adaptive Design",
+      description: "Ensuring your website looks stunning and functions perfectly on every device, from mobile phones to large-scale desktop displays using modern CSS techniques.",
       icon: "📱"
     },
     {
-      title: "Single Page Applications (SPA)",
-      description: "Developing fast, interactive web applications with smooth transitions and state management using Redux or React Query.",
+      title: "SPA & Modern Web Apps",
+      description: "Developing fast, interactive single-page applications with seamless transitions and advanced state management using Redux Toolkit or React Query.",
       icon: "🌐"
     },
     {
       title: "API & Backend Integration",
-      description: "Connecting your front-end to RESTful or GraphQL APIs, headless CMSs, and third-party services like Stripe or Firebase.",
+      description: "Seamlessly connecting your frontend to RESTful/GraphQL APIs, and integrating backend services like Firebase, Supabase, or Headless CMS solutions.",
       icon: "🔗"
+    },
+    {
+      title: "E-commerce Solutions",
+      description: "Creating modern, conversion-focused online stores with secure payment gateway integrations like Stripe, focusing on smooth checkout experiences.",
+      icon: "🛒"
+    },
+    {
+      title: "UI/UX & Accessibility",
+      description: "Enhancing user interfaces with a focus on usability and web accessibility (A11y) to ensure your digital products are inclusive and easy to use for everyone.",
+      icon: "✨"
+    },
+    {
+      title: "Support & Maintenance",
+      description: "Providing ongoing technical support, debugging, and regular updates to keep your web applications secure, up-to-date, and performing at their best.",
+      icon: "🛠️"
+    },
+    {
+      title: "Next.js Migration",
+      description: "Upgrading your existing React or HTML/CSS websites to Next.js to take advantage of Server-Side Rendering (SSR) and Static Site Generation (SSG) for better SEO and speed.",
+      icon: "🔄"
+    },
+    {
+      title: "Admin Dashboards",
+      description: "Building powerful, data-driven admin panels and dashboards with interactive charts, tables, and management tools to help you run your business efficiently.",
+      icon: "📊"
+    },
+    {
+      title: "Landing Page Design",
+      description: "Crafting high-converting landing pages focused on capturing leads and driving sales, with engaging animations and a clear call-to-action (CTA).",
+      icon: "🎯"
     }
   ]
 
   return (
     <>
       <SEO 
-        title="Services | Freelance Frontend Developer" 
-        description="I provide professional front-end development services, including custom web development, design conversion, and performance optimization."
+        title="Freelance Services | Front-End Developer" 
+        description="Professional freelance front-end development services. Specializing in React, Next.js, Figma to Code, and Performance Optimization for modern web applications."
       />
       <Navbar />
       <main className="bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-neon-cyan glow-text">Freelance Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-neon-cyan glow-text">Freelance Front-End Services</h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              I provide professional front-end development services to help you build modern, fast, and user-friendly web experiences.
+              I provide high-quality, professional front-end development services to help you transform your ideas into modern, fast, and user-centric web experiences.
             </p>
           </div>
 
