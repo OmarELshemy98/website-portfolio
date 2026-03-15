@@ -2785,7 +2785,7 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   transition: background 0.2s;
 }
 .indicator.active {
-  background: #27ae60;
+  background: var(--neon);
 }
 @media (max-width: 900px) {
   .cv-modal-content {
@@ -2812,8 +2812,9 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   background: radial-gradient(circle at 70% 20%, rgba(0,255,247,0.18) 0%, rgba(24,31,42,0.92) 60%, rgba(39,174,96,0.10) 100%);
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  max-width: 320px;
+  padding: 2.5rem 1.8rem 1.8rem 1.8rem;
+  max-width: 420px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -2828,41 +2829,65 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   margin-top: 0.5rem;
   margin-bottom: 1.2rem;
   font-size: 1.3rem;
-  color: #27ae60;
+  color: var(--neon);
   text-align: center;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
 }
 .portrait-card table {
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 0.4em;
+  border-spacing: 0 0.8em;
+  table-layout: fixed;
 }
 .portrait-card td {
   font-size: 1rem;
-  padding: 0.2em 0.3em;
-  vertical-align: middle;
+  padding: 0.4em 0.2em;
+  vertical-align: top;
   color: #f3f3f3;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.portrait-card table td:first-child {
+  color: #00fff7;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: left;
+  width: 110px;
+  padding-right: 0.5rem;
+}
+.portrait-card table td:last-child {
+  word-break: break-word;
+  text-align: left;
+  width: calc(100% - 110px);
 }
 .portrait-card a {
-  color: #27ae60 !important;
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+.portrait-card a:hover {
+  color: var(--neon) !important;
 }
 .portrait-card .email-cell a {
   word-break: break-all;
 }
 @media (max-width: 600px) {
   .portrait-card {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
-    max-width: 98vw;
+    padding: 1.5rem 0.8rem 1rem 0.8rem;
+    max-width: 95vw;
   }
-}
-
-.portrait-card table td:first-child {
-  color: #00fff7;
-  font-weight: bold;
+  .portrait-card table td:first-child {
+    width: 90px;
+    font-size: 0.85rem;
+    padding-right: 0.3rem;
+  }
+  .portrait-card table td:last-child {
+    width: calc(100% - 90px);
+    font-size: 0.85rem;
+  }
 }
 
 .portrait-card table td a,
 .portrait-card table td {
-  color: #fff !important;
   transition: color 0.2s, text-shadow 0.2s;
 }
 .portrait-card table td a:hover,
