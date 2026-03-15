@@ -11,6 +11,7 @@ export default function Home() {
         <meta name="description" content="Frontend Developer crafting modern, responsive, and user-friendly web experiences." />
       </Head>
       <Navbar />
+      <div className="bg-particles"></div>
       <section id="hero" className="hero-section">
         {/* Code Rain Background */}
         <canvas id="code-rain-canvas" className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>

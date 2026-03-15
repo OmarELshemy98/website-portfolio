@@ -169,6 +169,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- Scroll Reveal Animation Logic ---
+  const revealElements = () => {
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealElements);
+  // Initial check on load
+  setTimeout(revealElements, 500);
+
+  // Add reveal classes to sections
+  const sections = document.querySelectorAll('section, main, .service-card, .project-item, .experience-item, .skill-category-card');
+  sections.forEach((section, index) => {
+    if (!section.classList.contains('hero-section')) {
+      section.classList.add('reveal');
+    }
+  });
+
   // Services Modal & Form Submission (WhatsApp)
   const serviceModal = document.getElementById('serviceModal');
   const serviceRequestForm = document.getElementById('serviceRequestForm');
