@@ -41,7 +41,7 @@ export default function SEO({
       <meta property="twitter:image" content={ogImage} />
 
       <link rel="canonical" href={ogUrl} />
-      <link rel="icon" href="/favicon.png" type="image/png" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   )
 }
