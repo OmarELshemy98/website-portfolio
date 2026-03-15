@@ -63,8 +63,8 @@ export default function Skills() {
   return (
     <>
       <SEO 
-        title="My Skills" 
-        description="Comprehensive technical skills of Omar Elshemy, a Senior Front End Developer specialized in modern web technologies and optimization."
+        title="Technical Skills | Omar Elshemy - Front-End Development Expert" 
+        description="Explore the technical arsenal of Omar Elshemy. Specialized in React, Next.js, TypeScript, Tailwind CSS, and performance optimization."
       />
       <Navbar />
       <section id="skills" className="skills-section py-24 px-4 min-h-screen bg-[#0d1117]">

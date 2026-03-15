@@ -6,8 +6,8 @@ export default function About() {
   return (
     <>
       <SEO 
-        title="About Me" 
-        description="Learn more about Omar Elshemy, a digital craftsman and front-end developer passionate about creating beautiful and functional web experiences."
+        title="About Omar Elshemy | Front-End Developer & UI/UX Specialist" 
+        description="Learn about Omar Elshemy's journey as a Front-End Developer. Expertise in React, Next.js, and crafting user-centered digital experiences."
       />
       <Navbar />
       <section id="about" className="about-section">

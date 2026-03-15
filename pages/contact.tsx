@@ -6,8 +6,8 @@ export default function Contact() {
   return (
     <>
       <SEO 
-        title="Contact Me" 
-        description="Get in touch with Omar Elshemy for freelance opportunities or professional collaborations in front-end development."
+        title="Contact Omar Elshemy | Hire a Professional Front-End Developer" 
+        description="Get in touch with Omar Elshemy for freelance opportunities, professional collaborations, or technical consultations in front-end development."
       />
       <Navbar />
       <main className="contact-page bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">

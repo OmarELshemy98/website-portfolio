@@ -6,8 +6,8 @@ export default function Experience() {
   return (
     <>
       <SEO 
-        title="Experience" 
-        description="Professional work experience of Omar Elshemy as a Front End Developer and in other previous roles."
+        title="Work Experience | Omar Elshemy - Front-End Developer" 
+        description="Professional journey of Omar Elshemy. From Corporate Accountant to Sales Executive, and now a dedicated Front-End Developer at Arcon Corporation."
       />
       <Navbar />
       <section id="experience" className="experience-section">

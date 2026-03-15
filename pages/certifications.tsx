@@ -28,8 +28,8 @@ export default function Certifications({ certs }: Props) {
   return (
     <>
       <SEO 
-        title="Certifications" 
-        description="View the professional certifications and achievements of Omar Elshemy, including certificates from MaharaTech, SoloLearn, and Udemy."
+        title="Professional Certifications | Omar Elshemy - Verified Expertise" 
+        description="View the professional certifications and achievements of Omar Elshemy. Verified expertise from MaharaTech, SoloLearn, Udemy, and more in Front-End Development."
       />
       <Navbar />
       

@@ -1,15 +1,15 @@
-import Head from 'next/head'
-import Script from 'next/script'
+import SEO from '@/components/SEO'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Script from 'next/script'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Omar Elshemy – Frontend Developer Portfolio</title>
-        <meta name="description" content="Frontend Developer crafting modern, responsive, and user-friendly web experiences." />
-      </Head>
+      <SEO 
+        title="Omar Elshemy | Professional Front-End Developer & Freelancer" 
+        description="Explore the portfolio of Omar Elshemy, a professional Front-End Developer specializing in React, Next.js, and high-performance web applications. Open for freelance projects."
+      />
       <Navbar />
       <div className="bg-particles"></div>
       <section id="hero" className="hero-section">

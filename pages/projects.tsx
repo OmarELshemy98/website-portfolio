@@ -21,8 +21,8 @@ export default function Projects({ projects }: Props) {
   return (
     <>
       <SEO 
-        title="Portfolio Projects" 
-        description="A showcase of web development projects by Omar Elshemy, featuring responsive designs, interactive web apps, and modern front-end solutions."
+        title="Project Portfolio | Omar Elshemy - Front-End Development Showcase" 
+        description="A showcase of web development projects by Omar Elshemy. Featuring responsive designs, interactive web apps, and modern front-end solutions built with React and Next.js."
       />
       <Navbar />
       <section className="projects-section">
