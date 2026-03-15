@@ -6,37 +6,23 @@ export default function Footer() {
   return (
     <footer className="main-footer">
       <div className="footer-glow-top"></div>
-      <div className="footer-container">
-        <div className="footer-top">
-          <div className="footer-brand">
+      <div className="footer-container w-[90%] mx-auto">
+        <div className="footer-content-simple">
+          <div className="footer-brand-simple">
             <Logo />
-            <div className="brand-text">
-              <h3 className="footer-name">Omar Elshemy</h3>
-              <p className="footer-tagline">Digital Craftsman & Front-End Expert</p>
+            <div className="brand-text-simple">
+              <h3 className="footer-name-simple">Omar Elshemy</h3>
+              <p className="footer-tagline-simple">Digital Craftsman & Front-End Expert</p>
             </div>
           </div>
           
-          <div className="footer-nav">
-            <h4 className="footer-heading">Navigation</h4>
-            <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-social">
-            <h4 className="footer-heading">Connect</h4>
+          <div className="footer-social-simple">
             <SocialIcons />
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="footer-divider"></div>
-          <div className="footer-copyright">
-            <p>&copy; {year} <span className="highlight">Omar Elshemy</span>. Built with passion and precision.</p>
-          </div>
+        <div className="footer-bottom-simple">
+          <p>&copy; {year} <span className="highlight">Omar Elshemy</span>. All rights reserved.</p>
         </div>
       </div>
     </footer>

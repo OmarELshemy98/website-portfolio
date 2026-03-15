@@ -172,34 +172,19 @@ export default function Services() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-neon-cyan mb-2">Payment Method</label>
+                  <label className="block text-sm font-medium text-neon-cyan mb-2">Desired Timeframe</label>
                   <select 
-                    id="paymentMethod"
-                    name="paymentMethod"
-                    required 
+                    id="deliveryTimeframe"
+                    name="deliveryTimeframe"
                     className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300 cursor-pointer"
                   >
-                    <option value="">Select an option</option>
-                    <option value="Vodafone Cash">Vodafone Cash</option>
-                    <option value="Bank Transfer">Bank Transfer</option>
-                    <option value="PayPal">PayPal / Global</option>
+                    <option value="">Select timeframe (Optional)</option>
+                    <option value="1-3 days">1-3 days (Express)</option>
+                    <option value="3-7 days">3-7 days</option>
+                    <option value="1-2 weeks">1-2 weeks</option>
+                    <option value="1 month+">1 month+</option>
                   </select>
                 </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-neon-cyan mb-2">Desired Timeframe</label>
-                <select 
-                  id="deliveryTimeframe"
-                  name="deliveryTimeframe"
-                  className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300 cursor-pointer"
-                >
-                  <option value="">Select timeframe (Optional)</option>
-                  <option value="1-3 days">1-3 days (Express)</option>
-                  <option value="3-7 days">3-7 days</option>
-                  <option value="1-2 weeks">1-2 weeks</option>
-                  <option value="1 month+">1 month+</option>
-                </select>
               </div>
 
               <button 

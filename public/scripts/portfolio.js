@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const serviceTitle = modalServiceTitle ? modalServiceTitle.innerText : 'Unknown Service';
 
       const whatsappNumber = '201026238072';
-      const whatsappMessage = `*New Service Request*\n\n*Service:* ${serviceTitle}\n*Name:* ${data.clientName}\n*Email:* ${data.clientEmail}\n*Mobile:* ${data.mobileNumber}\n*Payment:* ${data.paymentMethod}\n*Timeframe:* ${data.deliveryTimeframe}\n\n*Description:* ${data.serviceDescription}`;
+      const whatsappMessage = `*New Service Request*\n\n*Service:* ${serviceTitle}\n*Name:* ${data.clientName}\n*Email:* ${data.clientEmail}\n*Mobile:* ${data.mobileNumber}\n*Timeframe:* ${data.deliveryTimeframe}\n\n*Description:* ${data.serviceDescription}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, '_blank');
       

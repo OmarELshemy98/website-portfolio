@@ -33,7 +33,15 @@ export default function Projects({ projects }: Props) {
                 <h2 className="project-title">{p.title}</h2>
                 <div className="project-details">
                   <p className="project-description">{p.description}</p>
-                  <p className="project-tech"><strong>Skills:</strong> {p.tech}</p>
+                  
+                  <div className="project-tags flex flex-wrap gap-2 mt-4 mb-6">
+                    {p.tech.split(',').map((tag, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-neon/10 border border-neon/30 text-neon text-xs font-bold rounded-full">
+                        {tag.trim()}
+                      </span>
+                    ))}
+                  </div>
+
                   <div className="project-link-container">
                     <a href={p.link.startsWith('http') ? p.link : `https://${p.link}`} 
                        target="_blank" 
