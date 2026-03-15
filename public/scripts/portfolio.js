@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('mobileMenuBtn');
   const menuOverlay = document.getElementById('mobileMenuOverlay');
   const menuClose = document.getElementById('mobileMenuClose');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-item');
 
   if (menuBtn && menuOverlay) {
     const toggleMenu = () => {
