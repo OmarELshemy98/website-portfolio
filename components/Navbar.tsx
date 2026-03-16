@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="navbar-container">
       <nav className="main-navbar" role="navigation" aria-label="Main Navigation">
-        <div className="navbar-inner flex items-center justify-between px-4 md:px-12 relative h-full max-w-[1400px] mx-auto">
+        <div className="navbar-inner px-4 relative mx-auto">
           
           {/* --- MOBILE LAYOUT --- */}
           <div className="lg:hidden flex-1"></div>

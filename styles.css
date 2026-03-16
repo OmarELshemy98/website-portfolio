@@ -154,27 +154,35 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   gap: 1.2rem;
 }
 
-.main-navbar.scrolled .nav-links.left { padding-right: 20px; }
-.main-navbar.scrolled .nav-links.right { padding-left: 20px; }
+.main-navbar.scrolled .nav-links.left { padding-right: 15px; }
+.main-navbar.scrolled .nav-links.right { padding-left: 15px; }
 
 .navbar-inner {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Center everything tightly */
+  gap: 20px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem; /* Reduced gap for a tighter look */
   padding: 0;
   margin: 0;
-  flex: 1;
+  flex: none; /* Stop stretching */
 }
 
-.nav-links.left { justify-content: flex-end; padding-right: 40px; }
-.nav-links.right { justify-content: flex-start; padding-left: 40px; }
+.nav-links.left { 
+  justify-content: flex-end; 
+  padding-right: 10px; 
+}
+
+.nav-links.right { 
+  justify-content: flex-start; 
+  padding-left: 10px; 
+}
 
 .nav-item {
   color: rgba(255, 255, 255, 0.7);
