@@ -140,6 +140,7 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 247, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: auto;
+  direction: ltr;
 }
 
 .main-navbar.scrolled {
@@ -154,8 +155,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   gap: 1.2rem;
 }
 
-.main-navbar.scrolled .nav-links.left { padding-right: 15px; }
-.main-navbar.scrolled .nav-links.right { padding-left: 15px; }
+.main-navbar.scrolled .nav-links.start { padding-inline-end: 15px; }
+.main-navbar.scrolled .nav-links.end { padding-inline-start: 15px; }
 
 .navbar-inner {
   height: 100%;
@@ -163,6 +164,7 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   align-items: center;
   justify-content: center; /* Center everything tightly */
   gap: 20px;
+  direction: ltr;
 }
 
 .nav-links {
@@ -174,14 +176,14 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   flex: none; /* Stop stretching */
 }
 
-.nav-links.left { 
+.nav-links.start { 
   justify-content: flex-end; 
-  padding-right: 10px; 
+  padding-inline-end: 10px; 
 }
 
-.nav-links.right { 
+.nav-links.end { 
   justify-content: flex-start; 
-  padding-left: 10px; 
+  padding-inline-start: 10px; 
 }
 
 .nav-item {
@@ -193,6 +195,13 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   letter-spacing: 1.5px;
   transition: all 0.3s ease;
   position: relative;
+}
+.nav-item.active {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.4);
+}
+.nav-item.active::after {
+  width: 20px;
 }
 
 .nav-item::after {
@@ -215,6 +224,27 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 
 .nav-item:hover::after {
   width: 20px;
+}
+
+.lang-btn {
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 36px;
+  border: 1px solid rgba(0, 255, 247, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 255, 247, 0.08);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background: rgba(0, 255, 247, 0.2);
+  border-color: var(--neon);
+  box-shadow: 0 0 12px rgba(0, 255, 247, 0.35);
 }
 
 /* Logo Design */
@@ -364,6 +394,10 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 .mobile-nav-item:hover {
   color: var(--neon);
   transform: scale(1.1);
+  text-shadow: 0 0 20px var(--neon);
+}
+.mobile-nav-item.active {
+  color: var(--neon);
   text-shadow: 0 0 20px var(--neon);
 }
 
@@ -655,6 +689,9 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   margin: 2.5rem 0 2rem 0;
   color: #fff;
   letter-spacing: 1px;
+}
+[dir="rtl"] .section-title {
+  text-align: right;
 }
 /* Services Section */
 .services-section {
@@ -1082,11 +1119,42 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 [dir="rtl"] body {
   direction: rtl;
 }
-[dir="rtl"] .navbar-inner {
+[dir="rtl"] .main-navbar.locale-ar .nav-item {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+[dir="rtl"] .hero-content {
   flex-direction: row-reverse;
 }
-[dir="rtl"] .nav-links {
-  flex-direction: row-reverse;
+[dir="rtl"] .hero-text,
+[dir="rtl"] .about-text,
+[dir="rtl"] .project-description,
+[dir="rtl"] .experience-content,
+[dir="rtl"] .contact-page {
+  text-align: right;
+}
+[dir="rtl"] .experience-period {
+  align-items: flex-start;
+}
+[dir="rtl"] .project-tech {
+  border-left: none;
+  border-right: 4px solid var(--neon);
+}
+[dir="rtl"] .close-icon {
+  right: auto;
+  left: 30px;
+}
+[dir="rtl"] .modal-close {
+  right: auto;
+  left: 1.5rem;
+}
+[dir="rtl"] .carousel-prev { left: auto; right: 15px; }
+[dir="rtl"] .carousel-next { right: auto; left: 15px; }
+[dir="rtl"] .mobile-nav-list {
+  text-align: right;
+}
+[dir="rtl"] .mobile-nav-item {
+  letter-spacing: 1px;
 }
 [dir="rtl"] .about-inner {
   flex-direction: row-reverse;

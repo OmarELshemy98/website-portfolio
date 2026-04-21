@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" dir="ltr">
       <Head>
         <meta name="theme-color" content="#0d1117" />
         <meta name="robots" content="index, follow" />
@@ -11,6 +11,20 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var locale = localStorage.getItem('portfolio-locale');
+                  var isArabic = locale === 'ar';
+                  document.documentElement.lang = isArabic ? 'ar' : 'en';
+                  document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
         <link 
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
@@ -26,7 +40,7 @@ export default function Document() {
           <div className="relative z-10 flex flex-col items-center text-white font-montserrat">
             <img src="/images/logo.png" alt="Omar Elshemy Logo" className="landing-logo-animate w-[180px] h-[180px] mb-4" />
             <div id="transition-page-name" className="text-3xl font-bold tracking-widest uppercase"></div>
-            <div className="blink mt-4 text-sm opacity-70">Loading...</div>
+            <div id="transition-loading-text" className="blink mt-4 text-sm opacity-70">Loading...</div>
           </div>
         </div>
 
