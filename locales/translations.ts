@@ -53,7 +53,7 @@ export const translations = {
       experience: 'الخبرات',
       projects: 'المشاريع',
       certifications: 'الشهادات',
-      contact: 'تواصل',
+      contact: 'تواصل معي',
       toggleMenu: 'فتح القائمة',
       closeMenu: 'إغلاق القائمة',
       switchToArabic: 'التحويل إلى العربية'

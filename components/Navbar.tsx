@@ -1,11 +1,18 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Logo from './Logo'
 import { useI18n, type Locale } from '@/lib/i18n'
 import { NAV_LINKS } from '@/config/navigation'
 
 export default function Navbar() {
+  const router = useRouter()
   const { locale, setLocale, t } = useI18n()
   const withLang = (href: string) => `${href}?lang=${locale}`
+  const currentPath = router.asPath.split('?')[0].replace(/\/$/, '') || '/'
+  const isActive = (href: string) => {
+    const normalized = href.replace(/\/$/, '') || '/'
+    return currentPath === normalized
+  }
   const navLinks = NAV_LINKS.map((link) => ({
     href: link.href,
     label: t(link.labelKey)
@@ -13,8 +20,6 @@ export default function Navbar() {
 
   const leftLinks = navLinks.slice(0, 4)
   const rightLinks = navLinks.slice(4)
-  const startLinks = locale === 'ar' ? rightLinks : leftLinks
-  const endLinks = locale === 'ar' ? leftLinks : rightLinks
 
   const nextLocale: Locale = locale === 'en' ? 'ar' : 'en'
 
@@ -53,38 +58,77 @@ export default function Navbar() {
           </div>
 
           {/* --- DESKTOP LAYOUT --- */}
-          <ul className="nav-links start hidden lg:flex">
-            {startLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={withLang(link.href)} className="nav-item">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {locale === 'ar' ? (
+            <>
+              <button
+                type="button"
+                className="lang-btn hidden lg:flex"
+                onClick={() => setLocale(nextLocale)}
+                aria-label={t('navbar.switchToArabic')}
+              >
+                EN
+              </button>
 
-          <div className="logo-container hidden lg:flex">
-            <Logo />
-          </div>
+              <ul className="nav-links start hidden lg:flex">
+                {rightLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-          <ul className="nav-links end hidden lg:flex">
-            {endLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={withLang(link.href)} className="nav-item">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+              <div className="logo-container hidden lg:flex">
+                <Logo />
+              </div>
 
-          <button
-            type="button"
-            className="lang-btn hidden lg:flex"
-            onClick={() => setLocale(nextLocale)}
-            aria-label={t('navbar.switchToArabic')}
-          >
-            {locale === 'en' ? 'AR' : 'EN'}
-          </button>
+              <ul className="nav-links end hidden lg:flex">
+                {leftLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : (
+            <>
+              <ul className="nav-links start hidden lg:flex">
+                {leftLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="logo-container hidden lg:flex">
+                <Logo />
+              </div>
+
+              <ul className="nav-links end hidden lg:flex">
+                {rightLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                type="button"
+                className="lang-btn hidden lg:flex"
+                onClick={() => setLocale(nextLocale)}
+                aria-label={t('navbar.switchToArabic')}
+              >
+                AR
+              </button>
+            </>
+          )}
 
           {/* Mobile Menu Overlay */}
           <div id="mobileMenuOverlay" className="mobile-overlay">
@@ -92,7 +136,7 @@ export default function Navbar() {
             <ul className="mobile-nav-list">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={withLang(link.href)} className="mobile-nav-item">
+                  <Link href={withLang(link.href)} className={`mobile-nav-item ${isActive(link.href) ? 'active' : ''}`}>
                     {link.label}
                   </Link>
                 </li>

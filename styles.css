@@ -196,6 +196,13 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   transition: all 0.3s ease;
   position: relative;
 }
+.nav-item.active {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.4);
+}
+.nav-item.active::after {
+  width: 20px;
+}
 
 .nav-item::after {
   content: '';
@@ -387,6 +394,10 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 .mobile-nav-item:hover {
   color: var(--neon);
   transform: scale(1.1);
+  text-shadow: 0 0 20px var(--neon);
+}
+.mobile-nav-item.active {
+  color: var(--neon);
   text-shadow: 0 0 20px var(--neon);
 }
 
@@ -1113,6 +1124,14 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 }
 [dir="rtl"] .nav-links.end {
   justify-content: flex-end;
+}
+[dir="rtl"] .main-navbar.locale-ar .nav-links {
+  gap: 1.1rem;
+}
+[dir="rtl"] .main-navbar.locale-ar .nav-item {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.92rem;
 }
 [dir="rtl"] .hero-content {
   flex-direction: row-reverse;
