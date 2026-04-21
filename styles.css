@@ -1119,19 +1119,9 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 [dir="rtl"] body {
   direction: rtl;
 }
-[dir="rtl"] .nav-links.start {
-  justify-content: flex-start;
-}
-[dir="rtl"] .nav-links.end {
-  justify-content: flex-end;
-}
-[dir="rtl"] .main-navbar.locale-ar .nav-links {
-  gap: 1.1rem;
-}
 [dir="rtl"] .main-navbar.locale-ar .nav-item {
-  letter-spacing: 0;
-  text-transform: none;
-  font-size: 0.92rem;
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 [dir="rtl"] .hero-content {
   flex-direction: row-reverse;

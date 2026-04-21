@@ -20,6 +20,8 @@ export default function Navbar() {
 
   const leftLinks = navLinks.slice(0, 4)
   const rightLinks = navLinks.slice(4)
+  const arRightGroupLinks = [...leftLinks].reverse()
+  const arLeftGroupLinks = [...rightLinks].reverse()
 
   const nextLocale: Locale = locale === 'en' ? 'ar' : 'en'
 
@@ -70,7 +72,7 @@ export default function Navbar() {
               </button>
 
               <ul className="nav-links start hidden lg:flex">
-                {rightLinks.map((link) => (
+                {arLeftGroupLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
@@ -84,7 +86,7 @@ export default function Navbar() {
               </div>
 
               <ul className="nav-links end hidden lg:flex">
-                {leftLinks.map((link) => (
+                {arRightGroupLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
