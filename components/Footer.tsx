@@ -1,7 +1,9 @@
 import Logo from './Logo'
 import SocialIcons from './SocialIcons'
+import { useI18n } from '@/lib/i18n'
 
 export default function Footer() {
+  const { t } = useI18n()
   const year = new Date().getFullYear()
   return (
     <footer className="main-footer">
@@ -12,7 +14,7 @@ export default function Footer() {
             <Logo />
             <div className="brand-text-simple">
               <h3 className="footer-name-simple">Omar Elshemy</h3>
-              <p className="footer-tagline-simple">Digital Craftsman & Front-End Expert</p>
+              <p className="footer-tagline-simple">{t('footer.tagline')}</p>
             </div>
           </div>
           
@@ -22,7 +24,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom-simple">
-          <p>&copy; {year} <span className="highlight">Omar Elshemy</span>. All rights reserved.</p>
+          <p>&copy; {year} <span className="highlight">Omar Elshemy</span>. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const isArabic = document.documentElement.lang === 'ar'
 
   // --- Page Transition & Code Rain Logic ---
   const overlay = document.getElementById('page-transition-overlay');
@@ -56,11 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (overlay && pageNameEl) {
       // Clean up page name for display (remove slashes)
       let displayName = pageName.replace(/\//g, '').trim();
-      pageNameEl.textContent = displayName || 'Home';
+      pageNameEl.textContent = displayName || (isArabic ? 'الرئيسية' : 'Home');
       overlay.classList.add('show');
       startCodeRain();
     }
   };
+
+  const loadingText = document.getElementById('transition-loading-text');
+  if (loadingText) {
+    loadingText.textContent = isArabic ? 'جاري التحميل...' : 'Loading...';
+  }
 
   const hideOverlay = () => {
     if (overlay) {
@@ -70,16 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   internalLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       const href = link.getAttribute('href');
-      if (href === window.location.pathname || href.startsWith('#') || !href.startsWith('/')) {
+      if (!href || href === window.location.pathname || href.startsWith('#') || !href.startsWith('/')) {
         return;
       }
-      e.preventDefault();
       showOverlay(href);
-      setTimeout(() => {
-        window.location.href = href;
-      }, 600); // Wait for animation
     });
   });
 
@@ -163,7 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('message').value;
       
       const whatsappNumber = '201026238072';
-      const whatsappMessage = `Hello, my name is ${name}. My email is ${email}.\n\nMy message is:\n${message}`;
+      const whatsappMessage = isArabic
+        ? `مرحبًا، اسمي ${name}. بريدي الإلكتروني ${email}.\n\nرسالتي:\n${message}`
+        : `Hello, my name is ${name}. My email is ${email}.\n\nMy message is:\n${message}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, '_blank');
     });
@@ -232,10 +236,12 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const formData = new FormData(serviceRequestForm);
       const data = Object.fromEntries(formData.entries());
-      const serviceTitle = modalServiceTitle ? modalServiceTitle.innerText : 'Unknown Service';
+      const serviceTitle = modalServiceTitle ? modalServiceTitle.innerText : (isArabic ? 'خدمة غير محددة' : 'Unknown Service');
 
       const whatsappNumber = '201026238072';
-      const whatsappMessage = `*New Service Request*\n\n*Service:* ${serviceTitle}\n*Name:* ${data.clientName}\n*Email:* ${data.clientEmail}\n*Mobile:* ${data.mobileNumber}\n*Timeframe:* ${data.deliveryTimeframe}\n\n*Description:* ${data.serviceDescription}`;
+      const whatsappMessage = isArabic
+        ? `*طلب خدمة جديد*\n\n*الخدمة:* ${serviceTitle}\n*الاسم:* ${data.clientName}\n*البريد:* ${data.clientEmail}\n*الموبايل:* ${data.mobileNumber}\n*المدة:* ${data.deliveryTimeframe}\n\n*الوصف:* ${data.serviceDescription}`
+        : `*New Service Request*\n\n*Service:* ${serviceTitle}\n*Name:* ${data.clientName}\n*Email:* ${data.clientEmail}\n*Mobile:* ${data.mobileNumber}\n*Timeframe:* ${data.deliveryTimeframe}\n\n*Description:* ${data.serviceDescription}`;
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, '_blank');
       
