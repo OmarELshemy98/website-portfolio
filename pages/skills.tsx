@@ -90,7 +90,7 @@ export default function Skills() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {skillCategories.map((category, catIndex) => (
-              <div key={catIndex} className="skill-category-card group bg-[#161b22] p-8 rounded-[2rem] border border-white/5 hover:border-neon-cyan/30 transition-all duration-500 shadow-2xl relative overflow-hidden">
+              <div key={catIndex} className="skill-category-card group bg-[#161b22] p-8 rounded-4xl border border-white/5 hover:border-neon-cyan/30 transition-all duration-500 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-neon-cyan/10 transition-all"></div>
                 
                 <h3 className="text-xl font-black text-neon-cyan mb-10 flex items-center gap-3">
@@ -112,7 +112,7 @@ export default function Skills() {
                       </div>
                       <div className="w-full bg-black/40 rounded-full h-2 relative p-0.5">
                         <div 
-                          className="skill-progress bg-gradient-to-r from-neon-cyan to-accent h-full rounded-full transition-all duration-1000 ease-out relative" 
+                          className="skill-progress bg-linear-to-r from-neon-cyan to-accent h-full rounded-full transition-all duration-1000 ease-out relative" 
                           data-level={skill.level}
                           style={{ width: animateBars ? `${skill.level}%` : '0%' }}
                         >
