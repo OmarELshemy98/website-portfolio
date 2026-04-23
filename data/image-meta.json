@@ -1,0 +1,17 @@
+{
+  "profile-photo.jpg": {
+    "width": 449,
+    "height": 449,
+    "webp": "/images/profile-photo.webp"
+  },
+  "logo.png": {
+    "width": 253,
+    "height": 263,
+    "webp": "/images/logo.webp"
+  },
+  "background5.jpg": {
+    "width": 1380,
+    "height": 921,
+    "webp": "/images/background5.webp"
+  }
+}

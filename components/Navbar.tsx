@@ -7,12 +7,13 @@ import { NAV_LINKS } from '@/config/navigation'
 export default function Navbar() {
   const router = useRouter()
   const { locale, setLocale, t } = useI18n()
-  const withLang = (href: string) => `${href}?lang=${locale}`
-  const currentPath = router.asPath.split('?')[0].replace(/\/$/, '') || '/'
-  const isActive = (href: string) => {
-    const normalized = href.replace(/\/$/, '') || '/'
-    return currentPath === normalized
+  const navHref = (href: string) => (href === '/' ? '/' : `${href.replace(/\/$/, '')}/`)
+  const currentPath = router.asPath.split('?')[0] || '/'
+  const normalizePath = (p: string) => {
+    if (!p || p === '/') return '/'
+    return p.replace(/\/+$/, '') || '/'
   }
+  const isActive = (href: string) => normalizePath(navHref(href)) === normalizePath(currentPath)
   const navLinks = NAV_LINKS.map((link) => ({
     href: link.href,
     label: t(link.labelKey)
@@ -74,7 +75,7 @@ export default function Navbar() {
               <ul className="nav-links start hidden lg:flex">
                 {arLeftGroupLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                    <Link href={navHref(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
                     </Link>
                   </li>
@@ -88,7 +89,7 @@ export default function Navbar() {
               <ul className="nav-links end hidden lg:flex">
                 {arRightGroupLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                    <Link href={navHref(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
                     </Link>
                   </li>
@@ -100,7 +101,7 @@ export default function Navbar() {
               <ul className="nav-links start hidden lg:flex">
                 {leftLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                    <Link href={navHref(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
                     </Link>
                   </li>
@@ -114,7 +115,7 @@ export default function Navbar() {
               <ul className="nav-links end hidden lg:flex">
                 {rightLinks.map((link) => (
                   <li key={link.href}>
-                    <Link href={withLang(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                    <Link href={navHref(link.href)} className={`nav-item ${isActive(link.href) ? 'active' : ''}`}>
                       {link.label}
                     </Link>
                   </li>
@@ -138,7 +139,7 @@ export default function Navbar() {
             <ul className="mobile-nav-list">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={withLang(link.href)} className={`mobile-nav-item ${isActive(link.href) ? 'active' : ''}`}>
+                  <Link href={navHref(link.href)} className={`mobile-nav-item ${isActive(link.href) ? 'active' : ''}`}>
                     {link.label}
                   </Link>
                 </li>
