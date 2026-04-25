@@ -101,7 +101,7 @@ export const projects: Project[] = [
     id: 'medyour',
     title: 'Medyour – Digital Healthcare Platform',
     description: 'A responsive, bilingual (Arabic & English) website for Medyour, designed to showcase healthcare services, address industry challenges, and provide information to users in both languages. The website features dedicated pages for services, FAQs, contact, and more, with a focus on accessibility and user experience.',
-    tech: 'HTML5, CSS3, Vanilla JS, Multilingual Support, SEO Optimization, Responsive Web Design',
+    tech: 'Next.js, Static Site Generation (SSG), Multilingual Support, SEO Optimization, Responsive Web Design',
     link: 'https://medyour.com',
     images: [
       '/images/mockup/medyour-mockup/medyour-home-en-mockup.png',
@@ -147,9 +147,9 @@ export const projects: Project[] = [
   },
   {
     id: 'egyptian-robotics',
-    title: 'ERRCSF Website',
-    description: 'Responsive website for the Egyptian Robotics & RC Sports Federation with multi-step registration and interactive popups.',
-    tech: 'HTML5, CSS3, Tailwind CSS, Vanilla JS',
+    title: 'ERRCSF | Robotics Federation Site & Registration',
+    description: 'A professional, bilingual website showcasing events, competitions, and educational programs for the Egyptian Robotics Union. Features clear navigation, modern UI, and responsive layouts across all devices.',
+    tech: 'HTML5, CSS3, Tailwind CSS, Vanilla JS, Multilingual Support, SEO Optimization, Responsive Web Design',
     link: 'https://staging.errcsf.org',
     images: [
       '/images/mockup/errcsf-mockup/errcsf.png',
@@ -173,9 +173,9 @@ export const projects: Project[] = [
   },
   {
     id: 'dh-consult',
-    title: 'ConsultCo – Consulting Services Website',
-    description: 'Dynamic and visually appealing website for a consulting firm with sections for company info, services, projects, and contact.',
-    tech: 'HTML5, Tailwind CSS, Vanilla JS',
+    title: 'DH Consult | Modern Business & Consulting Site',
+    description: 'Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company\'s online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.',
+    tech: 'HTML5 (semantic, accessible markup), Tailwind CSS (efficient, utility-first styling & responsive design), Vanilla JavaScript (smooth interactivity & dynamic UI), Optimized images (fast load times & performance)',
     link: 'https://darkgoldenrod-gnu-568360.hostingersite.com',
     images: [
       '/images/mockup/DhConsult-mockup/home.png',
