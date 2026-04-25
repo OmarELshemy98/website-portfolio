@@ -127,8 +127,8 @@ export const projects: Project[] = [
   {
     id: 'labsforhome',
     title: 'Labs For Home – Interactive Science Learning',
-    description: 'Responsive web app with interactive simulations, gamified modules, and resource management, tailored for students and schools.',
-    tech: 'Next.js, TypeScript, CSS Modules, PostCSS',
+    description: 'A modern, responsive web application designed to enhance science education through interactive simulations, gamified learning modules, and comprehensive resource management. The platform provides tailored experiences for students, teachers, and schools, featuring video demonstrations, testimonials, and a robust content management system. The website aims to make science learning engaging, accessible, and effective for various academic levels.',
+    tech: 'Next.js, React.js, TypeScript, Tailwind CSS, Node.js',
     link: 'https://lightcyan-salamander-875465.hostingersite.com',
     images: [
       '/images/mockup/l4h-mockup/l4h-home.png',
