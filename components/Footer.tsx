@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="footer-brand-simple">
             <Logo />
             <div className="brand-text-simple">
-              <h3 className="footer-name-simple">Omar Elshemy</h3>
+              <p className="footer-name-simple font-bold text-lg m-0">Omar Elshemy</p>
               <p className="footer-tagline-simple">{t('footer.tagline')}</p>
             </div>
           </div>

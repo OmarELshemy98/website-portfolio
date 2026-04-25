@@ -10,18 +10,18 @@ export default function Experience() {
   return (
     <>
       <SEO 
-        title={isAr ? 'الخبرات العملية | عمر الشيمي - مطوّر واجهات أمامية' : 'Work Experience | Omar Elshemy - Front-End Developer'} 
+        title={isAr ? 'الخبرات | عمر الشيمي' : 'Experience | Omar Elshemy — Front-End'} 
         description={isAr ? 'المسيرة المهنية لعمر الشيمي من المحاسبة التنفيذية والمبيعات إلى تطوير الواجهات الأمامية في Arcon Corporation.' : 'Professional journey of Omar Elshemy. From Corporate Accountant to Sales Executive, and now a dedicated Front-End Developer at Arcon Corporation.'}
       />
       <Navbar />
       <section id="experience" className="experience-section">
-        <h2 className="section-title">{isAr ? 'الخبرات' : 'Work'} <span className="highlight">{isAr ? 'العملية' : 'Experience'}</span></h2>
+        <h1 className="section-title">{isAr ? 'الخبرات' : 'Work'} <span className="highlight">{isAr ? 'العملية' : 'Experience'}</span></h1>
         <div className="experience-container">
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h3>{isAr ? 'مطوّر واجهات أمامية' : 'Front End Developer'}</h3>
-                <h4>Arcon Corporation</h4>
+                <h2>{isAr ? 'مطوّر واجهات أمامية' : 'Front End Developer'}</h2>
+                <h3>Arcon Corporation</h3>
               </div>
               <div className="experience-period">
                 <span className="period">{isAr ? 'سبتمبر 2024 - حتى الآن' : 'SEPTEMBER 2024 - PRESENT'}</span>
@@ -39,8 +39,8 @@ export default function Experience() {
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h3>{isAr ? 'مسؤول مبيعات' : 'Sales Executive'}</h3>
-                <h4>CHUBB LIFE INSURANCE</h4>
+                <h2>{isAr ? 'مسؤول مبيعات' : 'Sales Executive'}</h2>
+                <h3>CHUBB LIFE INSURANCE</h3>
               </div>
               <div className="experience-period">
                 <span className="period">{isAr ? 'مايو 2024 - سبتمبر 2024' : 'MAY 2024 - SEPTEMBER 2024'}</span>
@@ -60,8 +60,8 @@ export default function Experience() {
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h3>{isAr ? 'محاسب شركات' : 'Corporate Accountant'}</h3>
-                <h4>MABARET AL ASAFRA HOSPITAL</h4>
+                <h2>{isAr ? 'محاسب شركات' : 'Corporate Accountant'}</h2>
+                <h3>MABARET AL ASAFRA HOSPITAL</h3>
               </div>
               <div className="experience-period">
                 <span className="period">{isAr ? 'أبريل 2020 - فبراير 2021' : 'APRIL 2020 - FEBRUARY 2021'}</span>

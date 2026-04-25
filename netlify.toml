@@ -2,6 +2,28 @@
   command = "npm run build"
   publish = "out"
 
+# Netlify: align www subdomain with apex for the *.netlify.app hostname (SEO Site Checkup canonicalization).
+[[redirects]]
+  from = "https://www.omarelshemy.netlify.app/*"
+  to = "https://omarelshemy.netlify.app/:splat"
+  status = 301
+  force = true
+
+# When a custom domain is connected, uncomment and adjust if you use www on your own domain.
+# [[redirects]]
+#   from = "https://www.omarelshemy.com/*"
+#   to = "https://omarelshemy.com/:splat"
+#   status = 301
+#   force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
 [build.processing]
   skip_node_bundling = true
 

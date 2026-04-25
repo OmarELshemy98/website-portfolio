@@ -75,16 +75,16 @@ export default function Skills() {
   return (
     <>
       <SEO 
-        title={isAr ? 'المهارات التقنية | عمر الشيمي - خبير تطوير واجهات أمامية' : 'Technical Skills | Omar Elshemy - Front-End Development Expert'} 
+        title={isAr ? 'المهارات | عمر الشيمي' : 'Skills | Omar Elshemy — Front-End'} 
         description={isAr ? 'استعرض المهارات التقنية لعمر الشيمي في React و Next.js و TypeScript و Tailwind CSS وتحسين الأداء.' : 'Explore the technical arsenal of Omar Elshemy. Specialized in React, Next.js, TypeScript, Tailwind CSS, and performance optimization.'}
       />
       <Navbar />
       <section id="skills" className="skills-section py-24 px-4 min-h-screen bg-[#0d1117]">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-black text-white mb-6">
               {isAr ? 'الترسانة' : 'Technical'} <span className="text-neon-cyan">{isAr ? 'التقنية' : 'Arsenal'}</span>
-            </h2>
+            </h1>
             <div className="w-24 h-1.5 bg-neon-cyan mx-auto rounded-full"></div>
           </div>
           
@@ -93,10 +93,10 @@ export default function Skills() {
               <div key={catIndex} className="skill-category-card group bg-[#161b22] p-8 rounded-4xl border border-white/5 hover:border-neon-cyan/30 transition-all duration-500 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-neon-cyan/10 transition-all"></div>
                 
-                <h3 className="text-xl font-black text-neon-cyan mb-10 flex items-center gap-3">
+                <h2 className="text-xl font-black text-neon-cyan mb-10 flex items-center gap-3">
                   <span className="w-8 h-8 rounded-lg bg-neon-cyan/10 flex items-center justify-center text-sm">0{catIndex + 1}</span>
                   {category.title}
-                </h3>
+                </h2>
                 
                 <div className="space-y-10">
                   {category.skills.map((skill, index) => (

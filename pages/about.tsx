@@ -1,7 +1,11 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
+import OptimizedImg from '@/components/OptimizedImg'
+import imageMeta from '@/data/image-meta.json'
 import { useI18n } from '@/lib/i18n'
+
+const profileMeta = imageMeta['profile-photo.jpg'] as { width: number; height: number; webp: string }
 
 export default function About() {
   const { locale } = useI18n()
@@ -10,14 +14,14 @@ export default function About() {
   return (
     <>
       <SEO 
-        title={isAr ? 'من أنا | عمر الشيمي - مطوّر واجهات أمامية' : 'About Omar Elshemy | Front-End Developer & UI/UX Specialist'} 
+        title={isAr ? 'من أنا | عمر الشيمي' : 'About | Omar Elshemy — Front-End'} 
         description={isAr ? 'تعرف على رحلة عمر الشيمي في تطوير الواجهات الأمامية وخبرته في React و Next.js وبناء تجارب رقمية متمحورة حول المستخدم.' : "Learn about Omar Elshemy's journey as a Front-End Developer. Expertise in React, Next.js, and crafting user-centered digital experiences."}
       />
       <Navbar />
       <section id="about" className="about-section">
         <div className="about-inner">
           <div className="about-text">
-            <h2 className="section-title">{isAr ? 'من' : 'About'} <span className="highlight">{isAr ? 'أنا' : 'Me'}</span></h2>
+            <h1 className="section-title">{isAr ? 'من' : 'About'} <span className="highlight">{isAr ? 'أنا' : 'Me'}</span></h1>
             <p>
               {isAr
                 ? 'أنا مطوّر واجهات أمامية بحب أحوّل الأفكار لتجارب رقمية تفاعلية. رحلتي في المجال مبنية على الفضول، الإبداع، والاهتمام بالتفاصيل عشان كل عنصر يطلع بأفضل شكل.'
@@ -36,7 +40,15 @@ export default function About() {
           </div>
           <div className="about-info portrait-card">
             <div className="portrait-profile-pic">
-              <img src="/images/profile-photo.jpg" alt="Profile Photo" style={{ width: 120, height: 120, borderRadius: '50%', objectFit: 'cover', boxShadow: '0 4px 15px rgba(0, 255, 247, 0.3)', marginBottom: '1rem', border: '2px solid var(--neon)' }} />
+              <OptimizedImg
+                webpSrc={profileMeta.webp}
+                fallbackSrc="/images/profile-photo.jpg"
+                alt="Omar Elshemy profile photo"
+                width={120}
+                height={120}
+                sizes="120px"
+                className="about-profile-photo"
+              />
             </div>
             <h2 style={{ color: 'var(--neon)', textShadow: '0 0 10px rgba(0, 255, 247, 0.5)' }}>{isAr ? 'معلومات أساسية' : 'Basic Information'}</h2>
             <table>

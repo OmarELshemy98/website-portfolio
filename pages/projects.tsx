@@ -97,12 +97,23 @@ export default function Projects({ projects }: Props) {
   return (
     <>
       <SEO 
-        title={isAr ? 'معرض المشاريع | عمر الشيمي - أعمال تطوير واجهات أمامية' : 'Project Portfolio | Omar Elshemy - Front-End Development Showcase'} 
+        title={isAr ? 'المشاريع | عمر الشيمي' : 'Projects | Omar Elshemy — Portfolio'} 
         description={isAr ? 'مجموعة مشاريع تطوير ويب تشمل تصميمات متجاوبة وتطبيقات تفاعلية وحلول حديثة مبنية بـ React و Next.js.' : 'A showcase of web development projects by Omar Elshemy. Featuring responsive designs, interactive web apps, and modern front-end solutions built with React and Next.js.'}
       />
       <Navbar />
       <section className="projects-section">
         <div className="projects-container">
+          <h1 className="text-center text-3xl md:text-5xl font-black text-white mb-14 px-4 pt-8 max-w-4xl mx-auto leading-tight">
+            {isAr ? (
+              <>
+                معرض <span className="text-neon">المشاريع</span>
+              </>
+            ) : (
+              <>
+                Project <span className="text-neon">Portfolio</span>
+              </>
+            )}
+          </h1>
           {projects.map(p => {
             const localized = isAr ? arProjectCopy[p.id] : undefined
             const title = localized?.title ?? p.title

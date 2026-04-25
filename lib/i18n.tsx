@@ -32,8 +32,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     const localeFromQuery = params.get('lang')
-    if (localeFromQuery === 'en' || localeFromQuery === 'ar') {
-      setLocale(localeFromQuery)
+    if (localeFromQuery === 'ar') {
+      setLocale('ar')
+      return
+    }
+    if (localeFromQuery === 'en') {
+      setLocale('en')
       return
     }
 
@@ -53,8 +57,15 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.dir = dir
 
     const url = new URL(window.location.href)
-    url.searchParams.set('lang', locale)
-    window.history.replaceState({}, '', url.toString())
+    if (locale === 'ar') {
+      url.searchParams.set('lang', 'ar')
+    } else {
+      url.searchParams.delete('lang')
+    }
+    const next = `${url.pathname}${url.search}${url.hash}`
+    if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) {
+      window.history.replaceState({}, '', next)
+    }
   }, [dir, locale])
 
   const value = useMemo<I18nContextValue>(
