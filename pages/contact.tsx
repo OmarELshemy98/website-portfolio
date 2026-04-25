@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <>
       <SEO 
-        title={isAr ? 'تواصل مع عمر الشيمي | وظّف مطوّر واجهات أمامية محترف' : 'Contact Omar Elshemy | Hire a Professional Front-End Developer'} 
+        title={isAr ? 'تواصل | عمر الشيمي' : 'Contact | Omar Elshemy — Hire'} 
         description={isAr ? 'تواصل مع عمر الشيمي لفرص العمل الحر أو التعاون المهني أو الاستشارات التقنية في تطوير الواجهات الأمامية.' : 'Get in touch with Omar Elshemy for freelance opportunities, professional collaborations, or technical consultations in front-end development.'}
       />
       <Navbar />

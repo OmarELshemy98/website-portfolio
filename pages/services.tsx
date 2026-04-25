@@ -73,7 +73,7 @@ export default function Services() {
   return (
     <>
       <SEO 
-        title={isAr ? 'الخدمات | مطوّر واجهات أمامية مستقل' : 'Freelance Services | Front-End Developer'} 
+        title={isAr ? 'الخدمات | عمر الشيمي' : 'Services | Omar Elshemy — Freelance'} 
         description={isAr ? 'خدمات تطوير واجهات أمامية احترافية تشمل React و Next.js وتحويل التصميم إلى كود وتحسين الأداء.' : 'Professional freelance front-end development services. Specializing in React, Next.js, Figma to Code, and Performance Optimization for modern web applications.'}
       />
       <Navbar />
@@ -114,8 +114,8 @@ export default function Services() {
         </div>
       </main>
 
-      <div id="serviceModal" className="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-[9999] backdrop-blur-md overflow-y-auto" style={{ display: 'none' }}>
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-neon-cyan/30 w-full max-w-2xl my-8 relative">
+      <div id="serviceModal" className="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-9999 backdrop-blur-md overflow-y-auto" style={{ display: 'none' }}>
+        <div className="bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-neon-cyan/30 w-full max-w-2xl my-8 relative">
           <button 
             className="close-button absolute top-4 right-4 text-white text-3xl hover:text-neon-cyan transition-colors z-10"
           >

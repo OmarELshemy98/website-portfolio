@@ -1,7 +1,12 @@
+import Link from 'next/link'
 import SEO from '@/components/SEO'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import OptimizedImg from '@/components/OptimizedImg'
+import imageMeta from '@/data/image-meta.json'
 import { useI18n } from '@/lib/i18n'
+
+const profileMeta = imageMeta['profile-photo.jpg'] as { width: number; height: number; webp: string }
 
 export default function Home() {
   const { t, locale } = useI18n()
@@ -10,8 +15,12 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title={isAr ? 'عمر الشيمي | مطوّر واجهات أمامية محترف' : 'Omar Elshemy | Professional Front-End Developer & Freelancer'} 
-        description={isAr ? 'استعرض أعمال عمر الشيمي، مطوّر واجهات أمامية متخصص في React و Next.js وبناء تطبيقات ويب عالية الأداء، ومتاح للعمل الحر.' : 'Explore the portfolio of Omar Elshemy, a professional Front-End Developer specializing in React, Next.js, and high-performance web applications. Open for freelance projects.'}
+        title={isAr ? 'عمر الشيمي | مطوّر واجهات أمامية' : 'Omar Elshemy | Front-End Developer'} 
+        description={
+          isAr
+            ? 'أعمال عمر الشيمي: مطوّر واجهات أمامية (React وNext.js)، مواقع سريعة وواجهات نظيفة. متاح للعمل الحر.'
+            : 'Omar Elshemy is a front-end developer for React and Next.js: fast, responsive interfaces, clean UI, and performance-minded delivery. Open for freelance work.'
+        }
       />
       <Navbar />
       <div className="bg-particles"></div>
@@ -37,18 +46,36 @@ export default function Home() {
               >
                 {t('home.viewCv')}
               </a>
-              <a 
-                href={`/contact?lang=${locale}`} 
-                className="px-8 py-3 border-2 border-neon text-neon font-bold rounded-xl hover:bg-neon/10 transition-all"
+              <Link
+                href="/contact/"
+                className="px-8 py-3 border-2 border-neon text-neon font-bold rounded-xl hover:bg-neon/10 transition-all inline-block text-center"
               >
                 {t('home.hireMe')}
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hexagon-img">
-            <img src="/images/profile-photo.jpg" alt="Omar Elshemy" className="profile-img" />
+            <OptimizedImg
+              webpSrc={profileMeta.webp}
+              fallbackSrc="/images/profile-photo.jpg"
+              alt="Omar Elshemy, front-end developer portrait"
+              className="profile-img"
+              width={profileMeta.width}
+              height={profileMeta.height}
+              sizes="(max-width: 768px) 180px, 200px"
+              loading="eager"
+              fetchPriority="high"
+            />
           </div>
         </div>
+      </section>
+      <section className="max-w-3xl mx-auto px-4 py-16 md:py-20 text-text-muted leading-relaxed" aria-labelledby="home-intro-heading">
+        <h2 id="home-intro-heading" className="text-2xl md:text-3xl font-bold text-white mb-6">
+          {t('home.introHeading')}
+        </h2>
+        <p className="mb-5 text-base md:text-lg">{t('home.introP1')}</p>
+        <p className="mb-5 text-base md:text-lg">{t('home.introP2')}</p>
+        <p className="text-base md:text-lg">{t('home.introP3')}</p>
       </section>
       <Footer />
     </>
