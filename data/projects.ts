@@ -100,8 +100,8 @@ export const projects: Project[] = [
     {
     id: 'medyour',
     title: 'Medyour – Digital Healthcare Platform',
-    description: 'Modern responsive website with bilingual support and seamless navigation.',
-    tech: 'HTML5, CSS3, Vanilla JS',
+    description: 'A responsive, bilingual (Arabic & English) website for Medyour, designed to showcase healthcare services, address industry challenges, and provide information to users in both languages. The website features dedicated pages for services, FAQs, contact, and more, with a focus on accessibility and user experience.',
+    tech: 'HTML5, CSS3, Vanilla JS, Multilingual Support, SEO Optimization, Responsive Web Design',
     link: 'https://medyour.com',
     images: [
       '/images/mockup/medyour-mockup/medyour-home-en-mockup.png',
