@@ -2,205 +2,242 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
+import OptimizedImg from '@/components/OptimizedImg'
 
 export default function Services() {
-  const { locale } = useI18n()
+  const { locale, t } = useI18n()
   const isAr = locale === 'ar'
 
-  const services = [
-    {
-      title: isAr ? 'تطوير مواقع مخصص' : 'Custom Web Development',
-      description: isAr ? 'بناء مواقع عالية الأداء وقابلة للتوسع باستخدام React و Next.js و TypeScript مع هندسة كود نظيفة تناسب احتياجك.' : "Building high-performance, scalable websites using React, Next.js (SSR/SSG), and TypeScript. I focus on clean code and robust architecture tailored to your needs.",
-      icon: "🚀"
-    },
-    {
-      title: isAr ? 'تحويل Figma إلى React' : 'Figma to React Conversion',
-      description: isAr ? 'تحويل تصميمات Figma أو Adobe XD إلى مكونات React/Next.js دقيقة ومتجاوبة باستخدام Tailwind CSS.' : "Transforming your Figma or Adobe XD designs into pixel-perfect, responsive React/Next.js components with Tailwind CSS for rapid and consistent styling.",
-      icon: "🎨"
-    },
-    {
-      title: isAr ? 'تحسين الأداء وSEO' : 'Performance & SEO Optimization',
-      description: isAr ? 'تحسين Core Web Vitals وتطبيق أفضل ممارسات SEO لسرعة تحميل أعلى وظهور أفضل في نتائج البحث.' : "Optimizing Core Web Vitals, implementing SEO best practices, and ensuring lightning-fast load times to boost your search engine rankings and user retention.",
-      icon: "⚡"
-    },
-    {
-      title: isAr ? 'تصميم متجاوب وتكيفي' : 'Responsive & Adaptive Design',
-      description: isAr ? 'ضمان ظهور الموقع بشكل ممتاز على كل الأجهزة من الموبايل حتى الشاشات الكبيرة باستخدام تقنيات CSS الحديثة.' : "Ensuring your website looks stunning and functions perfectly on every device, from mobile phones to large-scale desktop displays using modern CSS techniques.",
-      icon: "📱"
-    },
-    {
-      title: isAr ? 'تطبيقات SPA حديثة' : 'SPA & Modern Web Apps',
-      description: isAr ? 'تطوير تطبيقات ويب تفاعلية سريعة بانتقالات سلسة وإدارة حالة متقدمة باستخدام Redux Toolkit أو React Query.' : "Developing fast, interactive single-page applications with seamless transitions and advanced state management using Redux Toolkit or React Query.",
-      icon: "🌐"
-    },
-    {
-      title: isAr ? 'ربط API والباك إند' : 'API & Backend Integration',
-      description: isAr ? 'ربط الواجهة الأمامية بخدمات RESTful/GraphQL ودمج Firebase أو Supabase أو حلول Headless CMS.' : "Seamlessly connecting your frontend to RESTful/GraphQL APIs, and integrating backend services like Firebase, Supabase, or Headless CMS solutions.",
-      icon: "🔗"
-    },
-    {
-      title: isAr ? 'حلول المتاجر الإلكترونية' : 'E-commerce Solutions',
-      description: isAr ? 'إنشاء متاجر إلكترونية حديثة تركز على التحويل مع دمج بوابات دفع آمنة مثل Stripe وتجربة Checkout سلسة.' : "Creating modern, conversion-focused online stores with secure payment gateway integrations like Stripe, focusing on smooth checkout experiences.",
-      icon: "🛒"
-    },
-    {
-      title: isAr ? 'UI/UX وإمكانية الوصول' : 'UI/UX & Accessibility',
-      description: isAr ? 'تحسين واجهات المستخدم مع التركيز على سهولة الاستخدام وإمكانية الوصول (A11y) لتجربة شاملة لكل المستخدمين.' : "Enhancing user interfaces with a focus on usability and web accessibility (A11y) to ensure your digital products are inclusive and easy to use for everyone.",
-      icon: "✨"
-    },
-    {
-      title: isAr ? 'الدعم والصيانة' : 'Support & Maintenance',
-      description: isAr ? 'تقديم دعم تقني مستمر، إصلاح المشاكل، وتحديثات دورية للحفاظ على أمان التطبيق وكفاءته.' : "Providing ongoing technical support, debugging, and regular updates to keep your web applications secure, up-to-date, and performing at their best.",
-      icon: "🛠️"
-    },
-    {
-      title: isAr ? 'الترحيل إلى Next.js' : 'Next.js Migration',
-      description: isAr ? 'ترقية مشاريع React أو HTML/CSS الحالية إلى Next.js للاستفادة من SSR و SSG وتحسين السرعة وSEO.' : "Upgrading your existing React or HTML/CSS websites to Next.js to take advantage of Server-Side Rendering (SSR) and Static Site Generation (SSG) for better SEO and speed.",
-      icon: "🔄"
-    },
-    {
-      title: isAr ? 'لوحات تحكم إدارية' : 'Admin Dashboards',
-      description: isAr ? 'بناء لوحات تحكم قوية مع رسوم بيانية وجداول وأدوات إدارة تساعدك على تشغيل أعمالك بكفاءة.' : "Building powerful, data-driven admin panels and dashboards with interactive charts, tables, and management tools to help you run your business efficiently.",
-      icon: "📊"
-    },
-    {
-      title: isAr ? 'تصميم صفحات الهبوط' : 'Landing Page Design',
-      description: isAr ? 'تصميم صفحات هبوط عالية التحويل لجذب العملاء وزيادة المبيعات مع حركة جذابة وCTA واضح.' : "Crafting high-converting landing pages focused on capturing leads and driving sales, with engaging animations and a clear call-to-action (CTA).",
-      icon: "🎯"
-    }
-  ]
+  interface ServiceItem {
+    title: string
+    description: string
+    image: string
+    features: string[]
+  }
+
+  const services = t<ServiceItem[]>('services.items')
 
   return (
     <>
       <SEO 
-        title={isAr ? 'الخدمات | عمر الشيمي' : 'Services | Omar Elshemy — Freelance'} 
-        description={isAr ? 'خدمات تطوير واجهات أمامية احترافية تشمل React و Next.js وتحويل التصميم إلى كود وتحسين الأداء.' : 'Professional freelance front-end development services. Specializing in React, Next.js, Figma to Code, and Performance Optimization for modern web applications.'}
+        title={t('services.title') + ' | Omar Elshemy'} 
+        description={t('services.subtitle')}
       />
       <Navbar />
-      <main className="bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-neon-cyan glow-text">{isAr ? 'خدمات تطوير واجهات أمامية' : 'Freelance Front-End Services'}</h1>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              {isAr ? 'أقدّم خدمات احترافية في تطوير الواجهات الأمامية لتحويل أفكارك إلى تجارب ويب حديثة وسريعة وموجهة للمستخدم.' : 'I provide high-quality, professional front-end development services to help you transform your ideas into modern, fast, and user-centric web experiences.'}
-            </p>
+      <main className="luxury-bg text-white min-h-screen font-montserrat overflow-x-hidden">
+        
+        {/* --- LUXURY HERO SECTION --- */}
+        <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-20 px-4">
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-neon-cyan/10 rounded-full blur-[150px] animate-pulse"></div>
+            <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-accent/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '3s' }}></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-stretch">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="service-card group relative bg-gray-900/40 border border-neon-cyan/20 rounded-2xl p-8 text-center hover:border-neon-cyan/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(72,255,205,0.15)] backdrop-blur-md flex flex-col justify-between overflow-hidden"
-              >
-                <div className="absolute -top-24 -right-24 w-48 h-48 bg-neon-cyan/5 rounded-full blur-3xl group-hover:bg-neon-cyan/10 transition-all duration-500"></div>
-                
-                <div className="relative z-10">
-                  <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-500">{service.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-neon-cyan transition-colors duration-300">{service.title}</h3>
-                  <p className="text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
-                    {service.description}
-                  </p>
-                </div>
-                
-                <button 
-                  className="request-button relative z-10 w-full py-3 px-6 rounded-xl font-bold text-neon-cyan border-2 border-neon-cyan/50 hover:bg-neon-cyan hover:text-gray-900 hover:border-neon-cyan transition-all duration-300 overflow-hidden group/btn"
-                >
-                  <span className="relative z-10">{isAr ? 'اطلب الخدمة' : 'Request Service'}</span>
-                  <div className="absolute inset-0 bg-neon-cyan transform translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
-                </button>
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <div className="glass-badge mb-8 reveal">
+              <span className="text-neon-cyan text-xs font-black tracking-[0.3em] uppercase">
+                {isAr ? 'حلول رقمية متكاملة' : 'Premium Digital Solutions'}
+              </span>
+            </div>
+            
+            <h1 className="text-6xl md:text-9xl font-black mb-10 leading-[0.9] tracking-tighter reveal">
+              <span className="block mb-4 text-white">{isAr ? 'خدمات' : 'Elite'}</span>
+              <span className="elite-text">{isAr ? 'احترافية' : 'Services'}</span>
+            </h1>
+
+            <p className="text-xl md:text-3xl text-text-muted max-w-4xl mx-auto leading-relaxed font-medium reveal" style={{ animationDelay: '0.2s' }}>
+              {t('services.subtitle')}
+            </p>
+
+            <div className="mt-16 flex flex-col items-center gap-6 reveal" style={{ animationDelay: '0.4s' }}>
+               <div className="flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                 <span className="relative flex h-3 w-3">
+                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75"></span>
+                   <span className="relative inline-flex rounded-full h-3 w-3 bg-neon-cyan"></span>
+                 </span>
+                 <span className="text-sm font-bold text-white/80 tracking-wide uppercase">
+                   {isAr ? 'متاح للمشاريع الجديدة' : 'Available for new projects'}
+                 </span>
+               </div>
+            </div>
+          </div>
+          
+          {/* Scroll Down Indicator */}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30 animate-bounce">
+            <span className="text-[10px] font-black tracking-[0.5em] uppercase text-white vertical-text">{isAr ? 'اسحب' : 'Scroll'}</span>
+            <div className="w-[2px] h-16 bg-linear-to-b from-neon-cyan to-transparent"></div>
+          </div>
+        </section>
+
+        {/* --- SERVICES SECTIONS --- */}
+        <div className="relative">
+          {services.map((service, index) => (
+            <section 
+              key={index} 
+              className={`relative py-32 px-4 sm:px-6 lg:px-8 border-t border-white/5 overflow-hidden ${index % 2 === 1 ? 'bg-white/[0.01]' : 'bg-transparent'}`}
+            >
+              {/* Background Number */}
+              <div className={`absolute top-20 ${index % 2 === 1 ? 'left-10' : 'right-10'} text-[15rem] font-black text-white/[0.02] select-none leading-none z-0`}>
+                {String(index + 1).padStart(2, '0')}
               </div>
-            ))}
+
+              <div className="max-w-7xl mx-auto relative z-10">
+                <div className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-16 lg:gap-24`}>
+                  
+                  {/* Visual Side */}
+                  <div className="w-full lg:w-1/2 group">
+                    <div className="relative">
+                      {/* Decorative elements around image */}
+                      <div className="absolute -top-6 -left-6 w-24 h-24 border-t-2 border-l-2 border-neon-cyan/30 rounded-tl-3xl group-hover:-top-8 group-hover:-left-8 transition-all duration-500"></div>
+                      <div className="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-accent/30 rounded-br-3xl group-hover:-bottom-8 group-hover:-right-8 transition-all duration-500"></div>
+                      
+                      {/* Main Image Container */}
+                      <div className="relative overflow-hidden rounded-3xl bg-gray-900 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform transition-all duration-700 group-hover:translate-y-[-10px] group-hover:shadow-neon-cyan/10 group-hover:shadow-2xl">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full aspect-[16/10] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-[#0b0f17] via-transparent to-transparent opacity-60"></div>
+                        
+                        {/* Overlay Icon or Badge */}
+                        <div className="absolute top-6 right-6 px-4 py-2 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 text-neon-cyan text-xs font-black tracking-widest uppercase">
+                          {isAr ? 'جودة ممتازة' : 'Premium Quality'}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Content Side */}
+                  <div className="w-full lg:w-1/2">
+                    <div className="space-y-8">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-4 text-neon-cyan font-black text-sm tracking-[0.3em] uppercase">
+                          <span className="w-10 h-[2px] bg-neon-cyan"></span>
+                          {isAr ? `خدمة ${index + 1}` : `Service ${index + 1}`}
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-black text-white leading-[1.2] tracking-tight">
+                          {service.title}
+                        </h2>
+                        <p className="text-lg md:text-xl text-text-muted leading-relaxed font-medium">
+                          {service.description}
+                        </p>
+                      </div>
+                      
+                      {/* Professional Features Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 py-8 border-y border-white/5">
+                        {service.features.map((feature, fIndex) => (
+                          <div key={fIndex} className="flex items-center gap-4 group/item">
+                            <div className="flex-shrink-0 w-6 h-6 rounded-lg bg-neon-cyan/10 flex items-center justify-center text-neon-cyan group-hover/item:bg-neon-cyan group-hover/item:text-dark transition-all duration-300">
+                              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <span className="text-white/80 font-bold text-sm group-hover/item:text-neon-cyan transition-colors duration-300">
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Action Button */}
+                      <div className="pt-4">
+                        <button 
+                          className="request-button group relative px-10 py-5 bg-linear-to-r from-neon-cyan to-accent text-dark font-black rounded-2xl transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,255,247,0.4)] flex items-center gap-3 overflow-hidden"
+                        >
+                          <span className="relative z-10">{t('common.requestService')}</span>
+                          <svg className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                          <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
+
+        {/* --- CTA BOTTOM SECTION --- */}
+        <section className="relative py-40 px-4 text-center overflow-hidden">
+          <div className="absolute inset-0 bg-neon-cyan/[0.02]"></div>
+          <div className="max-w-4xl mx-auto relative z-10 space-y-10">
+            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter">
+              {isAr ? 'هل أنت مستعد لبدء مشروعك؟' : 'Ready to Start Your Project?'}
+            </h2>
+            <p className="text-xl md:text-2xl text-text-muted font-medium">
+              {isAr ? 'دعنا نحول رؤيتك إلى حقيقة رقمية مذهلة.' : "Let's turn your vision into a stunning digital reality with expert precision."}
+            </p>
+            <div className="pt-6">
+              <a 
+                href="/contact" 
+                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-dark font-black text-2xl rounded-3xl hover:bg-neon-cyan hover:shadow-[0_0_50px_rgba(0,255,247,0.6)] hover:scale-110 transition-all duration-500"
+              >
+                {isAr ? 'ابدأ الآن' : 'Get Started Now'}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Modal Structure Re-added (Keeping it functional) */}
+        <div id="serviceModal" className="fixed inset-0 bg-black/95 hidden items-center justify-center p-4 z-9999 backdrop-blur-xl overflow-y-auto" style={{ display: 'none' }}>
+          <div className="bg-[#151b26] rounded-[2.5rem] shadow-2xl border border-white/10 w-full max-w-2xl my-8 relative overflow-hidden">
+            {/* Modal Glow */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-neon-cyan to-accent"></div>
+            
+            <button className="close-button absolute top-8 right-8 text-white/50 text-4xl hover:text-white transition-colors z-10">&times;</button>
+            
+            <div className="p-10 md:p-14">
+              <h2 className="text-4xl font-black text-center mb-4 text-white leading-tight">
+                {isAr ? 'طلب' : 'Request'} <span id="modalServiceTitle" className="text-transparent bg-clip-text bg-linear-to-r from-neon-cyan to-accent">{isAr ? 'خدمة' : 'Service'}</span>
+              </h2>
+              <p className="text-center text-text-muted mb-12 font-medium">{isAr ? 'املأ البيانات وسأتواصل معك خلال 24 ساعة' : 'Fill in the details and I will contact you within 24 hours'}</p>
+              
+              <form id="serviceRequestForm" className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الاسم' : 'Full Name'}</label>
+                    <input type="text" id="clientName" name="clientName" required placeholder={isAr ? 'اسمك الكريم' : 'Your name'} className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'البريد الإلكتروني' : 'Email Address'}</label>
+                    <input type="email" id="clientEmail" name="clientEmail" required placeholder="name@company.com" className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'وصف المشروع' : 'Project Description'}</label>
+                  <textarea id="serviceDescription" name="serviceDescription" rows={4} required placeholder={isAr ? 'أخبرني المزيد عن مشروعك...' : 'Tell me more about your goals...'} className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 resize-none"></textarea>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'رقم الهاتف' : 'Phone Number'}</label>
+                    <input type="tel" id="mobileNumber" name="mobileNumber" required placeholder="+20 102..." className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الجدول الزمني' : 'Timeline'}</label>
+                    <select id="deliveryTimeframe" name="deliveryTimeframe" className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 cursor-pointer appearance-none">
+                      <option value="">{isAr ? 'اختر المدة' : 'Select timeframe'}</option>
+                      <option value="1-3 days">{isAr ? 'عاجل (1-3 أيام)' : 'Urgent (1-3 days)'}</option>
+                      <option value="1-2 weeks">{isAr ? 'متوسط (1-2 أسبوع)' : 'Standard (1-2 weeks)'}</option>
+                      <option value="1 month+">{isAr ? 'مشروع كبير (شهر+)' : 'Large Project (1 month+)'}</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" className="w-full py-6 bg-linear-to-r from-neon-cyan to-accent text-dark font-black text-xl rounded-2xl hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(0,255,247,0.4)] transition-all duration-300 uppercase tracking-widest">
+                  {t('common.sendViaWhatsApp')}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </main>
-
-      <div id="serviceModal" className="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-9999 backdrop-blur-md overflow-y-auto" style={{ display: 'none' }}>
-        <div className="bg-linear-to-br from-gray-800 to-gray-900 rounded-2xl shadow-2xl border border-neon-cyan/30 w-full max-w-2xl my-8 relative">
-          <button 
-            className="close-button absolute top-4 right-4 text-white text-3xl hover:text-neon-cyan transition-colors z-10"
-          >
-            &times;
-          </button>
-          
-          <div className="p-8">
-            <h2 className="text-3xl font-bold text-center mb-2 text-white">{isAr ? 'طلب' : 'Request'} <span id="modalServiceTitle" className="text-neon-cyan">{isAr ? 'خدمة' : 'Service'}</span></h2>
-            
-            <form id="serviceRequestForm" className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-neon-cyan mb-2">{isAr ? 'الاسم' : 'Your Name'}</label>
-                  <input 
-                    type="text" 
-                    id="clientName"
-                    name="clientName"
-                    required 
-                    placeholder={isAr ? 'اكتب اسمك' : 'Enter your name'} 
-                    className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-neon-cyan mb-2">{isAr ? 'البريد الإلكتروني' : 'Your Email'}</label>
-                  <input 
-                    type="email" 
-                    id="clientEmail"
-                    name="clientEmail"
-                    required 
-                    placeholder="name@example.com" 
-                    className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-neon-cyan mb-2">{isAr ? 'متطلبات المشروع' : 'Project Requirements'}</label>
-                <textarea 
-                  id="serviceDescription"
-                  name="serviceDescription"
-                  rows={4} 
-                  required 
-                  placeholder={isAr ? 'اكتب هدف المشروع والمميزات المطلوبة...' : 'Describe your project goals and specific features...'} 
-                  className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300"
-                ></textarea>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-neon-cyan mb-2">{isAr ? 'رقم الموبايل' : 'Mobile Number'}</label>
-                  <input 
-                    type="tel" 
-                    id="mobileNumber"
-                    name="mobileNumber"
-                    required 
-                    placeholder={isAr ? 'مثال: 01012345678' : 'e.g., 01012345678'} 
-                    className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-neon-cyan mb-2">{isAr ? 'المدة المتوقعة' : 'Desired Timeframe'}</label>
-                  <select 
-                    id="deliveryTimeframe"
-                    name="deliveryTimeframe"
-                    className="w-full bg-gray-900/60 border-2 border-neon-cyan/30 rounded-lg py-3 px-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition duration-300 cursor-pointer"
-                  >
-                    <option value="">{isAr ? 'اختر المدة (اختياري)' : 'Select timeframe (Optional)'}</option>
-                    <option value="1-3 days">{isAr ? '1-3 أيام (سريع)' : '1-3 days (Express)'}</option>
-                    <option value="3-7 days">{isAr ? '3-7 أيام' : '3-7 days'}</option>
-                    <option value="1-2 weeks">{isAr ? '1-2 أسبوع' : '1-2 weeks'}</option>
-                    <option value="1 month+">{isAr ? 'شهر أو أكثر' : '1 month+'}</option>
-                  </select>
-                </div>
-              </div>
-
-              <button 
-                type="submit" 
-                className="w-full bg-neon-cyan text-gray-900 font-bold py-4 rounded-xl hover:bg-opacity-90 transform hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(72,255,205,0.4)]"
-              >
-                {isAr ? 'إرسال الطلب عبر واتساب' : 'Send Request via WhatsApp'}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
       <Footer />
     </>
   )

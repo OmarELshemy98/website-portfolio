@@ -79,18 +79,19 @@ export default function Experience() {
    <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h2>{isAr ? 'مطوّر واجهات أمامية مبتدئ | React.js | Tailwind CSS | تصميم لوحات معلومات وصفحات هبوط متجاوبة' : 'Junior Front-End Developer | React.js | Tailwind CSS | Designing Responsive Dashboards & Landing Pages'}</h2>
-                <h3>Modern Trade for Engineering (MTE)</h3>
+                <h2>{isAr ? 'مطوّر واجهات أمامية مستقل | React.js | Next.js | TypeScript | تصميم وتطوير حلول ويب مخصصة للعملاء' : 'Freelance Front-End Developer | React.js | Next.js | TypeScript | Crafting Custom Web Solutions for Clients'}</h2>
+                <h3>Self-Employed</h3>
               </div>
               <div className="experience-period">
-                <span className="period">{isAr ? 'مايو 2022 - ديسمبر 2023' : 'MAY 2022 - DECEMBER 2023'}</span>
+                <span className="period">{isAr ? 'سبتمبر 2024 - حتى الآن' : 'SEPTEMBER 2024 - PRESENT'}</span>
               </div>
             </div>
             <div className="experience-content">
               <ul>
-                <li>{isAr ? 'تصميم وتنفيذ لوحات معلومات وصفحات هبوط متجاوبة باستخدام React.js وTailwind CSS.' : 'Designed and implemented responsive dashboards and landing pages using React.js and Tailwind CSS.'}</li>
-                <li>{isAr ? 'تحسين سرعة تحميل الموقع بنسبة 35% من خلال تحسين الأداء وتحسينات SEO.' : 'Enhanced website load speed by 35% through performance optimization and SEO improvements.'}</li>
-                <li>{isAr ? 'ضمان إمكانية الوصول (A11y) والتوافق عبر المتصفحات المختلفة.' : 'Ensured accessibility (A11y) and cross-browser compatibility.'}</li>
+                <li>{isAr ? 'تصميم وتطوير مواقع وتطبيقات ويب حديثة باستخدام React.js، Next.js، وTypeScript.' : 'Designed and developed modern websites and web applications using React.js, Next.js, and TypeScript.'}</li>
+                <li>{isAr ? 'تقديم حلول مخصصة للعملاء تلبي احتياجاتهم التجارية وتعزز من تجربة المستخدم.' : 'Delivered tailored client solutions that meet business needs and enhance user experience.'}</li>
+                <li>{isAr ? 'تحسين أداء التطبيقات من خلال ممارسات التحميل الكسول، تقسيم الشيفرة، وتحسين Core Web Vitals.' : 'Optimized application performance through lazy loading, code splitting, and Core Web Vitals best practices.'}</li>
+                <li>{isAr ? 'إدارة المشاريع بشكل مستقل، من جمع المتطلبات إلى التسليم النهائي والصيانة.' : 'Managed projects independently from requirements gathering to final delivery and maintenance.'}</li>
               </ul>
             </div>
           </div>
