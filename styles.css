@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @theme {
   --color-neon: #00fff7;
   --color-neon-cyan: #00fff7;
@@ -49,11 +58,14 @@ html, body {
   background: var(--bg-dark);
   color: var(--text-main);
   box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   min-height: 100vh;
   background: #0d1117 !important;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* Global Content Wrapper to prevent Navbar overlap */
@@ -193,6 +205,19 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   padding: 0;
   margin: 0;
   flex: none; /* Stop stretching */
+}
+
+@media (max-width: 1350px) {
+  .nav-links {
+    gap: 0.8rem;
+  }
+  .nav-item {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  .main-navbar {
+    max-width: 95%;
+  }
 }
 
 .nav-links.start { 
@@ -542,53 +567,171 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 3.5rem;
+  gap: 4rem;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   justify-content: center;
+  padding: 0 2rem;
 }
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-name {
+    font-size: 2rem;
+  }
+  .hero-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .hero-btns a, .hero-btns button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/* --- HERO IMAGE & ANIMATIONS --- */
 .hexagon-img {
-  width: 220px;
-  height: 240px;
+  width: clamp(280px, 35vw, 420px);
+  height: clamp(280px, 35vw, 420px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
   position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: float-profile 6s ease-in-out infinite;
+  flex-shrink: 0;
+  z-index: 1;
 }
-.hexagon-img::before {
+
+@keyframes float-profile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Rotating Rings */
+.hexagon-img::before,
+.hexagon-img::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  margin: auto;
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, var(--neon) 60%, #00c3ff 100%);
-  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
-  filter: blur(8px) brightness(1.2);
-  z-index: 1;
-  opacity: 0.85;
+  border-radius: 50%;
+  transition: all 0.5s ease;
 }
+
+/* Inner Solid Ring */
+.hexagon-img::before {
+  inset: -15px;
+  border: clamp(3px, 0.8vw, 5px) solid var(--neon);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate-ring 3s linear infinite;
+  z-index: 1;
+  filter: drop-shadow(0 0 15px var(--neon));
+}
+
+/* Outer Dashed Ring */
+.hexagon-img::after {
+  inset: -35px;
+  border: 2px dashed #00c3ff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: rotate-ring-reverse 10s linear infinite;
+  z-index: 0;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-ring-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 10px var(--neon)); opacity: 0.8; }
+  50% { filter: drop-shadow(0 0 25px var(--neon)); opacity: 1; }
+}
+
 .profile-img {
-  width: 200px;
-  height: 220px;
+  width: 85%;
+  height: 85%;
   object-fit: cover;
-  border-radius: 18px;
-  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+  border-radius: 50%;
   position: relative;
   z-index: 2;
-  box-shadow: 0 0 32px #00fff799, 0 4px 32px #000a;
-  background: #232b3a;
-  aspect-ratio: 10/11;
-  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+  border: clamp(5px, 1vw, 8px) solid #1a1f2b;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(0, 255, 247, 0.2);
+  background: #1a1f2b;
+  aspect-ratio: 1/1;
+  transition: all 0.4s ease;
+  filter: contrast(1.1) brightness(1.05);
+  image-rendering: -webkit-optimize-contrast;
 }
-.hexagon-img.small {
-  width: 120px;
-  height: 130px;
+
+/* Hover Effects */
+.hexagon-img:hover { transform: scale(1.03); }
+.hexagon-img:hover::before { inset: -25px; border-width: 6px; filter: drop-shadow(0 0 25px var(--neon)); }
+.hexagon-img:hover::after { inset: -50px; opacity: 0.7; filter: blur(0px) drop-shadow(0 0 20px #00c3ff); }
+.hexagon-img:hover .profile-img { border-color: var(--neon); box-shadow: 0 0 60px rgba(0, 255, 247, 0.5); filter: contrast(1.15) brightness(1.1); }
+
+/* --- RESPONSIVE HERO --- */
+@media (max-width: 1024px) {
+  .hero-content { gap: 3rem; }
+  .hexagon-img { width: 320px; height: 320px; }
 }
-.hexagon-img.small .profile-img {
-  width: 100px;
-  height: 110px;
+
+@media (max-width: 768px) {
+  .hero-section { height: auto; min-height: 100vh; padding: 120px 0 60px 0; }
+  .hero-content { flex-direction: column-reverse; text-align: center; gap: 2rem; }
+  
+  .hexagon-img { 
+    width: 320px; 
+    height: 320px; 
+    margin-bottom: 2rem; 
+    animation: float-profile 5s ease-in-out infinite; 
+  }
+  .hexagon-img::before { animation: rotate-ring 3s linear infinite, pulse-glow 2s ease-in-out infinite; }
+  
+  .profile-img { border-width: 6px; box-shadow: 0 0 35px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(0, 255, 247, 0.15); }
+  
+  .hero-text h1 { font-size: 1.8rem; }
+  .hero-name { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; padding: 0 10px; }
+  .hero-btns { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+  .hero-btns a, .hero-btns button { width: 100%; max-width: 280px; }
 }
+
+@media (max-width: 480px) {
+  .hexagon-img { width: 300px; height: 300px; }
+  .hexagon-img::before { inset: -15px; }
+  .hexagon-img::after { inset: -35px; }
+}
+
+@media (max-width: 360px) {
+  .hexagon-img { width: 260px; height: 260px; }
+  .hexagon-img::before { inset: -12px; }
+  .hexagon-img::after { inset: -30px; }
+}
+
+.hexagon-img.small { width: 140px; height: 140px; }
+.hexagon-img.small .profile-img { width: 115px; height: 115px; }
+
 .hero-text {
   flex: 1;
   min-width: 260px;
@@ -991,14 +1134,6 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   .navbar-inner {
     height: 44px;
     padding: 0 0.5vw;
-  }
-  .hexagon-img {
-    width: 120px;
-    height: 130px;
-  }
-  .profile-img {
-    width: 100px;
-    height: 110px;
   }
   .section-title {
     font-size: 1.3rem;
@@ -2727,26 +2862,6 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   .mobile-nav {
     display: flex;
   }
-  .hero-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.2rem;
-  }
-  .hexagon-img {
-    margin: 0 auto 1rem auto;
-    display: flex;
-    justify-content: center;
-  }
-  .hero-text {
-    align-items: center;
-    text-align: center;
-  }
-  .hero-btns {
-    justify-content: center;
-    width: 100%;
-    display: flex;
-  }
 }
 @media (min-width: 701px) {
   .mobile-nav, .burger-menu {
@@ -3089,15 +3204,40 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   }
 }
 
+/* --- ABOUT PROFILE PHOTO --- */
 .about-profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 255, 247, 0.3);
-  margin-bottom: 1rem;
-  border: 2px solid var(--neon);
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--neon);
   display: block;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.about-profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 247, 0.5);
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .about-profile-photo {
+    width: 130px;
+    height: 130px;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-profile-photo {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .portrait-card {

@@ -4,20 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Page Transition & Code Rain Logic ---
   const overlay = document.getElementById('page-transition-overlay');
   const pageNameEl = document.getElementById('transition-page-name');
-  const internalLinks = document.querySelectorAll('a[href^="/"]');
   const canvas = document.getElementById('code-rain-canvas');
   let rainAnimationId = null;
+
+  const resize = () => {
+    if (canvas) {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+  };
+  window.addEventListener('resize', resize);
 
   const startCodeRain = () => {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
     resize();
-    window.addEventListener('resize', resize);
 
     const chars = '01<>{}';
     const charArray = chars.split('');
@@ -63,11 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const loadingText = document.getElementById('transition-loading-text');
-  if (loadingText) {
-    loadingText.textContent = isArabic ? 'جاري التحميل...' : 'Loading...';
-  }
-
   const hideOverlay = () => {
     if (overlay) {
       overlay.classList.remove('show');
@@ -75,15 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  internalLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const href = link.getAttribute('href');
-      if (!href || href === window.location.pathname || href.startsWith('#') || !href.startsWith('/')) {
-        return;
-      }
-      showOverlay(href);
-    });
-  });
+  // Expose to window for Next.js router events
+  window.showPageOverlay = showOverlay;
+  window.hidePageOverlay = hideOverlay;
+
+  const loadingText = document.getElementById('transition-loading-text');
+  if (loadingText) {
+    loadingText.textContent = isArabic ? 'جاري التحميل...' : 'Loading...';
+  }
 
   // --- Mobile Menu Logic ---
   const menuBtn = document.getElementById('mobileMenuBtn');

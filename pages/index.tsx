@@ -62,20 +62,12 @@ export default function Home() {
               className="profile-img"
               width={profileMeta.width}
               height={profileMeta.height}
-              sizes="(max-width: 768px) 180px, 200px"
+              sizes="(max-width: 480px) 280px, (max-width: 768px) 300px, 420px"
               loading="eager"
               fetchPriority="high"
             />
           </div>
         </div>
-      </section>
-      <section className="max-w-3xl mx-auto px-4 py-16 md:py-20 text-text-muted leading-relaxed" aria-labelledby="home-intro-heading">
-        <h2 id="home-intro-heading" className="text-2xl md:text-3xl font-bold text-white mb-6">
-          {t('home.introHeading')}
-        </h2>
-        <p className="mb-5 text-base md:text-lg">{t('home.introP1')}</p>
-        <p className="mb-5 text-base md:text-lg">{t('home.introP2')}</p>
-        <p className="text-base md:text-lg">{t('home.introP3')}</p>
       </section>
       <Footer />
     </>

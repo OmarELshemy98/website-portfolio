@@ -44,9 +44,9 @@ export default function About() {
                 webpSrc={profileMeta.webp}
                 fallbackSrc="/images/profile-photo.jpg"
                 alt="Omar Elshemy profile photo"
-                width={120}
-                height={120}
-                sizes="120px"
+                width={profileMeta.width}
+                height={profileMeta.height}
+                sizes="(max-width: 480px) 140px, 160px"
                 className="about-profile-photo"
               />
             </div>
