@@ -55,26 +55,6 @@ export default function Document() {
         />
       </Head>
       <body>
-        {/* Page Transition Overlay with Code Rain */}
-        <div id="page-transition-overlay" className="fixed inset-0 bg-[#1a374d] z-9999 flex flex-col items-center justify-center overflow-hidden pointer-events-none opacity-0">
-          <canvas id="code-rain-canvas" className="absolute top-0 left-0 w-full h-full z-0"></canvas>
-          <div className="relative z-10 flex flex-col items-center text-white font-montserrat">
-            <picture>
-              <source srcSet="/images/logo.webp" type="image/webp" />
-              <img
-                src="/images/logo.png"
-                alt="Omar Elshemy Logo"
-                className="landing-logo-animate w-[180px] h-[180px] mb-4"
-                width={180}
-                height={180}
-                decoding="async"
-              />
-            </picture>
-            <div id="transition-page-name" className="text-3xl font-bold tracking-widest uppercase"></div>
-            <div id="transition-loading-text" className="blink mt-4 text-sm opacity-70">Loading...</div>
-          </div>
-        </div>
-
         {/* Persistent Background blobs */}
         <div className="main-bg-container">
           <div className="bg-blob blob-1"></div>

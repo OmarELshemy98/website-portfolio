@@ -1,86 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const isArabic = document.documentElement.lang === 'ar'
 
-  // --- Page Transition & Code Rain Logic ---
-  const overlay = document.getElementById('page-transition-overlay');
-  const pageNameEl = document.getElementById('transition-page-name');
-  const canvas = document.getElementById('code-rain-canvas');
-  let rainAnimationId = null;
-
-  const resize = () => {
-    if (canvas) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-  };
-  window.addEventListener('resize', resize);
-
-  const startCodeRain = () => {
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    
-    resize();
-
-    const chars = '01<>{}';
-    const charArray = chars.split('');
-    const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(0).map(() => Math.random() * -50);
-
-    const draw = () => {
-      ctx.fillStyle = 'rgba(26, 55, 77, 0.1)'; // Match overlay bg
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#00fff7';
-      ctx.font = `${fontSize}px monospace`;
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = charArray[Math.floor(Math.random() * charArray.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-      rainAnimationId = requestAnimationFrame(draw);
-    };
-
-    if (rainAnimationId) cancelAnimationFrame(rainAnimationId);
-    draw();
-  };
-
-  const stopCodeRain = () => {
-    if (rainAnimationId) {
-      cancelAnimationFrame(rainAnimationId);
-      rainAnimationId = null;
-    }
-  };
-
-  const showOverlay = (pageName) => {
-    if (overlay && pageNameEl) {
-      // Clean up page name for display (remove slashes)
-      let displayName = pageName.replace(/\//g, '').trim();
-      pageNameEl.textContent = displayName || (isArabic ? 'الرئيسية' : 'Home');
-      overlay.classList.add('show');
-      startCodeRain();
-    }
-  };
-
-  const hideOverlay = () => {
-    if (overlay) {
-      overlay.classList.remove('show');
-      stopCodeRain();
-    }
-  };
-
-  // Expose to window for Next.js router events
-  window.showPageOverlay = showOverlay;
-  window.hidePageOverlay = hideOverlay;
-
-  const loadingText = document.getElementById('transition-loading-text');
-  if (loadingText) {
-    loadingText.textContent = isArabic ? 'جاري التحميل...' : 'Loading...';
-  }
-
   // --- Mobile Menu Logic ---
   const menuBtn = document.getElementById('mobileMenuBtn');
   const menuOverlay = document.getElementById('mobileMenuOverlay');
@@ -120,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // Hide overlay on page load (for back/forward navigation)
-  window.addEventListener('pageshow', hideOverlay);
-  hideOverlay();
 
   // --- Other Pure JS Functionality ---
   // ... (The rest of your portfolio.js code remains the same)
