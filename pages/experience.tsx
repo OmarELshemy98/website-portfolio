@@ -20,8 +20,27 @@ export default function Experience() {
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h2>{isAr ? 'مطوّر واجهات أمامية' : 'Front End Developer'}</h2>
+                <h2>{isAr ? 'مطوّر واجهات أمامية متوسط المستوى | React.js | Next.js | TypeScript | بناء تطبيقات ويب قابلة للتوسع وعالية الأداء' : 'Mid-Level Front-End Developer | React.js | Next.js | TypeScript | Building Scalable & High-Performance Web Applications'}</h2>
                 <h3>Arcon Corporation</h3>
+              </div>
+              <div className="experience-period">
+                <span className="period">{isAr ? 'يوليو 2024 - حتى الآن' : 'JULY 2024 - PRESENT'}</span>
+              </div>
+            </div>
+            <div className="experience-content">
+              <ul>
+                <li>{isAr ? 'تطوير وصيانة واجهات ويب متجاوبة وعالية الأداء باستخدام React.js وNext.js وTypeScript.' : 'Developed and maintained responsive and high-performance web interfaces using React.js, Next.js, and TypeScript.'}</li>
+                <li>{isAr ? 'بناء أنظمة مكونات قابلة لإعادة الاستخدام، مما أدى إلى تحسين سرعة التطوير بنسبة 25%.' : 'Built reusable component systems, improving development speed by 25%.'}</li>
+                <li>{isAr ? 'تكامل واجهات RESTful APIs وتحسين مؤشرات Core Web Vitals من خلال التحميل الكسول وتقسيم الشيفرة.' : 'Integrated RESTful APIs and enhanced Core Web Vitals with lazy loading and code splitting.'}</li>
+                <li>{isAr ? 'التعاون في سبرينتات Agile مع المصممين ومهندسي الواجهة الخلفية لتقديم ميزات جاهزة للإنتاج.' : 'Collaborated in Agile sprints with designers and backend engineers to deliver production-ready features.'}</li>
+              </ul>
+            </div>
+          </div>
+          <div className="experience-item">
+            <div className="experience-header">
+              <div className="experience-company">
+                <h2>{isAr ? 'مطوّر واجهات أمامية مستقل | React.js | Next.js | TypeScript | تصميم وتطوير حلول ويب مخصصة للعملاء' : 'Freelance Front-End Developer | React.js | Next.js | TypeScript | Crafting Custom Web Solutions for Clients'}</h2>
+                <h3>Self-Employed</h3>
               </div>
               <div className="experience-period">
                 <span className="period">{isAr ? 'سبتمبر 2024 - حتى الآن' : 'SEPTEMBER 2024 - PRESENT'}</span>
@@ -29,9 +48,10 @@ export default function Experience() {
             </div>
             <div className="experience-content">
               <ul>
-                <li>{isAr ? 'تطوير مواقع متجاوبة باستخدام HTML وCSS وJavaScript لتحسين تجربة المستخدم.' : 'Built responsive websites using HTML, CSS, and JavaScript to improve user experience.'}</li>
-                <li>{isAr ? 'التعاون مع الفريق لتنفيذ مزايا جديدة وتحسين أداء الموقع.' : 'Collaborated with team members to implement new features, boosting site performance.'}</li>
-                <li>{isAr ? 'المساهمة في إصلاح الأخطاء وتحديث الموقع للحفاظ على أفضل كفاءة.' : 'Assisted in bug fixes and site updates to ensure optimal functionality.'}</li>
+                <li>{isAr ? 'تصميم وتطوير مواقع وتطبيقات ويب حديثة باستخدام React.js، Next.js، وTypeScript.' : 'Designed and developed modern websites and web applications using React.js, Next.js, and TypeScript.'}</li>
+                <li>{isAr ? 'تقديم حلول مخصصة للعملاء تلبي احتياجاتهم التجارية وتعزز من تجربة المستخدم.' : 'Delivered tailored client solutions that meet business needs and enhance user experience.'}</li>
+                <li>{isAr ? 'تحسين أداء التطبيقات من خلال ممارسات التحميل الكسول، تقسيم الشيفرة، وتحسين Core Web Vitals.' : 'Optimized application performance through lazy loading, code splitting, and Core Web Vitals best practices.'}</li>
+                <li>{isAr ? 'إدارة المشاريع بشكل مستقل، من جمع المتطلبات إلى التسليم النهائي والصيانة.' : 'Managed projects independently from requirements gathering to final delivery and maintenance.'}</li>
               </ul>
             </div>
           </div>
@@ -39,20 +59,17 @@ export default function Experience() {
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
-                <h2>{isAr ? 'مسؤول مبيعات' : 'Sales Executive'}</h2>
+                <h2>{isAr ? 'مستشار تأمين' : 'Insurance Advisor'}</h2>
                 <h3>CHUBB LIFE INSURANCE</h3>
               </div>
               <div className="experience-period">
-                <span className="period">{isAr ? 'مايو 2024 - سبتمبر 2024' : 'MAY 2024 - SEPTEMBER 2024'}</span>
+                <span className="period">{isAr ? 'يوليو 2024 - سبتمبر 2024' : 'JULY 2024 - SEPTEMBER 2024'}</span>
               </div>
             </div>
             <div className="experience-content">
               <ul>
-                <li>{isAr ? 'مساعدة العملاء في اختيار وثائق التأمين على الحياة المناسبة لاحتياجاتهم.' : 'Assist clients with selecting life insurance policies tailored to their needs.'}</li>
-                <li>{isAr ? 'تقديم استشارات متخصصة حول منتجات التمويل وإرشاد العملاء خلال إجراءات التقديم.' : 'Provide expert advice on loan products, guiding clients through the application process.'}</li>
-                <li>{isAr ? 'إجراء تقييمات مالية واقتراح المنتجات الأنسب لكل عميل.' : 'Conduct financial assessments and recommend suitable financial products.'}</li>
-                <li>{isAr ? 'التعاون مع فريق البنك لضمان سير العمل بسلاسة وتقديم خدمة عملاء ممتازة.' : 'Collaborate with bank staff to ensure smooth operations and excellent customer service.'}</li>
-                <li>{isAr ? 'الحفاظ على سجلات دقيقة لتفاعلات العملاء والمعاملات المالية.' : 'Maintain detailed records of client interactions and financial transactions.'}</li>
+                <li>{isAr ? 'إجراء استشارات مالية وتقديم حلول تأمين واستثمار مخصصة.' : 'Conducted financial consultations and provided tailored insurance and investment solutions.'}</li>
+                <li>{isAr ? 'تعزيز العلاقات مع العملاء من خلال التواصل الواضح والرؤى المستندة إلى البيانات.' : 'Strengthened client relationships through clear communication and data-driven insights.'}</li>
               </ul>
             </div>
           </div>
