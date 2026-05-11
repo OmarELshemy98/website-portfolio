@@ -120,9 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (serviceModal && requestButtons.length > 0) {
     requestButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const serviceCard = button.closest('.service-card');
-        const serviceTitle = serviceCard.querySelector('h3').innerText;
+        const serviceCard = button.closest('section') || button.closest('.service-card');
+        if (!serviceCard) return;
+        
+        const titleEl = serviceCard.querySelector('h2') || serviceCard.querySelector('h3');
+        if (!titleEl) return;
+
+        const serviceTitle = titleEl.innerText;
         if (modalServiceTitle) modalServiceTitle.innerText = serviceTitle;
+        const hiddenInput = document.getElementById('hiddenServiceType');
+        if (hiddenInput) hiddenInput.value = serviceTitle;
+        
         serviceModal.style.display = 'flex';
         serviceModal.classList.remove('hidden');
       });
@@ -145,21 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (serviceRequestForm) {
     serviceRequestForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+      // Allow Formspree to handle the submission if desired, 
+      // but the user wants it professional and sent to email.
+      // We will keep the default submission for Formspree.
+      // e.preventDefault(); // Commenting this out to allow form submission to action URL
+      
       const formData = new FormData(serviceRequestForm);
       const data = Object.fromEntries(formData.entries());
       const serviceTitle = modalServiceTitle ? modalServiceTitle.innerText : (isArabic ? 'خدمة غير محددة' : 'Unknown Service');
 
-      const whatsappNumber = '201026238072';
-      const whatsappMessage = isArabic
-        ? `*طلب خدمة جديد*\n\n*الخدمة:* ${serviceTitle}\n*الاسم:* ${data.clientName}\n*البريد:* ${data.clientEmail}\n*الموبايل:* ${data.mobileNumber}\n*المدة:* ${data.deliveryTimeframe}\n\n*الوصف:* ${data.serviceDescription}`
-        : `*New Service Request*\n\n*Service:* ${serviceTitle}\n*Name:* ${data.clientName}\n*Email:* ${data.clientEmail}\n*Mobile:* ${data.mobileNumber}\n*Timeframe:* ${data.deliveryTimeframe}\n\n*Description:* ${data.serviceDescription}`;
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-      window.open(whatsappUrl, '_blank');
-      
-      serviceModal.style.display = 'none';
-      serviceModal.classList.add('hidden');
-      serviceRequestForm.reset();
+      // If you want to ALSO send to WhatsApp, keep the logic below, 
+      // otherwise, Formspree handles the email part.
     });
   }
 });

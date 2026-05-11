@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
-import OptimizedImg from '@/components/OptimizedImg'
 
 export default function Services() {
   const { locale, t } = useI18n()
@@ -183,61 +182,83 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Modal Structure Re-added (Keeping it functional) */}
-        <div id="serviceModal" className="fixed inset-0 bg-black/95 hidden items-center justify-center p-4 z-9999 backdrop-blur-xl overflow-y-auto" style={{ display: 'none' }}>
-          <div className="bg-[#151b26] rounded-[2.5rem] shadow-2xl border border-white/10 w-full max-w-2xl my-8 relative overflow-hidden">
-            {/* Modal Glow */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-neon-cyan to-accent"></div>
+      </main>
+
+      {/* Modal Structure - Moved Outside Main to avoid stacking context issues */}
+      <div id="serviceModal" className="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-[99999] backdrop-blur-xl overflow-y-auto" style={{ display: 'none' }}>
+        <div className="bg-[#1a202c] rounded-[2.5rem] shadow-2xl border border-white/10 w-full max-w-2xl m-auto relative overflow-hidden flex flex-col">
+          {/* Modal Glow Header */}
+          <div className="absolute top-0 left-0 w-full h-1.5 bg-linear-to-r from-neon-cyan to-accent"></div>
+          
+          <button className="close-button absolute top-6 right-6 text-white/50 text-4xl hover:text-white transition-colors z-20">&times;</button>
+          
+          <div className="p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-black text-center mb-2 text-white leading-tight">
+              {isAr ? 'طلب' : 'Request'} <span id="modalServiceTitle" className="text-transparent bg-clip-text bg-linear-to-r from-neon-cyan to-accent">{isAr ? 'خدمة' : 'Service'}</span>
+            </h2>
+            <p className="text-center text-text-muted mb-10 font-medium">{isAr ? 'املأ البيانات وسأتواصل معك خلال 24 ساعة' : 'Fill in the details and I will contact you within 24 hours'}</p>
             
-            <button className="close-button absolute top-8 right-8 text-white/50 text-4xl hover:text-white transition-colors z-10">&times;</button>
-            
-            <div className="p-10 md:p-14">
-              <h2 className="text-4xl font-black text-center mb-4 text-white leading-tight">
-                {isAr ? 'طلب' : 'Request'} <span id="modalServiceTitle" className="text-transparent bg-clip-text bg-linear-to-r from-neon-cyan to-accent">{isAr ? 'خدمة' : 'Service'}</span>
-              </h2>
-              <p className="text-center text-text-muted mb-12 font-medium">{isAr ? 'املأ البيانات وسأتواصل معك خلال 24 ساعة' : 'Fill in the details and I will contact you within 24 hours'}</p>
-              
-              <form id="serviceRequestForm" className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الاسم' : 'Full Name'}</label>
-                    <input type="text" id="clientName" name="clientName" required placeholder={isAr ? 'اسمك الكريم' : 'Your name'} className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'البريد الإلكتروني' : 'Email Address'}</label>
-                    <input type="email" id="clientEmail" name="clientEmail" required placeholder="name@company.com" className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
-                  </div>
-                </div>
+            <form 
+              id="serviceRequestForm" 
+              className="space-y-6"
+              action="https://formspree.io/f/xvgzvzvz" 
+              method="POST"
+            >
+              {/* Formspree hidden email */}
+              <input type="hidden" name="_to" value="omarelshemy010@gmail.com" />
+              <input type="hidden" name="service_type" id="hiddenServiceType" value="" />
 
-                <div className="space-y-3">
-                  <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'وصف المشروع' : 'Project Description'}</label>
-                  <textarea id="serviceDescription" name="serviceDescription" rows={4} required placeholder={isAr ? 'أخبرني المزيد عن مشروعك...' : 'Tell me more about your goals...'} className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 resize-none"></textarea>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الاسم بالكامل' : 'Full Name'}</label>
+                  <input type="text" name="name" required placeholder={isAr ? 'اسمك الكريم' : 'Your full name'} className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'رقم الهاتف' : 'Phone Number'}</label>
-                    <input type="tel" id="mobileNumber" name="mobileNumber" required placeholder="+20 102..." className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الجدول الزمني' : 'Timeline'}</label>
-                    <select id="deliveryTimeframe" name="deliveryTimeframe" className="w-full bg-white/5 border border-white/10 rounded-2xl py-5 px-6 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 cursor-pointer appearance-none">
-                      <option value="">{isAr ? 'اختر المدة' : 'Select timeframe'}</option>
-                      <option value="1-3 days">{isAr ? 'عاجل (1-3 أيام)' : 'Urgent (1-3 days)'}</option>
-                      <option value="1-2 weeks">{isAr ? 'متوسط (1-2 أسبوع)' : 'Standard (1-2 weeks)'}</option>
-                      <option value="1 month+">{isAr ? 'مشروع كبير (شهر+)' : 'Large Project (1 month+)'}</option>
-                    </select>
-                  </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'البريد الإلكتروني' : 'Email Address'}</label>
+                  <input type="email" name="email" required placeholder="name@company.com" className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
                 </div>
+              </div>
 
-                <button type="submit" className="w-full py-6 bg-linear-to-r from-neon-cyan to-accent text-dark font-black text-xl rounded-2xl hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(0,255,247,0.4)] transition-all duration-300 uppercase tracking-widest">
-                  {t('common.sendViaWhatsApp')}
-                </button>
-              </form>
-            </div>
+              <div className="space-y-2">
+                <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'تفاصيل المشروع' : 'Project Details'}</label>
+                <textarea name="message" rows={3} required placeholder={isAr ? 'أخبرني المزيد عن متطلبات مشروعك...' : 'Tell me more about your requirements...'} className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 resize-none"></textarea>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'رقم الواتساب / الهاتف' : 'WhatsApp / Phone'}</label>
+                  <input type="tel" name="phone" required placeholder="+20 102..." className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'طريقة الدفع المفضلة' : 'Preferred Payment'}</label>
+                  <select name="payment_method" className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 cursor-pointer appearance-none">
+                    <option value="" disabled selected className="bg-[#1a202c]">{isAr ? 'اختر الطريقة' : 'Select Method'}</option>
+                    <option value="Vodafone Cash" className="bg-[#1a202c]">{isAr ? 'فودافون كاش (Vodafone Cash)' : 'Vodafone Cash'}</option>
+                    <option value="InstaPay" className="bg-[#1a202c]">{isAr ? 'إنستا باي (InstaPay)' : 'InstaPay'}</option>
+                    <option value="Bank Transfer" className="bg-[#1a202c]">{isAr ? 'تحويل بنكي (Bank Transfer)' : 'Bank Transfer'}</option>
+                    <option value="PayPal" className="bg-[#1a202c]">{isAr ? 'بايبال (PayPal)' : 'PayPal'}</option>
+                    <option value="Crypto" className="bg-[#1a202c]">{isAr ? 'عملات رقمية (Crypto)' : 'Crypto (USDT)'}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-[10px] font-black text-neon-cyan uppercase tracking-widest px-1">{isAr ? 'الجدول الزمني' : 'Timeline'}</label>
+                <select name="timeline" className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-5 text-white focus:border-neon-cyan focus:bg-white/10 outline-none transition-all duration-300 cursor-pointer appearance-none">
+                  <option value="1-3 days" className="bg-[#1a202c]">{isAr ? 'عاجل (1-3 أيام)' : 'Urgent (1-3 days)'}</option>
+                  <option value="1-2 weeks" className="bg-[#1a202c]">{isAr ? 'متوسط (1-2 أسبوع)' : 'Standard (1-2 weeks)'}</option>
+                  <option value="1 month+" className="bg-[#1a202c]">{isAr ? 'مشروع كبير (شهر+)' : 'Large Project (1 month+)'}</option>
+                </select>
+              </div>
+
+              <button type="submit" className="w-full py-5 bg-linear-to-r from-neon-cyan to-accent text-dark font-black text-lg rounded-xl hover:scale-[1.02] hover:shadow-[0_15px_40px_rgba(0,255,247,0.4)] transition-all duration-300 uppercase tracking-widest">
+                {isAr ? 'إرسال طلب الخدمة' : 'Submit Service Request'}
+              </button>
+            </form>
           </div>
         </div>
-      </main>
+      </div>
+
       <Footer />
     </>
   )
