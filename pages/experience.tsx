@@ -17,6 +17,7 @@ export default function Experience() {
       <section id="experience" className="experience-section">
         <h1 className="section-title">{isAr ? 'الخبرات' : 'Work'} <span className="highlight">{isAr ? 'العملية' : 'Experience'}</span></h1>
         <div className="experience-container">
+                        {/* Arcon corp */}
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
@@ -36,11 +37,12 @@ export default function Experience() {
               </ul>
             </div>
           </div>
+          {/* Freelance */}
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
                 <h2>{isAr ? 'مطوّر واجهات أمامية مستقل | React.js | Next.js | TypeScript | تصميم وتطوير حلول ويب مخصصة للعملاء' : 'Freelance Front-End Developer | React.js | Next.js | TypeScript | Crafting Custom Web Solutions for Clients'}</h2>
-                <h3>Self-Employed</h3>
+                <h3>{isAr ? 'عمل حر' : 'Freelance'}</h3>
               </div>
               <div className="experience-period">
                 <span className="period">{isAr ? 'سبتمبر 2024 - حتى الآن' : 'SEPTEMBER 2024 - PRESENT'}</span>
@@ -55,7 +57,7 @@ export default function Experience() {
               </ul>
             </div>
           </div>
-
+            {/* chubb life insurance */}
           <div className="experience-item">
             <div className="experience-header">
               <div className="experience-company">
@@ -70,6 +72,25 @@ export default function Experience() {
               <ul>
                 <li>{isAr ? 'إجراء استشارات مالية وتقديم حلول تأمين واستثمار مخصصة.' : 'Conducted financial consultations and provided tailored insurance and investment solutions.'}</li>
                 <li>{isAr ? 'تعزيز العلاقات مع العملاء من خلال التواصل الواضح والرؤى المستندة إلى البيانات.' : 'Strengthened client relationships through clear communication and data-driven insights.'}</li>
+              </ul>
+            </div>
+          </div>
+          {/* modern trade */}
+   <div className="experience-item">
+            <div className="experience-header">
+              <div className="experience-company">
+                <h2>{isAr ? 'مطوّر واجهات أمامية مبتدئ | React.js | Tailwind CSS | تصميم لوحات معلومات وصفحات هبوط متجاوبة' : 'Junior Front-End Developer | React.js | Tailwind CSS | Designing Responsive Dashboards & Landing Pages'}</h2>
+                <h3>Modern Trade for Engineering (MTE)</h3>
+              </div>
+              <div className="experience-period">
+                <span className="period">{isAr ? 'مايو 2022 - ديسمبر 2023' : 'MAY 2022 - DECEMBER 2023'}</span>
+              </div>
+            </div>
+            <div className="experience-content">
+              <ul>
+                <li>{isAr ? 'تصميم وتنفيذ لوحات معلومات وصفحات هبوط متجاوبة باستخدام React.js وTailwind CSS.' : 'Designed and implemented responsive dashboards and landing pages using React.js and Tailwind CSS.'}</li>
+                <li>{isAr ? 'تحسين سرعة تحميل الموقع بنسبة 35% من خلال تحسين الأداء وتحسينات SEO.' : 'Enhanced website load speed by 35% through performance optimization and SEO improvements.'}</li>
+                <li>{isAr ? 'ضمان إمكانية الوصول (A11y) والتوافق عبر المتصفحات المختلفة.' : 'Ensured accessibility (A11y) and cross-browser compatibility.'}</li>
               </ul>
             </div>
           </div>
