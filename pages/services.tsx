@@ -146,13 +146,25 @@ export default function Services() {
                         <Link 
                           href={`/request-service?serviceId=${index}`}
                           target="_blank"
-                          className="request-button group relative px-10 py-5 bg-linear-to-r from-neon-cyan to-accent text-dark font-black rounded-2xl transition-all duration-300 hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,255,247,0.4)] flex items-center gap-3 overflow-hidden"
+                          className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-dark font-black rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,247,0.5)] overflow-hidden"
                         >
                           <span className="relative z-10">{t('common.requestService')}</span>
-                          <svg className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                          <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                          <div className="relative z-10 w-6 h-6 flex items-center justify-center bg-dark/5 rounded-full group-hover:bg-neon-cyan/20 transition-colors duration-300">
+                            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </div>
+                          
+                          {/* Hover Liquid Effect */}
+                          <div className="absolute inset-0 bg-linear-to-r from-neon-cyan to-accent translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                          <span className="absolute inset-0 z-10 flex items-center gap-3 px-8 py-4 text-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {t('common.requestService')}
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              <svg className="w-4 h-4 translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                              </svg>
+                            </div>
+                          </span>
                         </Link>
                       </div>
                     </div>

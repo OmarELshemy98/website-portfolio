@@ -174,11 +174,27 @@ export default function RequestService() {
                     </div>
                   </div>
 
-                  <button type="submit" className="w-full py-6 bg-linear-to-r from-neon-cyan to-accent text-dark font-black text-xl rounded-2xl hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(0,255,247,0.4)] transition-all duration-500 uppercase tracking-widest group">
-                    <span className="flex items-center justify-center gap-3">
+                  <button 
+                    type="submit" 
+                    className="group relative w-full py-6 bg-white text-dark font-black rounded-2xl transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(37,211,102,0.4)] overflow-hidden flex items-center justify-center gap-4"
+                  >
+                    <span className="relative z-10 text-xl tracking-widest uppercase">
                       {isAr ? 'إرسال عبر واتساب' : 'Send via WhatsApp'}
-                      <i className="fab fa-whatsapp text-2xl"></i>
                     </span>
+                    <div className="relative z-10 w-10 h-10 rounded-full bg-dark/5 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                      <i className="fab fa-whatsapp text-2xl text-[#25D366] group-hover:text-white transition-colors duration-500"></i>
+                    </div>
+
+                    {/* Hover Liquid Effect */}
+                    <div className="absolute inset-0 bg-linear-to-r from-[#25D366] to-[#128C7E] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                    <div className="absolute inset-0 z-10 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                       <span className="text-xl tracking-widest uppercase text-white">
+                        {isAr ? 'إرسال عبر واتساب' : 'Send via WhatsApp'}
+                      </span>
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                        <i className="fab fa-whatsapp text-2xl text-white"></i>
+                      </div>
+                    </div>
                   </button>
                   
                   <p className="text-[10px] text-center text-text-muted/50 uppercase tracking-widest">
