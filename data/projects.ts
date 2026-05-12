@@ -263,5 +263,13 @@ export const projects: Project[] = [
     tech: 'HTML5, CSS3, Vanilla JS',
     link: 'https://alexluxuryapt.netlify.app/',
     images: []
+  },
+  {
+    id: 'connect-hub',
+    title: 'ConnectHub – A Comprehensive MERN Stack Social Media Ecosystem',
+    description: 'Developed as a Graduation Project for the Full-Stack Web Development Diploma at AMIT Learning, this platform is a feature-rich social media application. It showcases a sophisticated integration between a highly responsive React frontend and a robust Node.js/Express backend. The project demonstrates a complete end-to-end development lifecycle, featuring secure JWT authentication, dynamic content management, real-time-like notifications, and a seamless messaging system. Built with scalability and security in mind, it reflects professional-grade software engineering practices.',
+    tech: 'React.js, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Bootstrap 5, Axios, Multer, Nodemailer',
+    link: '#',
+    images: []
   }
 ]

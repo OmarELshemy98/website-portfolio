@@ -1302,8 +1302,7 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   right: auto;
   left: 1.5rem;
 }
-[dir="rtl"] .carousel-prev { left: auto; right: 15px; }
-[dir="rtl"] .carousel-next { right: auto; left: 15px; }
+
 [dir="rtl"] .mobile-nav-list {
   text-align: right;
 }
