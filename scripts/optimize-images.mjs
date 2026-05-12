@@ -8,7 +8,7 @@ const imagesDir = path.join(__dirname, '..', 'public', 'images')
 
 /** @type {Array<{ input: string; output: string; quality?: number }>} */
 const conversions = [
-  { input: 'profile-photo.jpg', output: 'profile-photo.webp', quality: 88 },
+  { input: 'profile-photo.png', output: 'profile-photo.webp', quality: 88 },
   { input: 'logo.png', output: 'logo.webp', quality: 90 },
   { input: 'background5.jpg', output: 'background5.webp', quality: 82 }
 ]

@@ -6,7 +6,7 @@ import OptimizedImg from '@/components/OptimizedImg'
 import imageMeta from '@/data/image-meta.json'
 import { useI18n } from '@/lib/i18n'
 
-const profileMeta = imageMeta['profile-photo.jpg'] as { width: number; height: number; webp: string }
+const profileMeta = imageMeta['profile-photo.png'] as { width: number; height: number; webp: string }
 
 export default function Home() {
   const { t, locale } = useI18n()
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="hexagon-img">
             <OptimizedImg
               webpSrc={profileMeta.webp}
-              fallbackSrc="/images/profile-photo.jpg"
+              fallbackSrc="/images/profile-photo.png"
               alt="Omar Elshemy, front-end developer portrait"
               className="profile-img"
               width={profileMeta.width}
