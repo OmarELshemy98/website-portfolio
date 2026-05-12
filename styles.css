@@ -3204,6 +3204,152 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   }
 }
 
+/* --- LUXURY SERVICES PAGE --- */
+.services-container section {
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Glassmorphism Badge */
+.bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Typography Enhancements */
+.font-black {
+  font-weight: 900;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.leading-\[1\.1\] {
+  line-height: 1.1;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
+/* Gradients */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-linear-to-r {
+  background: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+.from-neon-cyan {
+  --tw-gradient-from: #00fff7;
+}
+
+.to-accent {
+  --tw-gradient-to: #48ffcd;
+}
+
+/* Hover Shadows */
+.shadow-neon-cyan\/10 {
+  box-shadow: 0 0 50px rgba(0, 255, 247, 0.1);
+}
+
+/* Section Reveal Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Scroll Indicators */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+@media (max-width: 1024px) {
+  .services-container section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+  .services-container section div[class*="text-[15rem]"] {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container h2 {
+    font-size: 2.5rem;
+  }
+  .services-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Elite Gradient Text Fix */
+.elite-text {
+  background: linear-gradient(135deg, #00fff7 0%, #48ffcd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 247, 0.3));
+}
+
+.glow-text {
+  text-shadow: 0 0 15px rgba(0, 255, 247, 0.4);
+}
+
+/* Glass Badge */
+.glass-badge {
+  background: rgba(0, 255, 247, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 247, 0.2);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Luxury Background */
+.luxury-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(13, 17, 23, 1) 0%, rgba(11, 15, 23, 1) 100%);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
 /* --- ABOUT PROFILE PHOTO --- */
 .about-profile-photo {
   width: 140px;
