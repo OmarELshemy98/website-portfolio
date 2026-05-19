@@ -22,6 +22,11 @@ export default function Projects({ projects }: Props) {
   const { locale } = useI18n()
   const isAr = locale === 'ar'
   const arProjectCopy: Record<string, { title: string; description: string; tech: string }> = {
+    'social-sphere': {
+      title: 'SocialSphere - منصة تواصل اجتماعي متكاملة',
+      description: 'مشروع تخرج لدبلومة التطوير الشامل من AMIT Learning. تطبيق تواصل اجتماعي Full-Stack يوفر تجربة مستخدم سلسة مع نظام متطور لإدارة الحسابات، مشاركة المحتوى، وبنية تحتية سحابية. يتضمن ميزات متقدمة مثل نظام الصداقات والمتابعة، رفع الصور سحابياً، نظام إشعارات ذكي، وتصميم متجاوب بالكامل.',
+      tech: 'React 19, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Cloudinary, Railway, Bootstrap 5'
+    },
     'arcon-corp': {
       title: 'ARCON - حلول رائدة لمستقبل متطور',
       description: 'موقع احترافي يعرض حلول ARCON في التصنيع والهندسة والأتمتة مع تركيز على الأمن السيبراني والروبوتات وأنظمة التدريب.',
@@ -91,11 +96,6 @@ export default function Projects({ projects }: Props) {
       title: 'عرض شقق فاخرة',
       description: 'موقع عرض عقاري حديث بمعارض تفاعلية وتصميم أنيق يركز على التجربة البصرية.',
       tech: 'HTML5, CSS3, Vanilla JS'
-    },
-    'connect-hub': {
-      title: 'كونيكت هاب (ConnectHub) – منصة تواصل اجتماعي متكاملة بنظام MERN Stack',
-      description: 'مشروع تخرج لدبلومة التطوير الشامل من AMIT Learning. منصة تواصل اجتماعي احترافية تتضمن نظام مصادقة متطور، إدارة كاملة للمنشورات، نظام إشعارات ذكي، وميزة المراسلة الفورية.',
-      tech: 'React.js, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Bootstrap 5, Axios, Multer, Nodemailer'
     }
   }
 

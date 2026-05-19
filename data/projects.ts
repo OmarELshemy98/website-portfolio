@@ -9,6 +9,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'professional-portfolio',
+    title: 'Omar Elshemy | Official Full-Stack Developer Portfolio',
+    description: 'A sophisticated, high-performance Full-Stack Website Portfolio engineered to showcase comprehensive software development expertise and professional services. This bilingual platform (Arabic & English) features a seamless multi-language architecture using i18next, a dynamic theme engine (Dark/Light mode), and fluid animations powered by Framer Motion. Designed as a professional service hub, it offers a detailed look into web development solutions, UI/UX design, and consulting services. The application demonstrates mastery of modern web standards, featuring an interactive project gallery, professional experience timeline, technical skill sets, and certifications—all built with a mobile-first approach, clean architecture, and optimized for peak performance and SEO.',
+    tech: 'Next.js, React, TypeScript, Tailwind CSS, Framer Motion, i18next, Lucide React, SEO Optimization, Performance Tuning, Responsive Design',
+    link: 'https://omarelshemy.netlify.app/',
+    images: [
+      '/images/mockup/portfolio-mockup/home-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/home-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/about-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/about-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/experience-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/experience-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/skills-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/skills-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/project-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/project-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/certification-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/certification-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/services-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-page-mokcup-ar.png',
+      '/images/mockup/portfolio-mockup/services-one-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-two-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-three-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-four-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-five-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-six-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-seven-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/services-eight-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/contact-page-mokcup.png',
+      '/images/mockup/portfolio-mockup/contact-page-mokcup-ar.png'
+    ]
+  },
+  {
+    id: 'social-sphere',
+    title: 'SocialSphere - A Modern Full-Stack Social Networking Platform',
+    description: 'Developed as a Graduation Project for the Full-Stack Web Development Diploma at AMIT Learning, SocialSphere is a comprehensive Full-Stack social networking application built to provide a seamless and secure user experience. The project focuses on efficiency in data management and connecting users in an interactive environment. It features an advanced account management system, content sharing, and a cloud-based infrastructure to ensure speed and stability under heavy usage.',
+    tech: 'React 19, Redux Toolkit, React Router 7, Axios, Bootstrap 5, Vite, Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, Helmet, Cloudinary, Railway, Multer, Nodemailer',
+    link: 'https://satisfied-courage-production-852c.up.railway.app',
+    images: [
+      '/images/mockup/socialSphere-mockup/mockup/social-sphere-mockup.png',
+      '/images/mockup/socialSphere-mockup/mockup/home-page-dark-mockup.png',
+      '/images/mockup/socialSphere-mockup/mockup/home-page-ligth-mockup.png',
+      '/images/mockup/socialSphere-mockup/mockup/login-page-ligth-mockup.png',
+      '/images/mockup/socialSphere-mockup/mockup/notfications-page-dark-mockup.png',
+      '/images/mockup/socialSphere-mockup/mockup/profile-page-dark-mockup.png',
+      '/images/mockup/socialSphere-mockup/home-page-dark.png',
+      '/images/mockup/socialSphere-mockup/home-page-ligth.png',
+      '/images/mockup/socialSphere-mockup/notfications-page-dark.png',
+      '/images/mockup/socialSphere-mockup/notfications-page-light.png',
+      '/images/mockup/socialSphere-mockup/profile-page-dark.png',
+      '/images/mockup/socialSphere-mockup/profile-page-light.png'
+    ]
+  },
+  {
     id: 'arcon-corp',
     title: 'ARCON - Pioneering Solutions for a Dynamic Future',
     description: 'ARCON is a leading provider of manufacturing, engineering, and automation services. The website showcases the company\'s innovative solutions in cybersecurity, interactive tools, transformative learning tools, and comprehensive support for robotics and training systems. It highlights ARCON\'s commitment to enhancing efficiency, creativity, and collaboration across various sectors, with a focus on education, community engagement, and global impact.',
@@ -159,19 +213,6 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'front-end-portfolio',
-    title: 'Professional Front-End Portfolio Showcase',
-    description: 'This portfolio website serves as the live demonstration and definitive proof of my full Front-End expertise. Developed using cutting-edge technologies, it is not merely a resume but a high-performance web application built to the highest industry standards. The project showcases my commitment to clean architecture and superior user experience, making it the perfect benchmark for the quality clients can expect. Key Technical Features & Value Delivered: Next.js & React Core: Built on the Next.js framework utilizing React.js for developing a robust, highly modular, and scalable Single-Page Application (SPA). Superior Performance: Strategic implementation of performance optimization techniques, ensuring blazing-fast loading times and an excellent Lighthouse score. Clean Code Architecture: Delivered with clean, semantic, and easily maintainable code, adhering strictly to modern JavaScript (ES6+) best practices. Full Responsiveness: Meticulously crafted to ensure flawless responsiveness and perfect functionality across all devices and screen sizes. Professional UI/UX: A sleek, intuitive interface that successfully presents complex professional information in an engaging and user-friendly manner.',
-    tech: 'Next.js, React.js, TypeScript, Tailwind CSS, ES6+, Performance Optimization, Responsive Design, SEO',
-    link: 'https://omarelshemy.netlify.app/',
-    images: [
-      '/images/mockup/myWebsite-mockup/home.png',
-      '/images/mockup/myWebsite-mockup/about-us.png',
-      '/images/mockup/myWebsite-mockup/projects.png',
-      '/images/mockup/myWebsite-mockup/screencapture-omarelshemy-netlify-app-2026-02-16-13_21_12.png'
-    ]
-  },
-  {
     id: 'dh-consult',
     title: 'DH Consult | Modern Business & Consulting Site',
     description: 'Developed a dynamic and visually appealing website for a consulting firm, designed to enhance the company\'s online presence and streamline client engagement. The website features a modern, responsive user interface with dedicated sections for company information, services, projects portfolio, and a contact form. Emphasis was placed on user experience, accessibility, and performance optimization to ensure seamless navigation across all devices. The project demonstrates strong front-end development skills and attention to design detail.',
@@ -262,14 +303,6 @@ export const projects: Project[] = [
     description: 'Modern real estate showcase with interactive galleries and elegant design.',
     tech: 'HTML5, CSS3, Vanilla JS',
     link: 'https://alexluxuryapt.netlify.app/',
-    images: []
-  },
-  {
-    id: 'connect-hub',
-    title: 'ConnectHub – A Comprehensive MERN Stack Social Media Ecosystem',
-    description: 'Developed as a Graduation Project for the Full-Stack Web Development Diploma at AMIT Learning, this platform is a feature-rich social media application. It showcases a sophisticated integration between a highly responsive React frontend and a robust Node.js/Express backend. The project demonstrates a complete end-to-end development lifecycle, featuring secure JWT authentication, dynamic content management, real-time-like notifications, and a seamless messaging system. Built with scalability and security in mind, it reflects professional-grade software engineering practices.',
-    tech: 'React.js, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Bootstrap 5, Axios, Multer, Nodemailer',
-    link: '#',
     images: []
   }
 ]
