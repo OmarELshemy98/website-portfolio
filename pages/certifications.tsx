@@ -1,4 +1,5 @@
-import Script from 'next/script'
+import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
@@ -21,6 +22,21 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Certifications({ certs }: Props) {
   const { locale } = useI18n()
   const isAr = locale === 'ar'
+  const [selectedCert, setSelectedCert] = useState<Certification | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (selectedCert) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [selectedCert])
 
   const getArabicCertText = (cert: Certification) => {
     const monthMap: Record<string, string> = {
@@ -44,18 +60,25 @@ export default function Certifications({ certs }: Props) {
     )
 
     return {
-      title: `شهادة ${cert.title}`,
-      description: `شهادة احترافية موثقة في مجال ${cert.subcategory || 'تطوير الويب'} تثبت إتمام التدريب بنجاح واكتساب مهارات عملية قابلة للتطبيق في المشاريع.`,
+      title: cert.titleAr || `شهادة ${cert.title}`,
+      description: cert.descriptionAr || `شهادة احترافية موثقة في مجال ${cert.subcategory || 'تطوير الويب'} تثبت إتمام التدريب بنجاح واكتساب مهارات عملية قابلة للتطبيق في المشاريع.`,
       date
     }
   }
 
   const categories: Array<{ id: Certification['category'], title: string }> = [
+    { id: 'AMIT', title: isAr ? 'دبلومة AMIT (البرمجة المتكاملة)' : 'AMIT Diploma (Full-Stack Development)' },
     { id: 'MaharaTech', title: isAr ? 'مهارة تك (منصة ITI)' : 'Mahara-Tech (ITI Platform)' },
     { id: 'SoloLearn', title: 'SoloLearn' },
     { id: 'Udemy', title: 'Udemy' },
     { id: 'Other', title: isAr ? 'شهادات احترافية أخرى' : 'Professional & Other Certificates' }
   ]
+
+  const activeCertData = selectedCert ? (isAr ? getArabicCertText(selectedCert) : {
+    title: selectedCert.title,
+    description: selectedCert.description,
+    date: selectedCert.issueDate
+  }) : null
   
   return (
     <>
@@ -85,9 +108,12 @@ export default function Certifications({ certs }: Props) {
                 {items.map((c, idx) => {
                   const localized = isAr ? getArabicCertText(c) : null
                   const title = localized?.title || c.title
-                  const description = localized?.description || c.description
                   return (
-                  <div key={`${c.id}-${idx}`} className="certificate-card group bg-[#1a2332] rounded-2xl overflow-hidden border border-white/5 hover:border-neon/30 transition-all duration-500 shadow-xl flex flex-col h-full" data-certificate={`${c.id}-${idx}`}>
+                  <div 
+                    key={`${c.id}-${idx}`} 
+                    className="certificate-card group bg-[#1a2332] rounded-2xl overflow-hidden border border-white/5 hover:border-neon/30 transition-all duration-500 shadow-xl flex flex-col h-full cursor-pointer" 
+                    onClick={() => setSelectedCert(c)}
+                  >
                     <div className="relative aspect-4/3 ">
                       <img 
                         src={c.image} 
@@ -102,13 +128,10 @@ export default function Certifications({ certs }: Props) {
                       </h3>
                       <button 
                         className="read-more-btn mt-auto w-full py-3 rounded-xl border border-neon/30 text-neon font-bold text-sm hover:bg-neon hover:text-dark transition-all duration-300"
-                        data-cert-title={title}
-                        data-cert-image={c.image}
-                        data-cert-desc={description}
-                        data-cert-date={localized?.date || c.issueDate}
-                        data-cert-id-val={c.credentialId}
-                        data-cert-url={c.credentialUrl}
-                        data-cert-org={c.issuingOrg || cat.title}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedCert(c);
+                        }}
                       >
                         {isAr ? 'اقرأ المزيد' : 'Read More'}
                       </button>
@@ -121,25 +144,56 @@ export default function Certifications({ certs }: Props) {
         })}
       </section>
 
-      {/* Modal exactly like in the HTML */}
-      <div className="modal-overlay" id="certificateModal">
-        <div className="modal-content">
-          <button className="modal-close" id="certificateModalClose">&times;</button>
-          <img className="modal-image" id="certificateModalImage" src="" alt="" />
-          <div className="modal-body">
-            <h3 className="modal-title" id="certificateModalTitle"></h3>
-            <p className="modal-description" id="certificateModalDescription"></p>
-            <div id="modalExtraDetails" className="mt-4 text-sm text-gray-400 space-y-2">
-              <p id="certificateModalOrgContainer"><strong>{isAr ? 'الجهة المانحة:' : 'Issuing Organization:'}</strong> <span id="certificateModalOrg" className="text-neon"></span></p>
-              <p id="certificateModalDateContainer"><strong>{isAr ? 'تاريخ الإصدار:' : 'Issue Date:'}</strong> <span id="certificateModalDate"></span></p>
-              <p id="certificateModalIdContainer"><strong>{isAr ? 'رقم الشهادة:' : 'Credential ID:'}</strong> <span id="certificateModalId"></span></p>
-              <p id="certificateModalUrlContainer"><strong>{isAr ? 'رابط الشهادة:' : 'Credential URL:'}</strong> <a id="certificateModalUrl" href="#" target="_blank" rel="noopener noreferrer" className="text-neon hover:underline">{isAr ? 'عرض الشهادة' : 'View Certificate'}</a></p>
-            </div>
+      {/* PORTAL MODAL - UNIQUE CLASSES */}
+      {mounted && createPortal(
+        <div 
+          className={`cert-portal-overlay ${selectedCert ? 'is-active' : ''}`} 
+          onClick={(e) => {
+            if ((e.target as HTMLElement).classList.contains('cert-portal-overlay')) setSelectedCert(null);
+          }}
+        >
+          <div className="cert-portal-content">
+            <button 
+              className="cert-portal-close" 
+              onClick={() => setSelectedCert(null)}
+            >&times;</button>
+            
+            {selectedCert && (
+              <div className="cert-portal-inner">
+                <div className="cert-portal-img-container">
+                   <img className="cert-portal-image" src={selectedCert.image} alt={activeCertData?.title} />
+                </div>
+                <div className="cert-portal-body">
+                  <h3 className="cert-portal-title">{activeCertData?.title}</h3>
+                  <div className="cert-portal-description-scroll">
+                    <p className="cert-portal-description">{activeCertData?.description}</p>
+                  </div>
+                  <div className="cert-portal-details">
+                    {selectedCert.issuingOrg && (
+                      <p><strong>{isAr ? 'الجهة المانحة:' : 'Issuing Organization:'}</strong> <span className="text-neon">{selectedCert.issuingOrg}</span></p>
+                    )}
+                    {activeCertData?.date && (
+                      <p><strong>{isAr ? 'تاريخ الإصدار:' : 'Issue Date:'}</strong> <span>{activeCertData.date}</span></p>
+                    )}
+                    {selectedCert.credentialId && (
+                      <p><strong>{isAr ? 'رقم الشهادة:' : 'Credential ID:'}</strong> <span>{selectedCert.credentialId}</span></p>
+                    )}
+                    {selectedCert.credentialUrl && (
+                      <div className="mt-6">
+                         <a href={selectedCert.credentialUrl} target="_blank" rel="noopener noreferrer" className="cert-portal-link">
+                           {isAr ? 'عرض الشهادة الأصلية' : 'View Verified Certificate'}
+                         </a>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      </div>
+        </div>,
+        document.body
+      )}
 
-      <Script src="/scripts/certifications.js" strategy="afterInteractive" />
       <Footer />
     </>
   )

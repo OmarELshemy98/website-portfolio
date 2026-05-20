@@ -1,17 +1,33 @@
 export type Certification = {
   id: string
   title: string
+  titleAr?: string
   description: string
+  descriptionAr?: string
   image: string
   issueDate: string
   credentialId: string
   credentialUrl: string
-  category: 'Udemy' | 'SoloLearn' | 'MaharaTech' | 'Other'
+  category: 'Udemy' | 'SoloLearn' | 'MaharaTech' | 'Other' | 'AMIT'
   subcategory?: string
   issuingOrg?: string
 }
 
 export const certifications: Certification[] = [
+  {
+    id: 'amit-fullstack-diploma',
+    title: 'Full-Stack Web Development Diploma',
+    titleAr: 'دبلومة تطوير الويب المتكامل (Full-Stack)',
+    issuingOrg: 'AMIT Learning',
+    description: 'Earned a comprehensive Full-Stack Web Development Diploma from AMIT Learning, mastering the complete software development lifecycle. This intensive program covered advanced Front-End engineering with React, state management, and responsive UI design, alongside robust Back-End development using Node.js, Express, and MongoDB. The certification validates my ability to architect, develop, and deploy scalable, high-performance web applications using industry-standard tools and modern best practices.',
+    descriptionAr: 'حصلت على دبلومة احترافية متكاملة في تطوير الويب (Full-Stack) من مركز AMIT Learning، حيث أتقنت دورة حياة تطوير البرمجيات بالكامل. شمل البرنامج المكثف هندسة الواجهات الأمامية المتقدمة باستخدام React، وإدارة الحالة، وتصميم واجهات متجاوبة، بالإضافة إلى تطوير الأنظمة الخلفية القوية باستخدام Node.js و Express و MongoDB. تؤكد هذه الشهادة قدرتي على بناء وتطوير ونشر تطبيقات ويب برمجية متكاملة، عالية الأداء، وقابلة للتوسع باستخدام أحدث الأدوات والمعايير العالمية في سوق العمل.',
+    image: '/images/certificates/amit-certification.jpg',
+    issueDate: 'May 2026',
+    credentialId: 'AMIT-FS-2026',
+    credentialUrl: 'https://amit-learning.com/',
+    category: 'AMIT',
+    subcategory: 'Full Stack'
+  },
     {
     id: 'mahartech-typescript',
     title: 'TypeScript Fundamentals',
