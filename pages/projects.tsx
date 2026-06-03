@@ -22,10 +22,10 @@ export default function Projects({ projects }: Props) {
   const { locale } = useI18n()
   const isAr = locale === 'ar'
   const arProjectCopy: Record<string, { title: string; description: string; tech: string }> = {
-    'social-sphere': {
-      title: 'SocialSphere - منصة تواصل اجتماعي متكاملة',
-      description: 'مشروع تخرج لدبلومة التطوير الشامل من AMIT Learning. تطبيق تواصل اجتماعي Full-Stack يوفر تجربة مستخدم سلسة مع نظام متطور لإدارة الحسابات، مشاركة المحتوى، وبنية تحتية سحابية. يتضمن ميزات متقدمة مثل نظام الصداقات والمتابعة، رفع الصور سحابياً، نظام إشعارات ذكي، وتصميم متجاوب بالكامل.',
-      tech: 'React 19, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Cloudinary, Railway, Bootstrap 5'
+    'crew-social-platform': {
+      title: 'Crew | منصة تواصل اجتماعي عصرية',
+      description: 'Crew هي منصة تواصل اجتماعي عصرية وذات تصميم فاخر تجمع بين الشبكات الاجتماعية والتقنيات المتقدمة. تقدم منصة Crew تجربة مستخدم ممتعة تجمع بين مشاركة المنشورات والصور، شريط القصص، مكالمات فيديو وصوت عالية الجودة عبر Agora.io، دردشات جماعية، وتحكم كامل للمدير. تم بناء المشروع من الصفر مع تركيز كبير على سرعة التحميل، تجربة المستخدم السلسة، وتحسين محركات البحث لظهور في نتائج جوجل.',
+      tech: 'React 19, React-Redux (Toolkit), React-Router, React-Bootstrap, Framer Motion, Vite, Node.js, Express.js, MongoDB (Mongoose), Cloudinary (Media Hosting), Agora.io (Video/Voice Calls), Helmet.js'
     },
     'arcon-corp': {
       title: 'ARCON - حلول رائدة لمستقبل متطور',

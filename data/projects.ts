@@ -1,7 +1,9 @@
 export type Project = {
   id: string
   title: string
+  titleAr?: string
   description: string
+  descriptionAr?: string
   tech: string
   link: string
   images: string[]
@@ -42,11 +44,13 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 'social-sphere',
-    title: 'SocialSphere - A Modern Full-Stack Social Networking Platform',
-    description: 'Developed as a Graduation Project for the Full-Stack Web Development Diploma at AMIT Learning, SocialSphere is a comprehensive Full-Stack social networking application built to provide a seamless and secure user experience. The project focuses on efficiency in data management and connecting users in an interactive environment. It features an advanced account management system, content sharing, and a cloud-based infrastructure to ensure speed and stability under heavy usage.',
-    tech: 'React 19, Redux Toolkit, React Router 7, Axios, Bootstrap 5, Vite, Node.js, Express.js, MongoDB, Mongoose, JWT, Bcrypt, Helmet, Cloudinary, Railway, Multer, Nodemailer',
-    link: 'https://satisfied-courage-production-852c.up.railway.app',
+    id: 'crew-social-platform',
+    title: 'Crew | Premium Social Media Platform',
+  
+    description: 'Crew is a modern, luxury-styled social media platform that combines elite networking with cutting-edge communication features. Built from scratch, Crew offers a premium user experience featuring posts, image sharing, Stories, HD video/voice calls via Agora.io, group chats, and a comprehensive admin controls. The project emphasizes performance, smooth UX/UI, and full SEO optimization for Google search readiness.',
+    descriptionAr: 'Crew هي منصة تواصل اجتماعي عصرية وذات تصميم فاخر تجمع بين الشبكات الاجتماعية والتقنيات المتقدمة. تقدم منصة Crew تجربة مستخدم ممتعة تجمع بين مشاركة المنشورات والصور، شريط القصص، مكالمات فيديو وصوت عالية الجودة عبر Agora.io، دردشات جماعية، وتحكم كامل للمدير. تم بناء المشروع من الصفر مع تركيز كبير على سرعة التحميل، تجربة المستخدم السلسة، وتحسين محركات البحث لظهور في نتائج جوجل.',
+    tech: 'React 19, React-Redux (Toolkit), React-Router, React-Bootstrap, Framer Motion, Vite, Node.js, Express.js, MongoDB (Mongoose), Cloudinary (Media Hosting), Agora.io (Video/Voice Calls), Helmet.js',
+    link: 'https://crew-socialmedia.up.railway.app/',
     images: [
       '/images/mockup/socialSphere-mockup/mockup/social-sphere-mockup.png',
       '/images/mockup/socialSphere-mockup/mockup/home-page-dark-mockup.png',

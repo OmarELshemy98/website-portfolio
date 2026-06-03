@@ -63,13 +63,13 @@ export const certifications: Certification[] = [
   },
  
   {
-    id: 'mahartech-js',
+    id: 'mahartech-js-fundamentals',
     title: 'Javascript Programming',
     description: 'Successfully completed an intensive 7-hour JavaScript programming course provided by the ITI\'s Mahara-Tech platform. Gained fundamental to intermediate programming skills, validated by one of the leading technology institutes in the region.',
     image: '/images/certificates/mahartech/js-en.jpg',
     issueDate: 'june 2025',
-    credentialId: 'ruHLi9MfMI',
-    credentialUrl: 'https://maharatech.gov.eg/mod/customcert/verify_certificate.php?code=ruHLi9MfMI&qrcode=1',
+    credentialId: 'MHRT-JS-2025',
+    credentialUrl: 'https://maharatech.gov.eg/',
     category: 'MaharaTech',
     subcategory: 'JavaScript'
   },
@@ -528,7 +528,7 @@ export const certifications: Certification[] = [
   },
   // thirtyfive
   {
-    id: 'udemy-practical-nextjs-react',
+    id: 'udemy-html-css-js-right-way-2025',
     title: 'HTML5, CSS3, and JavaScript The Right Way 2025',
     description: 'Excited to share that I’ve completed the "HTML5, CSS3, and JavaScript The Right Way 2025" course on Udemy by Ali Murtaza. This course provided hands-on experience in building modern, responsive websites using HTML5, styling with CSS3, and adding interactivity with JavaScript. It’s a great step forward in my journey as a web developer, and I’m eager to apply these skills in real-world projects!',
     image: '/images/certificates/udemy/html-css-js-the-rigthway.jpg',
@@ -536,7 +536,7 @@ export const certifications: Certification[] = [
     credentialId: 'UC-a06d33cc-c037-4a62-82dc-a0755e1e049e',
     credentialUrl: 'https://www.udemy.com/certificate/UC-a06d33cc-c037-4a62-82dc-a0755e1e049e',
     category: 'Udemy',
-    subcategory: 'Next.js'
+    subcategory: 'HTML & CSS'
   },
   // thirtysix
   {
