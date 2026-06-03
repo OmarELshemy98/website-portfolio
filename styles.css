@@ -365,7 +365,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 2001;
+  z-index: 10001;
+  position: relative;
 }
 
 .mobile-menu-btn:hover {
@@ -399,16 +400,21 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 .mobile-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(13, 17, 23, 0.98);
-  backdrop-filter: blur(15px);
-  z-index: 2000;
+  background: rgba(13, 17, 23, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 80px 2rem 60px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
+  overflow: visible !important;
+  min-height: 100vh;
+  height: auto;
 }
 
 .mobile-overlay.show-menu {
@@ -421,18 +427,27 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   padding: 0;
   margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-nav-item {
   display: block;
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 4vw, 2rem);
   font-weight: 800;
   color: #fff;
   text-decoration: none;
-  margin: 1.5rem 0;
+  margin: 0;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 1.4;
   transition: all 0.3s ease;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .mobile-nav-item:hover {
@@ -447,11 +462,12 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 
 .close-icon {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 2.5rem;
+  top: 25px;
+  right: 25px;
+  font-size: 3rem;
   color: #fff;
   cursor: pointer;
+  z-index: 10000;
 }
 
 @media (max-width: 1024px) {

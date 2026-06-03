@@ -1,49 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const isArabic = document.documentElement.lang === 'ar'
 
-  // --- Mobile Menu Logic ---
-  const menuBtn = document.getElementById('mobileMenuBtn');
-  const menuOverlay = document.getElementById('mobileMenuOverlay');
-  const menuClose = document.getElementById('mobileMenuClose');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-item');
-
-  if (menuBtn && menuOverlay) {
-    const toggleMenu = () => {
-      menuOverlay.classList.toggle('show-menu');
-      menuBtn.classList.toggle('active');
-      
-      // Toggle body scroll
-      if (menuOverlay.classList.contains('show-menu')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-    };
-
-    const closeMenu = () => {
-      menuOverlay.classList.remove('show-menu');
-      menuBtn.classList.remove('active');
-      document.body.style.overflow = '';
-    };
-
-    menuBtn.addEventListener('click', toggleMenu);
-    if (menuClose) menuClose.addEventListener('click', closeMenu);
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    // Close on outside click
-    menuOverlay.addEventListener('click', (e) => {
-      if (e.target === menuOverlay) {
-        closeMenu();
-      }
-    });
-  }
-
-  // --- Other Pure JS Functionality ---
-  // ... (The rest of your portfolio.js code remains the same)
-
   // Skills Animation Logic
   const handleSkillsAnimation = () => {
     const skillProgressElements = document.querySelectorAll('.skill-progress');
@@ -53,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         skill.style.width = `${level}%`;
       }
     });
-  };
+  }
 
   if (document.querySelector('.skills-section')) {
     setTimeout(handleSkillsAnimation, 100);
@@ -103,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(revealElements, 500);
 
   // Add reveal classes to sections
-  const sections = document.querySelectorAll('section, main, .service-card, .project-item, .experience-item, .skill-category-card');
+  const sections = document.querySelectorAll('section, .service-card, .project-item, .experience-item, .skill-category-card');
   sections.forEach((section, index) => {
     if (!section.classList.contains('hero-section')) {
       section.classList.add('reveal');

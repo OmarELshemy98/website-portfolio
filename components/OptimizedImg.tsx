@@ -34,7 +34,7 @@ export default function OptimizedImg({
         height={height}
         sizes={sizes}
         loading={loading}
-        {...(fetchPriority ? { fetchPriority } : {})}
+        {...(fetchPriority ? { fetchpriority: fetchPriority } : {})}
         decoding={decoding}
       />
     </picture>
