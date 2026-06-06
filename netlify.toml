@@ -1,5 +1,5 @@
 [build]
-  command = "npm install --platform=linux --arch=x64 sharp && npm run build"
+  command = "npm install --platform=linux --arch=x64 sharp --legacy-peer-deps && npm run build"
   publish = "out"
 
 # Netlify: align www subdomain with apex for the *.netlify.app hostname (SEO Site Checkup canonicalization).
