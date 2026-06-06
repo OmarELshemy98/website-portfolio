@@ -132,7 +132,7 @@ export const projects: Project[] = [
     title: 'Modern Trade for Engineering (MTE)',
     description: 'Engineered a transformative digital presence for MTE, crafting a visually striking and fully responsive corporate website that unites English and Arabic audiences under one seamless platform. This project redefines user engagement through innovative design, intuitive navigation, and robust multilingual support, ensuring every visitor feels at home. Leveraging best-in-class SEO strategies and a mobile-first philosophy, the site amplifies MTE’s brand authority, showcases its diverse portfolio, and drives meaningful connections with clients across the globe. The result is not just a website, but a digital gateway that elevates MTE’s vision and values to an international stage.',
     tech: 'HTML5, CSS3, JavaScript (Vanilla JS), Tailwind CSS, Multilingual Support, SEO Optimization, Responsive Web Design',
-    link: 'www.moderntrade.netlify.app',
+    link: 'https://moderntrade.netlify.app',
     images: [
       '/images/mockup/modernTrade-mockup/mte-home-en.png',
       '/images/mockup/modernTrade-mockup/mte-home-ar.png',
