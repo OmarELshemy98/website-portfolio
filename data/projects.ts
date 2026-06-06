@@ -233,7 +233,7 @@ export const projects: Project[] = [
     id: 'ti-educational',
     title: 'TI Educational | STEM & Industrial Global Platform',
     description: 'A high-performance educational and engineering portal for TI Educational, designed to connect academic institutions with leading industrial manufacturers. The platform features an advanced multi-level navigation system handling extensive product catalogs, a dynamic Enquiry Basket for seamless information requests, and interactive components such as carousels and technical formula rendering. Emphasizing a modern corporate identity, the solution leverages Tailwind CSS, Vanilla JS (ES6+), and Swiper.js to deliver responsive design, smooth user experience, and robust lead generation capabilities.',
-    tech: 'HTML5 (semantic, accessible markup), Tailwind CSS (modern utility-first CSS framework for responsive and rapid UI development), Vanilla JavaScript (ES6+ for dynamic user interfaces and modular code), Swiper.js (advanced touch slider library for interactive carousels), KaTeX (high-performance math typesetting), and advanced Responsive Design for seamless experience across devices.',
+    tech: 'HTML5 semantic, accessible markup, Tailwind CSS (modern utility-first CSS framework for responsive and rapid UI development), Vanilla JavaScript (ES6+ for dynamic user interfaces and modular code), Swiper.js (advanced touch slider library for interactive carousels), KaTeX (high-performance math typesetting), and advanced Responsive Design for seamless experience across devices.',
     link: 'https://forestgreen-koala-992569.hostingersite.com',
     images: [
       '/images/mockup/ti-educational-mockup/ti-home.png',
