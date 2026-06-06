@@ -256,7 +256,7 @@ export const projects: Project[] = [
     title: 'EduPulse | Interactive Student Dashboard & LMS',
     description: 'I developed EduPulse, a comprehensive educational dashboard designed to optimize the digital learning experience. It serves as a centralized hub where students can manage courses, track attendance statistics, and access recorded lessons via a sleek, high-performance interface. Built entirely with Vanilla JavaScript (ES6+) and no frameworks, the platform features a dynamic theme engine (Dark/Light mode with preference persistence), simulated authentication with "Remember Me" and secure session handling, and interactive components like integrated YouTube video lessons, custom modals, and visual attendance tracking. The mobile-first, responsive design ensures seamless usability across devices.',
     tech: 'HTML5 (Semantic), CSS3 (Flexbox/Grid), Vanilla JavaScript (ES6+), LocalStorage API, YouTube API Integration',
-    link: 'https://omarelshemy98.github.io/mathmatic-dashboard-courses',
+    link: 'https://edupulse-dashboard.netlify.app',
     images: [
       '/images/mockup/math-dashboard/mockup.png',
       '/images/mockup/math-dashboard/login-page.png',
