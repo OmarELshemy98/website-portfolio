@@ -82,10 +82,7 @@ export default function Certifications({ certs }: Props) {
   
   return (
     <>
-      <SEO 
-        title={isAr ? 'الشهادات | عمر الشيمي' : 'Certificates | Omar Elshemy'} 
-        description={isAr ? 'استعرض الشهادات والإنجازات الاحترافية لعمر الشيمي من منصات مثل MaharaTech و SoloLearn و Udemy في مجال تطوير الواجهات.' : 'View the professional certifications and achievements of Omar Elshemy. Verified expertise from MaharaTech, SoloLearn, Udemy, and more in Front-End Development.'}
-      />
+      <SEO page="certifications" />
       <Navbar />
       
       <section id="certificates" className="certificates-section pt-32 pb-20 px-4 max-w-[1200px] mx-auto min-h-screen">

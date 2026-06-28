@@ -9,10 +9,7 @@ export default function Experience() {
 
   return (
     <>
-      <SEO 
-        title={isAr ? 'الخبرات | عمر الشيمي' : 'Experience | Omar Elshemy — Front-End'} 
-        description={isAr ? 'المسيرة المهنية لعمر الشيمي من المحاسبة التنفيذية والمبيعات إلى تطوير الواجهات الأمامية في Arcon Corporation.' : 'Professional journey of Omar Elshemy. From Corporate Accountant to Sales Executive, and now a dedicated Front-End Developer at Arcon Corporation.'}
-      />
+      <SEO page="experience" />
       <Navbar />
       <section id="experience" className="experience-section">
         <h1 className="section-title">{isAr ? 'الخبرات' : 'Work'} <span className="highlight">{isAr ? 'العملية' : 'Experience'}</span></h1>

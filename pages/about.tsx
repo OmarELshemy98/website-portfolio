@@ -13,10 +13,7 @@ export default function About() {
 
   return (
     <>
-      <SEO 
-        title={isAr ? 'من أنا | عمر الشيمي' : 'About | Omar Elshemy — Front-End'} 
-        description={isAr ? 'تعرف على رحلة عمر الشيمي في تطوير الواجهات الأمامية وخبرته في React و Next.js وبناء تجارب رقمية متمحورة حول المستخدم.' : "Learn about Omar Elshemy's journey as a Front-End Developer. Expertise in React, Next.js, and crafting user-centered digital experiences."}
-      />
+      <SEO page="about" />
       <Navbar />
       <section id="about" className="about-section">
         <div className="about-inner">

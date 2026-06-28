@@ -101,10 +101,7 @@ export default function Projects({ projects }: Props) {
 
   return (
     <>
-      <SEO 
-        title={isAr ? 'المشاريع | عمر الشيمي' : 'Projects | Omar Elshemy — Portfolio'} 
-        description={isAr ? 'مجموعة مشاريع تطوير ويب تشمل تصميمات متجاوبة وتطبيقات تفاعلية وحلول حديثة مبنية بـ React و Next.js.' : 'A showcase of web development projects by Omar Elshemy. Featuring responsive designs, interactive web apps, and modern front-end solutions built with React and Next.js.'}
-      />
+      <SEO page="projects" />
       <Navbar />
       <section className="projects-section">
         <div className="projects-container">

@@ -4,6 +4,7 @@ import { useI18n } from '@/lib/i18n'
 import imageMeta from '@/data/image-meta.json'
 
 interface SEOProps {
+  page?: 'home' | 'about' | 'skills' | 'services' | 'experience' | 'projects' | 'certifications' | 'contact'
   title?: string
   description?: string
   keywords?: string
@@ -66,15 +67,16 @@ function buildBreadcrumbList(siteUrl: string, pathNormalized: string, locale: 'e
 }
 
 export default function SEO({
+  page = 'home',
   title,
-  description = 'Omar Elshemy is a Front End Developer specializing in React and Next.js. I build modern, responsive web applications with a focus on performance and UI/UX design. Available for freelance projects in Alexandria, Egypt.',
-  keywords = 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, React Next.js, Tailwind CSS, TypeScript, UI/UX, Landing Page, Portfolio Website, Website Development, Responsive Design',
+  description,
+  keywords,
   ogImage = '/images/profile-photo.png',
   ogUrl,
   noindex = false
 }: SEOProps) {
   const router = useRouter()
-  const { locale } = useI18n()
+  const { t, locale } = useI18n()
   const siteUrl = (
     process.env.NEXT_PUBLIC_SITE_URL ||
     process.env.URL ||
@@ -92,8 +94,27 @@ export default function SEO({
   const finalOgUrl = ogUrl || localizedCanonical
   const ogLocale = locale === 'ar' ? 'ar_AR' : 'en_US'
 
-  const baseTitle = 'Omar Elshemy | Front-End Developer'
-  const fullTitle = title?.trim() ? title.trim() : baseTitle
+  // Get translated SEO values
+  const getSeoValue = (key: string) => {
+    const fullKey = `seo.${page}${key.charAt(0).toUpperCase()}${key.slice(1)}`
+    try {
+      return t(fullKey as any)
+    } catch {
+      return ''
+    }
+  }
+
+  const defaultTitle = getSeoValue('title') || (locale === 'ar' ? 'عمر الشيمي | مطوّر واجهات أمامية' : 'Omar Elshemy | Front-End Developer')
+  const defaultDescription = getSeoValue('description') || (locale === 'ar' 
+    ? 'أعمال عمر الشيمي: مطوّر واجهات أمامية (React وNext.js)، مواقع سريعة وواجهات نظيفة. متاح للعمل الحر.'
+    : 'Omar Elshemy is a front-end developer for React and Next.js: fast, responsive interfaces, clean UI, and performance-minded delivery. Open for freelance work.')
+  const defaultKeywords = getSeoValue('keywords') || (locale === 'ar'
+    ? 'عمر الشيمي، مطور واجهات أمامية، مطور React، مطور Next.js، تصميم مواقع، ملف شخصي، مطور فريلانس، مطور ويب مصر، مطور واجهات أمامية الإسكندرية، React Next.js، Tailwind CSS، TypeScript، UI/UX، صفحات هبوط، تطوير مواقع، تصميم متجاوب'
+    : 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, React Next.js, Tailwind CSS, TypeScript, UI/UX, Landing Page, Portfolio Website, Website Development, Responsive Design')
+
+  const fullTitle = title?.trim() || defaultTitle
+  const finalDescription = description?.trim() || defaultDescription
+  const finalKeywords = keywords?.trim() || defaultKeywords
 
   const breadcrumb = buildBreadcrumbList(siteUrl, pathNormalized, locale)
 
@@ -103,7 +124,7 @@ export default function SEO({
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
       name: 'Omar Elshemy Portfolio',
-      description,
+      description: finalDescription,
       inLanguage: ['en', 'ar'],
       publisher: { '@id': `${siteUrl}/#person` }
     },
@@ -123,13 +144,26 @@ export default function SEO({
         'CSS',
         'Tailwind CSS',
         'Web performance',
-        'Accessibility'
+        'Accessibility',
+        'مطور واجهات أمامية',
+        'مطور ويب'
       ],
       sameAs: [
         'https://github.com/omarelshemy98',
         'https://www.linkedin.com/in/omar-elshemy',
         'https://twitter.com/omarelshemy'
-      ]
+      ],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Freelance',
+        url: siteUrl
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Alexandria',
+        addressRegion: 'Alexandria',
+        addressCountry: 'EG'
+      }
     }
   ]
 
@@ -141,10 +175,16 @@ export default function SEO({
           '@id': `${localizedCanonical}#webpage`,
           url: localizedCanonical,
           name: fullTitle,
-          description,
+          description: finalDescription,
           isPartOf: { '@id': `${siteUrl}/#website` },
           inLanguage: locale,
-          about: { '@id': `${siteUrl}/#person` }
+          about: { '@id': `${siteUrl}/#person` },
+          primaryImageOfPage: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}${ogImage}`,
+            width: profileMeta.width,
+            height: profileMeta.height
+          }
         },
         breadcrumb
       ]
@@ -157,9 +197,9 @@ export default function SEO({
   return (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="google-site-verification" content="OTHiQ-Nu5vdtegSuxVHqWVxqhXvXbfYymZP2NZ5Kmvg" />
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+
+      <meta name="description" content={finalDescription} />
+      <meta name="keywords" content={finalKeywords} />
       <meta name="author" content="Omar Elshemy" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="content-language" content={locale} />
@@ -171,7 +211,7 @@ export default function SEO({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={finalOgUrl} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       {ogImage === '/images/profile-photo.png' ? (
         <>
@@ -187,7 +227,7 @@ export default function SEO({
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={finalOgUrl} />
       <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
+      <meta property="twitter:description" content={finalDescription} />
       <meta property="twitter:image" content={`${siteUrl}${ogImage}`} />
       <meta name="twitter:site" content="@omarelshemy" />
       <meta name="twitter:creator" content="@omarelshemy" />

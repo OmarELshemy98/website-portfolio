@@ -19,10 +19,7 @@ export default function Services() {
 
   return (
     <>
-      <SEO 
-        title={t('services.title') + ' | Omar Elshemy'} 
-        description={t('services.subtitle')}
-      />
+      <SEO page="services" />
       <Navbar />
       <main className="luxury-bg text-white min-h-screen font-montserrat overflow-x-hidden">
         

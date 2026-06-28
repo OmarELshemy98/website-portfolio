@@ -22,6 +22,25 @@ export const translations = {
       closeMenu: 'Close menu',
       switchToArabic: 'Switch to Arabic'
     },
+    seo: {
+      homeTitle: 'Omar Elshemy | Front-End Developer | React & Next.js Specialist',
+      homeDescription: 'Omar Elshemy is a Front-End Developer specializing in React, Next.js, Tailwind CSS, and TypeScript. Building modern, responsive web applications with focus on performance, UI/UX, and SEO. Available for freelance projects in Alexandria, Egypt.',
+      homeKeywords: 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, React Next.js, Tailwind CSS, TypeScript, UI/UX, Landing Page, Website Development, Responsive Design, مُطوّر ويب, مطور واجهات أمامية',
+      aboutTitle: 'About Omar Elshemy | Front-End Developer',
+      aboutDescription: 'Learn about Omar Elshemy, a professional Front-End Developer with expertise in React, Next.js, and modern web development. Discover my background, skills, and passion for building exceptional web experiences.',
+      skillsTitle: 'Skills | Omar Elshemy Front-End Developer',
+      skillsDescription: 'Explore Omar Elshemy\'s technical skills including React, Next.js, TypeScript, Tailwind CSS, and more. Expertise in modern front-end development, performance optimization, and responsive design.',
+      servicesTitle: 'Services | Omar Elshemy Front-End Developer',
+      servicesDescription: 'Professional Front-End Development services by Omar Elshemy: API Integration, i18n & RTL, Figma to Next.js, Performance Optimization, Landing Pages, Portfolios, and more.',
+      experienceTitle: 'Experience | Omar Elshemy Front-End Developer',
+      experienceDescription: 'Discover Omar Elshemy\'s professional experience in Front-End Development. Projects and work history with React, Next.js, and modern web technologies.',
+      projectsTitle: 'Projects | Omar Elshemy Front-End Developer',
+      projectsDescription: 'Browse Omar Elshemy\'s portfolio of web development projects. Modern, responsive websites and applications built with React, Next.js, and more.',
+      certificationsTitle: 'Certificates | Omar Elshemy Front-End Developer',
+      certificationsDescription: 'Certifications and courses completed by Omar Elshemy in Front-End Development, React, Next.js, JavaScript, TypeScript, and web technologies.',
+      contactTitle: 'Contact | Omar Elshemy Front-End Developer',
+      contactDescription: 'Get in touch with Omar Elshemy for freelance Front-End Development projects. Available for React, Next.js, and modern web development work.'
+    },
     footer: {
       tagline: 'Digital Craftsman & Front-End Expert',
       rights: 'All rights reserved.'
@@ -184,6 +203,25 @@ export const translations = {
       toggleMenu: 'فتح القائمة',
       closeMenu: 'إغلاق القائمة',
       switchToArabic: 'التحويل إلى العربية'
+    },
+    seo: {
+      homeTitle: 'عمر الشيمي | مطوّر واجهات أمامية | متخصص في React و Next.js',
+      homeDescription: 'عمر الشيمي مطوّر واجهات أمامية متخصص في React، Next.js، Tailwind CSS، و TypeScript. أبني تطبيقات ويب حديثة ومتجاوبة مع تركيز على الأداء، التصميم، وSEO. متاح للعمل الفريلانس في الإسكندرية، مصر.',
+      homeKeywords: 'عمر الشيمي، مطور واجهات أمامية، مطور React، مطور Next.js، تصميم مواقع، ملف شخصي، مطور فريلانس، مطور ويب مصر، مطور واجهات أمامية الإسكندرية، React Next.js، Tailwind CSS، TypeScript، UI/UX، صفحات هبوط، تطوير مواقع، تصميم متجاوب، Front-End Developer، Web Developer',
+      aboutTitle: 'نبذة عني | عمر الشيمي مطوّر واجهات أمامية',
+      aboutDescription: 'تعرف على عمر الشيمي، مطوّر واجهات أمامية محترف متخصص في React، Next.js، وتطوير الويب الحديث. اكتشف خلفيتي، مهاراتي، وشغفي ببناء تجارب ويب استثنائية.',
+      skillsTitle: 'المهارات | عمر الشيمي مطوّر واجهات أمامية',
+      skillsDescription: 'استكشف مهارات عمر الشيمي التقنية مثل React، Next.js، TypeScript، Tailwind CSS، والمزيد. خبرة في تطوير واجهات أمامية حديثة، تحسين الأداء، والتصميم المتجاوب.',
+      servicesTitle: 'الخدمات | عمر الشيمي مطوّر واجهات أمامية',
+      servicesDescription: 'خدمات تطوير واجهات أمامية احترافية من عمر الشيمي: ربط APIs، دعم اللغات المتعددة وتعديل الاتجاهات، تحويل Figma إلى Next.js، تحسين الأداء، صفحات هبوط، مواقع شخصية، والمزيد.',
+      experienceTitle: 'الخبرات | عمر الشيمي مطوّر واجهات أمامية',
+      experienceDescription: 'اكتشف خبرات عمر الشيمي المهنية في تطوير واجهات أمامية. مشاريع وسير عمل مع React، Next.js، وتقنيات الويب الحديثة.',
+      projectsTitle: 'المشاريع | عمر الشيمي مطوّر واجهات أمامية',
+      projectsDescription: 'تصفح ملف عمر الشيمي الشخصي لمشاريع تطوير الويب. مواقع وتطبيقات حديثة ومتجاوبة مبنية باستخدام React، Next.js، والمزيد.',
+      certificationsTitle: 'الشهادات | عمر الشيمي مطوّر واجهات أمامية',
+      certificationsDescription: 'الشهادات والدورات التي أكملها عمر الشيمي في تطوير واجهات أمامية، React، Next.js، JavaScript، TypeScript، وتقنيات الويب.',
+      contactTitle: 'تواصل معي | عمر الشيمي مطوّر واجهات أمامية',
+      contactDescription: 'تواصل مع عمر الشيمي لطلب مشاريع تطوير واجهات أمامية فريلانس. متاح لصيانة React، Next.js، وتطوير مواقع الويب الحديثة.'
     },
     footer: {
       tagline: 'مطوّر واجهات أمامية وحِرَفي تجارب رقمية',

@@ -14,14 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <SEO 
-        title={isAr ? 'عمر الشيمي | مطوّر واجهات أمامية' : 'Omar Elshemy | Front-End Developer'} 
-        description={
-          isAr
-            ? 'أعمال عمر الشيمي: مطوّر واجهات أمامية (React وNext.js)، مواقع سريعة وواجهات نظيفة. متاح للعمل الحر.'
-            : 'Omar Elshemy is a front-end developer for React and Next.js: fast, responsive interfaces, clean UI, and performance-minded delivery. Open for freelance work.'
-        }
-      />
+      <SEO page="home" />
       <Navbar />
       <div className="bg-particles"></div>
       <section id="hero" className="hero-section">

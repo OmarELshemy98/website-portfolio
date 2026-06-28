@@ -74,10 +74,7 @@ export default function Skills() {
 
   return (
     <>
-      <SEO 
-        title={isAr ? 'المهارات | عمر الشيمي' : 'Skills | Omar Elshemy — Front-End'} 
-        description={isAr ? 'استعرض المهارات التقنية لعمر الشيمي في React و Next.js و TypeScript و Tailwind CSS وتحسين الأداء.' : 'Explore the technical arsenal of Omar Elshemy. Specialized in React, Next.js, TypeScript, Tailwind CSS, and performance optimization.'}
-      />
+      <SEO page="skills" />
       <Navbar />
       <section id="skills" className="skills-section py-24 px-4 min-h-screen bg-[#0d1117]">
         <div className="max-w-[1400px] mx-auto">
