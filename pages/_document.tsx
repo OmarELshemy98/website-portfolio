@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" dir="ltr">
       <Head>
+        <meta name="google-site-verification" content="OTHiQ-Nu5vdtegSuxVHqWVxqhXvXbfYymZP2NZ5Kmvg" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
