@@ -157,6 +157,7 @@ export default function SEO({
   return (
     <Head>
       <title>{fullTitle}</title>
+      <meta name="google-site-verification" content="yTH1VahmD3v4mrUyDpaM_RH-hg9-We1ou08tr0VvhNE" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Omar Elshemy" />
