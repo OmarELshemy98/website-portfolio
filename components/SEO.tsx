@@ -67,8 +67,8 @@ function buildBreadcrumbList(siteUrl: string, pathNormalized: string, locale: 'e
 
 export default function SEO({
   title,
-  description = 'Omar Elshemy is a Front End Developer specializing in React and Next.js. I build modern, responsive web applications with a focus on performance and UI/UX design.',
-  keywords = 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer',
+  description = 'Omar Elshemy is a Front End Developer specializing in React and Next.js. I build modern, responsive web applications with a focus on performance and UI/UX design. Available for freelance projects in Alexandria, Egypt.',
+  keywords = 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, React Next.js, Tailwind CSS, TypeScript, UI/UX, Landing Page, Portfolio Website, Website Development, Responsive Design',
   ogImage = '/images/profile-photo.png',
   ogUrl,
   noindex = false
