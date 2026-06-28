@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omarelshemy.vercel.app/sitemap.xml
+Sitemap: https://omarelshemy.netlify.app/sitemap.xml

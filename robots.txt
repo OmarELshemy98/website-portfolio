@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://omarelshemy.netlify.app/sitemap.xml 

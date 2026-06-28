@@ -2,10 +2,70 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
+import Head from 'next/head'
 
 export default function Contact() {
   const { locale } = useI18n()
   const isAr = locale === 'ar'
+  const siteUrl = 'https://omarelshemy.netlify.app'
+
+  // FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: isAr ? 'ما هي خدماتك الرئيسية؟' : 'What are your main services?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isAr 
+            ? 'أقدم خدمات تطوير واجهات أمامية احترافية تشامل: تكامل API، دعم i18n و RTL، تكامل Headless CMS، إصلاح الأخطاء، تحويل Figma إلى Next.js، وتحسين الأداء.'
+            : 'I offer professional front-end development services including: API Integration, i18n & RTL Support, Headless CMS Integration, Bug Fixing, Figma to Next.js conversion, and Performance Optimization.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: isAr ? 'هل أنت متاح للعمل الحر؟' : 'Are you available for freelance work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isAr 
+            ? 'نعم، أنا متاح حاليًا للعمل الحر ومفتوح لفرص جديدة. يمكنك التواصل معي عبر البريد الإلكتروني أو واتساب.'
+            : 'Yes, I am currently available for freelance work and open to new opportunities. You can reach me via email or WhatsApp.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: isAr ? 'ما هي التقنيات التي تستخدمها؟' : 'What technologies do you use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isAr 
+            ? 'أستخدم React، Next.js، TypeScript، JavaScript، HTML5، CSS3، Tailwind CSS، وأدوات حديثة أخرى لتطوير واجهات المستخدم.'
+            : 'I use React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, and other modern tools for front-end development.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: isAr ? 'كم تستغرق المشاريع عادة؟' : 'How long do projects typically take?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isAr 
+            ? 'يعتمد ذلك على حجم المشروع ومتطلباته. صفحات الهبوط البسيطة قد تستغرق 3-5 أيام، بينما التطبيقات المعقدة قد تستغرق 2-4 أسابيع.'
+            : 'It depends on the project scope and requirements. Simple landing pages may take 3-5 days, while complex applications may take 2-4 weeks.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: isAr ? 'كيف يمكنني التواصل معك؟' : 'How can I contact you?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: isAr 
+            ? 'يمكنك التواصل معي عبر البريد الإلكتروني: omarelshemy010@gmail.com أو عبر واتساب: +201026238072'
+            : 'You can contact me via email: omarelshemy010@gmail.com or via WhatsApp: +201026238072'
+        }
+      }
+    ]
+  }
 
   return (
     <>
@@ -13,6 +73,12 @@ export default function Contact() {
         title={isAr ? 'تواصل | عمر الشيمي' : 'Contact | Omar Elshemy — Hire'} 
         description={isAr ? 'تواصل مع عمر الشيمي لفرص العمل الحر أو التعاون المهني أو الاستشارات التقنية في تطوير الواجهات الأمامية.' : 'Get in touch with Omar Elshemy for freelance opportunities, professional collaborations, or technical consultations in front-end development.'}
       />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      </Head>
       <Navbar />
       <main className="contact-page bg-dark text-white min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">

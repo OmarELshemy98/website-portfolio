@@ -109,8 +109,8 @@ export default function SEO({
     ? 'أعمال عمر الشيمي: مطوّر واجهات أمامية (React وNext.js)، مواقع سريعة وواجهات نظيفة. متاح للعمل الحر.'
     : 'Omar Elshemy is a front-end developer for React and Next.js: fast, responsive interfaces, clean UI, and performance-minded delivery. Open for freelance work.')
   const defaultKeywords = getSeoValue('keywords') || (locale === 'ar'
-    ? 'عمر الشيمي، مطور واجهات أمامية، مطور React، مطور Next.js، تصميم مواقع، ملف شخصي، مطور فريلانس، مطور ويب مصر، مطور واجهات أمامية الإسكندرية، React Next.js، Tailwind CSS، TypeScript، UI/UX، صفحات هبوط، تطوير مواقع، تصميم متجاوب'
-    : 'Omar Elshemy, Front End Developer, React Developer, Next.js, Web Design, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, React Next.js, Tailwind CSS, TypeScript, UI/UX, Landing Page, Portfolio Website, Website Development, Responsive Design')
+    ? 'عمر الشيمي، عمر الشيمي مطور، مطور واجهات أمامية، مطور ويب، مطور React، مطور Next.js، مطور TypeScript، تصميم مواقع، تطوير مواقع، ملف شخصي، مطور فريلانس، مطور ويب مصر، مطور واجهات أمامية الإسكندرية، مطور ويب الإسكندرية، برمجة الويب، تطوير تطبيقات الويب، تصميم واجهات المستخدم، UI/UX، صفحات هبوط، تطوير مواقع، تصميم متجاوب، تصميم مواقع احترافي، تصميم مواقع في مصر، تصميم مواقع في الإسكندرية، خدمات تطوير الويب، خدمات تصميم المواقع'
+    : 'Omar Elshemy, Omar Elshemy developer, Front End Developer, Web Developer, React Developer, Next.js Developer, TypeScript Developer, Web Design, Website Development, Portfolio, Freelance Developer, Web Developer Egypt, Alexandria Frontend, Alexandria Web Developer, Web Programming, Web Application Development, UI Design, UX Design, Landing Page, Portfolio Website, Website Development, Responsive Design, Professional Web Design, Web Design Egypt, Web Design Alexandria, Web Development Services, Web Design Services')
 
   const fullTitle = title?.trim() || defaultTitle
   const finalDescription = description?.trim() || defaultDescription
@@ -146,7 +146,10 @@ export default function SEO({
         'Web performance',
         'Accessibility',
         'مطور واجهات أمامية',
-        'مطور ويب'
+        'مطور ويب',
+        'تطوير واجهات المستخدم',
+        'تصميم المواقع',
+        'برمجة الويب'
       ],
       sameAs: [
         'https://github.com/omarelshemy98',
@@ -154,16 +157,46 @@ export default function SEO({
         'https://twitter.com/omarelshemy'
       ],
       worksFor: {
-        '@type': 'Organization',
-        name: 'Freelance',
-        url: siteUrl
+        '@id': `${siteUrl}/#organization`
       },
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Alexandria',
         addressRegion: 'Alexandria',
         addressCountry: 'EG'
-      }
+      },
+      telephone: '+201026238072',
+      email: 'omarelshemy010@gmail.com'
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${siteUrl}/#organization`,
+      name: 'Omar Elshemy - Front-End Development Services',
+      description: locale === 'ar' 
+        ? 'خدمات تطوير واجهات أمامية احترافية في مصر. تطوير مواقع وتطبيقات ويب باستخدام React و Next.js و TypeScript.'
+        : 'Professional front-end development services in Egypt. Website and web application development using React, Next.js, and TypeScript.',
+      url: siteUrl,
+      telephone: '+201026238072',
+      email: 'omarelshemy010@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Alexandria',
+        addressRegion: 'Alexandria',
+        addressCountry: 'EG'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '31.2001',
+        longitude: '29.9187'
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Egypt'
+      },
+      priceRange: '$$',
+      openingHours: 'Mo-Su 00:00-23:59',
+      availableLanguage: ['English', 'Arabic'],
+      founder: { '@id': `${siteUrl}/#person` }
     }
   ]
 

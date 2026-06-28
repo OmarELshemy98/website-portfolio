@@ -3,23 +3,68 @@ import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
 import Link from 'next/link'
+import Head from 'next/head'
+
+interface ServiceItem {
+  title: string
+  description: string
+  image: string
+  features: string[]
+}
 
 export default function Services() {
   const { locale, t } = useI18n()
   const isAr = locale === 'ar'
+  const siteUrl = 'https://omarelshemy.netlify.app'
   
-  interface ServiceItem {
-    title: string
-    description: string
-    image: string
-    features: string[]
-  }
-
   const services = t<ServiceItem[]>('services.items')
+
+  // Generate Service schema
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Omar Elshemy - Front-End Development Services',
+    description: isAr 
+      ? 'خدمات تطوير واجهات أمامية احترافية في مصر. تطوير مواقع وتطبيقات ويب باستخدام React و Next.js و TypeScript.'
+      : 'Professional front-end development services in Egypt. Website and web application development using React, Next.js, and TypeScript.',
+    url: siteUrl,
+    telephone: '+201026238072',
+    email: 'omarelshemy010@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Alexandria',
+      addressRegion: 'Alexandria',
+      addressCountry: 'EG'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Egypt'
+    },
+    priceRange: '$$',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: isAr ? 'خدمات تطوير الويب' : 'Web Development Services',
+      itemListElement: services?.map((service, index) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: service.title,
+          description: service.description
+        },
+        position: index + 1
+      })) || []
+    }
+  }
 
   return (
     <>
       <SEO page="services" />
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        />
+      </Head>
       <Navbar />
       <main className="luxury-bg text-white min-h-screen font-montserrat overflow-x-hidden">
         
