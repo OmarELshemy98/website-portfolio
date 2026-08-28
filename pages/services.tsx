@@ -15,45 +15,167 @@ interface ServiceItem {
 export default function Services() {
   const { locale, t } = useI18n()
   const isAr = locale === 'ar'
-  const siteUrl = 'https://omarelshemy.netlify.app'
-  
+  const rawSiteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.NEXT_PUBLIC_VERCEL_URL ||
+    process.env.VERCEL_URL ||
+    process.env.URL ||
+    process.env.DEPLOY_URL ||
+    'https://omarelshemy.vercel.app'
+  const cleanedUrl = rawSiteUrl.replace(/\/$/, '')
+  const siteUrl = cleanedUrl.startsWith('http') ? cleanedUrl : `https://${cleanedUrl}`
+
   const services = t<ServiceItem[]>('services.items')
 
-  // Generate Service schema
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: 'Omar Elshemy - Front-End Development Services',
-    description: isAr 
-      ? 'خدمات تطوير واجهات أمامية احترافية في مصر. تطوير مواقع وتطبيقات ويب باستخدام React و Next.js و TypeScript.'
-      : 'Professional front-end development services in Egypt. Website and web application development using React, Next.js, and TypeScript.',
-    url: siteUrl,
-    telephone: '+201026238072',
-    email: 'omarelshemy010@gmail.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Alexandria',
-      addressRegion: 'Alexandria',
-      addressCountry: 'EG'
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Egypt'
-    },
-    priceRange: '$$',
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: isAr ? 'خدمات تطوير الويب' : 'Web Development Services',
-      itemListElement: services?.map((service, index) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: service.title,
-          description: service.description
+    '@graph': [
+      {
+        '@type': 'ProfessionalService',
+        additionalType: ['Software House', 'Web Development Agency', 'SEO Agency', 'Digital Marketing Agency', 'LocalBusiness'],
+        name: isAr
+          ? 'عمر الشيمي — خدمات شركة برمجيات متكاملة، تطوير الواجهات، SEO، وتصميم هوية بصرية'
+          : 'Omar Elshemy — Software House, Front-End, SEO, Branding & Digital Services',
+        alternateName: isAr
+          ? ['خدمات عمر الشيمي', 'عمر الشيمي شركة برمجيات', 'Modern Trade Digital']
+          : ['Omar Elshemy Services', 'Omar Elshemy Software House', 'Modern Trade Digital'],
+        description: isAr
+          ? 'خدمات رقمية وتشغيلية متكاملة من عمر الشيمي: تطوير واجهات أمامية بـ React و Next.js، SEO فني وكتابة محتوى SEO إنساني، بناء CRM ولوحات تحكم إدارية، صفحات هبوط عالية التحويل، تحويل Figma/XD إلى Next.js، تحسين الأداء و Core Web Vitals، دعم اللغات و RTL، Headless CMS، إصلاح أخطاء برمجية، تصميم شعارات وهوية بصرية، استضافة ونشر، وخدمات تسعير شركات السياحة وإدارة عمليات لشركات الهندسة. خدمات لاصحاب الأعمال، المؤسسين، المديرين التنفيذيين، شركات الهندسة والسياحة والشركات الناشئة في مصر والعالم.'
+          : 'Full-scope Software House & operational services by Omar Elshemy: React & Next.js front-end engineering, Technical SEO & humanized SEO Content, custom CRM & Admin Dashboards, high-converting Landing Pages, Figma/XD to Next.js conversion, Performance & Core Web Vitals tuning, i18n & RTL, Headless CMS, bug fixing, logo design & branding, hosting & deployment, plus tourism pricing strategy and engineering operations services. Serving business owners, founders, CEOs, engineering companies, tourism operators, and startups across Egypt and worldwide.',
+        url: siteUrl,
+        telephone: '+201026238072',
+        email: 'omarelshemy010@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Alexandria',
+          addressRegion: 'Alexandria',
+          addressCountry: 'EG'
         },
-        position: index + 1
-      })) || []
-    }
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '31.2001',
+          longitude: '29.9187'
+        },
+        areaServed: [
+          { '@type': 'Country', name: 'Egypt' },
+          { '@type': 'Country', name: 'Saudi Arabia' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Qatar' },
+          { '@type': 'Country', name: 'Kuwait' },
+          { '@type': 'Country', name: 'Bahrain' },
+          { '@type': 'Country', name: 'Oman' },
+          { '@type': 'Country', name: 'Jordan' },
+          { '@type': 'Country', name: 'United Kingdom' },
+          { '@type': 'Country', name: 'United States' },
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'Germany' },
+          { '@type': 'Country', name: 'France' },
+          { '@type': 'Country', name: 'Worldwide' }
+        ],
+        priceRange: '$$',
+        openingHours: 'Mo-Su 00:00-23:59',
+        availableLanguage: ['English', 'Arabic'],
+        industry: isAr
+          ? [
+              'تطوير البرمجيات',
+              'تصميم المواقع',
+              'خدمات التسويق عبر محركات البحث',
+              'خدمات إدارة العمليات',
+              'تكنولوجيا شركات الهندسة',
+              'تكنولوجيا شركات السياحة',
+              'تكنولوجيا المعلومات والخدمات'
+            ]
+          : [
+              'Software Development',
+              'Web Design',
+              'Search Engine Optimization Services',
+              'Operations Management Services',
+              'Engineering Technology',
+              'Tourism Technology',
+              'Information Technology and Services'
+            ],
+        audience: {
+          '@type': 'Audience',
+          audienceType: isAr
+            ? [
+                'اصحاب الأعمال',
+                'المؤسسون ورواد الأعمال',
+                'المديرون التنفيذيون (CEO/CTO/COO)',
+                'شركات الهندسة',
+                'شركات السياحة والرحلات',
+                'الشركات الناشئة وMVP',
+                'المسوقون الرقميون'
+              ]
+            : [
+                'Business Owners',
+                'Founders & Entrepreneurs',
+                'C-Suite Executives (CEO/CTO/COO)',
+                'Engineering Companies',
+                'Tourism & Tour Operators',
+                'Startups & MVPs',
+                'Digital Marketers'
+              ],
+          geographicArea: {
+            '@type': 'Place',
+            name: 'Egypt, Middle East, GCC, Europe, North America, Worldwide'
+          }
+        },
+        founder: {
+          '@type': 'Person',
+          name: 'Omar Elshemy',
+          alternateName: ['عمر الشيمي'],
+          jobTitle: isAr
+            ? [
+                'مطور واجهات أمامية',
+                'متخصص تحسين محركات البحث SEO',
+                'كاتب محتوى SEO إنساني',
+                'مدير العمليات - شركة Modern Trade للهندسة',
+                'خبير تسعير باقات السياحة'
+              ]
+            : [
+                'Front-End Developer',
+                'SEO Specialist',
+                'Humanized SEO Copywriter',
+                'Operations Manager — Modern Trade for Engineering',
+                'Tourism Pricing Specialist'
+              ],
+          sameAs: [
+            'https://github.com/omarelshemy98',
+            'https://www.linkedin.com/in/omar-elshemy'
+          ],
+          memberOf: {
+            '@type': 'Organization',
+            name: 'Modern Trade for Engineering',
+            roleName: isAr ? 'مدير العمليات' : 'Operations Manager'
+          }
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: isAr ? 'قائمة خدمات شركة البرمجيات الكاملة' : 'Complete Software House Service Catalog',
+          itemListElement: services?.map((service, index) => ({
+            '@type': 'Offer',
+            position: index + 1,
+            itemOffered: {
+              '@type': 'Service',
+              name: service.title,
+              description: service.description,
+              featureList: service.features,
+              image: service.image ? `${siteUrl}${service.image}` : undefined,
+              provider: {
+                '@type': 'ProfessionalService',
+                name: isAr
+                  ? 'عمر الشيمي — خدمات شركة برمجيات'
+                  : 'Omar Elshemy — Software House Services'
+              },
+              areaServed: [
+                { '@type': 'Country', name: 'Egypt' },
+                { '@type': 'Country', name: 'Worldwide' }
+              ]
+            }
+          })) || []
+        }
+      }
+    ]
   }
 
   return (
