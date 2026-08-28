@@ -526,6 +526,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   align-items: center;
   justify-content: center;
   background: none;
+  contain: layout paint;
+  content-visibility: auto;
 }
 .animated-bg {
   position: absolute;
@@ -538,6 +540,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   animation: animatedGradient 16s ease-in-out infinite;
   opacity: 0.18;
   filter: blur(2px) brightness(1.08);
+  will-change: background-position;
+  contain: layout paint style;
 }
 .animated-bg::before, .animated-bg::after {
   content: '';
@@ -1208,6 +1212,7 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   pointer-events: none;
   z-index: -1;
   background: radial-gradient(circle at 50% 50%, rgba(0, 255, 247, 0.02) 0%, transparent 80%);
+  contain: layout paint style;
 }
 
 @keyframes slow-rotate {

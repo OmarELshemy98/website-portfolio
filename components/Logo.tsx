@@ -13,8 +13,9 @@ export default function Logo() {
           fallbackSrc="/images/logo.png"
           alt="Omar Elshemy Logo"
           className="logo-img"
-          width={logoMeta.width}
-          height={logoMeta.height}
+          width={64}
+          height={66}
+          intrinsicWidth={logoMeta.width}
           sizes="48px"
           loading="eager"
           fetchPriority="low"

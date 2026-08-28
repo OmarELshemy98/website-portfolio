@@ -9,6 +9,17 @@
     "build": "next build",
     "start": "next start"
   },
+  "browserslist": [
+    "last 2 and_chr versions",
+    "last 2 chrome versions",
+    "last 2 edge versions",
+    "last 2 firefox versions",
+    "last 2 ios_saf versions",
+    "last 2 safari versions",
+    "not dead",
+    "not ie 11",
+    "not op_mini all"
+  ],
   "dependencies": {
     "next": "14.2.20",
     "react": "18.3.1",

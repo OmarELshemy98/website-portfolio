@@ -53,11 +53,13 @@ export default function Home() {
               fallbackSrc="/images/profile-photo.png"
               alt="Omar Elshemy, front-end developer portrait"
               className="profile-img"
-              width={profileMeta.width}
-              height={profileMeta.height}
-              sizes="(max-width: 480px) 280px, (max-width: 768px) 300px, 420px"
+              width={420}
+              height={440}
+              intrinsicWidth={profileMeta.width}
+              sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
               loading="eager"
               fetchPriority="high"
+              decoding="sync"
             />
           </div>
         </div>

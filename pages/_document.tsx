@@ -18,6 +18,15 @@ export default function Document() {
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Omar Elshemy" />
         <meta name="application-name" content="Omar Elshemy — Portfolio, Software House & Digital Services" />
+
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="x-content-type-options" content="nosniff" />
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https: ws: wss:; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+        />
+        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/favicon.png" />
@@ -31,17 +40,17 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <link rel="preconnect" href={DEFAULT_SITE_URL} />
+
         <link
-          id="gf-montserrat"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
-          media="print"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){var l=document.getElementById('gf-montserrat');if(!l)return;function a(){l.media='all';}if(l.sheet&&l.sheet.cssRules&&l.sheet.cssRules.length)a();else l.addEventListener('load',a);})();"
-          }}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -55,21 +64,6 @@ export default function Document() {
                 } catch (e) {}
               })();
             `
-          }}
-        />
-        <link
-          id="fa-all-css"
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-          media="print"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){var l=document.getElementById('fa-all-css');if(!l)return;function a(){l.media='all';}if(l.sheet&&l.sheet.cssRules&&l.sheet.cssRules.length)a();else l.addEventListener('load',a);})();"
           }}
         />
       </Head>
