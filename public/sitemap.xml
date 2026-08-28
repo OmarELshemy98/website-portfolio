@@ -1,51 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://omarelshemy.netlify.app/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/about/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/about/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/about/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/about/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/skills/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/skills/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/skills/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/skills/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/skills/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/services/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/services/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/services/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/services/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/experience/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/experience/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/experience/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/experience/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/experience/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/projects/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/projects/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/projects/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/projects/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/certifications/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/certifications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/certifications/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/certifications/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/certifications/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://omarelshemy.netlify.app/contact/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://omarelshemy.vercel.app/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/contact/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/contact/"/>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omarelshemy.vercel.app/request-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://omarelshemy.vercel.app/request-service/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://omarelshemy.vercel.app/request-service/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://omarelshemy.vercel.app/request-service/"/>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -1,25 +1,48 @@
 {
-  "name": "Omar Elshemy Portfolio",
-  "short_name": "Omar Portfolio",
+  "name": "Omar Elshemy — Front-End Developer & SEO Specialist Portfolio",
+  "short_name": "Omar Elshemy",
+  "description": "Portfolio of Omar Elshemy — Front-End Developer & SEO Specialist expert in React, Next.js, TypeScript, Core Web Vitals, and Technical SEO. Building high-ranking, fast, responsive websites.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#27ae60",
+  "orientation": "portrait-primary",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "developer", "seo", "technology", "web design", "web development"],
+  "keywords": [
+    "Omar Elshemy",
+    "Front-End Developer",
+    "SEO Specialist",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer",
+    "Portfolio",
+    "Egypt",
+    "Alexandria",
+    "Freelance",
+    "Core Web Vitals",
+    "Technical SEO",
+    "TypeScript",
+    "Tailwind CSS",
+    "عمر الشيمي",
+    "مطور واجهات أمامية",
+    "مطور ويب",
+    "متخصص SEO"
+  ],
   "icons": [
     {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
-} 
+}

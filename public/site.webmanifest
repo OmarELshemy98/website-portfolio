@@ -1,26 +1,48 @@
 {
-  "name": "Omar Elshemy — Front-End Developer Portfolio",
+  "name": "Omar Elshemy — Front-End Developer & SEO Specialist Portfolio",
   "short_name": "Omar Elshemy",
-  "description": "Portfolio of Omar Elshemy — React, Next.js, and modern web interfaces.",
+  "description": "Portfolio of Omar Elshemy — Front-End Developer & SEO Specialist expert in React, Next.js, TypeScript, Core Web Vitals, and Technical SEO. Building high-ranking, fast, responsive websites.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#0d1117",
   "theme_color": "#0d1117",
   "lang": "en",
   "dir": "ltr",
+  "categories": ["portfolio", "developer", "seo", "technology", "web design", "web development"],
+  "keywords": [
+    "Omar Elshemy",
+    "Front-End Developer",
+    "SEO Specialist",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer",
+    "Portfolio",
+    "Egypt",
+    "Alexandria",
+    "Freelance",
+    "Core Web Vitals",
+    "Technical SEO",
+    "TypeScript",
+    "Tailwind CSS",
+    "عمر الشيمي",
+    "مطور واجهات أمامية",
+    "مطور ويب",
+    "متخصص SEO"
+  ],
   "icons": [
     {
       "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }
