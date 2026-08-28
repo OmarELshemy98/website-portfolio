@@ -49,17 +49,18 @@ export default function Home() {
           </div>
           <div className="hexagon-img">
             <OptimizedImg
-              webpSrc={profileMeta.webp}
-              fallbackSrc="/images/profile-photo.png"
+              webpSrc="/images/responsive/profile-photo-420.webp"
+              fallbackSrc="/images/responsive/profile-photo-420.png"
+              responsiveBase="/images/responsive/profile-photo"
               alt="Omar Elshemy, front-end developer portrait"
               className="profile-img"
               width={420}
               height={440}
-              intrinsicWidth={profileMeta.width}
               sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
               loading="eager"
               fetchPriority="high"
               decoding="sync"
+              aspectRatio="420 / 440"
             />
           </div>
         </div>

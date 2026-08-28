@@ -2,16 +2,19 @@
   "profile-photo.png": {
     "width": 1225,
     "height": 1283,
-    "webp": "/images/profile-photo.webp"
+    "webp": "/images/profile-photo.webp",
+    "responsiveBase": "/images/responsive/profile-photo"
   },
   "logo.png": {
     "width": 253,
     "height": 263,
-    "webp": "/images/logo.webp"
+    "webp": "/images/logo.webp",
+    "responsiveBase": "/images/responsive/logo"
   },
   "background5.jpg": {
     "width": 1380,
     "height": 921,
-    "webp": "/images/background5.webp"
+    "webp": "/images/background5.webp",
+    "responsiveBase": "/images/responsive/background5"
   }
 }

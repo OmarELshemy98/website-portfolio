@@ -38,14 +38,15 @@ export default function About() {
           <div className="about-info portrait-card">
             <div className="portrait-profile-pic">
               <OptimizedImg
-                webpSrc={profileMeta.webp}
-                fallbackSrc="/images/profile-photo.png"
+                webpSrc="/images/responsive/profile-photo-160.webp"
+                fallbackSrc="/images/responsive/profile-photo-160.png"
+                responsiveBase="/images/responsive/profile-photo"
                 alt="Omar Elshemy profile photo"
                 width={160}
                 height={168}
-                intrinsicWidth={profileMeta.width}
                 sizes="(max-width: 480px) 120px, (max-width: 1024px) 130px, 140px"
                 className="about-profile-photo"
+                aspectRatio="160 / 168"
               />
             </div>
             <h2 style={{ color: 'var(--neon)', textShadow: '0 0 10px rgba(0, 255, 247, 0.5)' }}>{isAr ? 'معلومات أساسية' : 'Basic Information'}</h2>

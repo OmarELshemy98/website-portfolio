@@ -9,14 +9,21 @@ type Props = {
   loading?: 'lazy' | 'eager'
   fetchPriority?: 'high' | 'low' | 'auto'
   decoding?: 'async' | 'auto' | 'sync'
-  intrinsicWidth?: number
+  responsiveBase?: string | null
+  aspectRatio?: string
 }
 
-const buildSrcSet = (src: string, baseW: number, steps: number[]) =>
-  steps
-    .filter(w => w <= Math.max(baseW, 300))
-    .map(w => `${src} ${w}w`)
-    .join(', ')
+const WIDTH_STEPS = [240, 320, 420, 640, 820, 1024, 1280]
+
+function buildResponsiveSrcSet(base: string | null | undefined, ext: string, maxW: number) {
+  if (!base) return null
+  const parts: string[] = []
+  for (const w of WIDTH_STEPS) {
+    if (w <= Math.max(maxW, 240)) parts.push(`${base}-${w}.${ext} ${w}w`)
+  }
+  if (!parts.length) return null
+  return parts.join(', ')
+}
 
 export default function OptimizedImg({
   webpSrc,
@@ -29,15 +36,16 @@ export default function OptimizedImg({
   loading = 'lazy',
   fetchPriority,
   decoding = 'async',
-  intrinsicWidth
+  responsiveBase,
+  aspectRatio,
 }: Props) {
-  const effectiveW = intrinsicWidth || width
-  const widthSteps = [120, 150, 240, 280, 320, 420, 600, 800, 1024, 1280]
-  const webpSet = buildSrcSet(webpSrc, effectiveW, widthSteps)
-  const pngSet = buildSrcSet(fallbackSrc, effectiveW, widthSteps)
+  const maxDim = Math.max(width, height)
+  const intrinsicW = Math.max(width, 240)
+  const webpSet = buildResponsiveSrcSet(responsiveBase, 'webp', intrinsicW)
+  const pngSet = buildResponsiveSrcSet(responsiveBase, 'png', intrinsicW)
 
   return (
-    <picture>
+    <picture style={{ aspectRatio: aspectRatio || `${width} / ${height}`, display: 'block' }}>
       {webpSet ? (
         <source srcSet={webpSet} sizes={sizes} type="image/webp" />
       ) : (
@@ -54,6 +62,7 @@ export default function OptimizedImg({
         loading={loading}
         {...(fetchPriority ? { fetchpriority: fetchPriority } : {})}
         decoding={decoding}
+        style={{ display: 'block', width: '100%', height: '100%' }}
       />
     </picture>
   )

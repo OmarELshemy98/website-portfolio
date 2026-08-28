@@ -9,16 +9,17 @@ export default function Logo() {
     <Link href="/" className="nav-logo-wrapper">
       <div className="logo-circle">
         <OptimizedImg
-          webpSrc={logoMeta.webp}
-          fallbackSrc="/images/logo.png"
+          webpSrc="/images/responsive/logo-240.webp"
+          fallbackSrc="/images/responsive/logo-240.png"
+          responsiveBase="/images/responsive/logo"
           alt="Omar Elshemy Logo"
           className="logo-img"
           width={64}
           height={66}
-          intrinsicWidth={logoMeta.width}
           sizes="48px"
           loading="eager"
           fetchPriority="low"
+          aspectRatio="64 / 66"
         />
         <div className="logo-glow"></div>
       </div>
