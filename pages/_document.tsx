@@ -8,8 +8,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="google-site-verification" content="B6Y6hvFNqApQczRDgzer7rFpaqoy77XszfxxjsBaFME" />
-        <meta name="google-site-verification" content="OTHiQ-Nu5vdtegSuxVHqWVxqhXvXbfYymZP2NZ5Kmvg" />
+        <meta name="google-site-verification" content="yTH1VahmD3v4mrUyDpaM_RH-hg9-We1ou08tr0VvhNE" />
         <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <meta name="msapplication-TileColor" content="#0d1117" />
