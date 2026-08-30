@@ -34,7 +34,7 @@ img {
 }
 .skip-to-main {
   position: absolute;
-  left: -9999px;
+  transform: translateX(-150vw);
   top: 0.75rem;
   z-index: 100000;
   padding: 0.5rem 1rem;
@@ -43,9 +43,11 @@ img {
   font-weight: 700;
   border-radius: 8px;
   text-decoration: none;
-  transition: left 0.15s ease;
+  will-change: transform;
+  transition: transform 0.15s ease;
 }
 .skip-to-main:focus {
+  transform: translateX(0);
   left: 0.75rem;
   outline: 2px solid #fff;
   outline-offset: 2px;
@@ -629,14 +631,16 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
 .hexagon-img {
   width: clamp(280px, 35vw, 420px);
   height: clamp(280px, 35vw, 420px);
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
   animation: float-profile 6s ease-in-out infinite;
   flex-shrink: 0;
   z-index: 1;
+  contain: layout paint;
 }
 
 @keyframes float-profile {
@@ -650,7 +654,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   content: '';
   position: absolute;
   border-radius: 50%;
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  will-change: transform;
 }
 
 /* Inner Solid Ring */

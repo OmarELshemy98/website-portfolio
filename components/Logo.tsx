@@ -7,22 +7,22 @@ export default function Logo() {
       <div className="logo-circle">
         <picture>
           <source
-            srcSet="/images/responsive/logo-240.webp 240w, /images/responsive/logo-253.webp 253w"
-            sizes="(max-width: 768px) 57px, (max-width: 1024px) 47px, 62px"
+            srcSet="/images/responsive/logo-96.webp 96w, /images/responsive/logo-128.webp 128w"
+            sizes="(max-width: 1024px) 57px, (max-width: 1025px) 42px, 62px"
             type="image/webp"
           />
           <source
-            srcSet="/images/responsive/logo-240.png 240w, /images/responsive/logo-253.png 253w"
-            sizes="(max-width: 768px) 57px, (max-width: 1024px) 47px, 62px"
+            srcSet="/images/responsive/logo-96.png 96w, /images/responsive/logo-128.png 128w"
+            sizes="(max-width: 1024px) 57px, (max-width: 1025px) 42px, 62px"
             type="image/png"
           />
           <Image
-            src="/images/responsive/logo-240.webp"
+            src="/images/responsive/logo-96.webp"
             alt="Omar Elshemy Logo"
             className="logo-img"
             width={62}
             height={64}
-            sizes="(max-width: 768px) 57px, (max-width: 1024px) 47px, 62px"
+            sizes="(max-width: 1024px) 57px, (max-width: 1025px) 42px, 62px"
             loading="eager"
             fetchPriority="low"
             quality={80}
