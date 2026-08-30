@@ -1,13 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const DEFAULT_SITE_URL = 'https://omarelshemy.vercel.app'
-
 const GOOGLE_FONTS_URL =
   'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'
-const FONT_AWESOME_URL =
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
-const FONT_AWESOME_SRI =
-  'sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
 
 export default function Document() {
   return (
@@ -33,7 +27,7 @@ export default function Document() {
         <meta name="x-content-type-options" content="nosniff" />
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https: ws: wss:; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+          content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https: ws: wss:; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
         />
         <meta
           httpEquiv="Permissions-Policy"
@@ -47,19 +41,30 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-        {/* 
-          Critical resource hints (optimized for < 4 preconnects):
-          - Preconnect only to origins that deliver render-critical subresources EARLY
-          - Everything else downgraded to dns-prefetch
+        {/*
+          Optimized resource hints — MAX 4 preconnects (critical origins only):
+          1. fonts.googleapis.com  — Google Fonts CSS (render-critical)
+          2. fonts.gstatic.com     — actual font files (render-critical)
+          Everything else uses dns-prefetch (lighter) only when truly needed.
         */}
-        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* 
+        {/*
+          Preload LCP-critical image (hero background) so the browser discovers it
+          BEFORE the CSS parser does. Dramatically cuts LCP on repeat + first views.
+        */}
+        <link
+          rel="preload"
+          href="/images/responsive/background5-1380.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+
+        {/*
           CRITICAL INLINE @font-face with metric overrides to eliminate CLS from font swap.
           These values tune the FALLBACK (system-ui) glyph box to match Montserrat's,
           so when Montserrat finishes swapping in, text reflow is invisible.
@@ -99,14 +104,12 @@ export default function Document() {
           }}
         />
 
-        {/* 
-          DEFERRING NON-CRITICAL EXTERNAL CSS (saves ~1,930 ms render-blocking).
-          Pattern: <link rel="preload" as="style"> + <link media="print"> + inline bootstrap script upgrades media="print"→"all" BEFORE React hydrates.
-          Works on every browser the instant the raw HTML is parsed (no React dependency).
-        */}
-
-        {/* Google Fonts */}
-        <link rel="preload" as="style" href={GOOGLE_FONTS_URL} />
+        {/* Google Fonts — loaded asynchronously (non render-blocking) */}
+        <link
+          rel="preload"
+          as="style"
+          href={GOOGLE_FONTS_URL}
+        />
         <link
           rel="stylesheet"
           href={GOOGLE_FONTS_URL}
@@ -117,33 +120,9 @@ export default function Document() {
           }}
         />
 
-        {/* Font Awesome */}
-        <link
-          rel="preload"
-          as="style"
-          href={FONT_AWESOME_URL}
-          integrity={FONT_AWESOME_SRI}
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <link
-          rel="stylesheet"
-          href={FONT_AWESOME_URL}
-          integrity={FONT_AWESOME_SRI}
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-          media="print"
-          onLoad={(e) => {
-            const t = e.currentTarget as HTMLLinkElement
-            if (t.media !== 'all') t.media = 'all'
-          }}
-        />
-
-        {/* 
-          Critical inline bootstrap: upgrades any deferred media="print" stylesheet
-          to media="all" as soon as the browser parses this block (BEFORE React hydrates).
-          This guarantees render-blocking removal even if React's onLoad handlers
-          have not yet been attached.
+        {/*
+          Critical inline bootstrap: upgrades the deferred media="print" stylesheet
+          to media="all" BEFORE React hydrates. Zero render-blocking guaranteed.
         */}
         <script
           dangerouslySetInnerHTML={{
@@ -163,13 +142,6 @@ export default function Document() {
         {/* Fallback for browsers/users with JS disabled */}
         <noscript>
           <link rel="stylesheet" href={GOOGLE_FONTS_URL} />
-          <link
-            rel="stylesheet"
-            href={FONT_AWESOME_URL}
-            integrity={FONT_AWESOME_SRI}
-            crossOrigin="anonymous"
-            referrerPolicy="no-referrer"
-          />
         </noscript>
 
         <script
@@ -195,7 +167,6 @@ export default function Document() {
 
         <Main />
         <NextScript />
-        <script src="/scripts/portfolio.js"></script>
       </body>
     </Html>
   )

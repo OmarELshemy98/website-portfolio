@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
 import Head from 'next/head'
+import { WhatsappIcon } from '@/components/Icons'
 
 export default function Contact() {
   const { locale } = useI18n()
@@ -137,7 +138,7 @@ export default function Contact() {
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     {isAr ? 'إرسال الرسالة' : 'Send Message'}
-                    <i className="fab fa-whatsapp text-xl"></i>
+                    <WhatsappIcon className="w-5 h-5" />
                   </span>
                 </button>
               </div>

@@ -1240,6 +1240,8 @@ main, section:not(.hero-section), .contact-page, .projects-section, .certificate
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+  contain: layout paint style;
+  will-change: contents;
 }
 
 .floating-icon {

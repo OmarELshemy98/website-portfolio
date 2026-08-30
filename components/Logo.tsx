@@ -1,26 +1,26 @@
 import Link from 'next/link'
-import OptimizedImg from '@/components/OptimizedImg'
-import imageMeta from '@/data/image-meta.json'
-
-const logoMeta = imageMeta['logo.png'] as { width: number; height: number; webp: string }
+import Image from 'next/image'
 
 export default function Logo() {
   return (
     <Link href="/" className="nav-logo-wrapper">
       <div className="logo-circle">
-        <OptimizedImg
-          webpSrc="/images/responsive/logo-240.webp"
-          fallbackSrc="/images/responsive/logo-240.png"
-          responsiveBase="/images/responsive/logo"
-          alt="Omar Elshemy Logo"
-          className="logo-img"
-          width={64}
-          height={66}
-          sizes="48px"
-          loading="eager"
-          fetchPriority="low"
-          aspectRatio="64 / 66"
-        />
+        <picture>
+          <source srcSet="/images/responsive/logo-240.webp 1x, /images/responsive/logo-253.webp 2x" type="image/webp" />
+          <source srcSet="/images/responsive/logo-240.png 1x, /images/responsive/logo-253.png 2x" type="image/png" />
+          <Image
+            src="/images/responsive/logo-240.webp"
+            alt="Omar Elshemy Logo"
+            className="logo-img"
+            width={64}
+            height={66}
+            sizes="48px"
+            loading="eager"
+            fetchPriority="low"
+            quality={80}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </picture>
         <div className="logo-glow"></div>
       </div>
     </Link>

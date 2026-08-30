@@ -5,6 +5,7 @@ import SEO from '@/components/SEO'
 import type { GetStaticProps } from 'next'
 import { projects as allProjects, type Project } from '@/data/projects'
 import { useI18n } from '@/lib/i18n'
+import { ExternalLinkAltIcon, ChevronLeftIcon, ChevronRightIcon } from '@/components/Icons'
 
 type Props = {
   projects: Project[]
@@ -160,7 +161,7 @@ export default function Projects({ projects }: Props) {
                       ))}
                     </div>
                     <button className="carousel-next" aria-label={isAr ? 'التالي' : 'Next'}>
-                      <i className="fas fa-chevron-right"></i>
+                      <ChevronRightIcon className="w-6 h-6" />
                     </button>
                     <div className="carousel-indicators"></div>
                   </div>

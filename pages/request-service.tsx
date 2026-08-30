@@ -1,9 +1,11 @@
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import { useI18n } from '@/lib/i18n'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useEffect, useState } from 'react'
+import { WhatsappIcon } from '@/components/Icons'
 
 export default function RequestService() {
   const router = useRouter()
@@ -192,7 +194,7 @@ export default function RequestService() {
                         {isAr ? 'إرسال عبر واتساب' : 'Send via WhatsApp'}
                       </span>
                       <div className="w-10 h-10 rounded-full flex items-center justify-center">
-                        <i className="fab fa-whatsapp text-2xl text-white"></i>
+                        <WhatsappIcon className="w-6 h-6 text-white" />
                       </div>
                     </div>
                   </button>

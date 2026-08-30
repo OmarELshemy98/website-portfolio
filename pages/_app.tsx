@@ -1,6 +1,4 @@
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
 import Script from 'next/script'
 import '../styles.css'
 import { I18nProvider } from '@/lib/i18n'
@@ -13,6 +11,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <a href="#main-content" className="skip-to-main">
         Skip to main content
       </a>
+
+      {/*
+        Portfolio logic (scroll reveal, navbar scroll, skills bars, contact form)
+        — NOT render-critical. Defer to afterInteractive so it never blocks FCP/LCP.
+        Idle loading would be even nicer, but afterInteractive is the safest
+        compatibility with features that rely on DOM being ready.
+      */}
+      <Script src="/scripts/portfolio.js" strategy="afterInteractive" />
+
       {gaId ? (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />

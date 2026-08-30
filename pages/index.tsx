@@ -1,12 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import SEO from '@/components/SEO'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import OptimizedImg from '@/components/OptimizedImg'
-import imageMeta from '@/data/image-meta.json'
 import { useI18n } from '@/lib/i18n'
-
-const profileMeta = imageMeta['profile-photo.png'] as { width: number; height: number; webp: string }
 
 export default function Home() {
   const { t, locale } = useI18n()
@@ -48,20 +45,31 @@ export default function Home() {
             </div>
           </div>
           <div className="hexagon-img">
-            <OptimizedImg
-              webpSrc="/images/responsive/profile-photo-420.webp"
-              fallbackSrc="/images/responsive/profile-photo-420.png"
-              responsiveBase="/images/responsive/profile-photo"
-              alt="Omar Elshemy, front-end developer portrait"
-              className="profile-img"
-              width={420}
-              height={440}
-              sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
-              loading="eager"
-              fetchPriority="high"
-              decoding="sync"
-              aspectRatio="420 / 440"
-            />
+            <picture>
+              <source
+                srcSet="/images/responsive/profile-photo-320.webp 320w, /images/responsive/profile-photo-420.webp 420w, /images/responsive/profile-photo-640.webp 640w, /images/responsive/profile-photo-820.webp 820w"
+                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                type="image/webp"
+              />
+              <source
+                srcSet="/images/responsive/profile-photo-320.png 320w, /images/responsive/profile-photo-420.png 420w, /images/responsive/profile-photo-640.png 640w, /images/responsive/profile-photo-820.png 820w"
+                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                type="image/png"
+              />
+              <Image
+                src="/images/responsive/profile-photo-420.webp"
+                alt="Omar Elshemy, front-end developer portrait"
+                className="profile-img"
+                width={420}
+                height={440}
+                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                loading="eager"
+                fetchPriority="high"
+                decoding="sync"
+                quality={80}
+                style={{ width: '100%', height: '100%', aspectRatio: '420 / 440' }}
+              />
+            </picture>
           </div>
         </div>
       </section>

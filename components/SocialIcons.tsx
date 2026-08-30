@@ -1,4 +1,5 @@
 import React from 'react'
+import { GithubIcon, LinkedinIcon, EnvelopeIcon, WhatsappIcon } from './Icons'
 
 export default function SocialIcons() {
   return (
@@ -11,7 +12,7 @@ export default function SocialIcons() {
         aria-label="GitHub"
       >
         <div className="absolute inset-0 bg-neon-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <i className="fab fa-github text-2xl relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"></i>
+        <GithubIcon className="w-6 h-6 relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
       </a>
       <a 
         href="https://www.linkedin.com/in/omar-elshemy" 
@@ -21,7 +22,7 @@ export default function SocialIcons() {
         aria-label="LinkedIn"
       >
         <div className="absolute inset-0 bg-neon-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <i className="fab fa-linkedin-in text-2xl relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"></i>
+        <LinkedinIcon className="w-6 h-6 relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
       </a>
       <a 
         href="mailto:omarelshemy010@gmail.com" 
@@ -29,7 +30,7 @@ export default function SocialIcons() {
         aria-label="Email"
       >
         <div className="absolute inset-0 bg-neon-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <i className="fas fa-envelope text-2xl relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"></i>
+        <EnvelopeIcon className="w-6 h-6 relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
       </a>
       <a 
         href="https://wa.me/201026238072" 
@@ -39,7 +40,7 @@ export default function SocialIcons() {
         aria-label="WhatsApp"
       >
         <div className="absolute inset-0 bg-neon-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        <i className="fab fa-whatsapp text-2xl relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500"></i>
+        <WhatsappIcon className="w-6 h-6 relative z-10 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
       </a>
     </div>
   )

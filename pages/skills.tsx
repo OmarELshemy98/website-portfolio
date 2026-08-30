@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
 import { useI18n } from '@/lib/i18n'
 import { useEffect, useState } from 'react'
+import FaIcon from '@/components/Icons'
 
 export default function Skills() {
   const { locale } = useI18n()
@@ -101,7 +102,7 @@ export default function Skills() {
                       <div className="flex justify-between items-center mb-4">
                         <div className="flex items-center gap-4">
                           <div className="text-2xl text-gray-500 group-hover:text-neon-cyan transition-colors duration-500">
-                            <i className={skill.icon}></i>
+                            <FaIcon icon={skill.icon} className="w-7 h-7" />
                           </div>
                           <span className="font-bold text-gray-200 text-base">{skill.name}</span>
                         </div>
