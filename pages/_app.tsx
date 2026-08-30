@@ -1,16 +1,27 @@
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
+import { Montserrat } from 'next/font/google'
 import '../styles.css'
 import { I18nProvider } from '@/lib/i18n'
+
+const montserrat = Montserrat({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  adjustFontFallback: true,
+})
 
 const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <I18nProvider>
-      <a href="#main-content" className="skip-to-main">
-        Skip to main content
-      </a>
+      <div className={`${montserrat.variable}`}>
+        <a href="#main-content" className="skip-to-main">
+          Skip to main content
+        </a>
 
       {/*
         Portfolio logic (scroll reveal, navbar scroll, skills bars, contact form)
@@ -31,6 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main id="main-content" tabIndex={-1}>
         <Component {...pageProps} />
       </main>
+      </div>
     </I18nProvider>
   )
 }

@@ -47,27 +47,27 @@ export default function Home() {
           <div className="hexagon-img">
             <picture>
               <source
-                srcSet="/images/responsive/profile-photo-320.webp 320w, /images/responsive/profile-photo-420.webp 420w, /images/responsive/profile-photo-640.webp 640w, /images/responsive/profile-photo-820.webp 820w"
-                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                srcSet="/images/responsive/profile-photo-240.webp 240w, /images/responsive/profile-photo-320.webp 320w, /images/responsive/profile-photo-420.webp 420w, /images/responsive/profile-photo-640.webp 640w"
+                sizes="(max-width: 360px) 221px, (max-width: 480px) 255px, (max-width: 768px) 272px, (max-width: 1024px) 272px, 357px"
                 type="image/webp"
               />
               <source
-                srcSet="/images/responsive/profile-photo-320.png 320w, /images/responsive/profile-photo-420.png 420w, /images/responsive/profile-photo-640.png 640w, /images/responsive/profile-photo-820.png 820w"
-                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                srcSet="/images/responsive/profile-photo-240.png 240w, /images/responsive/profile-photo-320.png 320w, /images/responsive/profile-photo-420.png 420w, /images/responsive/profile-photo-640.png 640w"
+                sizes="(max-width: 360px) 221px, (max-width: 480px) 255px, (max-width: 768px) 272px, (max-width: 1024px) 272px, 357px"
                 type="image/png"
               />
               <Image
                 src="/images/responsive/profile-photo-420.webp"
                 alt="Omar Elshemy, front-end developer portrait"
                 className="profile-img"
-                width={420}
-                height={440}
-                sizes="(max-width: 480px) 280px, (max-width: 1024px) 320px, 420px"
+                width={357}
+                height={374}
+                sizes="(max-width: 360px) 221px, (max-width: 480px) 255px, (max-width: 768px) 272px, (max-width: 1024px) 272px, 357px"
                 loading="eager"
                 fetchPriority="high"
                 decoding="sync"
                 quality={80}
-                style={{ width: '100%', height: '100%', aspectRatio: '420 / 440' }}
+                style={{ width: '100%', height: '100%', aspectRatio: '357 / 374' }}
               />
             </picture>
           </div>
